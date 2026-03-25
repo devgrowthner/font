@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://zynextechnologies.com.au/</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Solutions Page -->
+  <url>
+    <loc>https://zynextechnologies.com.au/solutions</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Custom AI Page -->
+  <url>
+    <loc>https://zynextechnologies.com.au/custom-ai</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Strategy Report Page -->
+  <url>
+    <loc>https://zynextechnologies.com.au/strategy-report</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- What is Zynex / Learn More Page -->
+  <url>
+    <loc>https://zynextechnologies.com.au/what-is-zynex</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- AI Solutions - Machine Learning -->
+  <url>
+    <loc>https://zynextechnologies.com.au/machine-learning</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - Chatbot -->
+  <url>
+    <loc>https://zynextechnologies.com.au/chatbot</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - Generative AI -->
+  <url>
+    <loc>https://zynextechnologies.com.au/generative-ai</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - Computer Vision -->
+  <url>
+    <loc>https://zynextechnologies.com.au/computer-vision</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - Recommendation Engine -->
+  <url>
+    <loc>https://zynextechnologies.com.au/recommendation-engine</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - Agentic AI -->
+  <url>
+    <loc>https://zynextechnologies.com.au/agentic-ai</loc>
+    <lastmod>2026-03-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - Blogs -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs</loc>
+    <lastmod>2026-03-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - AI Automation -->
+  <url>
+    <loc>https://zynextechnologies.com.au/ai-automation</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - AI Feasibility Analysis -->
+  <url>
+    <loc>https://zynextechnologies.com.au/ai-feasibility-analysis</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - AI Automation -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/ai-automation-company-australia-workflow-solutions</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solutions - AI Feasibility Analysis -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-company-australia</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+
+</urlset>

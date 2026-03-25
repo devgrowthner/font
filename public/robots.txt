@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block common system folders if they exist
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /cgi-bin/
+
+# Sitemap
+Sitemap: https://zynextechnologies.com.au/sitemap.xml   
