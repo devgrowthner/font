@@ -1,4 +1,4 @@
-import Blogs from '@/pages/Blogs';
+import Blogs from '@/views/Blogs';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

@@ -1,4 +1,4 @@
-import CustomAI from '@/pages/CustomAI';
+import CustomAI from '@/views/CustomAI';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

@@ -1,4 +1,4 @@
-import Home from '@/pages/Home';
+import Home from '@/views/Home';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

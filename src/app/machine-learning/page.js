@@ -1,4 +1,4 @@
-import MachineLearning from '@/pages/MachineLearning';
+import MachineLearning from '@/views/MachineLearning';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

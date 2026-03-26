@@ -1,4 +1,4 @@
-import BlogTemplate from '@/pages/BlogTemplate';
+import BlogTemplate from '@/views/BlogTemplate';
 import { blogContents } from '@/constants/blogData';
 import { buildPageMetadata } from '@/lib/seo';
 

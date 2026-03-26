@@ -1,4 +1,4 @@
-import ComputerVision from '@/pages/ComputerVision';
+import ComputerVision from '@/views/ComputerVision';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

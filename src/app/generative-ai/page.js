@@ -1,4 +1,4 @@
-import GenerativeAI from '@/pages/GenerativeAI';
+import GenerativeAI from '@/views/GenerativeAI';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

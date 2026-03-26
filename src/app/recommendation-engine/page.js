@@ -1,4 +1,4 @@
-import RecommendationEngine from '@/pages/RecommendationEngine';
+import RecommendationEngine from '@/views/RecommendationEngine';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

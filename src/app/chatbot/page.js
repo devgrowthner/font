@@ -1,4 +1,4 @@
-import Chatbot from '@/pages/Chatbot';
+import Chatbot from '@/views/Chatbot';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

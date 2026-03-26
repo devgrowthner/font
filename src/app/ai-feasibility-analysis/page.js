@@ -1,4 +1,4 @@
-import AIFeasibilityAnalysis from '@/pages/AIFeasibilityAnalysis';
+import AIFeasibilityAnalysis from '@/views/AIFeasibilityAnalysis';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

@@ -1,6 +1,5 @@
-'use client';
 
-import Solutions from '@/pages/Solutions';
+import Solutions from '@/views/Solutions';
 
 export default function SolutionsPage() {
   return <Solutions />;

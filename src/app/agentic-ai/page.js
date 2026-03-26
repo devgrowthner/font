@@ -1,4 +1,4 @@
-import AgenticAI from '@/pages/AgenticAI';
+import AgenticAI from '@/views/AgenticAI';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

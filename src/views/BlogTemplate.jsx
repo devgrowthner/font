@@ -39,6 +39,46 @@ const staggerContainer = {
 
 // ─── Reusable Section Components ────────────────────────────────────────────
 
+const NarrativeSection = ({ title, highlight, description, bullets = [], bgClass }) => (
+  <section className={`py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 ${bgClass || 'bg-gradient-to-br from-[#fefdfb] via-[#fff7ed] to-[#fef3c7]/30'} relative overflow-hidden`}>
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(122,130,80,0.06),transparent_60%)]"></div>
+    <div className="absolute top-0 left-0 w-full h-px" style={{ backgroundImage: 'linear-gradient(to right, transparent, rgba(113, 147, 52, 0.5), transparent)' }}></div>
+    <div className="container mx-auto max-w-4xl relative z-10">
+      <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-foreground mb-6 text-center">
+          {title}{' '}
+          {highlight ? (
+            <span
+              className="bg-clip-text text-transparent"
+              style={{ backgroundImage: 'linear-gradient(to right, #719334, #719334)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+            >
+              {highlight}
+            </span>
+          ) : null}
+        </h2>
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed whitespace-pre-line">{description}</p>
+      </motion.div>
+
+      {bullets.length > 0 && (
+        <motion.ul
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={staggerContainer}
+          className="mt-8 space-y-3"
+        >
+          {bullets.map((item, index) => (
+            <motion.li key={index} variants={fadeInUp} className="flex items-start gap-3 text-base sm:text-lg text-muted-foreground">
+              <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#719334' }}></span>
+              <span>{item}</span>
+            </motion.li>
+          ))}
+        </motion.ul>
+      )}
+    </div>
+  </section>
+);
+
 const ServicesSection = ({ blogData }) => (
   <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#fefdfb] via-[#fff7ed] to-[#fef3c7]/30 relative overflow-hidden">
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(122,130,80,0.06),transparent_60%)]"></div>
@@ -52,13 +92,15 @@ const ServicesSection = ({ blogData }) => (
         className="text-center mb-12 sm:mb-16"
       >
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-foreground mb-4">
-          {blogData.servicesTitle}{' '}
-          <span
-            className="bg-clip-text text-transparent"
-            style={{ backgroundImage: 'linear-gradient(to right, #719334, #719334)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
-          >
-            Services We Offer
-          </span>
+          {(blogData.servicesTitle || blogData.title || 'Services')}{' '}
+          {blogData.servicesTitleHighlight ? (
+            <span
+              className="bg-clip-text text-transparent"
+              style={{ backgroundImage: 'linear-gradient(to right, #719334, #719334)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}
+            >
+              {blogData.servicesTitleHighlight}
+            </span>
+          ) : null}
         </h2>
         <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
           {blogData.servicesDescription}
@@ -517,11 +559,46 @@ const BlogTemplate = () => {
 
   // Map section keys to their rendered components
   const sectionMap = {
+    summary: blogData.summaryDescription ? (
+      <NarrativeSection
+        title={blogData.summaryTitle || 'Summary'}
+        highlight={blogData.summaryTitleHighlight}
+        description={blogData.summaryDescription}
+        bullets={blogData.summaryBullets}
+      />
+    ) : null,
+    introduction: blogData.introductionDescription ? (
+      <NarrativeSection
+        title={blogData.introductionTitle || 'Introduction'}
+        highlight={blogData.introductionTitleHighlight}
+        description={blogData.introductionDescription}
+        bullets={blogData.introductionBullets}
+        bgClass="bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#f0fdf4]"
+      />
+    ) : null,
     services: blogData.services ? <ServicesSection blogData={blogData} /> : null,
     process: blogData.processSteps ? <ProcessSection blogData={blogData} /> : null,
     industries: blogData.industries ? <IndustriesSection blogData={blogData} /> : null,
     benefits: blogData.benefits ? <BenefitsSection blogData={blogData} /> : null,
     whyChooseUs: blogData.whyChooseUs ? <WhyChooseUsSection blogData={blogData} /> : null,
+    future: blogData.futureDescription ? (
+      <NarrativeSection
+        title={blogData.futureTitle || 'Future'}
+        highlight={blogData.futureTitleHighlight}
+        description={blogData.futureDescription}
+        bullets={blogData.futureBullets}
+        bgClass="bg-gradient-to-br from-[#f5f5f5] via-[#f0f0f0] to-[#ebebeb]"
+      />
+    ) : null,
+    conclusion: blogData.conclusionDescription ? (
+      <NarrativeSection
+        title={blogData.conclusionTitle || 'Conclusion'}
+        highlight={blogData.conclusionTitleHighlight}
+        description={blogData.conclusionDescription}
+        bullets={blogData.conclusionBullets}
+        bgClass="bg-gradient-to-br from-[#f0fdf4] via-[#fefdfb] to-[#ecfdf5]"
+      />
+    ) : null,
     cta: <CtaSection blogData={blogData} onOpenModal={() => setIsModalOpen(true)} />,
     faq: blogData.faqs ? <FaqSection blogData={blogData} openFaqIndex={openFaqIndex} setOpenFaqIndex={setOpenFaqIndex} /> : null,
   };
