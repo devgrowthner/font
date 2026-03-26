@@ -1,4 +1,5 @@
-// eslint-disable-next-line no-unused-vars
+'use client';
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Footer from '../components/Footer';
@@ -83,8 +84,8 @@ const NotFound = () => {
                 Page Not Found
               </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                Oops! The page you're looking for seems to have wandered off into the digital void. 
-                Don't worry, let's get you back on track.
+                Oops! The page you&apos;re looking for seems to have wandered off into the digital void.
+                Don&apos;t worry, let&apos;s get you back on track.
               </p>
             </motion.div>
 
