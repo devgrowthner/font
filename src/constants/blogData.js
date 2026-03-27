@@ -897,7 +897,7 @@ export const blogContents = {
 
   faqDescription:
     "Common questions about AI use cases for small and medium businesses",
-  faqs: [
+  faq: [
     {
       question: "What are the most common AI use cases for small businesses?",
       answer:

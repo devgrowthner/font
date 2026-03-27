@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+    <head suppressHydrationWarning>
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
