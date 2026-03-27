@@ -505,7 +505,7 @@ const FAQItem = ({ question, answer }) => {
 
 // ─── CTA — now uses blogData fields instead of hardcoded strings ───────────
 
-const CTASection = ({ blogData }) => (
+const CTASection = ({ blogData, onContactClick }) => (
   <section id="cta" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
       <div
@@ -537,7 +537,7 @@ const CTASection = ({ blogData }) => (
           </p>
 
           <button
-            onClick={() => setIsModalOpen(true)}
+            onClick={onContactClick}
             className="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#719334] rounded-lg font-heading font-bold hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
             {blogData.ctaButtonText || 'Get Started Today'}
@@ -647,7 +647,7 @@ const BlogDetailTemplate = () => {
       ? <FAQSection blogData={blogData} />
       : null,
 
-    cta: <CTASection blogData={blogData} />,
+    cta: <CTASection blogData={blogData} onContactClick={() => setIsModalOpen(true)} />,
   };
 
   // Use sectionOrder from data, with a sensible default
