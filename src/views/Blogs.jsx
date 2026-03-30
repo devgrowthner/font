@@ -95,7 +95,7 @@ const Blogs = () => {
             variants={staggerContainer}
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {blogList.map((post) => (
+            {blogList.slice(2).map((post) => (
               <motion.article
                 key={post.id}
                 variants={fadeInUp}
