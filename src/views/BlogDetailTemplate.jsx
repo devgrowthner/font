@@ -95,9 +95,9 @@ const TableOfContents = ({ sections, activeSection, onSectionClick, isMobile, on
 // ─── Section Components ────────────────────────────────────────────────────
 
 const SummarySection = ({ blogData }) => (
-  <section id="summary" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
+  <section id="summary" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
-      <div className="bg-gradient-to-br from-[#719334]/10 to-[#719334]/5 border-l-4 border-[#719334] rounded-lg p-6 sm:p-8">
+      <div className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
         <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4">
           {blogData.summaryTitle || 'Summary'}
         </h2>
@@ -110,40 +110,42 @@ const SummarySection = ({ blogData }) => (
 );
 
 const IntroductionSection = ({ blogData }) => (
-  <section id="introduction" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
+  <section id="introduction" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
-      <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
-        {blogData.introductionTitle || 'Introduction'}
-      </h2>
-      <div className="prose prose-lg max-w-none">
-        {(blogData.introductionDescription || '').split('\n\n').map((paragraph, index) => (
-          <p key={index} className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
-            {paragraph}
-          </p>
-        ))}
-      </div>
-      {/* introductionBullets */}
-      {blogData.introductionBullets?.length > 0 && (
-        <ul className="mt-4 space-y-2">
-          {blogData.introductionBullets.map((item, index) => (
-            <li key={index} className="flex items-start gap-3 text-base sm:text-lg text-muted-foreground">
-              <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#719334' }}></span>
-              <span>{item}</span>
-            </li>
+      <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+        <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
+          {blogData.introductionTitle || 'Introduction'}
+        </h2>
+        <div className="prose prose-lg max-w-none">
+          {(blogData.introductionDescription || '').split('\n\n').map((paragraph, index) => (
+            <p key={index} className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
+              {paragraph}
+            </p>
           ))}
-        </ul>
-      )}
+        </div>
+        {/* introductionBullets */}
+        {blogData.introductionBullets?.length > 0 && (
+          <ul className="mt-6 space-y-3">
+            {blogData.introductionBullets.map((item, index) => (
+              <li key={index} className="flex items-start gap-3 text-base sm:text-lg text-muted-foreground">
+                <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#719334' }}></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </motion.div>
   </section>
 );
 
 const ServicesSection = ({ blogData }) => (
-  <section id="services" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
+  <section id="services" className="py-8 sm:py-10 px-0 sm:px-0">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
-      <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4">
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
         {blogData.servicesTitle || 'Services'}
       </h2>
-      <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
+      <p className="text-lg text-gray-700 leading-relaxed mb-8">
         {blogData.servicesDescription}
       </p>
     </motion.div>
@@ -156,27 +158,13 @@ const ServicesSection = ({ blogData }) => (
       className="space-y-6"
     >
       {blogData.services?.map((service, index) => (
-        <motion.div key={index} variants={fadeInUp} className="group">
-          <div className="bg-white border border-gray-200 rounded-lg p-6 hover:border-[#719334]/50 hover:shadow-lg transition-all duration-300">
-            <div className="flex items-start gap-4">
-              <div
-                className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center"
-                style={{ background: 'linear-gradient(135deg, rgba(113, 147, 52, 0.2), rgba(113, 147, 52, 0.1))', color: '#719334' }}
-              >
-                <div className="w-6 h-6">
-                  {typeof service.icon === 'string' ? getIconComponent(service.icon) : service.icon}
-                </div>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </div>
-          </div>
+        <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3">
+            {service.title}
+          </h3>
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+            {service.description}
+          </p>
         </motion.div>
       ))}
     </motion.div>
@@ -184,12 +172,12 @@ const ServicesSection = ({ blogData }) => (
 );
 
 const ProcessSection = ({ blogData }) => (
-  <section id="process" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
+  <section id="process" className="py-8 sm:py-10 px-0 sm:px-0">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
-      <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4">
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
         {blogData.processTitle || 'Process'}
       </h2>
-      <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
+      <p className="text-lg text-gray-700 leading-relaxed mb-8">
         {blogData.processDescription}
       </p>
     </motion.div>
@@ -199,21 +187,23 @@ const ProcessSection = ({ blogData }) => (
       whileInView="animate"
       viewport={{ once: true, margin: '-100px' }}
       variants={staggerContainer}
-      className="grid sm:grid-cols-2 gap-6"
+      className="space-y-6"
     >
       {blogData.processSteps?.map((step, index) => (
-        <motion.div key={index} variants={fadeInUp} className="relative">
-          <div className="bg-gradient-to-br from-white to-[#fefdfb] border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all duration-300 h-full">
+        <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow flex gap-6">
+          <div className="flex-shrink-0">
             <div
-              className="absolute -top-4 -left-4 w-10 h-10 rounded-full flex items-center justify-center text-white font-heading font-bold shadow-lg"
+              className="flex items-center justify-center w-12 h-12 rounded-full text-white font-heading font-bold text-lg"
               style={{ background: 'linear-gradient(135deg, #719334, #5a7529)' }}
             >
               {step.number}
             </div>
-            <h3 className="text-lg font-heading font-bold text-foreground mb-3 mt-2">
+          </div>
+          <div className="flex-1">
+            <h3 className="text-xl font-heading font-bold text-foreground mb-2">
               {step.title}
             </h3>
-            <p className="text-base text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
               {step.description}
             </p>
           </div>
@@ -224,19 +214,15 @@ const ProcessSection = ({ blogData }) => (
 );
 
 const BenefitsSection = ({ blogData }) => (
-  <section id="benefits" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
+  <section id="benefits" className="py-8 sm:py-10 px-0 sm:px-0">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
-      <div className="mb-8">
-        <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-2">
-          {blogData.benefitsTitle || 'Benefits'}
-          {blogData.benefitsTitleHighlight && (
-            <span className="block sm:inline-block ml-0 sm:ml-2 text-[#719334]">
-              {blogData.benefitsTitleHighlight}
-            </span>
-          )}
-        </h2>
-      </div>
-      <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+        {blogData.benefitsTitle || 'Benefits'}
+        {blogData.benefitsTitleHighlight && (
+          <span className="text-[#719334]"> {blogData.benefitsTitleHighlight}</span>
+        )}
+      </h2>
+      <p className="text-lg text-gray-700 leading-relaxed mb-8">
         {blogData.benefitsDescription}
       </p>
     </motion.div>
@@ -246,24 +232,14 @@ const BenefitsSection = ({ blogData }) => (
       whileInView="animate"
       viewport={{ once: true, margin: '-100px' }}
       variants={staggerContainer}
-      className="grid sm:grid-cols-2 gap-6"
+      className="space-y-6"
     >
       {blogData.benefits?.map((benefit, index) => (
-        <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all duration-300">
-          {benefit.icon && (
-            <div
-              className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-              style={{ background: 'linear-gradient(135deg, rgba(113, 147, 52, 0.2), rgba(113, 147, 52, 0.1))', color: '#719334' }}
-            >
-              <div className="w-6 h-6">
-                {typeof benefit.icon === 'string' ? getIconComponent(benefit.icon) : benefit.icon}
-              </div>
-            </div>
-          )}
-          <h3 className="text-lg font-heading font-bold text-foreground mb-2">
+        <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+          <h3 className="text-xl font-heading font-bold text-foreground mb-2">
             {benefit.title}
           </h3>
-          <p className="text-base text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             {benefit.description}
           </p>
         </motion.div>
@@ -275,15 +251,15 @@ const BenefitsSection = ({ blogData }) => (
 // ─── Industries Section (missing from original, now added) ─────────────────
 
 const IndustriesSection = ({ blogData }) => (
-  <section id="industries" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
+  <section id="industries" className="py-8 sm:py-10 px-0 sm:px-0">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
-      <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4">
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
         {blogData.industriesTitle || 'Industries'}
         {blogData.industriesTitleHighlight && (
-          <span className="ml-2 text-[#719334]">{blogData.industriesTitleHighlight}</span>
+          <span className="text-[#719334]"> {blogData.industriesTitleHighlight}</span>
         )}
       </h2>
-      <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8">
+      <p className="text-lg text-gray-700 leading-relaxed mb-8">
         {blogData.industriesDescription}
       </p>
     </motion.div>
@@ -293,38 +269,27 @@ const IndustriesSection = ({ blogData }) => (
       whileInView="animate"
       viewport={{ once: true, margin: '-100px' }}
       variants={staggerContainer}
-      className="grid sm:grid-cols-2 gap-6"
+      className="space-y-6"
     >
       {blogData.industries?.map((industry, index) => (
-        <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 rounded-lg p-6 hover:border-[#719334]/50 hover:shadow-lg transition-all duration-300">
-          {industry.icon && (
-            <div
-              className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-              style={{ background: 'linear-gradient(135deg, rgba(113, 147, 52, 0.2), rgba(113, 147, 52, 0.1))', color: '#719334' }}
-            >
-              <div className="w-6 h-6">
-                {typeof industry.icon === 'string' ? getIconComponent(industry.icon) : industry.icon}
-              </div>
-            </div>
-          )}
-          <h3 className="text-lg font-heading font-bold text-foreground mb-2">
+        <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+          <h3 className="text-xl font-heading font-bold text-foreground mb-2">
             {industry.title}
           </h3>
-          <p className="text-base text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             {industry.description}
           </p>
         </motion.div>
       ))}
     </motion.div>
 
-    {/* industriesFooterNote — only present on feasibility blog */}
     {blogData.industriesFooterNote && (
       <motion.p
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, margin: '-100px' }}
         variants={fadeInUp}
-        className="mt-8 text-base sm:text-lg text-muted-foreground leading-relaxed text-center"
+        className="mt-8 pt-6 border-t border-gray-200 text-base sm:text-lg text-gray-700 leading-relaxed italic"
       >
         {blogData.industriesFooterNote}
       </motion.p>
@@ -335,18 +300,16 @@ const IndustriesSection = ({ blogData }) => (
 // ─── WhyChooseUs — now includes icons ──────────────────────────────────────
 
 const WhyChooseUsSection = ({ blogData }) => (
-  <section id="whyChooseUs" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
+  <section id="whyChooseUs" className="py-8 sm:py-10 px-0 sm:px-0">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
-      <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-2">
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
         {blogData.whyChooseUsTitle || 'Why Choose Us'}
         {blogData.whyChooseUsTitleHighlight && (
-          <span className="block sm:inline-block ml-0 sm:ml-2 text-[#719334]">
-            {blogData.whyChooseUsTitleHighlight}
-          </span>
+          <span className="text-[#719334]"> {blogData.whyChooseUsTitleHighlight}</span>
         )}
       </h2>
       {blogData.whyChooseUsDescription && (
-        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-8 mt-4">
+        <p className="text-lg text-gray-700 leading-relaxed mb-8">
           {blogData.whyChooseUsDescription}
         </p>
       )}
@@ -357,25 +320,14 @@ const WhyChooseUsSection = ({ blogData }) => (
       whileInView="animate"
       viewport={{ once: true, margin: '-100px' }}
       variants={staggerContainer}
-      className="grid sm:grid-cols-2 gap-6"
+      className="space-y-6"
     >
       {blogData.whyChooseUs?.map((item, index) => (
-        <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all duration-300">
-          {/* icon — was missing before */}
-          {item.icon && (
-            <div
-              className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-              style={{ background: 'linear-gradient(135deg, rgba(113, 147, 52, 0.2), rgba(113, 147, 52, 0.1))', color: '#719334' }}
-            >
-              <div className="w-6 h-6">
-                {typeof item.icon === 'string' ? getIconComponent(item.icon) : item.icon}
-              </div>
-            </div>
-          )}
-          <h3 className="text-lg font-heading font-bold text-foreground mb-3" style={{ color: '#719334' }}>
+        <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+          <h3 className="text-xl font-heading font-bold text-foreground mb-2">
             {item.title}
           </h3>
-          <p className="text-base text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
             {item.description}
           </p>
         </motion.div>
@@ -445,11 +397,16 @@ const ConclusionSection = ({ blogData }) => (
 );
 
 const FAQSection = ({ blogData }) => (
-  <section id="faq" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
+  <section id="faq" className="py-12 sm:py-16 px-4 sm:px-6">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
-      <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-8">
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
         Frequently Asked Questions
       </h2>
+      {blogData.faqDescription && (
+        <p className="text-lg text-gray-700 leading-relaxed mb-12">
+          {blogData.faqDescription}
+        </p>
+      )}
     </motion.div>
 
     <motion.div
@@ -457,51 +414,22 @@ const FAQSection = ({ blogData }) => (
       whileInView="animate"
       viewport={{ once: true, margin: '-100px' }}
       variants={staggerContainer}
-      className="space-y-4"
+      className="space-y-8"
     >
       {/* third blog uses `faq`, first two use `faqs` — handle both */}
       {(blogData.faq || blogData.faqs)?.map((item, index) => (
-        <FAQItem key={index} question={item.question} answer={item.answer} />
+        <motion.div key={index} variants={fadeInUp}>
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3">
+            {index + 1}. {item.question}
+          </h3>
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+            {item.answer}
+          </p>
+        </motion.div>
       ))}
     </motion.div>
   </section>
 );
-
-const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <motion.div
-      variants={fadeInUp}
-      className="border border-gray-200 rounded-lg overflow-hidden hover:border-[#719334]/50 transition-all duration-300"
-    >
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-4 flex items-start justify-between gap-4 hover:bg-gray-50 transition-colors duration-300 text-left"
-      >
-        <span className="font-heading font-bold text-foreground text-base sm:text-lg">
-          {question}
-        </span>
-        <span
-          className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300"
-          style={{ background: '#719334', color: 'white', transform: isOpen ? 'rotate(180deg)' : 'rotate(0)' }}
-        >
-          ▼
-        </span>
-      </button>
-      <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
-      >
-        <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-          <p className="text-base text-muted-foreground leading-relaxed">{answer}</p>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-};
 
 // ─── CTA — now uses blogData fields instead of hardcoded strings ───────────
 
@@ -677,8 +605,9 @@ const BlogDetailTemplate = () => {
 
   return (
     <div className="min-h-screen bg-[#fefdfb]">
-      {/* Hero Section */}
-      <section className="relative pt-20 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Hero Section — With Background Image */}
+      <section className="relative pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src={blogData.image || '/aiautomation/aiuse.webp'}
@@ -686,41 +615,47 @@ const BlogDetailTemplate = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#f0fdf4]/40 via-[#fefdfb]/30 to-[#ecfdf5]/40"></div>
-        <div className="absolute inset-0 z-[1] bg-[radial-gradient(circle_at_30%_20%,rgba(122,130,80,0.03),transparent_50%)]"></div>
 
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <button
+        {/* Overlay Gradients — Lighter overlay for better image visibility */}
+        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-white/25 via-white/15 to-white/25"></div>
+        <div className="absolute inset-0 z-[1] bg-[radial-gradient(circle_at_30%_20%,rgba(113,147,52,0.02),transparent_50%)]"></div>
+
+        <div className="container mx-auto max-w-4xl relative z-10">
+          {/* <button
             onClick={() => router.push('/blogs')}
-            className="inline-flex items-center gap-2 text-white hover:opacity-80 transition-opacity font-medium text-sm mb-8"
+            className="inline-flex items-center gap-2 text-[#719334] hover:text-[#5a7529] transition-colors font-medium text-sm mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blogs
-          </button>
+          </button> */}
 
-          <motion.div initial="initial" animate="animate" variants={fadeInUp} className="max-w-4xl">
-            <div className="inline-block mb-4 px-3 py-1 rounded-full text-sm font-medium bg-white/90 backdrop-blur-sm" style={{ color: '#719334' }}>
+          <motion.div initial="initial" animate="animate" variants={fadeInUp}>
+            {/* Badge */}
+            <div className="inline-block mb-6 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase mt-8" style={{ background: '#719334', color: 'white' }}>
               {blogData.badge || 'AI Solutions'}
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-foreground mb-6 leading-tight">
+            {/* H1 Title */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-foreground mb-6 leading-tight">
               {blogData.title}
             </h1>
 
-            <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-3xl">
-              {blogData.description}
-            </p>
-
-            <div className="flex flex-wrap items-center gap-6 mt-8 text-sm text-white/80">
+            {/* Meta Information */}
+            <div className="flex flex-wrap items-center gap-6 text-sm text-white mb-8">
               <div className="flex items-center gap-2">
-                <span>📅</span>
+                <span className="font-medium">Published:</span>
                 <span>{blogData.date}</span>
               </div>
               <div className="flex items-center gap-2">
-                <span>⏱️</span>
+                <span className="font-medium">Read time:</span>
                 <span>{blogData.readTime}</span>
               </div>
             </div>
+
+            {/* Subtitle/Description */}
+            <p className="text-lg sm:text-xl text-white leading-relaxed max-w-3xl">
+              {blogData.description}
+            </p>
           </motion.div>
         </div>
       </section>

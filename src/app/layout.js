@@ -15,6 +15,9 @@ export const metadata = {
     description: 'AI & Machine Learning Solutions',
     images: ['/final3.png'],
   },
+  other: {
+    'msvalidate.01': '6A0893C130463AFFC73A8F0ABFA289BE',
+  },
 };
 
 export default function RootLayout({ children }) {
