@@ -5,6 +5,10 @@ import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'nemoclaw-implementation-guide-businesses',
+  'openclaw-implementation-guide-businesses',
+  '10-business-processes-to-automate-with-ai',
+  'ai-automation-for-businesses-australia',
   'ai-use-cases-for-small-businesses',
 ];
 

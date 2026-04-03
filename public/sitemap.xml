@@ -108,6 +108,33 @@
     <lastmod>2026-03-25</lastmod>
     <priority>0.8</priority>
   </url>
-  
+
+  <!-- Blogs - AI Automation for Businesses in Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/ai-automation-for-businesses-australia</loc>
+    <lastmod>2026-03-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - 10 Business Processes to Automate with AI -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/10-business-processes-to-automate-with-ai</loc>
+    <lastmod>2026-03-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Openclaw Implementation Guide -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/openclaw-implementation-guide-businesses</loc>
+    <lastmod>2026-03-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Nemoclaw Implementation Guide -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/nemoclaw-implementation-guide-businesses</loc>
+    <lastmod>2026-03-30</lastmod>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
