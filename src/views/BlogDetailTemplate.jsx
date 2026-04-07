@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import Link from 'next/link';
 import { useRouter, useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Menu, X } from 'lucide-react';
@@ -8,8 +9,103 @@ import ContactModal from '../components/ContactModal';
 import Footer from '../components/Footer';
 import Schema from '../components/Schema';
 import { useSeo } from '../hooks/useSeo';
-import { blogContents } from '../constants/blogData';
+import { blogContents, blogList } from '../constants/blogData';
 import { getIconComponent } from '../utils/iconRenderer';
+import { SITE_URL } from '../lib/seo';
+
+/** Key site pages for SEO internal linking from blog posts */
+const PILLAR_INTERNAL_LINKS = [
+  { href: '/solutions', label: 'AI solutions' },
+  { href: '/custom-ai', label: 'Custom AI development' },
+  { href: '/ai-automation', label: 'AI automation' },
+  { href: '/ai-feasibility-analysis', label: 'AI feasibility analysis' },
+  { href: '/strategy-report', label: 'Strategy report' },
+  { href: '/blogs', label: 'All blog articles' },
+];
+
+/** Insert related posts section at the end (after CTA) */
+function insertRelatedLinksOrder(order) {
+  if (!order?.length || order.includes('relatedLinks')) return order;
+  const ctaIdx = order.indexOf('cta');
+  if (ctaIdx >= 0) {
+    return [...order.slice(0, ctaIdx + 1), 'relatedLinks'];
+  }
+  return [...order, 'relatedLinks'];
+}
+
+/** Resolve related list cards: per-page `relatedSlugs` in blogData, else first 3 other posts */
+function resolveRelatedPosts(currentSlug, blogData) {
+  const bySlug = Object.fromEntries(blogList.map((p) => [p.slug, p]));
+  const fromConfig = blogData?.relatedSlugs
+    ?.map((s) => bySlug[s])
+    .filter((p) => p && p.slug !== currentSlug);
+  if (fromConfig?.length) {
+    return fromConfig.slice(0, 3);
+  }
+  return blogList.filter((p) => p.slug !== currentSlug).slice(0, 3);
+}
+
+/** Short date for card badge, e.g. "March 2026" → "Mar 2026" */
+function formatDateBadge(dateStr) {
+  if (!dateStr) return '';
+  const parts = dateStr.trim().split(/\s+/);
+  if (parts.length >= 2) {
+    return `${parts[0].slice(0, 3)} ${parts[1]}`;
+  }
+  return dateStr;
+}
+
+/**
+ * BlogPosting + FAQPage JSON-LD (@graph). FAQ answers match on-page FAQ from blogData.
+ */
+function buildBlogDetailJsonLd(blogData, slug) {
+  const rawImage = blogData.image || '/aiautomation/aiuse.webp';
+  const imageUrl = rawImage.startsWith('http') ? rawImage : `${SITE_URL}${rawImage.startsWith('/') ? '' : '/'}${rawImage}`;
+  const pageUrl = `${SITE_URL}/blogs/${slug}`;
+
+  const blogPosting = {
+    '@type': 'BlogPosting',
+    headline: blogData.title,
+    description: blogData.metaDescription,
+    image: imageUrl,
+    datePublished: blogData.date,
+    url: pageUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': pageUrl,
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Zynex Technologies',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zynex Technologies',
+    },
+  };
+
+  const faqItems = blogData.faq || blogData.faqs;
+  const graph = [blogPosting];
+
+  if (faqItems?.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: (item.question || '').trim(),
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: (item.answer || '').trim(),
+        },
+      })),
+    });
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  };
+}
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -396,6 +492,79 @@ const ConclusionSection = ({ blogData }) => (
   </section>
 );
 
+const RelatedLinksSection = ({ currentSlug, blogData }) => {
+  const otherPosts = resolveRelatedPosts(currentSlug, blogData);
+
+  const pillarLinkClass =
+    'text-sm text-[#719334] hover:text-[#5a7529] font-medium underline-offset-2 hover:underline transition-colors';
+
+  return (
+    <section id="relatedLinks" className="py-10 sm:py-14 px-0 w-full max-w-6xl mx-auto">
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: '-100px' }}
+        variants={fadeInUp}
+      >
+        <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-8">
+          Related blogs
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {otherPosts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blogs/${post.slug}`}
+              className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#719334] focus-visible:ring-offset-2 rounded-xl"
+            >
+              <article className="h-full rounded-xl overflow-hidden bg-white border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 hover:border-[#719334]/30">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/95 via-[#0f172a]/45 to-[#0f172a]/25"
+                    aria-hidden
+                  />
+                  <span className="absolute top-3 left-3 z-10 bg-white text-gray-900 text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm">
+                    {formatDateBadge(post.date)}
+                  </span>
+                  <span className="absolute top-3 right-3 z-10 text-white text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase opacity-95">
+                    Zynex
+                  </span>
+                  <h3 className="absolute bottom-0 left-0 right-0 z-10 p-4 pt-12 text-white font-heading font-bold text-sm sm:text-base leading-snug line-clamp-3">
+                    {post.title}
+                  </h3>
+                </div>
+                <div className="p-4 sm:p-5">
+                  <p className="font-heading font-bold text-foreground text-sm sm:text-base leading-snug line-clamp-3 group-hover:text-[#719334] transition-colors">
+                    {post.title}
+                  </p>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-10 pt-8 border-t border-gray-200">
+          <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-3">
+            Explore services
+          </p>
+          <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Internal links">
+            {PILLAR_INTERNAL_LINKS.map((item) => (
+              <Link key={item.href} href={item.href} className={pillarLinkClass}>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
 const FAQSection = ({ blogData }) => (
   <section id="faq" className="py-12 sm:py-16 px-4 sm:px-6">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
@@ -516,6 +685,11 @@ const BlogDetailTemplate = () => {
     description: blogData?.metaDescription || 'Discover AI insights and solutions from Zynex Technologies.',
   });
 
+  const jsonLd = useMemo(() => {
+    if (!blogData || !slug) return null;
+    return buildBlogDetailJsonLd(blogData, slug);
+  }, [blogData, slug]);
+
   if (!blogData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -570,6 +744,8 @@ const BlogDetailTemplate = () => {
       ? <ConclusionSection blogData={blogData} />
       : null,
 
+    relatedLinks: <RelatedLinksSection currentSlug={slug} blogData={blogData} />,
+
     // handle both `faq` (blog 3) and `faqs` (blogs 1 & 2)
     faq: (blogData.faq?.length > 0 || blogData.faqs?.length > 0)
       ? <FAQSection blogData={blogData} />
@@ -578,11 +754,12 @@ const BlogDetailTemplate = () => {
     cta: <CTASection blogData={blogData} onContactClick={() => setIsModalOpen(true)} />,
   };
 
-  // Use sectionOrder from data, with a sensible default
-  const sectionOrder = blogData.sectionOrder || [
+  // Use sectionOrder from data, with a sensible default; related posts appended after CTA
+  const defaultSectionOrder = [
     'summary', 'introduction', 'services', 'process',
     'benefits', 'industries', 'whyChooseUs', 'future', 'conclusion', 'faq', 'cta',
   ];
+  const sectionOrder = insertRelatedLinksOrder(blogData.sectionOrder || defaultSectionOrder);
 
   // ─── TOC: build from sectionOrder, only include sections that have data ──
   const tocLabelMap = {
@@ -595,6 +772,7 @@ const BlogDetailTemplate = () => {
     whyChooseUs:  blogData.whyChooseUsTitle  || 'Why Choose Us',
     future:       blogData.futureTitle       || 'Future',
     conclusion:   blogData.conclusionTitle   || 'Conclusion',
+    relatedLinks: 'Related posts',
     faq:          'FAQ',
     cta:          'Get Started',
   };
@@ -745,20 +923,7 @@ const BlogDetailTemplate = () => {
 
       <Footer />
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <Schema
-        schema={{
-          '@context': 'https://schema.org',
-          '@type': 'BlogPosting',
-          headline: blogData.title,
-          description: blogData.metaDescription,
-          image: blogData.image,
-          datePublished: blogData.date,
-          author: {
-            '@type': 'Organization',
-            name: 'Zynex Technologies',
-          },
-        }}
-      />
+      <Schema schema={jsonLd} />
     </div>
   );
 };

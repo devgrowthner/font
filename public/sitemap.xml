@@ -137,4 +137,11 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blogs - Custom AI vs Off-the-Shelf AI Tools -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/custom-ai-solutions-vs-off-the-shelf-ai-tools</loc>
+    <lastmod>2026-03-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
