@@ -144,4 +144,11 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blogs - AI Feasibility Analysis -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-why-every-business-needs-it</loc>
+    <lastmod>2026-03-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

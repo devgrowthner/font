@@ -5,6 +5,7 @@ import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'ai-feasibility-analysis-why-every-business-needs-it',
   'custom-ai-solutions-vs-off-the-shelf-ai-tools',
   'nemoclaw-implementation-guide-businesses',
   'openclaw-implementation-guide-businesses',
