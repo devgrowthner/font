@@ -55,6 +55,68 @@ function formatDateBadge(dateStr) {
   return dateStr;
 }
 
+const INLINE_LINK_CLASS =
+  'text-blue-600 underline underline-offset-2 decoration-1 hover:text-blue-800 font-medium';
+
+/**
+ * Apply glossary links (longest match first). `linkDefs`: [{ match, href }, ...]
+ */
+function renderWithInlineLinks(text, linkDefs) {
+  if (text == null || text === '') return null;
+  if (!linkDefs?.length) return text;
+
+  const sorted = [...linkDefs].sort((a, b) => b.match.length - a.match.length);
+  let chunks = [{ type: 'text', value: text }];
+
+  for (const { match, href } of sorted) {
+    chunks = chunks.flatMap((chunk) => {
+      if (chunk.type === 'link') return [chunk];
+      const val = chunk.value;
+      const i = val.indexOf(match);
+      if (i === -1) return [chunk];
+      const out = [];
+      if (i > 0) out.push({ type: 'text', value: val.slice(0, i) });
+      out.push({ type: 'link', href, label: match });
+      if (i + match.length < val.length) out.push({ type: 'text', value: val.slice(i + match.length) });
+      return out;
+    });
+  }
+
+  return chunks.map((chunk, i) => {
+    if (chunk.type === 'text') {
+      return <React.Fragment key={i}>{chunk.value}</React.Fragment>;
+    }
+    const { href, label } = chunk;
+    if (href.startsWith('http')) {
+      return (
+        <a
+          key={i}
+          href={href}
+          className={INLINE_LINK_CLASS}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {label}
+        </a>
+      );
+    }
+    return (
+      <Link key={i} href={href} className={INLINE_LINK_CLASS}>
+        {label}
+      </Link>
+    );
+  });
+}
+
+function RichParagraphs({ text, linkDefs, paragraphClassName }) {
+  if (!text) return null;
+  return (text || '').split('\n\n').map((paragraph, idx) => (
+    <p key={idx} className={paragraphClassName}>
+      {linkDefs?.length ? renderWithInlineLinks(paragraph, linkDefs) : paragraph}
+    </p>
+  ));
+}
+
 /**
  * BlogPosting + FAQPage JSON-LD (@graph). FAQ answers match on-page FAQ from blogData.
  */
@@ -197,9 +259,13 @@ const SummarySection = ({ blogData }) => (
         <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4">
           {blogData.summaryTitle || 'Summary'}
         </h2>
-        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-          {blogData.summaryDescription}
-        </p>
+        <div className="text-base sm:text-lg text-muted-foreground leading-relaxed space-y-3">
+          <RichParagraphs
+            text={blogData.summaryDescription}
+            linkDefs={blogData.inlineInternalLinks}
+            paragraphClassName="leading-relaxed"
+          />
+        </div>
       </div>
     </motion.div>
   </section>
@@ -213,11 +279,11 @@ const IntroductionSection = ({ blogData }) => (
           {blogData.introductionTitle || 'Introduction'}
         </h2>
         <div className="prose prose-lg max-w-none">
-          {(blogData.introductionDescription || '').split('\n\n').map((paragraph, index) => (
-            <p key={index} className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
-              {paragraph}
-            </p>
-          ))}
+          <RichParagraphs
+            text={blogData.introductionDescription}
+            linkDefs={blogData.inlineInternalLinks}
+            paragraphClassName="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4"
+          />
         </div>
         {/* introductionBullets */}
         {blogData.introductionBullets?.length > 0 && (
@@ -225,7 +291,11 @@ const IntroductionSection = ({ blogData }) => (
             {blogData.introductionBullets.map((item, index) => (
               <li key={index} className="flex items-start gap-3 text-base sm:text-lg text-muted-foreground">
                 <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#719334' }}></span>
-                <span>{item}</span>
+                <span>
+                  {blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(item, blogData.inlineInternalLinks)
+                    : item}
+                </span>
               </li>
             ))}
           </ul>
@@ -241,9 +311,13 @@ const ServicesSection = ({ blogData }) => (
       <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
         {blogData.servicesTitle || 'Services'}
       </h2>
-      <p className="text-lg text-gray-700 leading-relaxed mb-8">
-        {blogData.servicesDescription}
-      </p>
+      <div className="text-lg text-gray-700 leading-relaxed mb-8 space-y-4">
+        <RichParagraphs
+          text={blogData.servicesDescription}
+          linkDefs={blogData.inlineInternalLinks}
+          paragraphClassName="leading-relaxed"
+        />
+      </div>
     </motion.div>
 
     <motion.div
@@ -259,7 +333,9 @@ const ServicesSection = ({ blogData }) => (
             {service.title}
           </h3>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            {service.description}
+            {blogData.inlineInternalLinks?.length
+              ? renderWithInlineLinks(service.description, blogData.inlineInternalLinks)
+              : service.description}
           </p>
         </motion.div>
       ))}
@@ -274,7 +350,9 @@ const ProcessSection = ({ blogData }) => (
         {blogData.processTitle || 'Process'}
       </h2>
       <p className="text-lg text-gray-700 leading-relaxed mb-8">
-        {blogData.processDescription}
+        {blogData.inlineInternalLinks?.length
+          ? renderWithInlineLinks(blogData.processDescription, blogData.inlineInternalLinks)
+          : blogData.processDescription}
       </p>
     </motion.div>
 
@@ -300,7 +378,9 @@ const ProcessSection = ({ blogData }) => (
               {step.title}
             </h3>
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-              {step.description}
+              {blogData.inlineInternalLinks?.length
+                ? renderWithInlineLinks(step.description, blogData.inlineInternalLinks)
+                : step.description}
             </p>
           </div>
         </motion.div>
@@ -319,7 +399,9 @@ const BenefitsSection = ({ blogData }) => (
         )}
       </h2>
       <p className="text-lg text-gray-700 leading-relaxed mb-8">
-        {blogData.benefitsDescription}
+        {blogData.inlineInternalLinks?.length
+          ? renderWithInlineLinks(blogData.benefitsDescription, blogData.inlineInternalLinks)
+          : blogData.benefitsDescription}
       </p>
     </motion.div>
 
@@ -336,7 +418,9 @@ const BenefitsSection = ({ blogData }) => (
             {benefit.title}
           </h3>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            {benefit.description}
+            {blogData.inlineInternalLinks?.length
+              ? renderWithInlineLinks(benefit.description, blogData.inlineInternalLinks)
+              : benefit.description}
           </p>
         </motion.div>
       ))}
@@ -406,7 +490,9 @@ const WhyChooseUsSection = ({ blogData }) => (
       </h2>
       {blogData.whyChooseUsDescription && (
         <p className="text-lg text-gray-700 leading-relaxed mb-8">
-          {blogData.whyChooseUsDescription}
+          {blogData.inlineInternalLinks?.length
+            ? renderWithInlineLinks(blogData.whyChooseUsDescription, blogData.inlineInternalLinks)
+            : blogData.whyChooseUsDescription}
         </p>
       )}
     </motion.div>
@@ -424,7 +510,9 @@ const WhyChooseUsSection = ({ blogData }) => (
             {item.title}
           </h3>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            {item.description}
+            {blogData.inlineInternalLinks?.length
+              ? renderWithInlineLinks(item.description, blogData.inlineInternalLinks)
+              : item.description}
           </p>
         </motion.div>
       ))}
@@ -441,11 +529,11 @@ const FutureSection = ({ blogData }) => (
         {blogData.futureTitle || 'Future'}
       </h2>
       <div className="prose prose-lg max-w-none">
-        {(blogData.futureDescription || '').split('\n\n').map((paragraph, index) => (
-          <p key={index} className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
-            {paragraph}
-          </p>
-        ))}
+        <RichParagraphs
+          text={blogData.futureDescription}
+          linkDefs={blogData.inlineInternalLinks}
+          paragraphClassName="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4"
+        />
       </div>
       {/* futureBullets — present in third blog */}
       {blogData.futureBullets?.length > 0 && (
@@ -453,7 +541,11 @@ const FutureSection = ({ blogData }) => (
           {blogData.futureBullets.map((item, index) => (
             <li key={index} className="flex items-start gap-3 text-base sm:text-lg text-muted-foreground">
               <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#719334' }}></span>
-              <span>{item}</span>
+              <span>
+                {blogData.inlineInternalLinks?.length
+                  ? renderWithInlineLinks(item, blogData.inlineInternalLinks)
+                  : item}
+              </span>
             </li>
           ))}
         </ul>
@@ -471,11 +563,11 @@ const ConclusionSection = ({ blogData }) => (
         {blogData.conclusionTitle || 'Conclusion'}
       </h2>
       <div className="prose prose-lg max-w-none">
-        {(blogData.conclusionDescription || '').split('\n\n').map((paragraph, index) => (
-          <p key={index} className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4">
-            {paragraph}
-          </p>
-        ))}
+        <RichParagraphs
+          text={blogData.conclusionDescription}
+          linkDefs={blogData.inlineInternalLinks}
+          paragraphClassName="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4"
+        />
       </div>
       {/* conclusionBullets — present in third blog */}
       {blogData.conclusionBullets?.length > 0 && (
@@ -483,7 +575,11 @@ const ConclusionSection = ({ blogData }) => (
           {blogData.conclusionBullets.map((item, index) => (
             <li key={index} className="flex items-start gap-3 text-base sm:text-lg text-muted-foreground">
               <span className="mt-2 h-2 w-2 rounded-full flex-shrink-0" style={{ backgroundColor: '#719334' }}></span>
-              <span>{item}</span>
+              <span>
+                {blogData.inlineInternalLinks?.length
+                  ? renderWithInlineLinks(item, blogData.inlineInternalLinks)
+                  : item}
+              </span>
             </li>
           ))}
         </ul>
@@ -592,7 +688,9 @@ const FAQSection = ({ blogData }) => (
             {index + 1}. {item.question}
           </h3>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            {item.answer}
+            {blogData.inlineInternalLinks?.length
+              ? renderWithInlineLinks(item.answer, blogData.inlineInternalLinks)
+              : item.answer}
           </p>
         </motion.div>
       ))}
