@@ -271,7 +271,10 @@ const CustomAI = () => {
     { name: "Recommendation Engine", route: "/recommendation-engine" },
     { name: "Agentic AI", route: "/agentic-ai" },
     { name: "AI Automation", route: "/ai-automation" },
-    { name: "AI Feasibility Analysis", route: "/ai-feasibility-analysis" }
+    { name: "AI Feasibility Analysis", route: "/ai-feasibility-analysis" },
+    { name: "AI Development Company in Sydney", route: "/ai-development-company-sydney" },
+    { name: "AI Development Company in Melbourne", route: "/ai-development-company-melbourne" },
+    { name: "AI Development Company in Brisbane", route: "/ai-development-company-in-brisbane" }
 
   ];
 
