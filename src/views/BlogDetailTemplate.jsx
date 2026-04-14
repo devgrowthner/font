@@ -110,8 +110,9 @@ function renderWithInlineLinks(text, linkDefs) {
 
 function RichParagraphs({ text, linkDefs, paragraphClassName }) {
   if (!text) return null;
+  const cls = [paragraphClassName, 'whitespace-pre-line'].filter(Boolean).join(' ');
   return (text || '').split('\n\n').map((paragraph, idx) => (
-    <p key={idx} className={paragraphClassName}>
+    <p key={idx} className={cls}>
       {linkDefs?.length ? renderWithInlineLinks(paragraph, linkDefs) : paragraph}
     </p>
   ));
@@ -252,6 +253,22 @@ const TableOfContents = ({ sections, activeSection, onSectionClick, isMobile, on
 
 // ─── Section Components ────────────────────────────────────────────────────
 
+const PrefaceSection = ({ blogData }) => (
+  <section id="preface" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
+    <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+      <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div className="prose prose-lg max-w-none">
+          <RichParagraphs
+            text={blogData.prefaceDescription}
+            linkDefs={blogData.inlineInternalLinks}
+            paragraphClassName="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4"
+          />
+        </div>
+      </div>
+    </motion.div>
+  </section>
+);
+
 const SummarySection = ({ blogData }) => (
   <section id="summary" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
@@ -312,11 +329,28 @@ const ServicesSection = ({ blogData }) => (
         {blogData.servicesTitle || 'Services'}
       </h2>
       <div className="text-lg text-gray-700 leading-relaxed mb-8 space-y-4">
-        <RichParagraphs
-          text={blogData.servicesDescription}
-          linkDefs={blogData.inlineInternalLinks}
-          paragraphClassName="leading-relaxed"
-        />
+        {(blogData.servicesDescription || '').split('\n\n').map((paragraph, idx) => {
+          const lines = paragraph.split('\n');
+          return (
+            <p key={idx} className="leading-relaxed whitespace-pre-line">
+              {lines.map((line, lineIdx) => {
+                const trimmed = line.trim();
+                const isEmphasis = blogData.servicesEmphasisLines?.includes(trimmed);
+                const isBullet = blogData.servicesBulletLines?.includes(trimmed);
+                const lineText = blogData.inlineInternalLinks?.length
+                  ? renderWithInlineLinks(trimmed, blogData.inlineInternalLinks)
+                  : trimmed;
+                return (
+                  <React.Fragment key={lineIdx}>
+                    {isBullet ? '• ' : ''}
+                    {isEmphasis ? <span className="font-semibold text-foreground">{lineText}</span> : lineText}
+                    {lineIdx < lines.length - 1 ? '\n' : ''}
+                  </React.Fragment>
+                );
+              })}
+            </p>
+          );
+        })}
       </div>
     </motion.div>
 
@@ -329,14 +363,36 @@ const ServicesSection = ({ blogData }) => (
     >
       {blogData.services?.map((service, index) => (
         <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
-          <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3">
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-4">
             {service.title}
           </h3>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
             {blogData.inlineInternalLinks?.length
               ? renderWithInlineLinks(service.description, blogData.inlineInternalLinks)
               : service.description}
           </p>
+          
+          {service.example && (
+            <div className="mt-4 pt-4 border-t border-gray-100">
+              <p className="text-base font-semibold text-gray-700 mb-3">
+                {service.exampleTitle || 'Examples:'}
+              </p>
+              <ul className="space-y-2">
+                {service.example.map((item, exampleIndex) => (
+                  <li key={exampleIndex} className="text-base text-gray-600 flex items-start">
+                    <span className="text-[#719334] mr-2 font-bold">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          
+          {service.footer && (
+            <p className="mt-4 pt-4 border-t border-gray-100 text-base text-gray-700 italic">
+              {service.footer}
+            </p>
+          )}
         </motion.div>
       ))}
     </motion.div>
@@ -374,18 +430,43 @@ const ProcessSection = ({ blogData }) => (
             </div>
           </div>
           <div className="flex-1">
-            <h3 className="text-xl font-heading font-bold text-foreground mb-2">
+            <h3 className="text-xl font-heading font-bold text-foreground">
               {step.title}
             </h3>
-            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-              {blogData.inlineInternalLinks?.length
-                ? renderWithInlineLinks(step.description, blogData.inlineInternalLinks)
-                : step.description}
-            </p>
+            {step.description && (
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mt-2 whitespace-pre-line">
+                {step.description.split('\n').map((line, lineIdx, arr) => {
+                  const trimmed = line.trim();
+                  const isBullet = blogData.processBulletLines?.includes(trimmed);
+                  const lineText = blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(trimmed, blogData.inlineInternalLinks)
+                    : trimmed;
+                  return (
+                    <React.Fragment key={lineIdx}>
+                      {isBullet ? '• ' : ''}
+                      {lineText}
+                      {lineIdx < arr.length - 1 ? '\n' : ''}
+                    </React.Fragment>
+                  );
+                })}
+              </p>
+            )}
           </div>
         </motion.div>
       ))}
     </motion.div>
+
+    {blogData.processFooter && (
+      <motion.p
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: '-100px' }}
+        variants={fadeInUp}
+        className="mt-8 pt-6 border-t border-gray-200 text-base sm:text-lg text-gray-700 leading-relaxed italic"
+      >
+        {blogData.processFooter}
+      </motion.p>
+    )}
   </section>
 );
 
@@ -398,11 +479,30 @@ const BenefitsSection = ({ blogData }) => (
           <span className="text-[#719334]"> {blogData.benefitsTitleHighlight}</span>
         )}
       </h2>
-      <p className="text-lg text-gray-700 leading-relaxed mb-8">
-        {blogData.inlineInternalLinks?.length
-          ? renderWithInlineLinks(blogData.benefitsDescription, blogData.inlineInternalLinks)
-          : blogData.benefitsDescription}
-      </p>
+      <div className="text-lg text-gray-700 leading-relaxed mb-8 space-y-4">
+        {(blogData.benefitsDescription || '').split('\n\n').map((paragraph, idx) => {
+          const lines = paragraph.split('\n');
+          return (
+            <p key={idx} className="leading-relaxed whitespace-pre-line">
+              {lines.map((line, lineIdx) => {
+                const trimmed = line.trim();
+                const isEmphasis = blogData.benefitsEmphasisLines?.includes(trimmed);
+                const isBullet = blogData.benefitsBulletLines?.includes(trimmed);
+                const lineText = blogData.inlineInternalLinks?.length
+                  ? renderWithInlineLinks(trimmed, blogData.inlineInternalLinks)
+                  : trimmed;
+                return (
+                  <React.Fragment key={lineIdx}>
+                    {isBullet ? '• ' : ''}
+                    {isEmphasis ? <span className="font-semibold text-foreground">{lineText}</span> : lineText}
+                    {lineIdx < lines.length - 1 ? '\n' : ''}
+                  </React.Fragment>
+                );
+              })}
+            </p>
+          );
+        })}
+      </div>
     </motion.div>
 
     <motion.div
@@ -414,17 +514,51 @@ const BenefitsSection = ({ blogData }) => (
     >
       {blogData.benefits?.map((benefit, index) => (
         <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
-          <h3 className="text-xl font-heading font-bold text-foreground mb-2">
+          <h3 className="text-xl font-heading font-bold text-foreground mb-4">
             {benefit.title}
           </h3>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
             {blogData.inlineInternalLinks?.length
               ? renderWithInlineLinks(benefit.description, blogData.inlineInternalLinks)
               : benefit.description}
           </p>
+          
+          {benefit.example && (
+            <div className="mt-4 pt-4 border-t border-gray-100">
+              <p className="text-base font-semibold text-gray-700 mb-3">
+                {blogData.benefitExampleTitle || 'For example:'}
+              </p>
+              <ul className="space-y-2">
+                {benefit.example.map((item, exampleIndex) => (
+                  <li key={exampleIndex} className="text-base text-gray-600 flex items-start">
+                    <span className="text-[#719334] mr-2 font-bold">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          
+          {benefit.footer && (
+            <p className="mt-4 pt-4 border-t border-gray-100 text-base text-gray-700 italic">
+              {benefit.footer}
+            </p>
+          )}
         </motion.div>
       ))}
     </motion.div>
+
+    {blogData.benefitmainfooter && (
+      <motion.p
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: '-100px' }}
+        variants={fadeInUp}
+        className="mt-8 pt-6 border-t border-gray-200 text-base sm:text-lg text-gray-700 leading-relaxed"
+      >
+        {blogData.benefitmainfooter}
+      </motion.p>
+    )}
   </section>
 );
 
@@ -439,10 +573,55 @@ const IndustriesSection = ({ blogData }) => (
           <span className="text-[#719334]"> {blogData.industriesTitleHighlight}</span>
         )}
       </h2>
-      <p className="text-lg text-gray-700 leading-relaxed mb-8">
-        {blogData.industriesDescription}
+      {blogData.industriesDescription && (
+      <p className="text-lg text-gray-700 leading-relaxed mb-8 whitespace-pre-line">
+        {(blogData.industriesDescription || '').split('\n').map((line, lineIdx, arr) => {
+          const trimmed = line.trim();
+          const isBullet = blogData.industriesBulletLines?.includes(trimmed);
+          return (
+            <React.Fragment key={lineIdx}>
+              {isBullet ? '• ' : ''}
+              {trimmed}
+              {lineIdx < arr.length - 1 ? '\n' : ''}
+            </React.Fragment>
+          );
+        })}
       </p>
+      )}
     </motion.div>
+
+    {blogData.industriesTable?.headers?.length > 0 && blogData.industriesTable?.rows?.length > 0 && (
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: '-100px' }}
+        variants={fadeInUp}
+        className="mb-8 overflow-x-auto"
+      >
+        <table className="w-full min-w-[640px]">
+          <thead>
+            <tr>
+              {blogData.industriesTable.headers.map((header, idx) => (
+                <th key={idx} className="text-left py-2 pr-6 text-2xl font-heading font-bold text-foreground">
+                  {header}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {blogData.industriesTable.rows.map((row, rowIdx) => (
+              <tr key={rowIdx}>
+                {row.map((cell, cellIdx) => (
+                  <td key={cellIdx} className="text-left py-2 pr-6 text-lg text-gray-700 leading-relaxed">
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </motion.div>
+    )}
 
     <motion.div
       initial="initial"
@@ -453,12 +632,34 @@ const IndustriesSection = ({ blogData }) => (
     >
       {blogData.industries?.map((industry, index) => (
         <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
-          <h3 className="text-xl font-heading font-bold text-foreground mb-2">
+          <h3 className="text-xl font-heading font-bold text-foreground mb-4">
             {industry.title}
           </h3>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
             {industry.description}
           </p>
+          
+          {industry.example && (
+            <div className="mt-4 pt-4 border-t border-gray-100">
+              <p className="text-base font-semibold text-gray-700 mb-3">
+                {blogData.industryExampleTitle || 'Examples include:'}
+              </p>
+              <ul className="space-y-2">
+                {industry.example.map((item, exampleIndex) => (
+                  <li key={exampleIndex} className="text-base text-gray-600 flex items-start">
+                    <span className="text-[#719334] mr-2 font-bold">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          
+          {industry.footer && (
+            <p className="mt-4 pt-4 border-t border-gray-100 text-base text-gray-700 italic">
+              {industry.footer}
+            </p>
+          )}
         </motion.div>
       ))}
     </motion.div>
@@ -509,7 +710,7 @@ const WhyChooseUsSection = ({ blogData }) => (
           <h3 className="text-xl font-heading font-bold text-foreground mb-2">
             {item.title}
           </h3>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
             {blogData.inlineInternalLinks?.length
               ? renderWithInlineLinks(item.description, blogData.inlineInternalLinks)
               : item.description}
@@ -529,11 +730,50 @@ const FutureSection = ({ blogData }) => (
         {blogData.futureTitle || 'Future'}
       </h2>
       <div className="prose prose-lg max-w-none">
-        <RichParagraphs
-          text={blogData.futureDescription}
-          linkDefs={blogData.inlineInternalLinks}
-          paragraphClassName="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4"
-        />
+        {(blogData.futureDescription || '').split('\n\n').map((paragraph, idx) => {
+          const lines = paragraph.split('\n');
+          return (
+            <p key={idx} className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 whitespace-pre-line">
+              {lines.map((line, lineIdx) => {
+                // Check if line starts with any emphasis pattern
+                const emphasisMatch = blogData.futureEmphasisLines?.find(emp => line.trim().startsWith(emp));
+                let content;
+                
+                if (emphasisMatch) {
+                  // Split line into heading and rest
+                  const headingEnd = line.indexOf(':') + 1;
+                  const heading = line.substring(0, headingEnd);
+                  const rest = line.substring(headingEnd);
+                  
+                  const headingContent = blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(heading, blogData.inlineInternalLinks)
+                    : heading;
+                  const restContent = blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(rest, blogData.inlineInternalLinks)
+                    : rest;
+                  
+                  return (
+                    <React.Fragment key={lineIdx}>
+                      <span className="font-semibold text-foreground">{headingContent}</span>
+                      {restContent}
+                      {lineIdx < lines.length - 1 ? '\n' : ''}
+                    </React.Fragment>
+                  );
+                } else {
+                  content = blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(line, blogData.inlineInternalLinks)
+                    : line;
+                  return (
+                    <React.Fragment key={lineIdx}>
+                      {content}
+                      {lineIdx < lines.length - 1 ? '\n' : ''}
+                    </React.Fragment>
+                  );
+                }
+              })}
+            </p>
+          );
+        })}
       </div>
       {/* futureBullets — present in third blog */}
       {blogData.futureBullets?.length > 0 && (
@@ -584,6 +824,23 @@ const ConclusionSection = ({ blogData }) => (
           ))}
         </ul>
       )}
+    </motion.div>
+  </section>
+);
+
+const FinalThoughtsSection = ({ blogData }) => (
+  <section id="finalThoughts" className="py-12 sm:py-16 px-4 sm:px-6 max-w-4xl">
+    <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+      <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4">
+        {blogData.finalThoughtsTitle || 'Final Thoughts'}
+      </h2>
+      <div className="prose prose-lg max-w-none">
+        <RichParagraphs
+          text={blogData.finalThoughtsDescription}
+          linkDefs={blogData.inlineInternalLinks}
+          paragraphClassName="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4"
+        />
+      </div>
     </motion.div>
   </section>
 );
@@ -662,7 +919,17 @@ const RelatedLinksSection = ({ currentSlug, blogData }) => {
 };
 
 const FAQSection = ({ blogData }) => (
-  <section id="faq" className="py-12 sm:py-16 px-4 sm:px-6">
+  <section id="faq" className="py-12 sm:py-16 px-0 sm:px-0 max-w-4xl">
+    {blogData.beforeFaqNote && (
+      <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp} className="mb-8 pb-8 border-b border-gray-200">
+        <p className="text-lg sm:text-xl font-heading font-bold text-foreground">
+          {blogData.inlineInternalLinks?.length
+            ? renderWithInlineLinks(blogData.beforeFaqNote, blogData.inlineInternalLinks)
+            : blogData.beforeFaqNote}
+        </p>
+      </motion.div>
+    )}
+
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
       <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
         Frequently Asked Questions
@@ -687,11 +954,30 @@ const FAQSection = ({ blogData }) => (
           <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3">
             {index + 1}. {item.question}
           </h3>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
             {blogData.inlineInternalLinks?.length
               ? renderWithInlineLinks(item.answer, blogData.inlineInternalLinks)
               : item.answer}
           </p>
+          
+          {item.bulletPoints && (
+            <div className="mt-4 ml-4 sm:ml-6">
+              <ul className="space-y-2">
+                {item.bulletPoints.map((bullet, bulletIndex) => (
+                  <li key={bulletIndex} className="text-base sm:text-lg text-gray-600 flex items-start">
+                    <span className="text-[#719334] mr-3 font-bold">•</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          
+          {item.footer && (
+            <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed italic">
+              {item.footer}
+            </p>
+          )}
         </motion.div>
       ))}
     </motion.div>
@@ -788,7 +1074,7 @@ const BlogDetailTemplate = () => {
     return buildBlogDetailJsonLd(blogData, slug);
   }, [blogData, slug]);
 
-  if (!blogData) {
+  if (!blogData || !slug) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -804,8 +1090,19 @@ const BlogDetailTemplate = () => {
     );
   }
 
+  // Use sectionOrder from data, with a sensible default; related posts appended after CTA
+  const defaultSectionOrder = [
+    'summary', 'introduction', 'services', 'process',
+    'benefits', 'industries', 'whyChooseUs', 'future', 'conclusion', 'faq', 'cta',
+  ];
+  const sectionOrder = insertRelatedLinksOrder(blogData.sectionOrder || defaultSectionOrder);
+
   // ─── Section map — keyed by sectionOrder ids ───────────────────────────
   const sectionMap = {
+    preface: blogData.prefaceDescription
+      ? <PrefaceSection blogData={blogData} />
+      : null,
+
     summary: blogData.summaryTitle
       ? <SummarySection blogData={blogData} />
       : null,
@@ -814,7 +1111,7 @@ const BlogDetailTemplate = () => {
       ? <IntroductionSection blogData={blogData} />
       : null,
 
-    services: blogData.services?.length > 0
+    services: (blogData.services?.length > 0 || blogData.servicesTitle || blogData.servicesDescription)
       ? <ServicesSection blogData={blogData} />
       : null,
 
@@ -822,15 +1119,15 @@ const BlogDetailTemplate = () => {
       ? <ProcessSection blogData={blogData} />
       : null,
 
-    benefits: blogData.benefits?.length > 0
+    benefits: (blogData.benefits?.length > 0 || blogData.benefitsTitle || blogData.benefitsDescription)
       ? <BenefitsSection blogData={blogData} />
       : null,
 
-    industries: blogData.industries?.length > 0
+    industries: (blogData.industries?.length > 0 || blogData.industriesTitle || blogData.industriesDescription || blogData.industriesTable?.rows?.length > 0)
       ? <IndustriesSection blogData={blogData} />
       : null,
 
-    whyChooseUs: blogData.whyChooseUs?.length > 0
+    whyChooseUs: (blogData.whyChooseUs?.length > 0 || blogData.whyChooseUsTitle || blogData.whyChooseUsDescription)
       ? <WhyChooseUsSection blogData={blogData} />
       : null,
 
@@ -842,25 +1139,23 @@ const BlogDetailTemplate = () => {
       ? <ConclusionSection blogData={blogData} />
       : null,
 
+    finalThoughts: blogData.finalThoughtsTitle
+      ? <FinalThoughtsSection blogData={blogData} />
+      : null,
+
     relatedLinks: <RelatedLinksSection currentSlug={slug} blogData={blogData} />,
 
     // handle both `faq` (blog 3) and `faqs` (blogs 1 & 2)
-    faq: (blogData.faq?.length > 0 || blogData.faqs?.length > 0)
+    faq: (blogData.faq && Array.isArray(blogData.faq) && blogData.faq.length > 0) || (blogData.faqs && Array.isArray(blogData.faqs) && blogData.faqs.length > 0)
       ? <FAQSection blogData={blogData} />
       : null,
 
     cta: <CTASection blogData={blogData} onContactClick={() => setIsModalOpen(true)} />,
   };
 
-  // Use sectionOrder from data, with a sensible default; related posts appended after CTA
-  const defaultSectionOrder = [
-    'summary', 'introduction', 'services', 'process',
-    'benefits', 'industries', 'whyChooseUs', 'future', 'conclusion', 'faq', 'cta',
-  ];
-  const sectionOrder = insertRelatedLinksOrder(blogData.sectionOrder || defaultSectionOrder);
-
   // ─── TOC: build from sectionOrder, only include sections that have data ──
   const tocLabelMap = {
+    preface: undefined,
     summary:      blogData.summaryTitle      || 'Summary',
     introduction: blogData.introductionTitle || 'Introduction',
     services:     blogData.servicesTitle     || 'Services',
@@ -870,6 +1165,7 @@ const BlogDetailTemplate = () => {
     whyChooseUs:  blogData.whyChooseUsTitle  || 'Why Choose Us',
     future:       blogData.futureTitle       || 'Future',
     conclusion:   blogData.conclusionTitle   || 'Conclusion',
+    finalThoughts: blogData.finalThoughtsTitle || 'Final Thoughts',
     relatedLinks: 'Related posts',
     faq:          'FAQ',
     cta:          'Get Started',
@@ -877,7 +1173,8 @@ const BlogDetailTemplate = () => {
 
   const tocSections = sectionOrder
     .filter((key) => sectionMap[key] !== null)
-    .map((key) => ({ id: key, label: tocLabelMap[key] }));
+    .map((key) => ({ id: key, label: tocLabelMap[key] }))
+    .filter((s) => s.label);
 
   return (
     <div className="min-h-screen bg-[#fefdfb]">

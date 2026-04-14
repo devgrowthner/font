@@ -538,13 +538,15 @@ const BlogTemplate = () => {
 
   const blogData = blogContents[slug];
 
+  // ✅ Hooks always called unconditionally — guard comes after
   useSeo({
     title: blogData?.metaTitle || 'Blog | Zynex Technologies',
     description: blogData?.metaDescription || 'Discover AI insights and solutions from Zynex Technologies.',
     canonical: `https://zynextechnologies.com.au/blogs/${slug}`,
   });
 
-  if (!blogData) {
+  // ✅ Early exit guard — must check BOTH blogData AND slug
+  if (!blogData || !slug) {
     return (
       <div className="min-h-screen bg-[#fefdfb] flex items-center justify-center">
         <div className="text-center">

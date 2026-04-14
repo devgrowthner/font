@@ -88,14 +88,21 @@ const Blogs = () => {
       {/* Blog Posts Grid */}
       <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#fefdfb] via-[#fff7ed] to-[#fef3c7]/30">
         <div className="container mx-auto max-w-7xl">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {blogList.map((post) => (
+          {/* Safe guard: Check if blogList exists and has items */}
+          {!blogList || blogList.length === 0 ? (
+            <div className="text-center py-16">
+              <p className="text-lg text-muted-foreground font-medium">No blog posts available at the moment.</p>
+              <p className="text-sm text-muted-foreground mt-2">Check back soon for new content!</p>
+            </div>
+          ) : (
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {blogList.map((post) => (
               <motion.article
                 key={post.id}
                 variants={fadeInUp}
@@ -149,7 +156,8 @@ const Blogs = () => {
                 </div>
               </motion.article>
             ))}
-          </motion.div>
+            </motion.div>
+          )}
         </div>
       </section>
 
