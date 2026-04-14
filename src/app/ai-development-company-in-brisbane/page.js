@@ -6,7 +6,7 @@ export const metadata = buildPageMetadata({
   description:
     "Zynex Technologies is Brisbane's leading AI Development Company. We build custom AI, chatbot, and agentic AI solutions that deliver 3x ROI. Get a free consultation.",
   path: '/ai-development-company-in-brisbane',
-  canonicalPath: '/ai-development-brisbane',
+  canonicalPath: '/ai-development-company-in-brisbane',
 });
 
 export default function AiDevelopmentCompanyBrisbanePage() {

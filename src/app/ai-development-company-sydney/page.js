@@ -6,7 +6,7 @@ export const metadata = buildPageMetadata({
   description:
     "Zynex Technologies is Sydney's leading AI development company. We build custom AI solutions with measurable ROI—from strategy to deployment in weeks. Get a free consultation today.",
   path: '/ai-development-company-sydney',
-  canonicalPath: '/ai-development-sydney',
+  canonicalPath: '/ai-development-company-sydney',
 });
 
 export default function AiDevelopmentCompanySydneyPage() {
