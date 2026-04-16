@@ -1,5 +1,3 @@
-'use client';
-
 import StrategyReport from '@/views/StrategyReport';
 import { buildPageMetadata } from '@/lib/seo';
 
