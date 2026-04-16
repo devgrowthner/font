@@ -80,6 +80,18 @@ const Header = () => {
       tag: 'Chatbots, agents & automation',
       isExternal: false,
     },
+    {
+      name: 'AI Development — Adelaide',
+      link: '/ai-development-company-adelaide',
+      tag: 'Custom AI, ML & automation',
+      isExternal: false,
+    },
+    {
+      name: 'Custom AI Development — Perth',
+      link: '/custom-ai-development-company-in-perth',
+      tag: 'Chatbot, vision & agentic AI',
+      isExternal: false,
+    },
   ];
 
   const navLinks = [

@@ -7,6 +7,7 @@ import { buildPageMetadata } from '@/lib/seo';
 const DETAIL_TEMPLATE_SLUGS = [
   'ai-feasibility-analysis-why-every-business-needs-it',
   'custom-ai-solutions-vs-off-the-shelf-ai-tools',
+  'how-to-choose-an-ai-development-company-in-australia',
   'nemoclaw-implementation-guide-businesses',
   'openclaw-implementation-guide-businesses',
   '10-business-processes-to-automate-with-ai',

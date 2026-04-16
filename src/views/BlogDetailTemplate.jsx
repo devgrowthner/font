@@ -732,47 +732,73 @@ const FutureSection = ({ blogData }) => (
       <div className="prose prose-lg max-w-none">
         {(blogData.futureDescription || '').split('\n\n').map((paragraph, idx) => {
           const lines = paragraph.split('\n');
-          return (
-            <p key={idx} className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 whitespace-pre-line">
-              {lines.map((line, lineIdx) => {
-                // Check if line starts with any emphasis pattern
-                const emphasisMatch = blogData.futureEmphasisLines?.find(emp => line.trim().startsWith(emp));
-                let content;
-                
-                if (emphasisMatch) {
-                  // Split line into heading and rest
-                  const headingEnd = line.indexOf(':') + 1;
-                  const heading = line.substring(0, headingEnd);
-                  const rest = line.substring(headingEnd);
-                  
-                  const headingContent = blogData.inlineInternalLinks?.length
-                    ? renderWithInlineLinks(heading, blogData.inlineInternalLinks)
-                    : heading;
-                  const restContent = blogData.inlineInternalLinks?.length
-                    ? renderWithInlineLinks(rest, blogData.inlineInternalLinks)
-                    : rest;
-                  
-                  return (
-                    <React.Fragment key={lineIdx}>
-                      <span className="font-semibold text-foreground">{headingContent}</span>
-                      {restContent}
-                      {lineIdx < lines.length - 1 ? '\n' : ''}
-                    </React.Fragment>
-                  );
-                } else {
-                  content = blogData.inlineInternalLinks?.length
-                    ? renderWithInlineLinks(line, blogData.inlineInternalLinks)
-                    : line;
-                  return (
-                    <React.Fragment key={lineIdx}>
-                      {content}
-                      {lineIdx < lines.length - 1 ? '\n' : ''}
-                    </React.Fragment>
-                  );
-                }
-              })}
-            </p>
-          );
+          const blocks = [];
+          let buffer = [];
+
+          const flushBuffer = (key) => {
+            const text = buffer.join('\n').trimEnd();
+            buffer = [];
+            if (!text) return;
+            blocks.push(
+              <p
+                key={key}
+                className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 whitespace-pre-line"
+              >
+                {blogData.inlineInternalLinks?.length
+                  ? renderWithInlineLinks(text, blogData.inlineInternalLinks)
+                  : text}
+              </p>
+            );
+          };
+
+          lines.forEach((line, lineIdx) => {
+            const trimmed = line.trim();
+            const emphasisMatch = blogData.futureEmphasisLines?.find((emp) => trimmed.startsWith(emp));
+
+            if (!emphasisMatch) {
+              buffer.push(line);
+              return;
+            }
+
+            flushBuffer(`future-p-${idx}-${lineIdx}`);
+
+            const colonIdx = trimmed.indexOf(':');
+            const hasColon = colonIdx !== -1;
+            const headingRaw = hasColon ? trimmed.slice(0, colonIdx) : trimmed;
+            const restRaw = hasColon ? trimmed.slice(colonIdx + 1).trim() : '';
+
+            const headingContent = blogData.inlineInternalLinks?.length
+              ? renderWithInlineLinks(headingRaw, blogData.inlineInternalLinks)
+              : headingRaw;
+            const restContent =
+              restRaw && blogData.inlineInternalLinks?.length
+                ? renderWithInlineLinks(restRaw, blogData.inlineInternalLinks)
+                : restRaw;
+
+            blocks.push(
+              <h3
+                key={`future-h-${idx}-${lineIdx}`}
+                className="text-xl sm:text-2xl font-heading font-bold text-foreground mt-6 mb-2"
+              >
+                {headingContent}
+              </h3>
+            );
+
+            if (restContent) {
+              blocks.push(
+                <p
+                  key={`future-hp-${idx}-${lineIdx}`}
+                  className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 whitespace-pre-line"
+                >
+                  {restContent}
+                </p>
+              );
+            }
+          });
+
+          flushBuffer(`future-p-${idx}-final`);
+
+          return <React.Fragment key={idx}>{blocks}</React.Fragment>;
         })}
       </div>
       {/* futureBullets — present in third blog */}
