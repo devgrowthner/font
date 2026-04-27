@@ -556,7 +556,9 @@ const BenefitsSection = ({ blogData }) => (
         variants={fadeInUp}
         className="mt-8 pt-6 border-t border-gray-200 text-base sm:text-lg text-gray-700 leading-relaxed"
       >
-        {blogData.benefitmainfooter}
+        {blogData.inlineInternalLinks?.length
+          ? renderWithInlineLinks(blogData.benefitmainfooter, blogData.inlineInternalLinks)
+          : blogData.benefitmainfooter}
       </motion.p>
     )}
   </section>
