@@ -5,6 +5,7 @@ import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'ai-workflow-automation-business-efficiency',
   'ai-feasibility-analysis-why-every-business-needs-it',
   'custom-ai-solutions-vs-off-the-shelf-ai-tools',
   'how-to-choose-an-ai-development-company-in-australia',

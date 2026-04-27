@@ -16,6 +16,7 @@ export const metadata = {
     images: ['/final3.png'],
   },
   other: {
+    'google-site-verification': '2eTFTGprXiban7qVWHTPexftIxtelNswpGgEN8Q_6DE',
     'msvalidate.01': '6A0893C130463AFFC73A8F0ABFA289BE',
   },
 };

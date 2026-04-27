@@ -92,6 +92,18 @@ const Header = () => {
       tag: 'Chatbot, vision & agentic AI',
       isExternal: false,
     },
+    {
+      name: 'AI Development — Canberra',
+      link: '/ai-development-company-in-canberra',
+      tag: 'Custom AI, ML & automation',
+      isExternal: false,
+    },
+    {
+      name: 'AI Development — Gold Coast',
+      link: '/ai-development-gold-coast',
+      tag: 'Custom AI, ML & automation',
+      isExternal: false,
+    },
   ];
 
   const navLinks = [
