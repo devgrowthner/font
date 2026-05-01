@@ -3,7 +3,7 @@ import AIDevelopmentCompanyGoldCoast from '@/views/AIDevelopmentCompanyGoldCoast
 export const metadata = {
   title: 'AI Development Company in Gold Coast | Zynex Technologies',
   description:
-    'Zynex Technologies is Gold Coast\'s trusted AI development company. We deliver custom AI development, AI automation, machine learning services, and AI feasibility analysis for businesses across Queensland.',
+    'AI Development Company in Gold Coast delivering Custom AI, Automation & Machine Learning Services with validated ROI. Start with a free Feasibility Analysis.',
   canonical: 'https://zynextechnologies.com.au/ai-development-gold-coast',
 };
 

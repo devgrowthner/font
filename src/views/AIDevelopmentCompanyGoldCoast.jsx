@@ -298,7 +298,7 @@ const AIDevelopmentCompanyGoldCoast = () => {
               transition={{ duration: 0.55, ease: 'easeOut' }}
               className="relative h-[260px] sm:h-[360px] lg:h-[440px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl"
             >
-              <img src={bg2} alt="" className="w-full h-full object-cover" />
+              <img src={bg2} alt="Gold Coast main image" className="w-full h-full object-cover" />
             </motion.div>
           </div>
 
