@@ -322,6 +322,93 @@ const IntroductionSection = ({ blogData }) => (
   </section>
 );
 
+/**
+ * Step-by-step guide blocks (numbered/bulleted lists, link-led bullets) for long-form posts.
+ * Data: blogData.guideSteps — [{ heading, bodyParagraphs?, numberedItems?, bulletLinkItems?, plainBulletItems?, closingParagraphs? }]
+ */
+const GuideStepsSection = ({ blogData }) => {
+  const steps = blogData.guideSteps;
+  if (!steps?.length) return null;
+  const linkDefs = blogData.inlineInternalLinks;
+
+  return (
+    <section id="guideSteps" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
+      {steps.map((step, stepIdx) => (
+        <motion.div
+          key={stepIdx}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={fadeInUp}
+          className={stepIdx > 0 ? 'mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-gray-200' : ''}
+        >
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
+            {step.heading}
+          </h2>
+
+          {step.bodyParagraphs?.map((para, i) => (
+            <p
+              key={`bp-${i}`}
+              className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line"
+            >
+              {linkDefs?.length ? renderWithInlineLinks(para, linkDefs) : para}
+            </p>
+          ))}
+
+          {step.numberedItems?.length > 0 && (
+            <ol className="mt-4 mb-4 list-decimal pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed marker:font-medium">
+              {step.numberedItems.map((item, i) => (
+                <li key={i} className="pl-2">
+                  {item.label ? (
+                    <>
+                      <strong className="font-semibold text-foreground">{item.label}</strong>
+                      {linkDefs?.length ? renderWithInlineLinks(item.content, linkDefs) : item.content}
+                    </>
+                  ) : (
+                    (linkDefs?.length ? renderWithInlineLinks(item.content, linkDefs) : item.content)
+                  )}
+                </li>
+              ))}
+            </ol>
+          )}
+
+          {step.bulletLinkItems?.length > 0 && (
+            <ul className="mt-4 mb-4 list-disc pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
+              {step.bulletLinkItems.map((item, i) => (
+                <li key={i} className="pl-1">
+                  <Link href={item.href} className={INLINE_LINK_CLASS}>
+                    {item.name}
+                  </Link>
+                  {linkDefs?.length ? renderWithInlineLinks(item.suffix, linkDefs) : item.suffix}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {step.plainBulletItems?.length > 0 && (
+            <ul className="mt-4 mb-4 list-disc pl-6 sm:pl-8 space-y-3 text-base sm:text-lg text-gray-700 leading-relaxed">
+              {step.plainBulletItems.map((line, i) => (
+                <li key={i} className="pl-1">
+                  {linkDefs?.length ? renderWithInlineLinks(line, linkDefs) : line}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {step.closingParagraphs?.map((para, i) => (
+            <p
+              key={`cp-${i}`}
+              className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line"
+            >
+              {linkDefs?.length ? renderWithInlineLinks(para, linkDefs) : para}
+            </p>
+          ))}
+        </motion.div>
+      ))}
+    </section>
+  );
+};
+
 const ServicesSection = ({ blogData }) => (
   <section id="services" className="py-8 sm:py-10 px-0 sm:px-0">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
@@ -710,7 +797,9 @@ const WhyChooseUsSection = ({ blogData }) => (
       {blogData.whyChooseUs?.map((item, index) => (
         <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
           <h3 className="text-xl font-heading font-bold text-foreground mb-2">
-            {item.title}
+            {blogData.inlineInternalLinks?.length
+              ? renderWithInlineLinks(item.title, blogData.inlineInternalLinks)
+              : item.title}
           </h3>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
             {blogData.inlineInternalLinks?.length
@@ -1041,8 +1130,15 @@ const CTASection = ({ blogData, onContactClick }) => (
             }
           </h2>
           <p className="text-base sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            {blogData.ctaDescription ||
-              'Get expert guidance on choosing the right AI use case for your business. Our team will help you identify opportunities and implement solutions that drive real results.'}
+            {blogData.inlineInternalLinks?.length &&
+            blogData.ctaDescription &&
+            !blogData.ctaPlainText
+              ? renderWithInlineLinks(
+                  blogData.ctaDescription,
+                  blogData.inlineInternalLinks,
+                )
+              : blogData.ctaDescription ||
+                'Get expert guidance on choosing the right AI use case for your business. Our team will help you identify opportunities and implement solutions that drive real results.'}
           </p>
 
           <button
@@ -1143,6 +1239,8 @@ const BlogDetailTemplate = () => {
       ? <ServicesSection blogData={blogData} />
       : null,
 
+    guideSteps: blogData.guideSteps?.length > 0 ? <GuideStepsSection blogData={blogData} /> : null,
+
     process: blogData.processSteps?.length > 0
       ? <ProcessSection blogData={blogData} />
       : null,
@@ -1187,6 +1285,7 @@ const BlogDetailTemplate = () => {
     summary:      blogData.summaryTitle      || 'Summary',
     introduction: blogData.introductionTitle || 'Introduction',
     services:     blogData.servicesTitle     || 'Services',
+    guideSteps:   blogData.guideStepsTocLabel || 'Steps',
     process:      blogData.processTitle      || 'Process',
     benefits:     blogData.benefitsTitle     || 'Benefits',
     industries:   blogData.industriesTitle   || 'Industries',
@@ -1206,14 +1305,14 @@ const BlogDetailTemplate = () => {
 
   return (
     <div className="min-h-screen bg-[#fefdfb]">
-      {/* Hero Section — With Background Image */}
-      <section className="relative pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Hero — fixed height + cover image (aligned with BlogTemplate image column: 300 / 400 / 500px) */}
+      <section className={`relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden px-4 sm:px-6 lg:px-8 ${blogData.heroTopMargin ? 'mt-16 sm:mt-20 lg:mt-24' : ''}`}>
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
             src={blogData.image || '/aiautomation/aiuse.webp'}
             alt={blogData.title}
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover object-center"
           />
         </div>
 
@@ -1221,7 +1320,7 @@ const BlogDetailTemplate = () => {
         <div className="absolute inset-0 z-[1] bg-gradient-to-br from-white/25 via-white/15 to-white/25"></div>
         <div className="absolute inset-0 z-[1] bg-[radial-gradient(circle_at_30%_20%,rgba(113,147,52,0.02),transparent_50%)]"></div>
 
-        <div className="container mx-auto max-w-4xl relative z-10">
+        <div className="container relative z-10 mx-auto flex h-full max-w-4xl flex-col justify-center py-6 sm:py-8">
           {/* <button
             onClick={() => router.push('/blogs')}
             className="inline-flex items-center gap-2 text-[#719334] hover:text-[#5a7529] transition-colors font-medium text-sm mb-8"
@@ -1230,19 +1329,22 @@ const BlogDetailTemplate = () => {
             Back to Blogs
           </button> */}
 
-          <motion.div initial="initial" animate="animate" variants={fadeInUp}>
+          <motion.div initial="initial" animate="animate" variants={fadeInUp} className="min-h-0">
             {/* Badge */}
-            <div className="inline-block mb-6 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase mt-8" style={{ background: '#719334', color: 'white' }}>
+            <div
+              className="mb-3 inline-block rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide sm:mb-4"
+              style={{ background: '#719334', color: 'white' }}
+            >
               {blogData.badge || 'AI Solutions'}
             </div>
 
             {/* H1 Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-foreground mb-6 leading-tight">
+            <h1 className="mb-3 font-heading text-3xl font-extrabold leading-tight text-foreground sm:mb-4 sm:text-4xl md:text-5xl lg:text-6xl">
               {blogData.title}
             </h1>
 
             {/* Meta Information */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-white mb-8">
+            <div className="mb-3 flex flex-wrap gap-4 text-sm text-white sm:mb-4 sm:gap-6">
               <div className="flex items-center gap-2">
                 <span className="font-medium">Published:</span>
                 <span>{blogData.date}</span>
@@ -1253,8 +1355,8 @@ const BlogDetailTemplate = () => {
               </div>
             </div>
 
-            {/* Subtitle/Description */}
-            <p className="text-lg sm:text-xl text-white leading-relaxed max-w-3xl">
+            {/* Subtitle — clamp so hero height matches other blogs; full copy lives in summary when present */}
+            <p className="line-clamp-4 max-w-3xl text-base leading-relaxed text-white sm:text-lg sm:line-clamp-5">
               {blogData.description}
             </p>
           </motion.div>

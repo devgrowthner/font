@@ -113,6 +113,18 @@ const Header = () => {
       tag: 'Custom AI, ML & automation',
       isExternal: false,
     },
+    {
+      name: 'AI Solution for Healthcare Clinics (Australia)',
+      link: '/ai-solution-healthcare-clinics-australia',
+      tag: 'GP, dental & allied health',
+      isExternal: false,
+    },
+    {
+      name: 'AI Solution for Hospitality (Australia)',
+      link: '/ai-solution-hospitality-businesses-australia',
+      tag: 'Restaurants, cafes & venue groups',
+      isExternal: false,
+    },
   ];
 
   const navLinks = [

@@ -206,4 +206,32 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blogs - AI Implementation Guide for Businesses -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/ai-implementation-guide-for-businesses</loc>
+    <lastmod>2026-05-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Cost of AI Development for Businesses in Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/cost-of-ai-development-for-businesses-in-australia</loc>
+    <lastmod>2026-05-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Solution for Hospitality Businesses in Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/ai-solution-hospitality-businesses-australia</loc>
+    <lastmod>2026-05-04</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- AI Solution for Healthcare Clinics in Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/ai-solution-healthcare-clinics-australia</loc>
+    <lastmod>2026-05-04</lastmod>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>
