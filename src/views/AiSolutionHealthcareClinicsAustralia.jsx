@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   ArrowLeft,
+  ArrowRight,
   ChevronDown,
   Inbox,
   Moon,
@@ -13,6 +14,8 @@ import {
   Zap,
   BookOpen,
   LayoutDashboard,
+  Check,
+  BarChart3,
 } from 'lucide-react';
 import ContactModal from '../components/ContactModal';
 import Footer from '../components/Footer';
@@ -167,47 +170,47 @@ const AiSolutionHealthcareClinicsAustralia = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#fefdfb]">
+    <div className="min-h-screen bg-white">
       <Schema schema={faqSchema} />
 
-      {/* SECTION 1: HERO */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#f0fdf4] via-[#fefdfb] to-[#ecfdf5] px-4 pb-12 pt-20 sm:px-6 sm:pb-16 sm:pt-24 lg:px-8 lg:pb-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(122,130,80,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(122,130,80,0.08),transparent_50%)]" />
+      {/* Hero Section */}
+      <section
+        className="relative overflow-hidden px-4 pb-16 pt-16 sm:px-6 sm:pb-20 sm:pt-20 lg:px-8 lg:pb-24 lg:pt-24"
+        style={{ background: 'linear-gradient(135deg, #719334 0%, #5a7529 100%)' }}
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-32 -right-24 h-[28rem] w-[28rem] rounded-full bg-yellow-300/15 blur-3xl"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-32 -left-24 h-[28rem] w-[28rem] rounded-full bg-white/10 blur-3xl"
+        />
 
-        <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="mb-6 sm:mb-10">
-            <button
-              type="button"
-              onClick={() => router.push('/')}
-              className="group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-[#719334] sm:text-base"
-            >
-              <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1 sm:h-5 sm:w-5" />
-              Back
-            </button>
-          </div>
-
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-            <motion.div initial="initial" animate="animate" variants={fadeInUp}>
-              <h1 className="mb-5 font-heading text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:mb-6 sm:text-4xl md:text-5xl lg:text-[3.25rem]">
-                The AI Solution for Healthcare Clinics in Australia That Actually Reduces Operational Load
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <motion.div initial="initial" animate="animate" variants={fadeInUp} className="lg:col-span-7">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+                The AI Solution for Healthcare Clinics in Australia{' '}
+                <span className="text-yellow-300">That Actually Reduces Operational Load</span>
               </h1>
-              <p className="mb-8 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+
+              <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-8 sm:mb-10 leading-relaxed max-w-2xl">
                 Zynex Technologies builds AI operating systems for Australian clinics. We handle patient enquiries, automate admin workflows, and give your team the tools to work without the constant pressure of being understaffed and overloaded.
               </p>
-              <div className="mb-10 flex flex-col gap-3 sm:mb-12 sm:flex-row sm:gap-4">
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(true)}
-                  className="group inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#719334] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-base"
-                  style={{ background: `linear-gradient(to right, ${brandGreen}, ${brandGreen})` }}
+                  className="group inline-flex items-center justify-center gap-2 text-[#719334] px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl shadow-lg w-full sm:w-auto bg-white"
                 >
                   Book a Discovery Call
+                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
                 <Link
                   href="/what-is-zynex"
-                  className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl border-2 px-6 py-3.5 text-sm font-semibold transition-all hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-base"
-                  style={{ borderColor: 'rgba(113, 147, 52, 0.55)', color: brandGreen }}
+                  className="group inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 border-2 border-white/80 w-full sm:w-auto"
                 >
                   See How Zynex Works
                 </Link>
@@ -218,331 +221,292 @@ const AiSolutionHealthcareClinicsAustralia = () => {
               initial={{ opacity: 0, x: 32 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.55, ease: 'easeOut' }}
-              className="relative h-[260px] overflow-hidden rounded-2xl shadow-xl sm:h-[360px] sm:rounded-3xl lg:h-[440px]"
+              className="lg:col-span-5 relative max-w-md mx-auto lg:max-w-none lg:w-[92%] lg:ml-auto"
             >
-              <img src={heroImage} alt="" className="h-full w-full object-cover" />
               <div
-                className="absolute inset-0"
-                style={{ background: 'linear-gradient(135deg, rgba(113,147,52,0.25), rgba(0,0,0,0.15))' }}
+                aria-hidden="true"
+                className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-yellow-300/20 to-white/0 blur-2xl"
               />
+              <div className="relative aspect-[5/6] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/30">
+                <img
+                  src={`/${heroImage}`}
+                  alt="AI Healthcare Solution"
+                  className="w-full h-full object-cover object-center scale-105"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#5a7529]/30 via-transparent to-transparent"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: WHO THIS IS FOR */}
-      <section className="border-y border-gray-100 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
+      {/* Built For Healthcare Section */}
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center mb-12 sm:mb-16">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-3">BUILT FOR AUSTRALIAN HEALTHCARE PRACTICES</p>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-heading font-normal text-gray-700 mb-4 leading-relaxed max-w-6xl mx-auto">
+              Zynex Technologies built its healthcare AI system for the specific operational realities of running a practice in Australia. If your clinic deals with call volume, admin pressure, intake friction, or inconsistent patient follow-up, this was built for you.
+            </h2>
+          </motion.div>
+
           <motion.div
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-10 max-w-3xl sm:mb-14"
+            viewport={{ once: true, margin: '-80px' }}
+            variants={staggerContainer}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4"
           >
-            <p className="mb-2 text-sm font-semibold text-[#719334]">Built for Australian healthcare practices</p>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Zynex Technologies built its healthcare AI system for the specific operational realities of running a practice in Australia. If your clinic deals with call volume, admin pressure, intake friction, or inconsistent patient follow-up, this was built for you.
-            </p>
-          </motion.div>
-          <h2 className="mb-6 font-heading text-xl font-bold text-foreground sm:text-2xl">Business types</h2>
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {whoBusinessTypes.map((item) => (
-              <li
-                key={item}
-                className="rounded-2xl border bg-[#fefdfb] px-5 py-4 shadow-sm"
-                style={{ borderColor: 'rgba(113, 147, 52, 0.2)' }}
-              >
-                <span className="font-heading font-semibold text-foreground">{item}</span>
-              </li>
+            {whoBusinessTypes.map((type, idx) => (
+              <motion.div key={idx} variants={fadeInUp} className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+                <div className="w-12 h-12 rounded-full mx-auto mb-3" style={{ background: '#719334', opacity: 0.2 }}></div>
+                <p className="text-sm font-semibold text-gray-900">{type}</p>
+              </motion.div>
             ))}
-          </ul>
+          </motion.div>
         </div>
       </section>
 
-      {/* SECTION 3: THE PROBLEM */}
-      <section className="bg-gradient-to-b from-[#f8fafc] to-[#fefdfb] px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-10 max-w-4xl sm:mb-14"
-          >
-            <h2 className="mb-4 font-heading text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
+      {/* Problem Section */}
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(135deg, #f0fdf4 0%, #f5f5f4 100%)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center mb-12 sm:mb-16">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-3">THE PROBLEM</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-normal text-gray-800 mb-4 leading-relaxed max-w-6xl mx-auto">
               Australian clinics are not failing because of bad staff. They are failing because of operational overload.
             </h2>
-            <p className="mb-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              The pressure on Australian healthcare practices has moved well beyond missed calls. Staff are stretched across too many tasks, patient expectations have risen, and the admin burden is now heavy enough to push experienced practitioners out the door. RACGP&apos;s 2025 Health of the Nation report makes the scale of this very clear.
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              The pressure on Australian healthcare practices has moved well beyond missed calls. Staff are stretched across too many tasks, patient expectations have risen, and the admin burden is now heavy enough to push experienced practitioners out the door. RACGP's 2025 Health of the Nation report makes the scale of this very clear.
             </p>
           </motion.div>
 
-          <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((s, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="rounded-2xl border bg-white p-5 shadow-sm"
-                style={{ borderColor: 'rgba(113, 147, 52, 0.35)' }}
-              >
-                <p className="text-sm font-bold leading-relaxed text-foreground sm:text-base">{s.full}</p>
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: '-80px' }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6"
+          >
+            {stats.map((stat, idx) => (
+              <motion.div key={idx} variants={fadeInUp} className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 text-center">
+                <div className="text-4xl sm:text-5xl font-heading font-extrabold text-[#719334] mb-2">{stat.full.split('%')[0]}%</div>
+                <p className="text-sm sm:text-base text-gray-600">{stat.full.split('Source:')[0]}</p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-          <div className="max-w-4xl space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            <p>
+          <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-80px' }} variants={fadeInUp} className="mt-12 sm:mt-16 max-w-5xl mx-auto bg-white rounded-xl p-6 sm:p-8 border border-gray-200">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
               One in three GPs intend to stop practising within five years. That is not a workforce problem you can recruit your way out of, particularly when Jobs and Skills Australia reports that around 48% of professional occupations are already in shortage, with health professions among the hardest hit.
             </p>
-            <p>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
               The practical consequence for clinic owners is straightforward. Every hour your trained staff spend managing routine calls, chasing referral documents, re-entering patient data, or handling enquiries that could have been captured automatically is an hour not spent on clinical work. Zynex Technologies built its healthcare AI system specifically to close that gap.
             </p>
-            <div
-              className="rounded-2xl border-l-4 bg-[#f0fdf4]/50 p-5 sm:p-6"
-              style={{ borderLeftColor: brandGreen }}
-            >
-              <p className="text-base leading-relaxed text-foreground sm:text-lg">
-                76% of Australian customers say after-hours AI service is the greatest benefit of AI adoption. 63% prefer self-service as a first option before speaking to a person. Australian customer-service benchmarks
-              </p>
-            </div>
-            <p>
+          </motion.div>
+
+          <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-80px' }} variants={fadeInUp} className="mt-8 sm:mt-12 max-w-5xl mx-auto bg-[#f0fdf4] rounded-xl p-6 sm:p-8 border-l-4" style={{ borderColor: '#719334' }}>
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-2">Customer Benchmark</p>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-2">
+              <strong>76% of Australian customers say after-hours AI service is the greatest benefit of AI adoption. 63% prefer self-service as a first option before speaking to a person.</strong>
+            </p>
+            <p className="text-xs text-gray-600">Australian customer-service benchmarks</p>
+          </motion.div>
+
+          <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-80px' }} variants={fadeInUp} className="mt-8 sm:mt-12 max-w-5xl mx-auto bg-white rounded-xl p-6 sm:p-8 border border-gray-200">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
               Your patients expect fast, consistent responses. Your team is already at capacity. Zynex sits between those two realities and handles the operational layer so your people can focus on what actually requires them.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* SECTION 4: WHAT ZYNEX TECHNOLOGIES DELIVERS */}
-      <section className="border-y border-gray-100 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-10 max-w-4xl sm:mb-12"
-          >
-            <h2 className="mb-4 font-heading text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
+      {/* What Zynex Does Section */}
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white" id="how-zynex-works">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center mb-12 sm:mb-16">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-3">NOT A SINGLE TOOL. A FULL AI OPERATING SYSTEM.</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-normal text-gray-800 mb-4 leading-relaxed max-w-6xl mx-auto">
               Zynex is not a single tool. It is a full AI operating system for your clinic.
             </h2>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Zynex Technologies does not sell point solutions. Our healthcare AI system is a coordinated operating model that improves six areas of your clinic&apos;s operation at the same time. Each module connects to the others, which means the impact compounds rather than staying isolated.
+            <p className="text-base sm:text-lg text-gray-600">
+              Zynex Technologies does not sell point solutions. Our healthcare AI system is a coordinated operating model that improves six areas of your clinic's operation at the same time. Each module connects to the others, which means the impact compounds rather than staying isolated.
             </p>
           </motion.div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {outcomes.map(({ title, description, Icon }, i) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06 }}
-                className="flex gap-4 rounded-2xl border bg-[#fefdfb] p-5 sm:p-6"
-                style={{ borderColor: 'rgba(113, 147, 52, 0.25)' }}
-              >
-                <div
-                  className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl"
-                  style={{ backgroundColor: 'rgba(113, 147, 52, 0.12)', color: brandGreen }}
-                >
-                  <Icon className="h-5 w-5" strokeWidth={2} />
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: '-80px' }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
+          >
+            {outcomes.map((outcome, idx) => {
+              const Icon = outcome.Icon;
+              return (
+                <motion.div key={idx} variants={fadeInUp} className="bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{ background: '#719334', color: 'white' }}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3">{outcome.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{outcome.description}</p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+
+          {/* Modules Section */}
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: '-80px' }}
+            variants={fadeInUp}
+            className="mt-16 sm:mt-20 grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch"
+          >
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 lg:p-10 h-full flex flex-col shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#719334' }}>
+                  <Zap className="w-5 h-5 text-white" />
                 </div>
-                <div>
-                  <h3 className="mb-2 font-heading text-base font-bold text-foreground sm:text-lg">{title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{description}</p>
+                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-gray-900">What Zynex Technologies deploys in your clinic</h3>
+              </div>
+              <p className="text-base text-gray-600 mb-6 leading-relaxed">Zynex configures its healthcare AI system around your clinic's specific setup, size, and existing tools. Depending on your priorities, deployment includes a combination of the following:</p>
+              <ul className="space-y-3 flex-1">
+                {modules.map((module, idx) => (
+                  <li key={idx} className="flex items-start gap-3 bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-[#719334]/40 transition-colors">
+                    <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: '#719334' }}>
+                      <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                    </div>
+                    <span className="text-base text-gray-900 leading-relaxed">{module}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 lg:p-10 h-full flex flex-col shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#719334' }}>
+                  <BarChart3 className="w-5 h-5 text-white" />
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: SOLUTION MODULES */}
-      <section className="bg-gradient-to-br from-[#f0fdf4]/40 via-[#fefdfb] to-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-8 max-w-4xl sm:mb-10"
-          >
-            <h2 className="mb-4 font-heading text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
-              What Zynex Technologies deploys in your clinic
-            </h2>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Zynex configures its healthcare AI system around your clinic&apos;s specific setup, size, and existing tools. Depending on your priorities, deployment includes a combination of the following:
-            </p>
-          </motion.div>
-
-          <div className="mb-14 max-w-3xl space-y-3 text-base text-foreground sm:text-lg">
-            {modules.map((m) => (
-              <div key={m} className="leading-relaxed">
-                {m}
+                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-gray-900">How Zynex measures the impact</h3>
               </div>
-            ))}
-          </div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-6 max-w-4xl"
-          >
-            <h3 className="mb-3 font-heading text-xl font-bold text-foreground sm:text-2xl">
-              How Zynex measures the impact
-            </h3>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Zynex Technologies does not present vague AI benefit claims. Before deployment, we establish your clinic&apos;s actual baseline. After deployment, we track the same numbers so you can see what has changed and by how much.
-            </p>
-          </motion.div>
-
-          <div className="mb-8 max-w-3xl space-y-3 text-base text-foreground sm:text-lg">
-            {kpis.map((k) => (
-              <div key={k} className="leading-relaxed">
-                {k}
+              <p className="text-base text-gray-600 mb-6 leading-relaxed">Zynex Technologies does not present vague AI benefit claims. Before deployment, we establish your clinic's actual baseline. After deployment, we track the same numbers so you can see what has changed and by how much.</p>
+              <div className="space-y-3 flex-1">
+                {kpis.map((kpi, idx) => (
+                  <div key={idx} className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-[#719334]/40 transition-colors">
+                    <p className="text-xs font-semibold text-[#719334] mb-1 tracking-wider">KPI {String(idx + 1).padStart(2, '0')}</p>
+                    <p className="text-base text-gray-900">{kpi}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-
-          <p className="max-w-4xl text-base leading-relaxed text-foreground sm:text-lg">
-            Every outcome is measured against your clinic&apos;s own starting point. That is how Zynex holds itself accountable to results.
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION 6: WHY ZYNEX TECHNOLOGIES */}
-      <section className="border-y border-gray-100 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-4xl space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-          <h2 className="font-heading text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
-            Why Australian clinics choose Zynex Technologies over individual AI tools
-          </h2>
-          <p>
-            Most AI tools solve one problem in isolation. A phone bot handles inbound calls. An OCR tool reads forms. A CRM sends follow-up messages. You end up managing five separate systems that do not communicate with each other, still require a person to oversee them, and create new admin work while trying to reduce the old kind.
-          </p>
-          <p>
-            Zynex Technologies takes a different approach. Our healthcare AI system combines voice AI, workflow automation, document processing, internal knowledge, analytics, and governance into a single operating model. The modules are designed to work together, which means you get compounding gains across enquiry capture, intake speed, admin hours, and staff efficiency, rather than improvement in one area and no change in another.
-          </p>
-          <p>
-            Zynex also brings governance into the deployment from day one. AI in a healthcare context needs clear access controls, audit trails, and operating boundaries. Zynex builds that in rather than treating it as an afterthought. Clinic owners and practice managers maintain full visibility and control over how the system operates.
-          </p>
-          <p>
-            The result is not just a more efficient clinic. It is a clinic that operates with more consistency, more accountability, and more capacity to handle growth without adding proportional headcount.
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION 7: FINAL CTA BLOCK */}
-      <section className="px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-5xl">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: '-100px' }}
-            variants={fadeInUp}
-            className="relative overflow-hidden rounded-3xl border border-border/30 bg-white/90 p-8 shadow-lg backdrop-blur-xl lg:p-12"
-          >
-            <div
-              className="absolute left-0 right-0 top-0 h-1"
-              style={{ background: 'linear-gradient(to right, #719334, #5a7529)' }}
-            />
-            <div className="text-center">
-              <h2 className="mb-6 font-heading text-3xl font-extrabold text-foreground sm:text-4xl md:text-5xl">
-                Ready to see what Zynex would look like inside your clinic?
-              </h2>
-              <p className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Zynex Technologies starts every engagement with a discovery call. We look at your current setup, identify the biggest operational gaps, and show you exactly where our healthcare AI system would have the most immediate impact. No commitment required.
-              </p>
-              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <button
-                  type="button"
-                  onClick={() => setIsModalOpen(true)}
-                  className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#719334] to-[#5a7529] px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(113,147,52,0.45)] sm:w-auto sm:px-8 sm:text-base"
-                >
-                  Book a Discovery Call with Zynex
-                </button>
-                <Link
-                  href="/solutions"
-                  className="text-sm font-semibold text-[#719334] underline-offset-4 hover:underline sm:text-base"
-                >
-                  Explore other industries Zynex works with
-                </Link>
-              </div>
+              <p className="text-sm text-gray-600 italic mt-6 pt-6 border-t border-gray-100">Every outcome is measured against your clinic's own starting point. That is how Zynex holds itself accountable to results.</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#f0fdf4] via-emerald-50/90 to-[#ecfdf5] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="absolute left-0 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#719334]/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full bg-emerald-200/30 blur-3xl" />
-
-        <div className="relative z-10 mx-auto max-w-5xl">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: '-100px' }}
-            variants={fadeInUp}
-            className="mb-12 text-center sm:mb-16"
-          >
-            <p className="mb-2 text-center text-sm text-muted-foreground">Faq</p>
-            <h2 className="mb-4 font-heading text-3xl font-extrabold text-foreground sm:text-4xl md:text-5xl">FAQ</h2>
+      {/* Why Zynex Section */}
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(135deg, #f0fdf4 0%, #f5f5f4 100%)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center mb-12 sm:mb-16">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-3">DIFFERENTIATION</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-normal text-gray-800 mb-4 leading-relaxed max-w-6xl mx-auto">
+              Why Australian clinics choose Zynex Technologies over individual AI tools
+            </h2>
           </motion.div>
 
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: '-100px' }}
-            variants={staggerContainer}
-            className="space-y-4"
-          >
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={faq.question}
-                variants={fadeInUp}
-                className="overflow-hidden rounded-2xl border border-emerald-100/70 bg-white/80 backdrop-blur-sm transition-all duration-300 hover:border-emerald-200/80 hover:shadow-xl"
-              >
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true, margin: '-80px' }} className="w-full max-w-5xl lg:max-w-6xl mx-auto space-y-6 sm:space-y-8">
+            <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 border-l-4" style={{ borderLeftColor: '#719334' }}>
+              <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3">The Problem with Point Solutions</h3>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                Most AI tools solve one problem in isolation. A phone bot handles inbound calls. An OCR tool reads forms. A CRM sends follow-up messages. You end up managing five separate systems that do not communicate with each other, still require a person to oversee them, and create new admin work while trying to reduce the old kind.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 border-l-4" style={{ borderLeftColor: '#719334' }}>
+              <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3">The Zynex Approach</h3>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                Zynex Technologies takes a different approach. Our healthcare AI system combines voice AI, workflow automation, document processing, internal knowledge, analytics, and governance into a single operating model. The modules are designed to work together, which means you get compounding gains across enquiry capture, intake speed, admin hours, and staff efficiency, rather than improvement in one area and no change in another.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 border-l-4" style={{ borderLeftColor: '#719334' }}>
+              <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3">Governance from Day One</h3>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                Zynex also brings governance into the deployment from day one. AI in a healthcare context needs clear access controls, audit trails, and operating boundaries. Zynex builds that in rather than treating it as an afterthought. Clinic owners and practice managers maintain full visibility and control over how the system operates.
+              </p>
+            </div>
+
+            <div className="bg-[#f0fdf4] rounded-xl p-6 sm:p-8 border-l-4" style={{ borderColor: '#719334' }}>
+              <p className="text-base sm:text-lg text-gray-900 leading-relaxed">
+                <strong>The result is not just a more efficient clinic. It is a clinic that operates with more consistency, more accountability, and more capacity to handle growth without adding proportional headcount.</strong>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="container mx-auto max-w-5xl">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-normal text-gray-800 mb-4 leading-relaxed max-w-6xl mx-auto">
+              Faqs
+            </h2>
+          </motion.div>
+
+          <motion.div variants={staggerContainer} initial="initial" whileInView="animate" viewport={{ once: true }} className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <motion.div key={idx} variants={fadeInUp} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
                 <button
                   type="button"
-                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
-                  className="flex w-full items-center justify-between p-6 text-left transition-colors duration-200 hover:bg-[#f0fdf4]/50"
+                  onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
+                  className="w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-gray-50 transition-colors"
                 >
-                  <h3 className="pr-8 text-lg font-semibold text-foreground sm:text-xl">{faq.question}</h3>
-                  <ChevronDown
-                    className={`h-5 w-5 flex-shrink-0 transition-transform duration-300 sm:h-6 sm:w-6 ${
-                      openFaqIndex === index ? 'rotate-180' : ''
-                    }`}
-                    style={{ color: brandGreen }}
-                  />
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                  <ChevronDown className={`w-5 h-5 transition-transform flex-shrink-0 ${openFaqIndex === idx ? 'rotate-180' : ''}`} style={{ color: brandGreen }} />
                 </button>
-                <motion.div
-                  initial={false}
-                  animate={{
-                    height: openFaqIndex === index ? 'auto' : 0,
-                    opacity: openFaqIndex === index ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.5, ease: 'easeInOut' }}
-                  className="overflow-hidden"
-                >
-                  <p className="border-t border-emerald-100/50 px-6 pb-6 pt-4 text-base leading-relaxed text-muted-foreground">
-                    {faq.answer}
-                  </p>
-                </motion.div>
+                {openFaqIndex === idx && (
+                  <div className="px-5 sm:px-6 pb-5 sm:pb-6 border-t border-gray-100">
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      <p className="mx-auto max-w-4xl px-4 py-8 text-center text-xs text-muted-foreground sm:px-6">
-        Content document prepared by Growthner for Zynex Technologies | Healthcare industry page | Ready for CMS upload or design handoff
-      </p>
+      {/* CTA Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-[#719334] to-[#5a7529] rounded-3xl shadow-xl p-8 sm:p-12 lg:p-16 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-white mb-4">
+              Ready to see what Zynex would look like inside your clinic?
+            </h2>
+            <p className="text-base sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              Zynex Technologies starts every engagement with a discovery call. We look at your current setup, identify the biggest operational gaps, and show you exactly where our healthcare AI system would have the most immediate impact. No commitment required.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className="inline-flex items-center justify-center text-[#719334] px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-1 shadow-lg bg-white"
+              >
+                Book a Discovery Call with Zynex
+              </button>
+              <Link
+                href="/ai-solution-hospitality-businesses-australia"
+                className="inline-flex items-center justify-center text-white px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-1 border-2 border-white hover:bg-white/10"
+              >
+                Explore other industries Zynex works with
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Footer />

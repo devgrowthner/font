@@ -1,11 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  ArrowLeft,
   ChevronDown,
   CalendarCheck,
   Moon,
@@ -13,6 +11,10 @@ import {
   PhoneForwarded,
   MessageCircleQuestion,
   LayoutDashboard,
+  Check,
+  BarChart3,
+  Zap,
+  ArrowRight,
 } from 'lucide-react';
 import ContactModal from '../components/ContactModal';
 import Footer from '../components/Footer';
@@ -122,7 +124,7 @@ const faqs = [
   {
     question: 'What is an AI solution for hospitality businesses in Australia?',
     answer:
-      'An AI solution for hospitality businesses in Australia is a system that automates guest-facing tasks like reservation capture, after-hours enquiries, and phone response. Zynex Technologies builds these systems as a connected operating model, not a single-function tool, so venues can handle more enquiries without adding headcount.',
+      'An AI solution for hospitality businesses in Australia is a system that automates guest-facing and operational tasks, such as reservation capture, after-hours enquiry handling, callback recovery, and FAQ responses. Instead of relying solely on staff to answer calls and follow up with guests, the AI handles these tasks around the clock so your team can focus on in-venue service.',
   },
   {
     question: 'Is AI for venue operators in Australia suitable for small or single-site businesses?',
@@ -146,8 +148,7 @@ const faqs = [
   },
 ];
 
-const AiSolutionHospitalityBusinessesAustralia = () => {
-  const router = useRouter();
+const AiSolutionHospitalityBusinessesAustraliaNew = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
@@ -168,47 +169,46 @@ const AiSolutionHospitalityBusinessesAustralia = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#fefdfb]">
+    <div className="min-h-screen bg-white">
       <Schema schema={faqSchema} />
 
-      {/* SECTION 1: HERO */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#f0fdf4] via-[#fefdfb] to-[#ecfdf5] px-4 pb-12 pt-20 sm:px-6 sm:pb-16 sm:pt-24 lg:px-8 lg:pb-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(122,130,80,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(122,130,80,0.08),transparent_50%)]" />
+      <section
+        className="relative overflow-hidden px-4 pb-16 pt-16 sm:px-6 sm:pb-20 sm:pt-20 lg:px-8 lg:pb-24 lg:pt-24"
+        style={{ background: 'linear-gradient(135deg, #719334 0%, #5a7529 100%)' }}
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-32 -right-24 h-[28rem] w-[28rem] rounded-full bg-yellow-300/15 blur-3xl"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -bottom-32 -left-24 h-[28rem] w-[28rem] rounded-full bg-white/10 blur-3xl"
+        />
 
-        <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="mb-6 sm:mb-10">
-            <button
-              type="button"
-              onClick={() => router.push('/')}
-              className="group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-[#719334] sm:text-base"
-            >
-              <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1 sm:h-5 sm:w-5" />
-              Back
-            </button>
-          </div>
-
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-            <motion.div initial="initial" animate="animate" variants={fadeInUp}>
-              <h1 className="mb-5 font-heading text-3xl font-extrabold leading-tight tracking-tight text-foreground sm:mb-6 sm:text-4xl md:text-5xl lg:text-[3.25rem]">
-                The AI Solution for Hospitality Businesses in Australia That Captures More Bookings and Reduces Staff Pressure
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <motion.div initial="initial" animate="animate" variants={fadeInUp} className="lg:col-span-7">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
+                The AI Solution for Hospitality Businesses in Australia{' '}
+                <span className="text-yellow-300">That Captures More Bookings and Reduces Staff Pressure</span>
               </h1>
-              <p className="mb-8 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+
+              <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-8 sm:mb-10 leading-relaxed max-w-2xl">
                 Zynex Technologies builds AI operating systems for Australian hospitality businesses. We handle reservations, after-hours enquiries, and guest response so your team can focus on delivering the experience, not managing the phones.
               </p>
-              <div className="mb-10 flex flex-col gap-3 sm:mb-12 sm:flex-row sm:gap-4">
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(true)}
-                  className="group inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#719334] px-6 py-3.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-base"
-                  style={{ background: `linear-gradient(to right, ${brandGreen}, ${brandGreen})` }}
+                  className="group inline-flex items-center justify-center gap-2 text-[#719334] px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl shadow-lg w-full sm:w-auto bg-white"
                 >
                   Book a Discovery Call
+                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
                 <Link
                   href="/what-is-zynex"
-                  className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl border-2 px-6 py-3.5 text-sm font-semibold transition-all hover:-translate-y-0.5 sm:w-auto sm:px-8 sm:text-base"
-                  style={{ borderColor: 'rgba(113, 147, 52, 0.55)', color: brandGreen }}
+                  className="group inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 border-2 border-white/80 w-full sm:w-auto"
                 >
                   See How Zynex Works
                 </Link>
@@ -219,334 +219,270 @@ const AiSolutionHospitalityBusinessesAustralia = () => {
               initial={{ opacity: 0, x: 32 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.55, ease: 'easeOut' }}
-              className="relative h-[260px] overflow-hidden rounded-2xl shadow-xl sm:h-[360px] sm:rounded-3xl lg:h-[440px]"
+              className="lg:col-span-5 relative max-w-md mx-auto lg:max-w-none lg:w-[92%] lg:ml-auto"
             >
-              <img src={heroImage} alt="" className="h-full w-full object-cover" />
               <div
-                className="absolute inset-0"
-                style={{ background: 'linear-gradient(135deg, rgba(113,147,52,0.25), rgba(0,0,0,0.15))' }}
+                aria-hidden="true"
+                className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-yellow-300/20 to-white/0 blur-2xl"
               />
+              <div className="relative aspect-[5/6] sm:aspect-[16/10] lg:aspect-[5/6] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/30">
+                <img src={`/${heroImage}`} alt="AI Hospitality Solution" className="w-full h-full object-cover" />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#5a7529]/40 via-transparent to-transparent"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: WHO THIS IS FOR */}
-      <section className="border-y border-gray-100 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-10 max-w-3xl sm:mb-14"
-          >
-            <p className="mb-2 text-sm font-semibold text-[#719334]">
-              Built for Australian hospitality operators
-            </p>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center mb-12 sm:mb-16">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-3">Built for Australian hospitality operators</p>
+            <p className="text-xl sm:text-2xl md:text-3xl font-heading font-normal text-gray-700 mb-4 leading-relaxed max-w-6xl mx-auto">
               Zynex Technologies built its hospitality AI system for operators who are tired of losing bookings to missed calls, after-hours silence, and staff stretched too thin to follow up consistently.
             </p>
           </motion.div>
-          <h2 className="mb-6 font-heading text-xl font-bold text-foreground sm:text-2xl">Business types</h2>
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {whoBusinessTypes.map((item) => (
-              <li
-                key={item}
-                className="rounded-2xl border bg-[#fefdfb] px-5 py-4 shadow-sm"
-                style={{ borderColor: 'rgba(113, 147, 52, 0.2)' }}
-              >
-                <span className="font-heading font-semibold text-foreground">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
 
-      {/* SECTION 3: THE PROBLEM */}
-      <section className="bg-gradient-to-b from-[#f8fafc] to-[#fefdfb] px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
           <motion.div
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-10 max-w-4xl sm:mb-14"
+            viewport={{ once: true, margin: '-80px' }}
+            variants={staggerContainer}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4"
           >
-            <h2 className="mb-4 font-heading text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
+            {whoBusinessTypes.map((type, idx) => (
+              <motion.div key={idx} variants={fadeInUp} className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
+                <div className="w-12 h-12 rounded-full mx-auto mb-3" style={{ background: '#719334', opacity: 0.2 }}></div>
+                <p className="text-sm font-semibold text-gray-900">{type}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(135deg, #f0fdf4 0%, #f5f5f4 100%)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-normal text-gray-800 mb-4 leading-relaxed max-w-6xl mx-auto">
               Every missed call in hospitality is a booking you will never know you lost.
             </h2>
-            <p className="mb-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-5xl mx-auto">
               Hospitality runs on speed, consistency, and availability. A guest who calls to make a reservation and gets no answer does not call back. They book somewhere else. And with staffing pressure at its worst in years, the gap between the enquiries coming in and the capacity to respond to them is only getting wider.
             </p>
           </motion.div>
 
-          <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((s, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="rounded-2xl border bg-white p-5 shadow-sm"
-                style={{ borderColor: 'rgba(113, 147, 52, 0.35)' }}
-              >
-                <p className="text-sm font-bold leading-relaxed text-foreground sm:text-base">{s.full}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="max-w-4xl space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            <p>
-              The sector generates enormous commercial volume. But the operational model underneath it is still heavily dependent on staff being available, phones being answered, and follow-up happening consistently. When any one of those breaks down, revenue walks out the door quietly and without a complaint.
-            </p>
-            <p>
-              The staffing shortage is not temporary. Jobs and Skills Australia&apos;s recruitment data shows Accommodation and Food Services under sustained pressure across the country. Operators cannot simply hire their way to a better guest experience. The only practical path is to make the team they have more effective by taking the repetitive, automatable work off their plate entirely.
-            </p>
-            <div
-              className="rounded-2xl border-l-4 bg-[#f0fdf4]/50 p-5 sm:p-6"
-              style={{ borderLeftColor: brandGreen }}
-            >
-              <p className="text-base leading-relaxed text-foreground sm:text-lg">
-                58% of Australian businesses have already seen the benefit of 24/7 AI support availability. 45% have seen reduced errors and better issue resolution after AI deployment. Australian customer-service benchmarks
-              </p>
-            </div>
-            <p>
-              Zynex sits in the gap between your guest&apos;s expectation of instant response and your team&apos;s actual capacity to deliver it. After-hours, during a busy service, or when every staff member is occupied, the Zynex system keeps the front door open.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: WHAT ZYNEX TECHNOLOGIES DELIVERS */}
-      <section className="border-y border-gray-100 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
           <motion.div
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-10 max-w-4xl sm:mb-12"
+            viewport={{ once: true, margin: '-80px' }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6"
           >
-            <h2 className="mb-4 font-heading text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
+            {stats.map((stat, idx) => (
+              <motion.div key={idx} variants={fadeInUp} className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200">
+                <p className="text-sm sm:text-base text-gray-700 font-semibold leading-relaxed">{stat.full}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-80px' }} variants={fadeInUp} className="mt-12 sm:mt-16 max-w-5xl mx-auto bg-white rounded-xl p-6 sm:p-8 border border-gray-200">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4">
+              The sector generates enormous commercial volume. But the operational model underneath it is still heavily dependent on staff being available, phones being answered, and follow-up happening consistently. When any one of those breaks down, revenue walks out the door quietly and without a complaint.
+            </p>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              The staffing shortage is not temporary. Jobs and Skills Australia&apos;s recruitment data shows Accommodation and Food Services under sustained pressure across the country. Operators cannot simply hire their way to a better guest experience. The only practical path is to make the team they have more effective by taking the repetitive, automatable work off their plate entirely.
+            </p>
+          </motion.div>
+
+          <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-80px' }} variants={fadeInUp} className="mt-8 sm:mt-12 max-w-5xl mx-auto bg-[#f0fdf4] rounded-xl p-6 sm:p-8 border-l-4" style={{ borderColor: '#719334' }}>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              <strong>58% of Australian businesses have already seen the benefit of 24/7 AI support availability. 45% have seen reduced errors and better issue resolution after AI deployment. Australian customer-service benchmarks</strong>
+            </p>
+          </motion.div>
+
+          <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-80px' }} variants={fadeInUp} className="mt-8 sm:mt-12 max-w-5xl mx-auto bg-white rounded-xl p-6 sm:p-8 border border-gray-200">
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              Zynex sits in the gap between your guest&apos;s expectation of instant response and your team&apos;s actual capacity to deliver it. After-hours, during a busy service, or when every staff member is occupied, the Zynex system keeps the front door open.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white" id="how-zynex-works">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-normal text-gray-800 mb-4 leading-relaxed max-w-6xl mx-auto">
               Zynex does not just answer phones. It runs the operational layer your front-of-house cannot cover alone.
             </h2>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="text-base sm:text-lg text-gray-600">
               Zynex Technologies does not offer a single-function tool. Our hospitality AI system is a coordinated operating model that improves six areas of your venue&apos;s operation at once. Each part connects to the others so the gains compound rather than sit in isolation.
             </p>
           </motion.div>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {outcomes.map(({ title, description, Icon }, i) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06 }}
-                className="flex gap-4 rounded-2xl border bg-[#fefdfb] p-5 sm:p-6"
-                style={{ borderColor: 'rgba(113, 147, 52, 0.25)' }}
-              >
-                <div
-                  className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl"
-                  style={{ backgroundColor: 'rgba(113, 147, 52, 0.12)', color: brandGreen }}
-                >
-                  <Icon className="h-5 w-5" strokeWidth={2} />
-                </div>
-                <div>
-                  <h3 className="mb-2 font-heading text-base font-bold text-foreground sm:text-lg">{title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: SOLUTION MODULES */}
-      <section className="bg-gradient-to-br from-[#f0fdf4]/40 via-[#fefdfb] to-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
           <motion.div
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-            className="mb-8 max-w-4xl sm:mb-10"
+            viewport={{ once: true, margin: '-80px' }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
           >
-            <h2 className="mb-4 font-heading text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
-              What Zynex Technologies deploys in your venue
-            </h2>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Zynex configures its hospitality AI system around your venue&apos;s specific setup, service style, and existing tools. Depending on your priorities, deployment includes a combination of the following:
-            </p>
+            {outcomes.map((outcome, idx) => {
+              const Icon = outcome.Icon;
+              return (
+                <motion.div key={idx} variants={fadeInUp} className="bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow">
+                  <div className="w-12 h-12 rounded-lg mb-4 flex items-center justify-center" style={{ background: '#719334', color: 'white' }}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-heading font-bold text-gray-900 mb-3">{outcome.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{outcome.description}</p>
+                </motion.div>
+              );
+            })}
           </motion.div>
 
-          <div className="mb-14 max-w-3xl space-y-3 text-base text-foreground sm:text-lg">
-            {modules.map((m) => (
-              <div key={m} className="leading-relaxed">
-                {m}
-              </div>
-            ))}
-          </div>
-
           <motion.div
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-80px' }}
             variants={fadeInUp}
-            className="mb-6 max-w-4xl"
+            className="mt-16 sm:mt-20 grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch"
           >
-            <h3 className="mb-3 font-heading text-xl font-bold text-foreground sm:text-2xl">
-              How Zynex measures the impact
-            </h3>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Zynex Technologies does not make vague claims about improvement. Before deployment, we establish your venue&apos;s actual baseline. After deployment, we track the same numbers so the difference is visible and accountable.
-            </p>
-          </motion.div>
-
-          <div className="mb-8 max-w-3xl space-y-3 text-base text-foreground sm:text-lg">
-            {kpis.map((k) => (
-              <div key={k} className="leading-relaxed">
-                {k}
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 lg:p-10 h-full flex flex-col shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#719334' }}>
+                  <Zap className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-gray-900">What Zynex Technologies deploys in your venue</h3>
               </div>
-            ))}
-          </div>
-
-          <p className="max-w-4xl text-base leading-relaxed text-foreground sm:text-lg">
-            Every result is measured against your venue&apos;s own starting point. That is how Zynex holds itself accountable.
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION 6: WHY ZYNEX TECHNOLOGIES */}
-      <section className="border-y border-gray-100 bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-4xl space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-          <h2 className="font-heading text-2xl font-extrabold text-foreground sm:text-3xl md:text-4xl">
-            Why hospitality operators choose Zynex Technologies over standard booking tools
-          </h2>
-          <p>
-            Most venues already have a booking platform. What they do not have is a system that handles everything around the booking: the after-hours call that came in before the platform was checked, the function enquiry that sat in a voicemail for two days, the guest question that pulled a staff member off the floor during service.
-          </p>
-          <p>
-            Zynex Technologies builds the operational layer that sits around your existing tools, not a replacement for them. Our hospitality AI system combines voice AI, workflow automation, guest response handling, internal knowledge, and management reporting into one connected model. The parts work together, which means enquiry capture, guest response, staff efficiency, and owner visibility all improve at the same time rather than one at the expense of another.
-          </p>
-          <p>
-            Hospitality is not going to solve its staffing shortage by hiring. The operators who will grow consistently are the ones who make their existing team more effective. Zynex removes the automatable work from your staff&apos;s plate so the people you have can focus entirely on the guest experience in front of them.
-          </p>
-          <p>
-            The result is a venue that responds faster, loses fewer bookings, handles more function enquiries, and gives its owner a clearer picture of what is actually happening across the operation, without adding headcount or management overhead to get there.
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION 7: FINAL CTA BLOCK */}
-      <section className="px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-5xl">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: '-100px' }}
-            variants={fadeInUp}
-            className="relative overflow-hidden rounded-3xl border border-border/30 bg-white/90 p-8 shadow-lg backdrop-blur-xl lg:p-12"
-          >
-            <div
-              className="absolute left-0 right-0 top-0 h-1"
-              style={{ background: 'linear-gradient(to right, #719334, #5a7529)' }}
-            />
-            <div className="text-center">
-              <h2 className="mb-6 font-heading text-3xl font-extrabold text-foreground sm:text-4xl md:text-5xl">
-                Ready to see what Zynex would look like inside your venue?
-              </h2>
-              <p className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                Zynex Technologies starts every engagement with a discovery call. We look at your current setup, understand your busiest operational pressure points, and show you exactly where our hospitality AI system would have the most immediate impact. No commitment required.
+              <p className="text-base text-gray-600 mb-6 leading-relaxed">
+                Zynex configures its hospitality AI system around your venue&apos;s specific setup, service style, and existing tools. Depending on your priorities, deployment includes a combination of the following:
               </p>
-              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <button
-                  type="button"
-                  onClick={() => setIsModalOpen(true)}
-                  className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#719334] to-[#5a7529] px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(113,147,52,0.45)] sm:w-auto sm:px-8 sm:text-base"
-                >
-                  Book a Discovery Call with Zynex
-                </button>
-                <Link
-                  href="/solutions"
-                  className="text-sm font-semibold text-[#719334] underline-offset-4 hover:underline sm:text-base"
-                >
-                  Explore other industries Zynex works with
-                </Link>
+              <ul className="space-y-3 flex-1">
+                {modules.map((module, idx) => (
+                  <li key={idx} className="flex items-start gap-3 bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-[#719334]/40 transition-colors">
+                    <div className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{ background: '#719334' }}>
+                      <Check className="w-4 h-4 text-white" strokeWidth={3} />
+                    </div>
+                    <span className="text-base text-gray-900 leading-relaxed">{module}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 lg:p-10 h-full flex flex-col shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: '#719334' }}>
+                  <BarChart3 className="w-5 h-5 text-white" />
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-gray-900">How Zynex measures the impact</h3>
               </div>
+              <p className="text-base text-gray-600 mb-6 leading-relaxed">
+                Zynex Technologies does not make vague claims about improvement. Before deployment, we establish your venue&apos;s actual baseline. After deployment, we track the same numbers so the difference is visible and accountable.
+              </p>
+              <div className="space-y-3 flex-1">
+                {kpis.map((kpi, idx) => (
+                  <div key={idx} className="bg-gray-50 border border-gray-200 rounded-lg p-4 hover:border-[#719334]/40 transition-colors">
+                    <p className="text-xs font-semibold text-[#719334] mb-1 tracking-wider">KPI {String(idx + 1).padStart(2, '0')}</p>
+                    <p className="text-base text-gray-900">{kpi}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-gray-600 italic mt-6 pt-6 border-t border-gray-100">Every result is measured against your venue&apos;s own starting point. That is how Zynex holds itself accountable.</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#f0fdf4] via-emerald-50/90 to-[#ecfdf5] px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="absolute left-0 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#719334]/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full bg-emerald-200/30 blur-3xl" />
-
-        <div className="relative z-10 mx-auto max-w-5xl">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: '-100px' }}
-            variants={fadeInUp}
-            className="mb-12 text-center sm:mb-16"
-          >
-            <p className="mb-2 text-center text-sm text-muted-foreground">Faq</p>
-            <h2 className="mb-4 font-heading text-3xl font-extrabold text-foreground sm:text-4xl md:text-5xl">FAQ</h2>
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8" style={{ background: 'linear-gradient(135deg, #f0fdf4 0%, #f5f5f4 100%)' }}>
+        <div className="container mx-auto max-w-6xl">
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true }} className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-normal text-gray-800 mb-4 leading-relaxed max-w-6xl mx-auto">
+              Why hospitality operators choose Zynex Technologies over standard booking tools
+            </h2>
           </motion.div>
 
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: '-100px' }}
-            variants={staggerContainer}
-            className="space-y-4"
-          >
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={faq.question}
-                variants={fadeInUp}
-                className="overflow-hidden rounded-2xl border border-emerald-100/70 bg-white/80 backdrop-blur-sm transition-all duration-300 hover:border-emerald-200/80 hover:shadow-xl"
-              >
+          <motion.div variants={fadeInUp} initial="initial" whileInView="animate" viewport={{ once: true, margin: '-80px' }} className="w-full max-w-5xl lg:max-w-6xl mx-auto space-y-6 sm:space-y-8">
+            <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 border-l-4" style={{ borderLeftColor: '#719334' }}>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                Most venues already have a booking platform. What they do not have is a system that handles everything around the booking: the after-hours call that came in before the platform was checked, the function enquiry that sat in a voicemail for two days, the guest question that pulled a staff member off the floor during service.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 border-l-4" style={{ borderLeftColor: '#719334' }}>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                Zynex Technologies builds the operational layer that sits around your existing tools, not a replacement for them. Our hospitality AI system combines voice AI, workflow automation, guest response handling, internal knowledge, and management reporting into one connected model. The parts work together, which means enquiry capture, guest response, staff efficiency, and owner visibility all improve at the same time rather than one at the expense of another.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 border-l-4" style={{ borderLeftColor: '#719334' }}>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                Hospitality is not going to solve its staffing shortage by hiring. The operators who will grow consistently are the ones who make their existing team more effective. Zynex removes the automatable work from your staff&apos;s plate so the people you have can focus entirely on the guest experience in front of them.
+              </p>
+            </div>
+
+            <div className="bg-[#f0fdf4] rounded-xl p-6 sm:p-8 border-l-4" style={{ borderColor: '#719334' }}>
+              <p className="text-base sm:text-lg text-gray-900 leading-relaxed">
+                <strong>The result is a venue that responds faster, loses fewer bookings, handles more function enquiries, and gives its owner a clearer picture of what is actually happening across the operation, without adding headcount or management overhead to get there.</strong>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="container mx-auto max-w-5xl">
+          <motion.div variants={staggerContainer} initial="initial" whileInView="animate" viewport={{ once: true }} className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <motion.div key={idx} variants={fadeInUp} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
                 <button
                   type="button"
-                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
-                  className="flex w-full items-center justify-between p-6 text-left transition-colors duration-200 hover:bg-[#f0fdf4]/50"
+                  onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
+                  className="w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-gray-50 transition-colors"
                 >
-                  <h3 className="pr-8 text-lg font-semibold text-foreground sm:text-xl">{faq.question}</h3>
-                  <ChevronDown
-                    className={`h-5 w-5 flex-shrink-0 transition-transform duration-300 sm:h-6 sm:w-6 ${
-                      openFaqIndex === index ? 'rotate-180' : ''
-                    }`}
-                    style={{ color: brandGreen }}
-                  />
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 pr-8">{faq.question}</h3>
+                  <ChevronDown className={`w-5 h-5 transition-transform flex-shrink-0 ${openFaqIndex === idx ? 'rotate-180' : ''}`} style={{ color: brandGreen }} />
                 </button>
-                <motion.div
-                  initial={false}
-                  animate={{
-                    height: openFaqIndex === index ? 'auto' : 0,
-                    opacity: openFaqIndex === index ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.5, ease: 'easeInOut' }}
-                  className="overflow-hidden"
-                >
-                  <p className="border-t border-emerald-100/50 px-6 pb-6 pt-4 text-base leading-relaxed text-muted-foreground">
-                    {faq.answer}
-                  </p>
-                </motion.div>
+                {openFaqIndex === idx && (
+                  <div className="px-5 sm:px-6 pb-5 sm:pb-6 border-t border-gray-100">
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      <p className="mx-auto max-w-4xl px-4 py-8 text-center text-xs text-muted-foreground sm:px-6">
-        Content document prepared by Growthner for Zynex Technologies | Hospitality industry page | Ready for CMS upload or
-        design handoff
-      </p>
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <div className="bg-gradient-to-br from-[#719334] to-[#5a7529] rounded-3xl shadow-xl p-8 sm:p-12 lg:p-16 text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-white mb-4">
+              Ready to see what Zynex would look like inside your venue?
+            </h2>
+            <p className="text-base sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              Zynex Technologies starts every engagement with a discovery call. We look at your current setup, understand your busiest operational pressure points, and show you exactly where our hospitality AI system would have the most immediate impact. No commitment required.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className="inline-flex items-center justify-center text-[#719334] px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-1 shadow-lg bg-white"
+              >
+                Book a Discovery Call with Zynex
+              </button>
+              <Link
+                href="/solutions"
+                className="inline-flex items-center justify-center text-white px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-1 border-2 border-white hover:bg-white/10"
+              >
+                Explore other industries Zynex works with
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Footer />
@@ -554,4 +490,4 @@ const AiSolutionHospitalityBusinessesAustralia = () => {
   );
 };
 
-export default AiSolutionHospitalityBusinessesAustralia;
+export default AiSolutionHospitalityBusinessesAustraliaNew;
