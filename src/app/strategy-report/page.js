@@ -1,4 +1,4 @@
-import StrategyReport from '@/views/StrategyReport';
+import StrategyReport from '@/views/services/StrategyReport';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 const bg3 = "/computer.webp";
-import ContactModal from "../components/ContactModal";
-import SampleReportModal from "../components/SampleReportModal";
-import RequestReportModal from "../components/RequestReportModal";
-import Footer from "../components/Footer";
+import ContactModal from "../../components/ContactModal";
+import SampleReportModal from "../../components/SampleReportModal";
+import RequestReportModal from "../../components/RequestReportModal";
+import Footer from "../../components/Footer";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },

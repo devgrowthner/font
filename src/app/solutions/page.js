@@ -1,4 +1,4 @@
-import Solutions from '@/views/Solutions';
+import Solutions from '@/views/services/Solutions';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

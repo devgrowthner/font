@@ -18,10 +18,10 @@ import {
   Database,
   Mic2,
 } from 'lucide-react';
-import ContactModal from '../components/ContactModal';
-import Footer from '../components/Footer';
-import Schema from '../components/Schema';
-import { useSeo } from '../hooks/useSeo';
+import ContactModal from '../../components/ContactModal';
+import Footer from '../../components/Footer';
+import Schema from '../../components/Schema';
+import { useSeo } from '../../hooks/useSeo';
 
 const bg2 = '/AIMelbourne.webp';
 

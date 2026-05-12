@@ -1,4 +1,4 @@
-import AiSolutionHospitalityBusinessesAustralia from '@/views/AiSolutionHospitalityBusinessesAustralia';
+import AiSolutionHospitalityBusinessesAustralia from '@/views/industrypages/AiSolutionHospitalityBusinessesAustralia';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

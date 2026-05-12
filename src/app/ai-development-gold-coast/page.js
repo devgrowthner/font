@@ -1,4 +1,4 @@
-import AIDevelopmentCompanyGoldCoast from '@/views/AIDevelopmentCompanyGoldCoast';
+import AIDevelopmentCompanyGoldCoast from '@/views/locations/AIDevelopmentCompanyGoldCoast';
 
 export const metadata = {
   title: 'AI Development Company in Gold Coast | Zynex Technologies',

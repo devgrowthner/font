@@ -1,4 +1,4 @@
-import AIAutomation from '@/views/AIAutomation';
+import AIAutomation from '@/views/services/AIAutomation';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

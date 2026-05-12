@@ -1,4 +1,4 @@
-import AIDevelopmentCompanyAdelaide from '@/views/AIDevelopmentCompanyAdelaide';
+import AIDevelopmentCompanyAdelaide from '@/views/locations/AIDevelopmentCompanyAdelaide';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

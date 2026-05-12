@@ -1,4 +1,4 @@
-import CustomAIDevelopmentCompanyPerth from '@/views/CustomAIDevelopmentCompanyPerth';
+import CustomAIDevelopmentCompanyPerth from '@/views/locations/CustomAIDevelopmentCompanyPerth';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({

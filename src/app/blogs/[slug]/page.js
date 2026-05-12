@@ -1,10 +1,11 @@
 import BlogTemplate from '@/views/BlogTemplate';
-import BlogDetailTemplate from '@/views/BlogDetailTemplate';
+import BlogDetailTemplate from '@/views/blogs/BlogDetailTemplate';
 import { blogContents } from '@/constants/blogData';
 import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'when-should-business-invest-ai-automation',
   'ai-workflow-automation-business-efficiency',
   'ai-feasibility-analysis-why-every-business-needs-it',
   'custom-ai-solutions-vs-off-the-shelf-ai-tools',

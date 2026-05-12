@@ -4,8 +4,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import bg1 from "../assets/ai3.png";
-import Footer from "../components/Footer";
+import bg1 from "../../assets/ai3.png";
+import Footer from "../../components/Footer";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },

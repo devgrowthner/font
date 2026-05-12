@@ -5,13 +5,13 @@ import Link from 'next/link';
 import { useRouter, useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Menu, X } from 'lucide-react';
-import ContactModal from '../components/ContactModal';
-import Footer from '../components/Footer';
-import Schema from '../components/Schema';
-import { useSeo } from '../hooks/useSeo';
-import { blogContents, blogList } from '../constants/blogData';
-import { getIconComponent } from '../utils/iconRenderer';
-import { SITE_URL } from '../lib/seo';
+import ContactModal from '../../components/ContactModal';
+import Footer from '../../components/Footer';
+import Schema from '../../components/Schema';
+import { useSeo } from '../../hooks/useSeo';
+import { blogContents, blogList } from '../../constants/blogData';
+import { getIconComponent } from '../../utils/iconRenderer';
+import { SITE_URL } from '../../lib/seo';
 
 /** Key site pages for SEO internal linking from blog posts */
 const PILLAR_INTERNAL_LINKS = [
@@ -324,7 +324,7 @@ const IntroductionSection = ({ blogData }) => (
 
 /**
  * Step-by-step guide blocks (numbered/bulleted lists, link-led bullets) for long-form posts.
- * Data: blogData.guideSteps — [{ heading, bodyParagraphs?, numberedItems?, bulletLinkItems?, plainBulletItems?, closingParagraphs? }]
+ * Data: blogData.guideSteps — [{ heading, bodyParagraphs?, hrAfterBodyParagraphIndex?, comparisonTable?, numberedItems?, labeledBulletItems?, bulletLinkItems?, plainBulletItems?, closingParagraphs? }]
  */
 const GuideStepsSection = ({ blogData }) => {
   const steps = blogData.guideSteps;
@@ -347,13 +347,48 @@ const GuideStepsSection = ({ blogData }) => {
           </h2>
 
           {step.bodyParagraphs?.map((para, i) => (
-            <p
-              key={`bp-${i}`}
-              className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line"
-            >
-              {linkDefs?.length ? renderWithInlineLinks(para, linkDefs) : para}
-            </p>
+            <React.Fragment key={`bp-${i}`}>
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
+                {linkDefs?.length ? renderWithInlineLinks(para, linkDefs) : para}
+              </p>
+              {step.hrAfterBodyParagraphIndex === i ? (
+                <hr className="my-6 sm:my-8 border-0 border-t border-gray-200" />
+              ) : null}
+            </React.Fragment>
           ))}
+
+          {step.comparisonTable?.headers?.length > 0 && step.comparisonTable?.rows?.length > 0 && (
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, margin: '-100px' }}
+              variants={fadeInUp}
+              className="mb-8 mt-2 overflow-x-auto"
+            >
+              <table className="w-full min-w-[640px]">
+                <thead>
+                  <tr>
+                    {step.comparisonTable.headers.map((header, idx) => (
+                      <th key={idx} className="text-left py-2 pr-6 text-2xl font-heading font-bold text-foreground">
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {step.comparisonTable.rows.map((row, rowIdx) => (
+                    <tr key={rowIdx}>
+                      {row.map((cell, cellIdx) => (
+                        <td key={cellIdx} className="text-left py-2 pr-6 text-lg text-gray-700 leading-relaxed">
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </motion.div>
+          )}
 
           {step.numberedItems?.length > 0 && (
             <ol className="mt-4 mb-4 list-decimal pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed marker:font-medium">
@@ -370,6 +405,17 @@ const GuideStepsSection = ({ blogData }) => {
                 </li>
               ))}
             </ol>
+          )}
+
+          {step.labeledBulletItems?.length > 0 && (
+            <ul className="mt-4 mb-4 list-disc pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
+              {step.labeledBulletItems.map((item, i) => (
+                <li key={i} className="pl-1">
+                  <strong className="font-semibold text-foreground">{item.label}</strong>
+                  {linkDefs?.length ? renderWithInlineLinks(item.content, linkDefs) : item.content}
+                </li>
+              ))}
+            </ul>
           )}
 
           {step.bulletLinkItems?.length > 0 && (

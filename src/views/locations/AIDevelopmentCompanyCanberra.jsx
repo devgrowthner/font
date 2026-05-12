@@ -5,10 +5,10 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ChevronDown } from 'lucide-react';
-import ContactModal from '../components/ContactModal';
-import Footer from '../components/Footer';
-import Schema from '../components/Schema';
-import { useSeo } from '../hooks/useSeo';
+import ContactModal from '../../components/ContactModal';
+import Footer from '../../components/Footer';
+import Schema from '../../components/Schema';
+import { useSeo } from '../../hooks/useSeo';
 
 const bg2 = '/CanberraAI.webp';
 

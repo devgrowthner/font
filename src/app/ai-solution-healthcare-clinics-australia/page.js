@@ -1,4 +1,4 @@
-import AiSolutionHealthcareClinicsAustralia from '@/views/AiSolutionHealthcareClinicsAustralia';
+import AiSolutionHealthcareClinicsAustralia from '@/views/industrypages/AiSolutionHealthcareClinicsAustralia';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
