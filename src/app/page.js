@@ -2,9 +2,9 @@ import Home from '@/views/Home';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'AI Solutions for Business Growth | Zynex Technologies',
+  title: 'AI Development Company in Australia | Zynex Technologies',
   description:
-    'AI solutions that deliver real business value automate workflows, cut costs & scale faster. Discover what Zynex can do for you.',
+    'Leading AI Development Company in Australia businesses trust for custom AI solutions, automation, and scalable software development services.',
   path: '/',
 });
 
