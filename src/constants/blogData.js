@@ -1,6 +1,18 @@
 // Blog metadata for listing cards
 export const blogList = [
   {
+    id: "15",
+    slug: "ai-feasibility-study-businesses-first",
+    title: "AI Feasibility Study: Why Businesses Should Do It First",
+    excerpt:
+      "Skipping an AI feasibility study is one of the biggest mistakes Australian businesses make. This post shows what a study covers, why it protects your investment, and how it proves whether AI is worth building.",
+    image: "/aiautomation/AIfes.webp",
+    date: "May 2026",
+    author: "Zynex Team",
+    readTime: "12 min read",
+    route: "/blogs/ai-feasibility-study-businesses-first",
+  },
+  {
     id: "14",
     slug: "when-should-business-invest-ai-automation",
     title: "When Should a Business Invest in AI Automation?",
@@ -2891,6 +2903,274 @@ export const blogContents = {
         question: "What are the most common AI use cases that benefit most from feasibility analysis?",
         answer:
           "AI use cases that involve high data complexity, significant infrastructure investment, or customer-facing applications benefit the most from a feasibility analysis. These include demand forecasting, fraud detection, AI-powered customer support, predictive maintenance, natural language processing, and recommendation engines  all areas where poor planning can result in substantial business losses.",
+      },
+    ],
+  },
+  "ai-feasibility-study-businesses-first": {
+    metaTitle: "AI Feasibility Study: Why Businesses Should Do It First | Zynex Technologies",
+    metaDescription:
+      "An AI feasibility study tells you where AI will work before you invest. Here's why doing it first saves time, money, and risk.",
+    title: "AI Feasibility Study: Why Businesses Should Do It First",
+    description:
+      "An AI feasibility study is a structured assessment that determines whether artificial intelligence can solve a specific business problem, what that solution would cost, and whether the expected return justifies the investment. It answers the questions every business should ask before committing budget to any AI project.",
+    image: "/aiautomation/AIfes.webp",
+    badge: "AI Feasibility",
+    date: "May 2026",
+    readTime: "12 min read",
+    relatedSlugs: [
+      "ai-feasibility-analysis-why-every-business-needs-it",
+      "ai-automation-for-businesses-australia",
+      "10-business-processes-to-automate-with-ai",
+    ],
+
+    inlineInternalLinks: [
+      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "AI automation", href: "/blogs/ai-automation-for-businesses-australia" },
+      { match: "AI Processes", href: "/blogs/10-business-processes-to-automate-with-ai" },
+      { match: "custom AI development", href: "/custom-ai" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+
+    sectionOrder: [
+      "summary",
+      "introduction",
+      "services",
+      "feasibilityCovers",
+      "whyChooseUs",
+      "benefits",
+      "process",
+      "conclusion",
+      "faq",
+      "cta",
+      "relatedLinks",
+    ],
+
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "Skipping an AI feasibility study is one of the most common and costly mistakes Australian businesses make when adopting artificial intelligence. This post breaks down exactly what an AI feasibility study is, what it covers, and why doing it before any development begins is the decision that separates successful AI projects from expensive ones. If you're considering AI for your business, this is the starting point.",
+
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "An AI feasibility study is a structured assessment that determines whether artificial intelligence can solve a specific business problem, what that solution would cost, and whether the expected return justifies the investment. It answers the questions every business should ask before committing budget to any AI project.\n\nMost AI failures don't happen during development. They happen before it starts, when a business skips the validation phase and moves straight into building. An AI feasibility study exists to prevent that exact outcome.\n\nThe study looks at your data, your workflows, your technical infrastructure, and your commercial goals. It produces a clear picture of where AI can realistically deliver value and where it can't. That clarity is worth more than most businesses realise until they've seen a project go wrong without it.",
+
+    servicesTitle: "Why So Many AI Projects Fail Without a Feasibility Study First",
+    servicesDescription:
+      "The numbers are sobering. Research consistently shows that a significant majority of enterprise AI projects either fail outright or fail to meet their original objectives. The reasons vary, but a common thread runs through nearly all of them: the business didn't validate the idea before building it.\n\nHere's what typically goes wrong when businesses skip the feasibility stage:\n\nEvery one of these problems is preventable. An AI feasibility study surfaces them before a single line of code is written.",
+    services: [
+      {
+        title: "Data problems surface too late",
+        description:
+          "AI systems need clean, structured, sufficient data. If your data isn't ready, no amount of development budget will fix it once the build has started.",
+      },
+      {
+        title: "The wrong problem gets automated",
+        description:
+          "Without a feasibility study, businesses often automate symptoms rather than root causes. The result is an AI system that works technically but doesn't change outcomes.",
+      },
+      {
+        title: "ROI expectations are never tested",
+        description:
+          "A system can be built and deployed and still fail to justify its cost. The feasibility stage is where those expectations get stress-tested against reality.",
+      },
+      {
+        title: "Infrastructure gaps go undetected",
+        description:
+          "Existing systems, APIs, and data pipelines may not support the AI layer being proposed. Discovering this mid-build is expensive.",
+      },
+      {
+        title: "Scope grows without a reference point",
+        description:
+          "Without a clear feasibility baseline, project scope expands and costs compound. There's no agreed benchmark to push back against.",
+      },
+    ],
+
+    processTitle: "What the Feasibility Process Looks Like in Practice",
+    processDescription:
+      "Working through an AI automation feasibility study with a specialist team is a structured, time-bound process. It's not open-ended consulting. It has a defined scope and a clear output.",
+    processSteps: [
+      {
+        number: "01",
+        title: "Scoping session",
+        description:
+          "A focused conversation to understand the business problem, the current workflow, and the commercial goal behind the proposed AI solution.",
+      },
+      {
+        number: "02",
+        title: "Data audit",
+        description:
+          "The team reviews available data sources, assesses quality and completeness, and identifies any gaps that would affect model performance.",
+      },
+      {
+        number: "03",
+        title: "Infrastructure mapping",
+        description:
+          "Current systems are reviewed to understand integration points, API availability, and any compatibility issues that need addressing before development begins.",
+      },
+      {
+        number: "04",
+        title: "ROI modelling",
+        description:
+          "Using real inputs from the business, the expected return is modelled across best-case, expected, and conservative scenarios. This gives decision-makers a realistic range rather than a single optimistic projection.",
+      },
+      {
+        number: "05",
+        title: "Risk and compliance review",
+        description:
+          "Relevant data privacy obligations, security requirements, and operational risks are identified and factored into the recommendation.",
+      },
+      {
+        number: "06",
+        title: "Feasibility report",
+        description:
+          "The process concludes with a written report covering the findings, the recommended approach, a high-level implementation pathway, and a cost-benefit summary. The business receives a clear answer: proceed, prepare first, or reconsider.",
+      },
+    ],
+
+    benefitsTitle: "The Cost of Skipping the Feasibility Stage",
+    benefitsTitleHighlight: "Don't Defer It",
+    benefitsDescription:
+      "Let's be direct about this: skipping an AI development feasibility study doesn't save money. It defers the cost and multiplies it. A feasibility study typically represents a small fraction of total AI project investment. What it prevents is far more expensive: failed builds, rework cycles, scope blowouts, and systems that get deployed and quietly abandoned because they don't perform as expected.",
+    benefits: [
+      {
+        title: "Building on unusable data",
+        description:
+          "Developers spending weeks building on data that turns out to be unusable.",
+      },
+      {
+        title: "Integration work goes unscoped",
+        description:
+          "Integration work that wasn't scoped because infrastructure gaps weren't identified early.",
+      },
+      {
+        title: "Delivered systems miss objectives",
+        description:
+          "A system delivered on time that misses the original business objective because the objective was never properly defined.",
+      },
+      {
+        title: "Eroded executive confidence",
+        description:
+          "Executive confidence in AI is eroded by a project that didn't deliver, making future investment harder to justify.",
+      },
+    ],
+
+    feasibilityCoversTitle: "What a Proper AI Feasibility Study Actually Covers",
+    feasibilityCoversDescription:
+      "A thorough AI feasibility analysis doesn't just ask whether AI is possible. It asks whether it's the right choice for this specific business, at this specific stage, with this specific data. That distinction matters.\n\nThe key areas a proper study covers include:",
+    feasibilityCovers: [
+      {
+        number: "1",
+        title: "Business problem definition",
+        description:
+          "The study starts by clearly defining what problem is being solved and whether AI is actually the most effective solution. Sometimes a simpler automation or process change is a better fit.",
+      },
+      {
+        number: "2",
+        title: "Data readiness assessment",
+        description:
+          "Every AI system is only as strong as the data it runs on. The study audits the volume, quality, consistency, and structure of your available data and identifies gaps that need to be addressed before development begins.",
+      },
+      {
+        number: "3",
+        title: "Technical infrastructure review",
+        description:
+          "The study maps your current systems, APIs, and integrations to determine whether they can support the proposed AI layer without significant rework.",
+      },
+      {
+        number: "4",
+        title: "ROI modelling",
+        description:
+          "Before any investment is committed, the expected return is modelled based on real inputs: time savings, error reduction, volume handled, and cost per outcome. This gives decision-makers a grounded basis for approval.",
+      },
+      {
+        number: "5",
+        title: "Risk identification",
+        description:
+          "Compliance requirements, data privacy obligations, and operational risks are mapped and factored into the recommendation before the build is scoped.",
+      },
+      {
+        number: "6",
+        title: "Implementation pathway",
+        description:
+          "The study concludes with a clear recommended path: what to build, in what order, with what milestones and what approximate investment.",
+      },
+    ],
+
+    whyChooseUsTitle: "How to Know Whether Your Business Is Ready for AI Development",
+    whyChooseUsTitleHighlight: "Readiness Signals",
+    whyChooseUsDescription:
+      "Not every business is at the right stage to build AI. That's not a criticism. It's a practical reality. An honest custom AI development partner will tell you that upfront, which is exactly what a feasibility study is designed to surface.",
+    whyChooseUs: [
+      {
+        icon: "IconCheck",
+        title: "A clearly defined, repeatable problem",
+        description:
+          "There is a clearly defined, repeatable problem that AI could address at scale.",
+      },
+      {
+        icon: "IconDatabase",
+        title: "Structured data exists",
+        description:
+          "Data exists in a structured or semi-structured form and has been collected consistently over time.",
+      },
+      {
+        icon: "IconTeam",
+        title: "Capacity for post-deployment support",
+        description:
+          "The business has the internal capacity or external support to maintain an AI system post-deployment.",
+      },
+      {
+        icon: "IconBarChart",
+        title: "Realistic leadership expectations",
+        description:
+          "Leadership has realistic expectations about timelines and ROI, not assumptions based on vendor marketing.",
+      },
+      {
+        icon: "IconIntegration",
+        title: "Integration readiness",
+        description:
+          "The technical infrastructure can support integration without a complete rebuild.",
+          
+      },
+    ],
+
+    conclusionTitle: "Final Thoughts",
+    conclusionDescription:
+      "An AI feasibility study isn't a preliminary formality. It's the foundation that every successful AI project is built on. Businesses that skip it are not moving faster. They're taking on risk they haven't measured and problems they haven't anticipated.\n\nThe study answers the three questions every business should have answered before building anything: Is AI the right solution here? Is the business ready to support it? And will the return justify the investment?\n\nIf the answer to all three is yes, the build begins with confidence. If the answer to any of them is not yet, the study tells you exactly what needs to change first. Either outcome is useful. Neither outcome is possible without doing the work upfront.\n\n Contact Zynex Technologies today to request an AI feasibility analysis and find out exactly where AI can deliver value for your business at zynextechnologies   ",
+    conclusionBullets: [],
+
+    ctaTitle: "Contact Zynex Technologies Today",
+    ctaHighlight: "Request an AI feasibility analysis",
+    ctaDescription:
+      "Contact Zynex Technologies today to request an AI feasibility analysis and find out exactly where AI can deliver value for your business.",
+    ctaButtonText: "Request Feasibility Analysis",
+    ctaBadge1: "Evidence-based guidance",
+    ctaBadge2: "Reduce AI risk",
+
+    faq: [
+      {
+        question: "What is an AI feasibility study?",
+        answer:
+          "An AI feasibility study is a structured pre-development assessment that determines whether artificial intelligence is the right solution for a specific business problem. It covers data readiness, technical infrastructure, ROI modelling, risk assessment, and implementation pathway. The output is a clear recommendation: whether to build, what to build, and what to address first.",
+      },
+      {
+        question: "How much does an AI feasibility study cost?",
+        answer:
+          "Cost varies depending on the complexity of the business problem and the depth of the assessment required. A focused feasibility study for a single use case is typically a fraction of total AI project investment. Given that it prevents the far greater costs of failed builds and misaligned development, it consistently returns more than it costs.",
+      },
+      {
+        question: "How long does an AI feasibility study take?",
+        answer:
+          "A focused feasibility study for a defined use case typically takes two to four weeks. More complex assessments covering multiple systems or enterprise-scale problems may take longer. The timeline depends on the availability of your data, systems access, and the number of stakeholders involved in the scoping process.",
+      },
+      {
+        question: "Can a small business benefit from an AI feasibility study?",
+        answer:
+          "Yes. Small and medium businesses often benefit most from the feasibility stage because they have less margin to absorb the cost of a failed AI project. A feasibility study gives smaller organisations the same validated, evidence-based foundation that enterprise teams rely on before committing development budget.",
+      },
+      {
+        question: "What happens after the feasibility study is complete?",
+        answer:
+          "The study concludes with a written report and a clear recommended path. If AI is the right solution and the business is ready, the next step is moving into scoped development with a defined budget and timeline. If the study identifies gaps, the recommendation will outline what needs to be addressed before development can begin.",
       },
     ],
   },

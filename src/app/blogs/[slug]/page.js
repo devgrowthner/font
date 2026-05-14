@@ -8,6 +8,7 @@ const DETAIL_TEMPLATE_SLUGS = [
   'when-should-business-invest-ai-automation',
   'ai-workflow-automation-business-efficiency',
   'ai-feasibility-analysis-why-every-business-needs-it',
+  'ai-feasibility-study-businesses-first',
   'custom-ai-solutions-vs-off-the-shelf-ai-tools',
   'how-to-choose-an-ai-development-company-in-australia',
   'nemoclaw-implementation-guide-businesses',
