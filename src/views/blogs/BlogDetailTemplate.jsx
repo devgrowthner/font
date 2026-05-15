@@ -333,6 +333,19 @@ const GuideStepsSection = ({ blogData }) => {
 
   return (
     <section id="guideSteps" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
+      {blogData.guideStepsTitle ? (
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={fadeInUp}
+          className="mb-10"
+        >
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+            {blogData.guideStepsTitle}
+          </h2>
+        </motion.div>
+      ) : null}
       {steps.map((step, stepIdx) => (
         <motion.div
           key={stepIdx}

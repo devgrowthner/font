@@ -17,7 +17,9 @@ const DETAIL_TEMPLATE_SLUGS = [
   'ai-automation-for-businesses-australia',
   'ai-use-cases-for-small-businesses',
   'ai-implementation-guide-for-businesses',
-  'cost-of-ai-development-for-businesses-in-australia'
+  'cost-of-ai-development-for-businesses-in-australia',
+  'ai-software-development-lifecycle-guide',
+  'ai-security-risk-management-safe-systems'
 ];
 
 export async function generateMetadata({ params }) {

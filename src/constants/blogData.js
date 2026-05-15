@@ -1,6 +1,30 @@
 // Blog metadata for listing cards
 export const blogList = [
   {
+    id: "17",
+    slug: "ai-security-risk-management-safe-systems",
+    title: "AI Security & Risk Management: How to Build Safe AI Systems",
+    excerpt:
+      "Learn how AI security and risk management protects your business. Discover the key risks, frameworks, and steps to build safe AI systems.",
+    image: "/aiautomation/AImeeting.webp",
+    date: "May 2026",
+    author: "Zynex Team",
+    readTime: "13 min read",
+    route: "/blogs/ai-security-risk-management-safe-systems",
+  },
+  {
+    id: "16",
+    slug: "ai-software-development-lifecycle-guide",
+    title: "AI Software Development Lifecycle: A Complete Guide",
+    excerpt:
+      "Learn every stage of the AI software development lifecycle and how Australian businesses can use it to build AI that actually works.",
+    image: "/aiautomation/AImeeting.webp",
+    date: "May 2026",
+    author: "Zynex Team",
+    readTime: "14 min read",
+    route: "/blogs/ai-software-development-lifecycle-guide",
+  },
+  {
     id: "15",
     slug: "ai-feasibility-study-businesses-first",
     title: "AI Feasibility Study: Why Businesses Should Do It First",
@@ -411,6 +435,525 @@ export const blogContents = {
         question: "Is AI automation suitable for every type of business?",
         answer:
           " No. Businesses that benefit most are those with clearly defined, high-volume, repetitive processes and reasonable data infrastructure. Service businesses, product businesses, and technology companies all have strong use cases. Businesses with very low transaction volumes or highly unpredictable workflows may find the ROI harder to justify at this stage.",
+      },
+    ],
+  },
+  "ai-software-development-lifecycle-guide": {
+    metaTitle: "AI Software Development Lifecycle: A Complete Guide | Zynex Technologies",
+    metaDescription:
+      "Learn every stage of the AI software development lifecycle and how Australian businesses can use it to build AI that actually works.",
+    title: "AI Software Development Lifecycle: A Complete Guide",
+    description:
+      "The AI software development lifecycle is the structured process that takes an AI idea from initial concept through to a working, maintained system in production. This guide explains every stage clearly so Australian businesses know what to expect before they commit.",
+    image: "/aiautomation/AImeeting.webp",
+    badge: "AI Development Lifecycle",
+    date: "May 2026",
+    readTime: "14 min read",
+    relatedSlugs: [
+      "ai-feasibility-analysis-why-every-business-needs-it",
+      "ai-implementation-guide-for-businesses",
+      "cost-of-ai-development-for-businesses-in-australia",
+    ],
+
+    inlineInternalLinks: [
+      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "AI automation", href: "/ai-automation" },
+      { match: "machine learning services", href: "/machine-learning" },
+      { match: "custom AI development", href: "/custom-ai" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+
+    sectionOrder: [
+      "summary",
+      "introduction",
+      "guideSteps",
+      "finalThoughts",
+      "faq",
+      "cta",
+      "relatedLinks",
+    ],
+
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "The AI software development lifecycle is the structured process that takes an AI idea from initial concept through to a working, maintained system in production. Most businesses that invest in AI without understanding this process end up with projects that run over budget, miss their objectives, or get abandoned before they deliver value. This guide covers every stage clearly, so business owners and decision-makers know exactly what to expect before they commit.",
+
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "The AI software development lifecycle is the end-to-end process of planning, building, deploying, and maintaining an AI system. It's similar in structure to traditional software development but has distinct stages that account for the data-driven nature of AI: data collection, model training, validation, and ongoing monitoring are all phases that don't exist in standard software projects.\n\nUnderstanding the lifecycle matters for any business considering AI. Not because you need to manage it yourself, but because knowing what's involved helps you ask better questions, set realistic expectations, and avoid the common trap of treating AI like a product you purchase off a shelf.\n\nAI is not a product. It's a process. And every stage of that process has an outcome that either sets up the next stage for success or introduces risk that compounds further down the line.",
+    guideStepsTitle: "AI Software Development Lifecycle: A Stage-by-Stage Breakdown",
+    guideStepsTocLabel: "Stage-by-Stage Breakdown",
+
+    guideSteps: [
+      {
+        heading: "Stage 1: Problem Definition and Feasibility",
+        bodyParagraphs: [
+          "Every reliable AI software development lifecycle starts in the same place: a clearly defined problem. Not a technology preference. Not a vague ambition to \"use AI.\" A specific, measurable business problem that AI is genuinely suited to solve.",
+          "This stage is where the foundation gets laid. It's also where the most important decision in the entire project gets made: whether AI is actually the right tool for the job.",
+        ],
+        numberedItems: [
+          {
+            label: "Feasibility assessment:",
+            content:
+              " It assesses whether the business problem is solvable with AI, whether the data exists to support it, whether the infrastructure can accommodate it, and whether the expected return justifies the investment.",
+          },
+          {
+            label: "Business alignment:",
+            content:
+              " It confirms that the proposed solution will address a measurable outcome, not just deliver a shiny capability.",
+          },
+          {
+            label: "Go/no-go decision:",
+            content:
+              " The output is a clear recommendation plus a scoped implementation pathway if the answer is go. Nothing gets built until this stage is complete.",
+          },
+        ],
+      },
+      {
+        heading: "Stage 2: Data Collection, Preparation, and Assessment",
+        bodyParagraphs: [
+          "AI systems learn from data. That makes data the single most important input in the entire lifecycle. A well-defined problem with poor data will still produce a poor AI system. There are no workarounds.",
+          "The data stage of the AI software development lifecycle involves several distinct activities that ensure the model has the right inputs to learn from.",
+        ],
+        labeledBulletItems: [
+          {
+            label: "Identifying data sources:",
+            content:
+              " Every relevant internal and external data source is mapped, including databases, spreadsheets, CRM records, transaction logs, customer interactions, and any other structured or semi-structured data the business generates.",
+          },
+          {
+            label: "Auditing data quality:",
+            content:
+              " Raw data is almost never clean. This step identifies missing values, inconsistencies, duplicates, and structural problems that would affect model performance if left unaddressed.",
+          },
+          {
+            label: "Data labelling:",
+            content:
+              " For supervised learning models, data needs to be labelled so the system knows what it's learning from. This is time-intensive and often underestimated in scoping.",
+          },
+          {
+            label: "Data transformation:",
+            content:
+              " Raw data gets reformatted, normalised, and structured into the form the model training process requires. This step is less visible than others but takes considerable time.",
+          },
+          {
+            label: "Data governance review:",
+            content:
+              " Privacy obligations under the Australian Privacy Act, data storage requirements, and access controls are confirmed before any data moves into a training environment.",
+          },
+        ],
+        closingParagraphs: [
+          "Rushing this stage is one of the most common reasons AI projects fail. The quality of your model is a direct reflection of the quality of your data, and no amount of technical skill downstream compensates for what's missing here.",
+        ],
+      },
+      {
+        heading: "Stage 3: Model Selection and Development",
+        bodyParagraphs: [
+          "With clean, prepared data in place, the build phase begins. Model selection and development is where the technical work that most people associate with AI actually happens, though it's worth noting that it's rarely the longest or most complex stage in a well-managed project.",
+          "The key decisions at this stage include the model type, the training approach, and how the team measures progress against the business problem.",
+        ],
+        numberedItems: [
+          {
+            label: "Algorithm selection:",
+            content:
+              " The type of AI model used depends on the problem being solved. Classification, regression, natural language processing, computer vision, and generative models all suit different use cases.",
+          },
+          {
+            label: "Training approach:",
+            content:
+              " The model is trained on the prepared dataset. Training involves adjusting the model's internal parameters until it produces accurate predictions or outputs consistently.",
+          },
+          {
+            label: "Iteration and refinement:",
+            content:
+              " First-pass models rarely perform at production standard. Multiple iterations, adjustments to training data, and hyperparameter tuning are standard parts of the process.",
+          },
+          {
+            label: "Version control:",
+            content:
+              " Model versions are tracked throughout development so the team can roll back to a previous state if a change degrades performance.",
+          },
+        ],
+        closingParagraphs: [
+          "A strong custom AI development team approaches this stage with the business outcome as the primary benchmark. Technical elegance is secondary to whether the model solves the problem it was built to solve.",
+        ],
+      },
+      {
+        heading: "Stage 4: Testing, Validation, and Performance Evaluation",
+        bodyParagraphs: [
+          "Building a model is one thing. Knowing whether it actually works under real conditions is another. The testing and validation stage of the AI software development lifecycle is where those two things get reconciled.",
+          "This stage involves more than checking whether the model produces outputs. It tests whether those outputs are accurate, consistent, fair, and safe to act on in a production environment.",
+        ],
+        numberedItems: [
+          {
+            label: "Performance testing:",
+            content:
+              " Measure accuracy, precision, recall, and error rates against held-out validation data that the model hasn't seen during training.",
+          },
+          {
+            label: "Edge case testing:",
+            content:
+              " Check how the model behaves with unusual, incomplete, or adversarial inputs.",
+          },
+          {
+            label: "Bias and fairness testing:",
+            content:
+              " Identify whether the model produces systematically skewed outputs for certain input types, an increasingly important consideration for regulated or customer-facing systems.",
+          },
+          {
+            label: "User acceptance testing:",
+            content:
+              " Validate the model with the business stakeholders who will rely on its outputs. A model can pass every technical benchmark and still fail to meet the needs of day-to-day users.",
+          },
+        ],
+      },
+      {
+        heading: "Stage 5: Deployment and Integration",
+        bodyParagraphs: [
+          "A model that performs well in a test environment still needs to be integrated into the business's actual systems before it delivers any value. Deployment is where the AI software development lifecycle transitions from a development project into an operational capability.",
+          "The AI development services involved at this stage include packaging the trained model for production, building the APIs and integration layers that connect it to existing systems, configuring the infrastructure that will run it at scale, and setting up monitoring dashboards that track performance from day one.",
+        ],
+        numberedItems: [
+          {
+            label: "Hosting environment:",
+            content:
+              " Cloud, on-premises, or hybrid deployment depending on data sensitivity, latency requirements, and cost.",
+          },
+          {
+            label: "Integration architecture:",
+            content:
+              " How the AI system connects to your CRM, ERP, customer-facing platforms, and data pipelines.",
+          },
+          {
+            label: "Access controls:",
+            content:
+              " Who can see the model's outputs, query its inputs, and modify its configuration.",
+          },
+          {
+            label: "Rollout approach:",
+            content:
+              " Whether the system goes live to all users at once or rolls out gradually to a subset first, allowing performance to be validated in production before full deployment.",
+          },
+        ],
+        closingParagraphs: [
+          "A phased rollout is almost always the smarter choice. It reduces risk and gives the team a controlled environment to catch integration issues before they affect the whole organisation.",
+        ],
+      },
+      {
+        heading: "Stage 6: Monitoring, Maintenance, and Continuous Improvement",
+        bodyParagraphs: [
+          "This is the stage most businesses don't plan for, and it's the stage that determines whether an AI system stays useful over time or slowly drifts into irrelevance.",
+          "AI models are not static. The data they were trained on reflects the world at a point in time. As business conditions change, customer behaviour shifts, and new data patterns emerge, a model that was accurate at deployment will gradually become less accurate if it's never updated.",
+        ],
+        labeledBulletItems: [
+          {
+            label: "Continuous performance monitoring:",
+            content:
+              " Track agreed KPIs and accuracy thresholds so you can spot drift before it affects users.",
+          },
+          {
+            label: "Alerting and issue detection:",
+            content:
+              " Set up alerts when model performance drops below acceptable levels or when infrastructure issues appear.",
+          },
+          {
+            label: "Scheduled retraining:",
+            content:
+              " Use updated data to keep the model current as the business and its environment evolve.",
+          },
+          {
+            label: "Infrastructure monitoring:",
+            content:
+              " Watch latency, uptime, and capacity so the AI system remains reliable in production.",
+          },
+          {
+            label: "Documentation updates:",
+            content:
+              " Keep system documentation current as the model and its integration points change.",
+          },
+        ],
+        closingParagraphs: [
+          "Think of AI maintenance the same way you'd think of maintaining any other business-critical system. It doesn't run itself. It needs attention, and the businesses that budget for it from the start are the ones whose AI systems are still performing well two years after deployment.",
+        ],
+      },
+      {
+        heading: "How the AI Software Development Lifecycle Differs From Traditional Software Development",
+        bodyParagraphs: [
+          "It's a fair question. Traditional software development has its own lifecycle, so why does AI need a separate one?",
+          "The short answer is data. Traditional software follows deterministic logic: given input A, the system produces output B. AI systems don't work that way. They learn patterns from data, which means their behaviour is probabilistic rather than deterministic. That difference changes everything about how you build, test, and maintain them.",
+        ],
+        comparisonTable: {
+          headers: ["Stage", "Traditional Software", "AI Software"],
+          rows: [
+            ["Requirements", "Defined by features and functions", "Defined by data availability and model objectives"],
+            ["Development", "Write logic and rules", "Train models on data"],
+            ["Testing", "Check outputs against specifications", "Validate accuracy, bias, and edge case behaviour"],
+            ["Deployment", "Push code to production", "Package model, build inference infrastructure"],
+            ["Maintenance", "Fix bugs, add features", "Retrain models, monitor drift, update pipelines"],
+          ],
+        },
+        closingParagraphs: [
+          "The AI development lifecycle is not harder than traditional software development. It's different. And understanding where the differences sit is what allows businesses to plan realistically and partner with the right team.",
+        ],
+      },
+    ],
+
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "The AI software development lifecycle is not something to be intimidated by. It's a structured process with clear stages, defined outputs, and predictable challenges at each step. The businesses that approach it with that clarity tend to build AI that works. The ones that don't tend to find out why each stage exists the hard way.\n\nWhat this guide makes clear is that the lifecycle doesn't start with code and it doesn't end with deployment. It starts with a well-defined problem and it ends with a well-maintained system. Everything in between is the work that connects those two points.\n\nIf you're considering AI for your business, understanding this process is the first step. The second step is finding a team that manages it well.\n\nBuild AI that actually works. Zynex Technologies guides Australian businesses through every stage of the lifecycle.",
+
+    ctaTitle: "Get in Touch",
+    ctaHighlight: "",
+    ctaPlainText: false,
+    ctaDescription:
+      "Build AI that actually works. Zynex Technologies guides Australian businesses through every stage of the lifecycle.",
+    ctaButtonText: "Get Started Today",
+
+    faqDescription: "",
+    faq: [
+      {
+        question: "What is the AI software development lifecycle?",
+        answer:
+          "The AI software development lifecycle is the end-to-end process of building and maintaining an AI system. It covers problem definition, data collection and preparation, model development, testing and validation, deployment and integration, and ongoing monitoring and maintenance. Unlike traditional software development, the AI lifecycle places significant emphasis on data quality and model performance over time.",
+      },
+      {
+        question: "How long does the AI software development lifecycle take?",
+        answer:
+          "Timeline depends on the complexity of the project and the readiness of the business's data and infrastructure. A focused single-use-case AI project can move from feasibility through to deployment in two to four months. Larger, multi-system AI projects typically take six to twelve months. The data preparation and testing stages are often the most time-intensive and the most commonly underestimated.",
+      },
+      {
+        question: "How much does it cost to go through the full AI development lifecycle?",
+        answer:
+          "Cost varies significantly depending on the scope of the project, the state of your existing data, and the complexity of the systems involved. A scoped feasibility study is typically the most cost-effective entry point, as it produces a realistic budget estimate before any development begins. Full lifecycle projects range from tens of thousands of dollars for focused SMB use cases to several hundred thousand for enterprise-scale builds.",
+      },
+      {
+        question: "What stage of the AI lifecycle causes the most project failures?",
+        answer:
+          "Data preparation and the problem definition stage account for the majority of AI project failures. Projects that skip proper feasibility assessment often build the wrong solution. Projects that underinvest in data preparation produce models that fail to perform in production. Both problems are preventable with the right process upfront.",
+      },
+      {
+        question: "Does the AI software development lifecycle apply to small businesses?",
+        answer:
+          "Yes. The lifecycle applies regardless of business size. The scale of each stage differs, with smaller businesses typically working with more focused datasets and simpler integration requirements, but the process and its logic are the same. Small businesses often benefit most from the structure the lifecycle provides, as it gives them a clear framework for managing what can otherwise feel like an overwhelming investment.",
+      },
+    ],
+  },
+  "ai-security-risk-management-safe-systems": {
+    metaTitle: "AI Security & Risk Management: Build Safe AI Systems | Zynex Technologies",
+    metaDescription:
+      "Learn how AI security and risk management protects your business. Discover the key risks, frameworks, and steps to build safe AI systems.",
+    title: "AI Security & Risk Management: How to Build Safe AI Systems",
+    description:
+      "AI security and risk management is no longer an optional consideration for businesses deploying artificial intelligence. This guide covers the most common AI security threats, risk management frameworks, and the practical steps Australian businesses need to build safe AI systems.",
+    image: "/aiautomation/AImeeting.webp",
+    badge: "AI Security",
+    date: "May 2026",
+    readTime: "13 min read",
+    relatedSlugs: [
+      "ai-feasibility-analysis-why-every-business-needs-it",
+      "ai-software-development-lifecycle-guide",
+      "cost-of-ai-development-for-businesses-in-australia",
+    ],
+
+    inlineInternalLinks: [
+      { match: "AI automation", href: "/ai-automation" },
+      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "custom AI development", href: "/custom-ai" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+
+    sectionOrder: [
+      "summary",
+      "introduction",
+      "guideSteps",
+      "finalThoughts",
+      "faq",
+      "cta",
+      "relatedLinks",
+    ],
+
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "AI security and risk management is no longer an optional consideration for businesses deploying artificial intelligence. As AI systems handle more sensitive data and make more consequential decisions, the risks attached to getting security wrong have grown significantly. This guide covers the most common AI security threats, the risk management frameworks Australian businesses should understand, and the practical steps that turn a well-built AI system into a safe one.",
+
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "AI security and risk management is not the same as general cybersecurity. That's a distinction worth making clearly, because many businesses assume their existing security posture covers AI systems. It doesn't. Not fully.\n\nTraditional cybersecurity protects systems from external attack, unauthorised access, and data breaches. Those risks still apply to AI. But AI introduces a second layer of risk that standard security frameworks weren't designed to handle: the risk that the AI system itself behaves incorrectly, unfairly, or in ways that cause harm even when no external attack has taken place.\n\nA model trained on biased data can produce discriminatory outputs. A system with no output monitoring can drift silently and start making poor decisions for months before anyone notices. An AI exposed to carefully crafted inputs can be manipulated into producing entirely wrong results. These are AI-specific risks, and they require AI-specific responses.",
+
+    // guideStepsTitle: "How to Build Safe AI Systems",
+    guideStepsTocLabel: "Security & Risk Framework",
+    guideSteps: [
+      {
+        heading: "The Most Significant AI Security Threats Businesses Face",
+        bodyParagraphs: [
+          "Understanding the threat landscape is the starting point for any serious approach to AI security and risk management. The risks that apply to AI systems sit across two broad categories: attacks on the AI system itself, and risks that emerge from how the system behaves.",
+          "The most significant threats businesses need to account for include:",
+        ],
+        labeledBulletItems: [
+          {
+            label: "Adversarial attacks:",
+            content:
+              " Inputs deliberately crafted to manipulate an AI model's output. A spam filter trained to detect certain patterns can be fooled by slightly altered text. An image recognition system can be confused by imperceptible changes to a photo.",
+          },
+          {
+            label: "Data poisoning:",
+            content:
+              " If an attacker can influence the data used to train a model, they can influence the model's behaviour. This is particularly relevant for systems that retrain continuously on new data.",
+          },
+          {
+            label: "Model inversion and extraction:",
+            content:
+              " Given sufficient access to a model's outputs, an attacker can reconstruct sensitive training data or replicate the model itself. Both outcomes represent serious intellectual property and privacy risks.",
+          },
+          {
+            label: "Prompt injection:",
+            content:
+              " For AI systems built on large language models, prompt injection attacks embed hidden instructions in user inputs that override the system's intended behaviour.",
+          },
+          {
+            label: "Model drift as an unmanaged risk:",
+            content:
+              " Drift isn't an attack, but it's a risk that carries real consequences. A model that was accurate at deployment and hasn't been monitored can produce significantly degraded outputs over time.",
+          },
+        ],
+      },
+      {
+        heading: "Key AI Risk Management Frameworks Australian Businesses Should Know",
+        bodyParagraphs: [
+          "Approaching AI risk without a framework is like building a structure without load calculations. The frameworks below provide the structure that responsible AI security and risk management requires.",
+          "Australia's own AI Ethics Framework, published by the Department of Industry, Science and Resources, outlines eight core principles covering accountability, transparency, privacy protection, fairness, and human oversight.",
+        ],
+        plainBulletItems: [
+          "Australia's AI Ethics Framework — not legally binding for most businesses today, but worth building to now rather than retrofitting later.",
+          "NIST AI Risk Management Framework — a comprehensive playbook for governing, mapping, measuring, and managing AI risk across an organisation.",
+          "ISO 42001 — the international standard for AI management systems, giving organisations a structured, auditable approach to AI governance.",
+        ],
+        closingParagraphs: [
+          "The practical takeaway is that no single framework covers every risk. Most mature organisations combine elements from two or more, calibrated to their industry, data sensitivity, and the decisions their AI systems are making.",
+        ],
+      },
+      {
+        heading: "How to Build Safe AI Systems: A Step-by-Step Approach",
+        bodyParagraphs: [
+          "Building safe AI isn't a single action. It's a set of decisions made at every stage of development, from the initial problem definition through to ongoing monitoring in production.",
+          "Here's the process that produces AI systems with genuine security foundations:",
+        ],
+        numberedItems: [
+          {
+            label: "Define security and risk requirements at the start:",
+            content:
+              " Document what the system will and won't have access to, what decisions it will and won't make autonomously, and what data it will handle.",
+          },
+          {
+            label: "Run a structured AI feasibility and risk assessment:",
+            content:
+              " Map data privacy obligations, compliance requirements, and potential failure modes before they become problems.",
+          },
+          {
+            label: "Apply data governance from day one:",
+            content:
+              " Establish who can access training data, how it's stored, how long it's retained, and what happens to it when the model is retrained or decommissioned.",
+          },
+          {
+            label: "Build explainability into the model:",
+            content:
+              " For any AI system making consequential decisions, explainability is a security requirement, not a nice-to-have.",
+          },
+          {
+            label: "Conduct adversarial testing before deployment:",
+            content:
+              " Red-team the system with edge cases, adversarial inputs, and unexpected data conditions to find failure modes in a controlled environment.",
+          },
+          {
+            label: "Deploy with access controls and audit logging:",
+            content:
+              " Log every interaction, control access on a least-privilege basis, and ensure incidents can be investigated accurately.",
+          },
+          {
+            label: "Monitor continuously and respond to drift:",
+            content:
+              " Set performance thresholds, alert conditions, and a clear process for investigating alerts, retraining, and communicating changes.",
+          },
+        ],
+      },
+      {
+        heading: "Building a Risk-Aware AI Culture Inside Your Organisation",
+        bodyParagraphs: [
+          "Technical controls are necessary but not sufficient. The businesses that manage AI risk well are the ones where risk awareness is embedded into how teams think about AI, not just into the systems they build.",
+          "That means training, governance structures, and a clear accountability model.",
+        ],
+        numberedItems: [
+          {
+            label: "Ongoing education:",
+            content:
+              " Provide continuous training for the teams who commission AI projects, work with AI outputs, and maintain AI systems.",
+          },
+          {
+            label: "Governance roles:",
+            content:
+              " Define who is accountable for AI risk, who reviews new deployments, and who can shut down systems if something goes wrong.",
+          },
+          {
+            label: "Governance handover:",
+            content:
+              " Deliver documentation of risks, monitoring requirements, retraining schedules, and escalation paths as part of the project handover.",
+          },
+          {
+            label: "Continuous risk practice:",
+            content:
+              " Review risk posture regularly as the threat environment, regulations, and operating conditions change.",
+          },
+        ],
+      },
+      {
+        heading: "What Good AI Security and Risk Management Looks Like in Practice",
+        bodyParagraphs: [
+          "A well-managed AI system has defined performance thresholds and an alert process when those thresholds are breached. It has access logs that capture who queried the system and what outputs were produced.",
+          "It has a documented retraining schedule and a record of every model version deployed. It has been tested adversarially before going live and has a clear process for handling edge cases that fall outside its design parameters.",
+        ],
+        closingParagraphs: [
+          "The AI systems that hold up over time share one common characteristic: they were built with security and risk management as design requirements, not compliance checkboxes.",
+          "Businesses that treat AI risk seriously don't just avoid incidents. They build AI systems that stakeholders trust, that regulators can audit, and that continue to perform accurately long after the initial deployment excitement has faded.",
+        ],
+      },
+    ],
+
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "AI security and risk management is the discipline that determines whether an AI investment holds its value over time or becomes a liability. The technical risks are real and well-documented. The organisational risks are equally real and less often discussed.\n\nThe businesses that get this right are the ones that start with a clear view of what could go wrong, build controls into the system from the beginning, and treat ongoing monitoring as a non-negotiable operational requirement, not a future budget item.\n\nSafe AI isn't a constraint on what's possible. It's what makes AI worth deploying in the first place.",
+
+    ctaTitle: "Get in Touch",
+    ctaHighlight: "",
+    ctaPlainText: false,
+    ctaDescription:
+      "Contact Zynex Technologies today to discuss AI security and risk management for your business.",
+    ctaButtonText: "Get Started Today",
+
+    faqDescription: "",
+    faq: [
+      {
+        question: "What is AI security and risk management?",
+        answer:
+          "AI security and risk management is the practice of identifying, assessing, and mitigating the security threats and operational risks specific to AI systems. It covers both external threats, such as adversarial attacks and data poisoning, and internal risks, such as model drift, biased outputs, and inadequate access controls. It applies across the full AI lifecycle, from development through to ongoing operation.",
+      },
+      {
+        question: "How is AI security different from standard cybersecurity?",
+        answer:
+          "Standard cybersecurity focuses on protecting systems from unauthorised access, data breaches, and malicious attacks. AI security covers all of those risks plus a second layer that's unique to AI: the risk that the system itself behaves incorrectly or harmfully, even without any external attack. Model drift, biased training data, adversarial manipulation, and lack of explainability are all AI-specific risks that general cybersecurity frameworks don't fully address.",
+      },
+      {
+        question: "How much does it cost to implement AI security and risk management?",
+        answer:
+          "Cost depends on the complexity of the AI system and the sensitivity of the data it handles. Basic security controls, governance documentation, and monitoring setup are typically factored into the AI development budget from the start. Retrofitting security onto an already-deployed system almost always costs more than building it in from the beginning. A proper AI feasibility assessment will include a risk scope and associated cost estimate before any build is approved.",
+      },
+      {
+        question: "How long does it take to establish AI risk management for a business?",
+        answer:
+          "For a focused, single-use-case AI system, basic risk management controls can be established as part of the development process, adding weeks rather than months to the timeline. For enterprise-scale deployments or businesses seeking formal certification such as ISO 42001, the governance and documentation process takes longer. The most important factor is starting risk management conversations at the beginning of the project, not after deployment.",
+      },
+      {
+        question: "What Australian regulations apply to AI security and risk management?",
+        answer:
+          "Australia's primary relevant frameworks include the AI Ethics Framework from the Department of Industry, Science and Resources, and the Australian Privacy Act, which governs how personal data used in AI systems must be handled. The Australian Cyber Security Centre also publishes guidance on AI-related risks. Sector-specific regulations apply in industries such as finance, healthcare, and government, where AI decisions can affect individual rights or safety. Formal AI regulation is actively developing at the federal level, and the direction is toward greater accountability and transparency requirements.",
       },
     ],
   },
