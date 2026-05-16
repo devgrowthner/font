@@ -136,6 +136,12 @@ const Header = () => {
       tag: 'Restaurants, cafes & venue groups',
       isExternal: false,
     },
+    {
+      name: 'AI Development for Construction (Australia)',
+      link: '/ai-development-company-construction-businesses-australia',
+      tag: 'Builders, contractors & project firms',
+      isExternal: false,
+    },
   ];
 
   const navLinks = [
