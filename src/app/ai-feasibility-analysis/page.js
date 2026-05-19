@@ -2,9 +2,9 @@ import AIFeasibilityAnalysis from '@/views/services/AIFeasibilityAnalysis';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'AI Feasibility Analysis Company in Australia | AI Consulting',
+  title: 'AI Feasibility Analysis Company in Australia | Zynex Technologies',
   description:
-    'Assess whether AI is right for your business. Our AI feasibility analysis in Australia evaluates data readiness, technical setup, ROI potential, and project risks.',
+    'AI feasibility analysis that assesses data readiness, ROI, and technical fit before you invest. Make smarter AI decisions with Zynex Technologies. Learn more.',
   path: '/ai-feasibility-analysis',
 });
 

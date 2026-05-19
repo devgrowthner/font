@@ -2,9 +2,9 @@ import AiDevelopmentCompanySydney from '@/views/locations/AiDevelopmentCompanySy
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'Best AI Development Company in Sydney | Zynex Technologies',
+  title: 'AI Development Company Sydney | Zynex Technologies',
   description:
-    "Zynex Technologies is Sydney's leading AI development company. We build custom AI solutions with measurable ROI—from strategy to deployment in weeks. Get a free consultation today.",
+    'AI development company Sydney businesses trust for custom ML models, NLP, and multi-agent AI. Deployed in 6–12 weeks with 3x average ROI. Get started.',
   path: '/ai-development-company-sydney',
   canonicalPath: '/ai-development-company-sydney',
 });

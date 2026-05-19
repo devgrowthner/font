@@ -2,9 +2,9 @@ import AiDevelopmentCompanyBrisbane from '@/views/locations/AiDevelopmentCompany
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'Leading AI Development Company in Brisbane | Zynex Technologies',
+  title: 'AI Development Company in Brisbane: Custom AI | Zynex Technologies',
   description:
-    "Zynex Technologies is Brisbane's leading AI Development Company. We build custom AI, chatbot, and agentic AI solutions that deliver 3x ROI. Get a free consultation.",
+    'AI development company in Brisbane building production-ready systems tailored to your workflows and data. Feasibility validated before build. Learn more.',
   path: '/ai-development-company-in-brisbane',
   canonicalPath: '/ai-development-company-in-brisbane',
 });

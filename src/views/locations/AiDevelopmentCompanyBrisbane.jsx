@@ -295,7 +295,7 @@ const AiDevelopmentCompanyBrisbane = () => {
               transition={{ duration: 0.55, ease: 'easeOut' }}
               className="relative h-[260px] sm:h-[360px] lg:h-[440px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl"
             >
-              <img src={bg2} alt="" className="w-full h-full object-cover" />
+              <img src={bg2} alt="AI development company brisbane" className="w-full h-full object-cover" />
               <div
                 className="absolute inset-0"
                 style={{ background: 'linear-gradient(135deg, rgba(113,147,52,0.25), rgba(0,0,0,0.15))' }}

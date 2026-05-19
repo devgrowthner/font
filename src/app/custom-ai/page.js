@@ -2,9 +2,9 @@ import CustomAI from '@/views/CustomAI';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'Custom AI Development Company in Australia | Zynex Technologies',
+  title: 'Custom AI Development Solutions | Zynex Technologies',
   description:
-    'Looking for a custom AI development company in Australia? Zynex Technologies builds AI automation, machine learning solutions, and tailored AI systems for businesses.',
+    'Custom AI development built for your business. We deliver machine learning, automation, and AI chatbots tailored to your operations. Get started.',
   path: '/custom-ai',
 });
 

@@ -1,11 +1,13 @@
 import AIDevelopmentCompanyGoldCoast from '@/views/locations/AIDevelopmentCompanyGoldCoast';
+import { buildPageMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'AI Development Company in Gold Coast | Zynex Technologies',
+export const metadata = buildPageMetadata({
+  title: 'AI Development Gold Coast | Custom AI Solutions | Zynex Technologies',
   description:
-    'AI Development Company in Gold Coast delivering Custom AI, Automation & Machine Learning Services with validated ROI. Start with a free Feasibility Analysis.',
-  canonical: 'https://zynextechnologies.com.au/ai-development-gold-coast',
-};
+    'AI development Gold Coast businesses trust for custom AI, automation, and ML services. ROI validated before build, strategy to deployment in weeks. Learn more.',
+  path: '/ai-development-gold-coast',
+  canonicalPath: '/ai-development-gold-coast',
+});
 
 export default function Page() {
   return <AIDevelopmentCompanyGoldCoast />;

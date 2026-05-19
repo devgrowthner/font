@@ -121,6 +121,18 @@ const Header = () => {
       tag: 'Custom AI, ML & automation',
       isExternal: false,
     },
+    {
+      name: 'AI Development — Darwin',
+      link: '/ai-development-company-darwin',
+      tag: 'Custom AI, ML & automation',
+      isExternal: false,
+    },
+    {
+      name: 'AI Development — Hobart',
+      link: '/ai-development-company-in-hobart',
+      tag: 'Custom AI, ML & automation',
+      isExternal: false,
+    },
   ];
 
   const industryServices = [

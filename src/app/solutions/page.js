@@ -2,9 +2,9 @@ import Solutions from '@/views/services/Solutions';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'CareCob: AI Companion for Everyone',
+  title: 'CareCob: AI Companion That Calls & Monitors | Zynex Technologies',
   description:
-    'CareCob AI companion makes intelligent support accessible for everyone. Discover how Zynex Technologies is redefining AI-powered care. Learn more today.',
+    'AI companion CareCob checks on your loved ones 24/7 with natural conversations, mood tracking, and emergency alerts. Learn more.',
   path: '/solutions',
 });
 

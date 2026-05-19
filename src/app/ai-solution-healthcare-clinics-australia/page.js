@@ -2,7 +2,7 @@ import AiSolutionHealthcareClinicsAustralia from '@/views/industrypages/AiSoluti
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'AI Solution for Healthcare Clinics in Australia | Zynex',
+  title: 'AI Solution for Healthcare Clinics in Australia | Zynex Technologies',
   description:
     'AI solution for healthcare clinics in Australia that cuts admin load, captures every patient enquiry, and automates intake workflows. Book a discovery call.',
   path: '/ai-solution-healthcare-clinics-australia',

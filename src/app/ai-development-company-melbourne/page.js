@@ -2,9 +2,9 @@ import AiDevelopmentCompanyMelbourne from '@/views/locations/AiDevelopmentCompan
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'Top AI Development Company in Melbourne | Zynex Technologies',
+  title: 'AI Development Company Melbourne | Zynex Technologies',
   description:
-    "Zynex Technologies is Melbourne's trusted AI development company. We build custom AI solutions with measurable ROI, from strategy to deployment in weeks. Get a free consultation.",
+    'AI development company Melbourne businesses trust for custom solutions. Get ROI clarity, fast deployment in 6–12 weeks. Book a free consultation.',
   path: '/ai-development-company-melbourne',
   canonicalPath: '/ai-development-company-melbourne',
 });
