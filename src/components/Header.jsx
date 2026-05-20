@@ -154,6 +154,24 @@ const Header = () => {
       tag: 'Builders, contractors & project firms',
       isExternal: false,
     },
+    {
+      name: 'AI Development for Small Businesses (Australia)',
+      link: '/ai-development-for-small-businesses-australia',
+      tag: 'SMB automation & lead capture',
+      isExternal: false,
+    },
+    {
+      name: 'AI Development for Legal Firms (Australia)',
+      link: '/ai-development-company-legal-firms-australia',
+      tag: 'Document review & client intake',
+      isExternal: false,
+    },
+    {
+      name: 'AI Development for Real Estate (Australia)',
+      link: '/ai-development-company-for-real-estate-australia',
+      tag: 'Listings, leads & property management',
+      isExternal: false,
+    },
   ];
 
   const navLinks = [
