@@ -49,6 +49,9 @@ function resolveRelatedPosts(currentSlug, blogData) {
 function formatDateBadge(dateStr) {
   if (!dateStr) return '';
   const parts = dateStr.trim().split(/\s+/);
+  if (parts.length >= 3) {
+    return `${parts[0].slice(0, 3)} ${parts[1]} ${parts[2]}`;
+  }
   if (parts.length >= 2) {
     return `${parts[0].slice(0, 3)} ${parts[1]}`;
   }
@@ -355,20 +358,53 @@ const GuideStepsSection = ({ blogData }) => {
           variants={fadeInUp}
           className={stepIdx > 0 ? 'mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-gray-200' : ''}
         >
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
+          <h3 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
             {step.heading}
-          </h2>
+          </h3>
 
-          {step.bodyParagraphs?.map((para, i) => (
-            <React.Fragment key={`bp-${i}`}>
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
-                {linkDefs?.length ? renderWithInlineLinks(para, linkDefs) : para}
-              </p>
-              {step.hrAfterBodyParagraphIndex === i ? (
-                <hr className="my-6 sm:my-8 border-0 border-t border-gray-200" />
-              ) : null}
-            </React.Fragment>
-          ))}
+          {step.firstParagraphBullet && step.bodyParagraphs?.[0] ? (
+            <ul className="mt-4 mb-4 list-disc pl-6 sm:pl-8 text-base sm:text-lg text-gray-700 leading-relaxed">
+              <li className="pl-1">
+                <strong className="font-semibold text-foreground">
+                  {linkDefs?.length ? renderWithInlineLinks(step.bodyParagraphs[0], linkDefs) : step.bodyParagraphs[0]}
+                </strong>
+              </li>
+            </ul>
+          ) : null}
+
+          {step.numberedParagraphs?.length > 0 ? (
+            <ol className="mt-4 mb-4 list-decimal pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
+              {step.numberedParagraphs.map((idx) => {
+                const para = step.bodyParagraphs?.[idx] || '';
+                const firstDot = para.indexOf('.');
+                const firstSentence = firstDot >= 0 ? para.slice(0, firstDot + 1).trim() : para.trim();
+                const rest = firstDot >= 0 ? para.slice(firstDot + 1).trim() : '';
+                return (
+                  <li key={idx} className="pl-1">
+                    <strong className="font-semibold text-foreground">
+                      {linkDefs?.length ? renderWithInlineLinks(firstSentence, linkDefs) : firstSentence}
+                    </strong>
+                    {rest ? ' ' : ''}
+                    {rest ? (linkDefs?.length ? renderWithInlineLinks(rest, linkDefs) : rest) : null}
+                  </li>
+                );
+              })}
+            </ol>
+          ) : null}
+
+          {step.bodyParagraphs?.map((para, i) => {
+            if ((step.firstParagraphBullet && i === 0) || (step.numberedParagraphs?.includes(i))) return null;
+            return (
+              <React.Fragment key={`bp-${i}`}>
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
+                  {linkDefs?.length ? renderWithInlineLinks(para, linkDefs) : para}
+                </p>
+                {step.hrAfterBodyParagraphIndex === i ? (
+                  <hr className="my-6 sm:my-8 border-0 border-t border-gray-200" />
+                ) : null}
+              </React.Fragment>
+            );
+          })}
 
           {step.comparisonTable?.headers?.length > 0 && step.comparisonTable?.rows?.length > 0 && (
             <motion.div
@@ -424,7 +460,7 @@ const GuideStepsSection = ({ blogData }) => {
             <ul className="mt-4 mb-4 list-disc pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
               {step.labeledBulletItems.map((item, i) => (
                 <li key={i} className="pl-1">
-                  <strong className="font-semibold text-foreground">{item.label}</strong>
+                  <strong className="font-semibold text-foreground">{item.label}</strong>{' '}
                   {linkDefs?.length ? renderWithInlineLinks(item.content, linkDefs) : item.content}
                 </li>
               ))}
