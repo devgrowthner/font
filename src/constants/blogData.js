@@ -18,7 +18,7 @@ export const blogList = [
     title: "Artificial Intelligence Solutions for Business Growth 2026",
     excerpt:
       "Explore the best artificial intelligence solutions for business growth in 2026 and see how Zynex Technologies helps you implement them.",
-    image: "/aiautomation/AIsolution.webp",
+    image: "/aiautomation/artificial-sollution.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -30,7 +30,7 @@ export const blogList = [
     title: "Cost Reduction Strategies with AI Automation: A Practical Guide",
     excerpt:
       "Reduce cost using AI automation by targeting the right processes first. Practical strategies for Australian businesses that deliver fast, measurable ROI.",
-    image: "/aiautomation/AIcost.webp",
+    image: "/aiautomation/reduce-codt.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "11 min read",
@@ -42,7 +42,7 @@ export const blogList = [
     title: "How to Automate Your Business Using AI (Practical Guide)",
     excerpt:
       "Business automation using AI reduces manual work and errors. Learn which processes to automate first and what results Australian businesses can expect.",
-    image: "/aiautomation/ImprovesBusiness.webp",
+    image: "/aiautomation/automate-using.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "14 min read",
@@ -54,7 +54,7 @@ export const blogList = [
     title: "AI Implementation: From Strategy to Execution for Businesses",
     excerpt:
       "Discover how AI implementation services take your business from strategy to live deployment. Learn the steps, costs, and what to expect.",
-    image: "/aiautomation/AImeeting.webp",
+    image: "/aiautomation/ai-implementation.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "14 min read",
@@ -66,7 +66,7 @@ export const blogList = [
     title: "AI Security & Risk Management: How to Build Safe AI Systems",
     excerpt:
       "Learn how AI security and risk management protects your business. Discover the key risks, frameworks, and steps to build safe AI systems.",
-    image: "/aiautomation/AImeeting.webp",
+    image: "/aiautomation/ai-security.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "13 min read",
@@ -78,7 +78,7 @@ export const blogList = [
     title: "AI Software Development Lifecycle: A Complete Guide",
     excerpt:
       "Learn every stage of the AI software development lifecycle and how Australian businesses can use it to build AI that actually works.",
-    image: "/aiautomation/AImeeting.webp",
+    image: "/aiautomation/ai-software.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "14 min read",
@@ -90,7 +90,7 @@ export const blogList = [
     title: "AI Feasibility Study: Why Businesses Should Do It First",
     excerpt:
       "Skipping an AI feasibility study is one of the biggest mistakes Australian businesses make. This post shows what a study covers, why it protects your investment, and how it proves whether AI is worth building.",
-    image: "/aiautomation/AIfes.webp",
+    image: "/aiautomation/ai-feasibilty.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -102,7 +102,7 @@ export const blogList = [
     title: "When Should a Business Invest in AI Automation?",
     excerpt:
       "Find out when AI automation makes business sense, what signals to look for, and how to start with the right strategy in Australia.",
-    image: "/aiautomation/businessinvest.webp",
+    image: "/aiautomation/business-invest.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -114,7 +114,7 @@ export const blogList = [
     title: "Cost of AI Development for Businesses in Australia",
     excerpt:
       "Discover what AI development really costs Australian businesses, what drives pricing, and how to plan your AI investment wisely.",
-    image: "/aiautomation/AIcost.webp",
+    image: "/aiautomation/copy-of-development.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "13 min read",
@@ -464,7 +464,7 @@ export const blogContents = {
     title: "When Should a Business Invest in AI Automation?",
     description:
       "Find out when AI automation makes business sense, what signals to look for, and how to start with the right strategy in Australia.",
-    image: "/aiautomation/businessinvest.webp",
+    image: "/aiautomation/business-invest.png",
     badge: "AI Automation",
     date: "May 25, 2026",
     readTime: "12 min read",
@@ -716,7 +716,7 @@ export const blogContents = {
     title: "AI Software Development Lifecycle: A Complete Guide",
     description:
       "The AI software development lifecycle is the structured process that takes an AI idea from initial concept through to a working, maintained system in production. This guide explains every stage clearly so Australian businesses know what to expect before they commit.",
-    image: "/aiautomation/AImeeting.webp",
+    image: "/aiautomation/ai-software.png",
     badge: "AI Development Lifecycle",
     date: "May 25, 2026",
     readTime: "14 min read",
@@ -1015,7 +1015,7 @@ export const blogContents = {
     title: "AI Security & Risk Management: How to Build Safe AI Systems",
     description:
       "AI security and risk management is no longer an optional consideration for businesses deploying artificial intelligence. This guide covers the most common AI security threats, risk management frameworks, and the practical steps Australian businesses need to build safe AI systems.",
-    image: "/aiautomation/AImeeting.webp",
+    image: "/aiautomation/ai-security.png",
     badge: "AI Security",
     date: "May 25, 2026",
     readTime: "13 min read",
@@ -1235,7 +1235,7 @@ export const blogContents = {
     title: "Cost of AI Development for Businesses in Australia",
     description:
       "AI development costs vary widely depending on what you're building, who builds it, and how complex your data environment is. For Australian businesses, understanding what drives these costs is the first step to making a smart investment. This post breaks down the key pricing factors across different AI solutions, outlines realistic budget ranges, and explains how to approach an AI project without blowing your budget on the wrong things.",
-    image: "/aiautomation/AIcost.webp",
+    image: "/aiautomation/copy-of-development.png",
     badge: "AI Development Costs",
     date: "May 25, 2026",
     readTime: "13 min read",
@@ -3727,7 +3727,7 @@ export const blogContents = {
     title: "AI Feasibility Study: Why Businesses Should Do It First",
     description:
       "An AI feasibility study is a structured assessment that determines whether artificial intelligence can solve a specific business problem, what that solution would cost, and whether the expected return justifies the investment. It answers the questions every business should ask before committing budget to any AI project.",
-    image: "/aiautomation/AIfes.webp",
+    image: "/aiautomation/ai-feasibilty.png",
     badge: "AI Feasibility",
     date: "May 25, 2026",
     readTime: "12 min read",
@@ -3995,7 +3995,7 @@ export const blogContents = {
       title: "Artificial Intelligence Solutions for Business Growth 2026",
       description:
         "Artificial intelligence solutions for business are no longer limited to large enterprises with dedicated tech teams. In 2026, businesses of all sizes are using AI to cut costs, speed up operations, and make sharper decisions with less effort. This post covers the most effective AI solutions available right now, what they actually do in a real business setting, and how to choose the right approach for your goals. Whether you're just starting to explore AI or ready to implement, this is the practical guide you need.",
-      image: "/aiautomation/AIsolution.webp",
+      image: "/aiautomation/artificial-sollution.png",
       badge: "AI Solutions",
       date: "May 25, 2026",
       readTime: "12 min read",
@@ -4189,7 +4189,7 @@ export const blogContents = {
       title: "Cost Reduction Strategies with AI Automation: A Practical Guide",
       description:
         "Businesses across Australia are under consistent pressure to do more with less, and AI automation is one of the most practical tools available for making that happen. This guide covers the specific ways that AI automation reduces operating costs, which processes deliver the fastest returns, and what a realistic implementation looks like from start to finish. Whether you're exploring the idea for the first time or ready to move into action, the information here is built around what actually works in practice, not what sounds good in a vendor brochure.",
-      image: "/aiautomation/AIcost.webp",
+      image: "/aiautomation/reduce-codt.png",
       badge: "Cost Reduction",
       date: "May 25, 2026",
       readTime: "11 min read",
@@ -4393,7 +4393,7 @@ export const blogContents = {
       title: "How to Automate Your Business Using AI (Practical Guide)",
       description:
         "Business automation using AI has moved well past the experimental stage for Australian businesses. Across operations, finance, customer service, and sales, AI-driven automation is reducing manual workload, cutting error rates, and freeing up team capacity for work that actually requires human judgement. This guide covers exactly how to approach automation practically: which processes to target first, how to structure the rollout, and what separates the businesses that see real results from the ones that don't.",
-      image: "/aiautomation/ImprovesBusiness.webp",
+      image: "/aiautomation/automate-using.png",
       badge: "Business Automation",
       date: "May 25, 2026",
       readTime: "14 min read",
@@ -4531,7 +4531,7 @@ export const blogContents = {
       title: "AI Implementation: From Strategy to Execution for Businesses",
       description:
         "AI implementation services cover everything that happens between deciding to use artificial intelligence and having a system running productively in your business. For most Australian businesses, that gap is wider than expected and harder to cross without the right support. This guide walks through the full journey from strategy to execution, covering what each phase involves, what typically goes wrong, and how to choose an implementation partner who delivers results rather than just a project plan.",
-      image: "/aiautomation/AImeeting.webp",
+      image: "/aiautomation/ai-implementation.png",
       badge: "AI Implementation",
       date: "May 25, 2026",
       readTime: "14 min read",

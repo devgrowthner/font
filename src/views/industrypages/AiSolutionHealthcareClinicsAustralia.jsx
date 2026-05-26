@@ -20,6 +20,7 @@ import {
 import ContactModal from '../../components/ContactModal';
 import Footer from '../../components/Footer';
 import Schema from '../../components/Schema';
+import RelatedIndustryPages from '../../components/RelatedIndustryPages';
 import { useSeo } from '../../hooks/useSeo';
 
 const heroImage = 'AIclinic.webp';
@@ -478,6 +479,8 @@ const AiSolutionHealthcareClinicsAustralia = () => {
           </motion.div>
         </div>
       </section>
+
+      <RelatedIndustryPages currentSlug="healthcare" />
 
       {/* CTA Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">

@@ -19,6 +19,7 @@ import {
 import ContactModal from '../../components/ContactModal';
 import Footer from '../../components/Footer';
 import Schema from '../../components/Schema';
+import RelatedIndustryPages from '../../components/RelatedIndustryPages';
 import { useSeo } from '../../hooks/useSeo';
 
 const heroImage = 'ai1.webp';
@@ -470,6 +471,8 @@ const AiDevelopmentForSmallBusinessesAustralia = () => {
           </div>
         </div>
       </section>
+
+      <RelatedIndustryPages currentSlug="small-business" />
 
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">

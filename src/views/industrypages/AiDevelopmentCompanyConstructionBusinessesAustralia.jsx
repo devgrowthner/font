@@ -23,6 +23,7 @@ import {
 import ContactModal from '../../components/ContactModal';
 import Footer from '../../components/Footer';
 import Schema from '../../components/Schema';
+import RelatedIndustryPages from '../../components/RelatedIndustryPages';
 import { useSeo } from '../../hooks/useSeo';
 
 const heroImage = 'AIconstruction.webp';
@@ -720,6 +721,8 @@ const AiDevelopmentCompanyConstructionBusinessesAustralia = () => {
           </motion.div>
         </div>
       </section>
+
+      <RelatedIndustryPages currentSlug="construction" />
 
       {/* Section 9 — Final CTA */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">

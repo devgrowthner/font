@@ -21,6 +21,7 @@ import {
 import ContactModal from '../../components/ContactModal';
 import Footer from '../../components/Footer';
 import Schema from '../../components/Schema';
+import RelatedLocationPages from '../../components/RelatedLocationPages';
 import { useSeo } from '../../hooks/useSeo';
 
 const bg2 = '/AIMelbourne.webp';
@@ -652,6 +653,9 @@ const AiDevelopmentCompanyMelbourne = () => {
       </section>
 
       {/* Connect / CTA Section */}
+
+      <RelatedLocationPages currentSlug="melbourne" />
+
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
           <motion.div

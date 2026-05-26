@@ -19,6 +19,7 @@ import {
 import ContactModal from '../../components/ContactModal';
 import Footer from '../../components/Footer';
 import Schema from '../../components/Schema';
+import RelatedIndustryPages from '../../components/RelatedIndustryPages';
 import { useSeo } from '../../hooks/useSeo';
 
 const heroImage = 'AIrestaurant.webp';
@@ -455,6 +456,8 @@ const AiSolutionHospitalityBusinessesAustraliaNew = () => {
           </motion.div>
         </div>
       </section>
+
+      <RelatedIndustryPages currentSlug="hospitality" />
 
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="container mx-auto max-w-5xl">
