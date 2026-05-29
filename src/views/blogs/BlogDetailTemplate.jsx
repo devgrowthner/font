@@ -1413,7 +1413,13 @@ const BlogDetailTemplate = () => {
 
         {/* Overlay Gradients — Lighter overlay for better image visibility */}
         <div className="absolute inset-0 z-[1] bg-gradient-to-br from-white/25 via-white/15 to-white/25"></div>
-        <div className="absolute inset-0 z-[1] bg-[radial-gradient(circle_at_30%_20%,rgba(113,147,52,0.02),transparent_50%)]"></div>
+        <div className="absolute inset-0 z-[1]">
+          <img
+            src="/aiautomation/zynex_blog_banner_ultraHD_8K.png"
+            alt="Zynex Banner"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         <div className="container relative z-10 mx-auto flex h-full max-w-4xl flex-col justify-center py-6 sm:py-8">
           {/* <button

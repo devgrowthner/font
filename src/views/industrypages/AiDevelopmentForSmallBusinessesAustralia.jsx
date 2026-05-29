@@ -472,8 +472,6 @@ const AiDevelopmentForSmallBusinessesAustralia = () => {
         </div>
       </section>
 
-      <RelatedIndustryPages currentSlug="small-business" />
-
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-[#719334] to-[#5a7529] rounded-3xl p-8 sm:p-12 text-center">
@@ -499,6 +497,7 @@ const AiDevelopmentForSmallBusinessesAustralia = () => {
         </div>
       </section>
 
+      <RelatedIndustryPages currentSlug="small-business" />
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Footer />
     </div>

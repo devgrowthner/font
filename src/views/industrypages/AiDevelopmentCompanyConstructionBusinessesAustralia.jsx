@@ -722,8 +722,6 @@ const AiDevelopmentCompanyConstructionBusinessesAustralia = () => {
         </div>
       </section>
 
-      <RelatedIndustryPages currentSlug="construction" />
-
       {/* Section 9 — Final CTA */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="container mx-auto max-w-5xl">
@@ -753,6 +751,7 @@ const AiDevelopmentCompanyConstructionBusinessesAustralia = () => {
         </div>
       </section>
 
+      <RelatedIndustryPages currentSlug="construction" />
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Footer />
     </motion.div>

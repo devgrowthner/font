@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 
 const locationPages = [
   {
@@ -67,70 +66,29 @@ const locationPages = [
   },
 ];
 
-const preferredRelated = {
-  sydney: ['melbourne', 'brisbane', 'canberra'],
-  melbourne: ['sydney', 'adelaide', 'hobart'],
-  brisbane: ['gold-coast', 'sydney', 'melbourne'],
-  adelaide: ['melbourne', 'perth', 'canberra'],
-  perth: ['adelaide', 'darwin', 'melbourne'],
-  canberra: ['sydney', 'melbourne', 'adelaide'],
-  'gold-coast': ['brisbane', 'sydney', 'melbourne'],
-  darwin: ['perth', 'brisbane', 'adelaide'],
-  hobart: ['melbourne', 'sydney', 'adelaide'],
-};
-
 const RelatedLocationPages = ({ currentSlug }) => {
-  const bySlug = Object.fromEntries(locationPages.map((page) => [page.slug, page]));
-  const related = (preferredRelated[currentSlug] || [])
-    .map((slug) => bySlug[slug])
-    .filter(Boolean)
-    .slice(0, 3);
-
-  const fallback = locationPages
-    .filter((page) => page.slug !== currentSlug && !related.some((item) => item.slug === page.slug))
-    .slice(0, 3 - related.length);
-
-  const pages = [...related, ...fallback];
+  const allLocations = locationPages.filter((page) => page.slug !== currentSlug);
 
   return (
-    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#fefdfb] via-[#fff7ed] to-[#fef3c7]/30">
       <div className="container mx-auto max-w-6xl">
-        <div className="mb-8 sm:mb-10">
-          <h2 className="text-3xl sm:text-4xl font-heading font-extrabold text-gray-900">
-            Related location pages
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-4">
+            Our Locations
           </h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+            Zynex Technologies provides AI development services across Australia. Explore our locations and find the office nearest to you.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 sm:gap-6">
-          {pages.map((page) => (
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">``
+          {allLocations.map((location) => (
             <Link
-              key={page.href}
-              href={page.href}
-              className="group overflow-hidden rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-all"
+              key={location.slug}
+              href={location.href}
+              className="inline-block px-6 sm:px-8 py-2.5 sm:py-3 rounded-full border-2 border-gray-300 text-gray-700 font-medium text-sm sm:text-base transition-all duration-300 hover:border-[#719334] hover:text-[#719334] hover:bg-[#719334]/5"
             >
-              <div className="relative h-44 sm:h-48 overflow-hidden bg-gray-100">
-                <img
-                  src={page.image}
-                  alt={page.title}
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
-                <span className="absolute left-4 top-4 rounded-lg bg-white px-3 py-1.5 text-xs font-bold text-gray-900 shadow-sm">
-                  Location
-                </span>
-                <h3 className="absolute bottom-0 left-0 right-0 p-4 text-white font-heading text-lg font-bold leading-snug">
-                  {page.title}
-                </h3>
-              </div>
-              <div className="p-5">
-                <p className="text-sm text-gray-600 leading-relaxed mb-5 line-clamp-3">
-                  {page.description}
-                </p>
-                <span className="inline-flex items-center gap-2 text-sm font-bold text-[#719334]">
-                  View page
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </span>
-              </div>
+              {location.slug === 'gold-coast' ? 'Gold Coast' : location.slug === 'perth' ? 'Perth' : location.slug === 'darwin' ? 'Darwin' : location.slug === 'hobart' ? 'Hobart' : location.slug.charAt(0).toUpperCase() + location.slug.slice(1)}
             </Link>
           ))}
         </div>

@@ -721,8 +721,6 @@ const AiDevelopmentCompanyHobart = () => {
 
       {/* Final CTA / Connect */}
 
-      <RelatedLocationPages currentSlug="hobart" />
-
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
           <motion.div
@@ -814,6 +812,7 @@ const AiDevelopmentCompanyHobart = () => {
         </div>
       </section>
 
+      <RelatedLocationPages currentSlug="hobart" />
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Footer />
     </div>

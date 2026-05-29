@@ -153,11 +153,11 @@ function BlogsContent() {
                     className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100"
                     onClick={() => router.push(`/blogs/${post.slug}`)}
                   >
-                    <div className="relative h-64 overflow-hidden">
+                    <div className="relative h-64 overflow-hidden bg-[#173607]">
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-contain transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                       <div className="absolute top-4 left-4">

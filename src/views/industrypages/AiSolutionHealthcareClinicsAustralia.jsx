@@ -480,8 +480,6 @@ const AiSolutionHealthcareClinicsAustralia = () => {
         </div>
       </section>
 
-      <RelatedIndustryPages currentSlug="healthcare" />
-
       {/* CTA Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="container mx-auto max-w-5xl">
@@ -511,6 +509,7 @@ const AiSolutionHealthcareClinicsAustralia = () => {
         </div>
       </section>
 
+      <RelatedIndustryPages currentSlug="healthcare" />
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Footer />
     </div>

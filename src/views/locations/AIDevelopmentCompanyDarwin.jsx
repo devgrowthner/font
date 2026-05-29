@@ -425,8 +425,6 @@ const AIDevelopmentCompanyDarwin = () => {
       </section>
 
 
-      <RelatedLocationPages currentSlug="darwin" />
-
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-white border rounded-3xl shadow-lg p-8 lg:p-12 text-center">
@@ -452,6 +450,7 @@ const AIDevelopmentCompanyDarwin = () => {
         </div>
       </section>
 
+      <RelatedLocationPages currentSlug="darwin" />
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Footer />
     </div>

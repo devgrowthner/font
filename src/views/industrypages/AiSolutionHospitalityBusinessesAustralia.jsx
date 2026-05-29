@@ -457,8 +457,6 @@ const AiSolutionHospitalityBusinessesAustraliaNew = () => {
         </div>
       </section>
 
-      <RelatedIndustryPages currentSlug="hospitality" />
-
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-[#719334] to-[#5a7529] rounded-3xl shadow-xl p-8 sm:p-12 lg:p-16 text-center">
@@ -487,6 +485,7 @@ const AiSolutionHospitalityBusinessesAustraliaNew = () => {
         </div>
       </section>
 
+      <RelatedIndustryPages currentSlug="hospitality" />
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Footer />
     </div>

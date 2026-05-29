@@ -25,6 +25,9 @@ const DETAIL_TEMPLATE_SLUGS = [
   'business-automation-using-ai',
   'ai-implementation-services-strategy-execution',
   'best-ai-companies-australia-2026',
+  'ai-development-construction-businesses-australia',
+  'australian-construction-companies-ai-win-tenders',
+  'ai-solution-healthcare-clinics-australia-admin',
 ];
 
 export async function generateMetadata({ params }) {

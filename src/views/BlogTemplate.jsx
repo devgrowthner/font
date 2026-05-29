@@ -682,6 +682,7 @@ const BlogTemplate = () => {
               className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.12)]"
             >
               <img src={blogData.image} alt={blogData.title} className="w-full h-full object-cover" />
+              <img src="/aiautomation/zynex_blog_banner_ultraHD_8K.png" alt="Zynex Banner" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, rgba(113, 147, 52, 0.3), rgba(113, 147, 52, 0.3))' }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             </motion.div>
