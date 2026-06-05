@@ -358,9 +358,15 @@ const GuideStepsSection = ({ blogData }) => {
           variants={fadeInUp}
           className={stepIdx > 0 ? 'mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-gray-200' : ''}
         >
-          <h3 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
-            {step.heading}
-          </h3>
+          {step.headingLevel === 'h2' ? (
+            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
+              {step.heading}
+            </h2>
+          ) : (
+            <h3 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
+              {step.heading}
+            </h3>
+          )}
 
           {step.firstParagraphBullet && step.bodyParagraphs?.[0] ? (
             <ul className="mt-4 mb-4 list-disc pl-6 sm:pl-8 text-base sm:text-lg text-gray-700 leading-relaxed">
@@ -479,6 +485,12 @@ const GuideStepsSection = ({ blogData }) => {
               ))}
             </ul>
           )}
+
+          {step.plainBulletItemsHeading ? (
+            <p className="mt-6 text-base sm:text-lg font-semibold text-foreground">
+              {linkDefs?.length ? renderWithInlineLinks(step.plainBulletItemsHeading, linkDefs) : step.plainBulletItemsHeading}
+            </p>
+          ) : null}
 
           {step.plainBulletItems?.length > 0 && (
             <ul className="mt-4 mb-4 list-disc pl-6 sm:pl-8 space-y-3 text-base sm:text-lg text-gray-700 leading-relaxed">

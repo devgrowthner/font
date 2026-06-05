@@ -13,7 +13,7 @@ const DETAIL_TEMPLATE_SLUGS = [
   'how-to-choose-an-ai-development-company-in-australia',
   'nemoclaw-implementation-guide-businesses',
   'openclaw-implementation-guide-businesses',
-  '10-business-processes-to-automate-with-ai',
+  'business-processes-to-automate-with-ai',
   'ai-automation-for-businesses-australia',
   'ai-use-cases-for-small-businesses',
   'ai-implementation-guide-for-businesses',
@@ -24,10 +24,15 @@ const DETAIL_TEMPLATE_SLUGS = [
   'reduce-cost-using-ai-automation',
   'business-automation-using-ai',
   'ai-implementation-services-strategy-execution',
-  'best-ai-companies-australia-2026',
+  'best-ai-development-companies-in-australia',
   'ai-development-construction-businesses-australia',
   'australian-construction-companies-ai-win-tenders',
-  'ai-solution-healthcare-clinics-australia-admin',
+  'how-australian-clinics-cut-admin-work-with-ai',
+  'ai-gp-clinics-missed-bookings-front-desk',
+  'how-australian-property-managers-ai-tenant-requests-faster',
+  'how-ai-helps-australian-real-estate-agencies-win-after-hours-leads',
+  'how-ai-reservation-systems-help-australian-restaurants-stop-losing-after-hours-bookings',
+  'what-is-ai-for-hospitality-businesses-in-australia-and-how-does-it-actually-work',
 ];
 
 export async function generateMetadata({ params }) {
