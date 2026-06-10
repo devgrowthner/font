@@ -15,6 +15,17 @@ const Footer = () => {
       { name: 'AI Strategy Report', href: 'https://competitorinsights.com.au/' },
       { name: 'CareCob Platform', href: 'https://www.carecob.com.au/' }
     ],
+    locations: [
+      { name: 'Sydney', href: '/ai-development-company-sydney', isRoute: true },
+      { name: 'Melbourne', href: '/ai-development-company-melbourne', isRoute: true },
+      { name: 'Brisbane', href: '/ai-development-company-in-brisbane', isRoute: true },
+      { name: 'Adelaide', href: '/ai-development-company-adelaide', isRoute: true },
+      { name: 'Perth', href: '/custom-ai-development-company-in-perth', isRoute: true },
+      { name: 'Canberra', href: '/ai-development-company-in-canberra', isRoute: true },
+      { name: 'Gold Coast', href: '/ai-development-gold-coast', isRoute: true },
+      { name: 'Darwin', href: '/ai-development-company-darwin', isRoute: true },
+      { name: 'Hobart', href: '/ai-development-company-in-hobart', isRoute: true },
+    ],
     company: [
       { name: 'Learn More', href: '/what-is-zynex', isRoute: true },
       { name: 'Contact', href: '#contact' }
@@ -97,10 +108,10 @@ const Footer = () => {
           </div>
 
           {/* Links Section - Right Side with Equal Gaps */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 flex-1 lg:justify-items-start">
-            {/* Solutions */}
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 flex-1 lg:justify-items-start">
+            {/* AI Services */}
             <div>
-              <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">Solutions</h4>
+              <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">AI Services</h4>
               <ul className="space-y-2.5">
                 {footerLinks.solutions.map((link, index) => (
                   <li key={index}>
@@ -124,6 +135,26 @@ const Footer = () => {
                         {link.name}
                       </a>
                     )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Locations */}
+            <div>
+              <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">Locations</h4>
+              <ul className="space-y-2.5">
+                {footerLinks.locations.map((link, index) => (
+                  <li key={index}>
+                    <button
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        router.push(link.href);
+                      }}
+                      className="text-muted-foreground transition-colors font-body text-sm text-left hover:text-brand-green block"
+                    >
+                      {link.name}
+                    </button>
                   </li>
                 ))}
               </ul>

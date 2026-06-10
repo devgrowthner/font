@@ -10,15 +10,12 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isLocationOpen, setIsLocationOpen] = useState(false);
   const [isIndustryOpen, setIsIndustryOpen] = useState(false);
   const router = useRouter();
   const servicesRef = useRef(null);
-  const locationRef = useRef(null);
-    const industryRef = useRef(null);
+  const industryRef = useRef(null);
 
   const mobileServicesRef = useRef(null);
-  const mobileLocationRef = useRef(null);
   const mobileIndustryRef = useRef(null);
 
 
@@ -59,9 +56,6 @@ const Header = () => {
       if (servicesRef.current && !servicesRef.current.contains(event.target)) {
         setIsServicesOpen(false);
       }
-      if (locationRef.current && !locationRef.current.contains(event.target)) {
-        setIsLocationOpen(false);
-      }
       if (industryRef.current && !industryRef.current.contains(event.target)) {
         setIsIndustryOpen(false);
       }
@@ -76,63 +70,6 @@ const Header = () => {
     { name: 'CareCob: AI Companion', link: '/solutions', tag: 'Healthcare AI', isExternal: false },
     { name: 'AI Automation', link: '/ai-automation', tag: 'Process Optimization', isExternal: false },
     { name: 'AI Feasibility Analysis', link: '/ai-feasibility-analysis', tag: 'Strategic Insights', isExternal: false },
-  ];
-
-  const locationServices = [
-    {
-      name: 'AI Development — Sydney',
-      link: '/ai-development-company-sydney',
-      tag: 'Local AI engineering & ROI',
-      isExternal: false,
-    },
-    {
-      name: 'AI Development — Melbourne',
-      link: '/ai-development-company-melbourne',
-      tag: 'Custom AI & ROI focus',
-      isExternal: false,
-    },
-    {
-      name: 'AI Development — Brisbane',
-      link: '/ai-development-company-in-brisbane',
-      tag: 'Chatbots, agents & automation',
-      isExternal: false,
-    },
-    {
-      name: 'AI Development — Adelaide',
-      link: '/ai-development-company-adelaide',
-      tag: 'Custom AI, ML & automation',
-      isExternal: false,
-    },
-    {
-      name: 'Custom AI Development — Perth',
-      link: '/custom-ai-development-company-in-perth',
-      tag: 'Chatbot, vision & agentic AI',
-      isExternal: false,
-    },
-    {
-      name: 'AI Development — Canberra',
-      link: '/ai-development-company-in-canberra',
-      tag: 'Custom AI, ML & automation',
-      isExternal: false,
-    },
-    {
-      name: 'AI Development — Gold Coast',
-      link: '/ai-development-gold-coast',
-      tag: 'Custom AI, ML & automation',
-      isExternal: false,
-    },
-    {
-      name: 'AI Development — Darwin',
-      link: '/ai-development-company-darwin',
-      tag: 'Custom AI, ML & automation',
-      isExternal: false,
-    },
-    {
-      name: 'AI Development — Hobart',
-      link: '/ai-development-company-in-hobart',
-      tag: 'Custom AI, ML & automation',
-      isExternal: false,
-    },
   ];
 
   const industryServices = [
@@ -181,7 +118,6 @@ const Header = () => {
   const handleLinkClick = () => {
     setIsOpen(false);
     setIsServicesOpen(false);
-    setIsLocationOpen(false);
   };
 
   const handleServiceClick = (link, isExternal, e) => {
@@ -190,7 +126,6 @@ const Header = () => {
       e.stopPropagation();
     }
     setIsServicesOpen(false);
-    setIsLocationOpen(false);
     setIsIndustryOpen(false);
     setIsOpen(false);
 
@@ -219,21 +154,15 @@ const Header = () => {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center flex-1 justify-end shrink-0">
               <div className="flex items-center space-x-1 lg:space-x-2">
-                <Link href="/" className="cursor-pointer text-gray-700 px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group hover:text-brand-green">
-                  Home
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}></span>
-                </Link>
-
                 {/* Services Dropdown */}
                 <div className="relative" ref={servicesRef}>
                   <button
                     onClick={() => {
                       setIsServicesOpen(!isServicesOpen);
-                      setIsLocationOpen(false);
                     }}
                     className="cursor-pointer text-gray-700 px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group flex items-center gap-1 hover:text-brand-green"
                   >
-                    Services
+                    AI Services
                     <svg className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -266,54 +195,11 @@ const Header = () => {
                   )}
                 </div>
 
-                {/* Location Dropdown */}
-                <div className="relative" ref={locationRef}>
-                  <button
-                    onClick={() => {
-                      setIsLocationOpen(!isLocationOpen);
-                      setIsServicesOpen(false);
-                    }}
-                    className="cursor-pointer text-gray-700 px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group flex items-center gap-1 hover:text-brand-green"
-                  >
-                    Location
-                    <svg className={`w-4 h-4 transition-transform duration-300 ${isLocationOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}></span>
-                  </button>
-
-                  {isLocationOpen && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[min(42rem,calc(100vw-2rem))] sm:w-[min(48rem,calc(100vw-2rem))] bg-white/95 backdrop-blur-xl border border-gray-200/50 rounded-2xl shadow-xl overflow-hidden z-50">
-                      <div className="p-3 sm:p-4">
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                          {locationServices.map((service, index) => (
-                            <button
-                              key={index}
-                              type="button"
-                              onClick={(e) => handleServiceClick(service.link, service.isExternal, e)}
-                              className="w-full text-left rounded-xl px-3 py-2.5 sm:py-3 text-sm text-gray-700 border border-transparent hover:bg-gray-50/80 hover:border-gray-100 transition-all duration-200 flex items-start gap-2 group"
-                            >
-                              <div className="flex-1 min-w-0">
-                                <div className="font-semibold leading-snug group-hover:text-brand-green transition-colors">{service.name}</div>
-                                <div className="text-xs text-gray-500 mt-1 leading-snug line-clamp-2">{service.tag}</div>
-                              </div>
-                              <svg className="w-4 h-4 text-gray-400 group-hover:translate-x-0.5 group-hover:text-brand-green transition-all duration-200 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                              </svg>
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
                  {/* Industry Dropdown */}
                 <div className="relative" ref={industryRef}>
                   <button
                     onClick={() => {
                       setIsIndustryOpen(!isIndustryOpen);
-                      setIsLocationOpen(false);
                       setIsServicesOpen(false);
                     }}
                     className="cursor-pointer text-gray-700 px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group flex items-center gap-1 hover:text-brand-green"
@@ -401,14 +287,10 @@ const Header = () => {
           <div className="absolute top-full left-4 right-4 mt-2 md:hidden" data-mobile-menu>
             <div className="bg-white/95 shadow-xl rounded-2xl border border-gray-200/50 overflow-hidden">
               <div className="px-3 py-3 space-y-2">
-                <Link href="/" className="text-gray-700 block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green" onClick={handleLinkClick}>
-                  Home
-                </Link>
-
                 {/* Mobile Services Section */}
                 <div ref={mobileServicesRef}>
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setIsServicesOpen(!isServicesOpen); setIsLocationOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
-                    <span>Services</span>
+                  <button type="button" onClick={(e) => { e.stopPropagation(); setIsServicesOpen(!isServicesOpen); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
+                    <span>AI Services</span>
                     <svg className={`w-5 h-5 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -431,35 +313,9 @@ const Header = () => {
                   )}
                 </div>
 
-                {/* Mobile Location Section */}
-                <div ref={mobileLocationRef}>
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setIsLocationOpen(!isLocationOpen); setIsServicesOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
-                    <span>Location</span>
-                    <svg className={`w-5 h-5 transition-transform duration-300 ${isLocationOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-
-                  {isLocationOpen && (
-                    <div className="mt-2 space-y-1" onClick={(e) => e.stopPropagation()}>
-                      {locationServices.map((service, index) => (
-                        <button
-                          key={index}
-                          type="button"
-                          onClick={(e) => handleServiceClick(service.link, service.isExternal, e)}
-                          className="text-gray-600 block px-4 py-2 rounded-lg text-sm font-medium w-full text-left cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green"
-                        >
-                          <div className="font-semibold">{service.name}</div>
-                          <div className="text-xs text-gray-500 mt-0.5">{service.tag}</div>
-                        </button>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                  {/* Mobile Industry Section */}
+                {/* Mobile Industry Section */}
                 <div ref={mobileIndustryRef}>
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setIsIndustryOpen(!isIndustryOpen); setIsLocationOpen(false); setIsServicesOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
+                  <button type="button" onClick={(e) => { e.stopPropagation(); setIsIndustryOpen(!isIndustryOpen); setIsServicesOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
                     <span>Industry</span>
                     <svg className={`w-5 h-5 transition-transform duration-300 ${isIndustryOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
