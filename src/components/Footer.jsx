@@ -197,8 +197,16 @@ const Footer = () => {
                   <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <a className="text-muted-foreground text-sm hover:text-brand-green transition-colors whitespace-nowrap">
+                  <a className="text-muted-foreground text-sm hover:text-brand-green transition-colors whitespace-nowrap" href="mailto:support@zynextechnologies.com.au">
                     support@zynextechnologies.com.au
+                  </a>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5.5A2.5 2.5 0 015.5 3h1A2.5 2.5 0 019 5.5v1A2.5 2.5 0 016.5 9H6a.5.5 0 00-.5.5v2A12.5 12.5 0 0018.5 22h2a.5.5 0 00.5-.5v-1A2.5 2.5 0 0021.5 18h1A2.5 2.5 0 0025 15.5v-1A2.5 2.5 0 0022.5 12h-1a.5.5 0 00-.5.5v-1A12.5 12.5 0 003.5 2H2a.5.5 0 00-.5.5v1A2.5 2.5 0 014 6h1A2.5 2.5 0 017.5 8.5v1A.5.5 0 007 10H6a2.5 2.5 0 01-2.5-2.5v-1z" />
+                  </svg>
+                  <a className="text-muted-foreground text-sm hover:text-brand-green transition-colors whitespace-nowrap" href="tel:0392922022">
+                    03 9292 2022
                   </a>
                 </li>
                 <li className="flex items-start gap-2.5">

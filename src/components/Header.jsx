@@ -249,9 +249,16 @@ const Header = () => {
                   </Link>
                 ))}
 
+                <a href="tel:0392922022" className="hidden md:inline-flex items-center gap-2 text-gray-700 bg-white border border-brand-green/20 px-3 lg:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap hover:border-brand-green hover:bg-green-50 hover:text-brand-green shadow-sm">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72 12.3 12.3 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.11-.45 12.3 12.3 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  03 9292 2022
+                </a>
+
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="text-white px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg transform hover:scale-105 active:scale-95 whitespace-nowrap"
+                  className="text-white px-3 lg:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg transform hover:scale-105 active:scale-95 whitespace-nowrap"
                   style={{ background: 'linear-gradient(to right, #719334, #719334)' }}
                 >
                   Connect with us
@@ -348,6 +355,10 @@ const Header = () => {
                     {link.name}
                   </Link>
                 ))}
+
+                <a href="tel:0392922022" className="text-gray-700 block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
+                  03 9292 2022
+                </a>
 
                 <button className="text-white block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer transition-all duration-300 shadow-md hover:shadow-lg transform active:scale-95" style={{ background: 'linear-gradient(to right, #719334, #719334)' }} onClick={() => { setIsModalOpen(true); handleLinkClick(); }}>
                   Connect with us
