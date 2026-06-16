@@ -25,6 +25,8 @@ const DETAIL_TEMPLATE_SLUGS = [
   'business-automation-using-ai',
   'ai-implementation-services-strategy-execution',
   'best-ai-development-companies-in-australia',
+  'best-odoo-development-company-australia',
+  'odoo-erp-implementation-cost-australia',
   'ai-development-construction-businesses-australia',
   'australian-construction-companies-ai-win-tenders',
   'how-australian-clinics-cut-admin-work-with-ai',
