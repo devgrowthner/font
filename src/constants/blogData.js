@@ -6,7 +6,7 @@ export const blogList = [
     title: "How Much Does Odoo ERP Implementation Cost in Australia?",
     excerpt:
       "Learn the real Odoo ERP implementation cost in Australia. Compare licensing, implementation, customisation, support, and project timeline expenses.",
-    image: "/aiautomation/aiuse.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "June 15, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -18,7 +18,7 @@ export const blogList = [
     title: "7 Best Odoo Development Company in Australia: A Complete Buyer's Guide",
     excerpt:
       "Compare top Australian Odoo partners, learn what to look for in an ERP implementation partner, and avoid the common pitfalls that derail Odoo projects.",
-    image: "/aiautomation/aiuse.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "June 15, 2026",
     author: "Zynex Team",
     readTime: "11 min read",
@@ -30,7 +30,7 @@ export const blogList = [
     title: "How Australian Property Managers Use AI for Faster Tenant Requests",
     excerpt:
       "Australian property managers are cutting tenant response times from hours to minutes with AI, reducing workload and improving satisfaction without adding staff.",
-    image: "/aiautomation/AImeeting.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "June 5, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -42,7 +42,7 @@ export const blogList = [
     title: "How AI Reservation Systems for Restaurants Help",
     excerpt:
       "AI reservation systems for restaurants handle guest bookings 24/7. Discover how Australian venues stop losing after-hours enquiries and recover missed revenue automatically.",
-    image: "/AIrestaurant.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "June 5, 2026",
     author: "Zynex Team",
     readTime: "13 min read",
@@ -54,7 +54,7 @@ export const blogList = [
     title: "What Is AI for Hospitality Businesses in Australia and How Does It Actually Work",
     excerpt:
       "What is AI for hospitality businesses in Australia and how does it work? Learn how operators are using AI to automate bookings and improve guest experience.",
-    image: "/AIrestaurant.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "June 5, 2026",
     author: "Zynex Team",
     readTime: "13 min read",
@@ -66,7 +66,7 @@ export const blogList = [
     title: "How AI Is Helping Australian Real Estate Agencies Capture After-Hours Leads",
     excerpt:
       "Australian real estate agencies are missing leads outside business hours. Discover how AI keeps enquiries engaged 24/7 and converts after-hours interest into actionable agent leads.",
-    image: "/AIclinic.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 29, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -78,7 +78,7 @@ export const blogList = [
     title: "How Australian General Practitioner Clinics Are Using AI to Recover Missed Bookings and Reduce Front-Desk Pressure",
     excerpt:
       "AI automation is changing how Australian GP clinics handle one of their most persistent problems: missed bookings and overwhelmed reception staff. Learn how clinics recover lost appointments, reduce no-shows, and ease front-desk pressure without hiring more staff.",
-    image: "/AIclinic.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 29, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -90,7 +90,7 @@ export const blogList = [
     title: "How Australian Healthcare Clinics Are Cutting Admin Work With AI Without Hiring More Staff",
     excerpt:
       "An AI solution for healthcare clinics cuts admin load without adding staff. See how Australian clinics save time and money with Zynex.",
-    image: "/AIclinic.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 29, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -102,7 +102,7 @@ export const blogList = [
     title: "How Australian Construction Companies Are Using AI to Win More Tenders and Deliver Projects on Time",
     excerpt:
       "AI for Australian construction companies is helping firms automate tendering, scheduling, compliance, and enquiry management.",
-    image: "/AIconstruction.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 29, 2026",
     author: "Zynex Team",
     readTime: "13 min read",
@@ -114,7 +114,7 @@ export const blogList = [
     title: "How AI Development for Construction Businesses in Australia Is Changing Site Operations",
     excerpt:
       "AI development for construction businesses in Australia is improving scheduling, safety, equipment usage, and compliance documentation.",
-    image: "/AIconstruction.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 29, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -126,7 +126,7 @@ export const blogList = [
     title: "5 Best AI Companies in Australia for 2026",
     excerpt:
       "Australia's AI market is growing fast. Compare the best AI development companies in Australia by technical depth, track record, and business outcomes.",
-    image: "/aiautomation/best-aus.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "13 min read",
@@ -138,7 +138,7 @@ export const blogList = [
     title: "Artificial Intelligence Solutions for Business Growth 2026",
     excerpt:
       "Explore the best artificial intelligence solutions for business growth in 2026 and see how Zynex Technologies helps you implement them.",
-    image: "/aiautomation/artificial-sollution.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -150,7 +150,7 @@ export const blogList = [
     title: "Cost Reduction Strategies with AI Automation: A Practical Guide",
     excerpt:
       "Reduce cost using AI automation by targeting the right processes first. Practical strategies for Australian businesses that deliver fast, measurable ROI.",
-    image: "/aiautomation/reduce-codt.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "11 min read",
@@ -162,7 +162,7 @@ export const blogList = [
     title: "How to Automate Your Business Using AI (Practical Guide)",
     excerpt:
       "Business automation using AI reduces manual work and errors. Learn which processes to automate first and what results Australian businesses can expect.",
-    image: "/aiautomation/automate-using.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "14 min read",
@@ -174,7 +174,7 @@ export const blogList = [
     title: "AI Implementation: From Strategy to Execution for Businesses",
     excerpt:
       "Discover how AI implementation services take your business from strategy to live deployment. Learn the steps, costs, and what to expect.",
-    image: "/aiautomation/ai-implementation.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "14 min read",
@@ -186,7 +186,7 @@ export const blogList = [
     title: "AI Security & Risk Management: How to Build Safe AI Systems",
     excerpt:
       "Learn how AI security and risk management protects your business. Discover the key risks, frameworks, and steps to build safe AI systems.",
-    image: "/aiautomation/ai-security.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "13 min read",
@@ -198,7 +198,7 @@ export const blogList = [
     title: "AI Software Development Lifecycle: A Complete Guide",
     excerpt:
       "Learn every stage of the AI software development lifecycle and how Australian businesses can use it to build AI that actually works.",
-    image: "/aiautomation/ai-software.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "14 min read",
@@ -210,7 +210,7 @@ export const blogList = [
     title: "AI Feasibility Study: Why Businesses Should Do It First",
     excerpt:
       "Skipping an AI feasibility study is one of the biggest mistakes Australian businesses make. This post shows what a study covers, why it protects your investment, and how it proves whether AI is worth building.",
-    image: "/aiautomation/ai-feasibilty.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -222,7 +222,7 @@ export const blogList = [
     title: "When Should a Business Invest in AI Automation?",
     excerpt:
       "Find out when AI automation makes business sense, what signals to look for, and how to start with the right strategy in Australia.",
-    image: "/aiautomation/business-invest.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -234,7 +234,7 @@ export const blogList = [
     title: "Cost of AI Development for Businesses in Australia",
     excerpt:
       "Discover what AI development really costs Australian businesses, what drives pricing, and how to plan your AI investment wisely.",
-    image: "/aiautomation/copy-of-development.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "13 min read",
@@ -247,7 +247,7 @@ export const blogList = [
     title: "A Practical AI Implementation Guide for Growing Businesses in Australia",
     excerpt:
       "A practical AI implementation guide for Australian businesses. Learn how to plan, build, and deploy AI the right way.",
-    image: "/aiautomation/AImeeting.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "May 25, 2026",
     author: "Zynex Team",
     readTime: "15 min read",
@@ -259,7 +259,7 @@ export const blogList = [
     title: "AI Workflow Automation Improves Business Efficiency",
     excerpt:
       "Discover how AI workflow automation helps Australian businesses cut costs, reduce errors, and scale operations faster in 2026.",
-    image: "/aiautomation/ImprovesBusiness.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "April 1, 2026",
     author: "Zynex Team",
     readTime: "10 min read",
@@ -271,7 +271,7 @@ export const blogList = [
     title: "How to Choose the Right AI Development Company in Australia",
     excerpt:
       "Picking the right AI development company is one of those decisions that is easy to get wrong and expensive to undo.",
-    image: "/aiautomation/rightdev.jpeg",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "April 1, 2026",
     author: "Zynex Team",
     readTime: "9 min read",
@@ -283,7 +283,7 @@ export const blogList = [
     title: "AI Feasibility Analysis: Why Every Business Needs It Before Implementing AI",
     excerpt:
       "Learn what AI feasibility analysis is, why it matters, and how to conduct one. Avoid costly AI failures by evaluating data, costs, and ROI before you build.",
-    image: "/aiautomation/AIfes.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "March 1, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -295,7 +295,7 @@ export const blogList = [
     title: "Custom AI Solutions vs Off-the-Shelf AI Tools: Which Is Better?",
     excerpt:
       "Not sure whether to build or buy your AI tools? Compare custom AI solutions vs off-the-shelf AI tools by cost, flexibility, and ROI to find the right fit for your business.",
-    image: "/aiautomation/AIsolution.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "March 1, 2026",
     author: "Zynex Team",
     readTime: "11 min read",
@@ -307,7 +307,7 @@ export const blogList = [
     title: "Getting Started with Nemoclaw: Implementation Guide for Businesses",
     excerpt:
       "Learn how to get started with Nemoclaw for your business. A practical implementation guide covering setup, use cases, and key benefits.",
-    image: "/aiautomation/Nemoclaw.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "March 1, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -319,7 +319,7 @@ export const blogList = [
     title: "How to Get Started with Openclaw: A Business Implementation Guide",
     excerpt:
       "Learn how to implement Openclaw in your business with a step-by-step guide. Build AI workflows that drive real results with Zynex Technologies.",
-    image: "/aiautomation/Openclaw.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "March 1, 2026",
     author: "Zynex Team",
     readTime: "12 min read",
@@ -331,7 +331,7 @@ export const blogList = [
     title: "10 Business Processes to Automate with AI",
     excerpt:
       "Discover 10 business processes to automate with AI to save time, reduce costs, and improve efficiency across operations, marketing, and customer support.",
-    image: "/aiautomation/AIbusiness.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "March 1, 2026",
     author: "Zynex Team",
     readTime: "10 min read",
@@ -343,7 +343,7 @@ export const blogList = [
     title: "AI Automation for Businesses in Australia | Benefits & Use Cases",
     excerpt:
       "Learn how AI automation for businesses in Australia improves efficiency, reduces costs, and helps companies automate workflows and decision-making.",
-    image: "/aiautomation/aiautomation.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "March 1, 2026",
     author: "Zynex Team",
     readTime: "8 min read",
@@ -355,7 +355,7 @@ export const blogList = [
     title: "AI Use Cases for Small Businesses | Top Examples",
     excerpt:
       "Discover top AI use cases for small businesses to automate tasks, cut costs, and boost growth with practical examples for SMEs.",
-    image: "/aiautomation/aiuse.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "March 1, 2026",
     author: "Zynex Team",
     readTime: "6 min read",
@@ -373,7 +373,7 @@ export const blogContents = {
     title: "5 Best AI Development Companies in Australia",
     description:
       "Australia's AI market is growing fast, and choosing the wrong development partner is an expensive mistake. This guide profiles the 5 best AI development companies in Australia, ranked by technical depth, real-world track record, and the ability to deliver measurable business outcomes.",
-    image: "/aiautomation/best-aus.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Companies",
     date: "May 25, 2026",
     readTime: "13 min read",
@@ -584,7 +584,7 @@ export const blogContents = {
     title: "7 Best Odoo Development Company in Australia: A Complete Buyer's Guide",
     description:
       "Finding the right Odoo development company in Australia is one of the most important decisions a business can make before committing to an ERP implementation. The wrong partner can cost you months of wasted time, a broken rollout, and a system your team refuses to use.",
-    image: "/aiautomation/aiuse.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Odoo Development",
     date: "June 15, 2026",
     readTime: "11 min read",
@@ -836,7 +836,7 @@ export const blogContents = {
     title: "How Much Does Odoo ERP Implementation Cost in Australia?",
     description:
       "Odoo ERP implementation cost in Australia varies significantly depending on the size of your business, the modules you need, and how much customisation is involved. A small business might spend anywhere from $5,000 to $20,000, while a mid-sized company could be looking at $50,000 or more once licensing, development, training, and support are factored in. This post breaks down every major cost category so business owners can plan with real numbers, not guesswork.",
-    image: "/aiautomation/aiuse.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Odoo Cost",
     date: "June 15, 2026",
     readTime: "12 min read",
@@ -1060,7 +1060,7 @@ export const blogContents = {
     title: "When Should a Business Invest in AI Automation?",
     description:
       "Find out when AI automation makes business sense, what signals to look for, and how to start with the right strategy in Australia.",
-    image: "/aiautomation/business-invest.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Automation",
     date: "May 25, 2026",
     readTime: "12 min read",
@@ -1312,7 +1312,7 @@ export const blogContents = {
     title: "AI Software Development Lifecycle: A Complete Guide",
     description:
       "The AI software development lifecycle is the structured process that takes an AI idea from initial concept through to a working, maintained system in production. This guide explains every stage clearly so Australian businesses know what to expect before they commit.",
-    image: "/aiautomation/ai-software.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Development Lifecycle",
     date: "May 25, 2026",
     readTime: "14 min read",
@@ -1612,7 +1612,7 @@ export const blogContents = {
     title: "AI Security & Risk Management: How to Build Safe AI Systems",
     description:
       "AI security and risk management is no longer an optional consideration for businesses deploying artificial intelligence. This guide covers the most common AI security threats, risk management frameworks, and the practical steps Australian businesses need to build safe AI systems.",
-    image: "/aiautomation/ai-security.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Security",
     date: "May 25, 2026",
     readTime: "13 min read",
@@ -1837,7 +1837,7 @@ export const blogContents = {
     title: "Cost of AI Development for Businesses in Australia",
     description:
       "AI development costs vary widely depending on what you're building, who builds it, and how complex your data environment is. For Australian businesses, understanding what drives these costs is the first step to making a smart investment. This post breaks down the key pricing factors across different AI solutions, outlines realistic budget ranges, and explains how to approach an AI project without blowing your budget on the wrong things.",
-    image: "/aiautomation/copy-of-development.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Development Costs",
     date: "May 25, 2026",
     readTime: "13 min read",
@@ -2024,7 +2024,7 @@ export const blogContents = {
     title: "A Practical AI Implementation Guide for Growing Businesses in Australia",
     description:
       "Implementing AI in a business is not just a technology decision  it's a strategic one. This guide walks Australian business owners and operations managers through every stage of a successful AI implementation, from initial planning and feasibility through to deployment and ongoing optimisation. Whether you're exploring automation, intelligent chatbots, or computer vision, the process is more straightforward than most people expect when approached in the right order.",
-    image: "/aiautomation/AImeeting.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Implementation",
     date: "May 25, 2026",
     readTime: "15 min read",
@@ -2280,7 +2280,7 @@ export const blogContents = {
     metaDescription: "Discover how AI workflow automation helps Australian businesses cut costs, reduce errors, and scale operations faster in 2026.",
     title: "AI Workflow Automation Improves Business Efficiency",
     description: "Discover how AI workflow automation helps Australian businesses cut costs, reduce errors, and scale operations faster in 2026.",
-    image: "/aiautomation/ImprovesBusiness.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Workflow Automation",
     date: "April 1, 2026",
     readTime: "10 min read",
@@ -2470,7 +2470,7 @@ export const blogContents = {
     title: "Custom AI Solutions vs Off-the-Shelf AI Tools: Which One is Better?",
     description:
       "Not sure whether to build or buy your AI tools? Compare custom AI solutions vs off-the-shelf AI tools by cost, flexibility, and ROI to find the right fit for your business.",
-    image: "/aiautomation/AIsolution.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Build vs Buy AI",
     date: "March 1, 2026",
     readTime: "11 min read",
@@ -2679,7 +2679,7 @@ export const blogContents = {
     title: "How AI Reservation Systems Are Helping Australian Restaurants Stop Losing After-Hours Bookings",
     description:
       "AI reservation systems are changing the way Australian restaurants handle bookings, particularly outside of business hours when staff aren't available to answer calls or respond to enquiries. This post explains how these systems work, why after-hours bookings represent a significant and often overlooked revenue gap, and what restaurant owners need to know before choosing a solution.",
-    image: "/AIrestaurant.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Reservations",
     date: "June 5, 2026",
     readTime: "13 min read",
@@ -2843,7 +2843,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "What Is AI for Hospitality Businesses in Australia and How Does It Actually Work",
     description:
       "AI for hospitality businesses in Australia is no longer a technology reserved for large hotel chains with deep IT budgets. From regional motels to busy inner-city restaurants, operators across the country are using AI tools to handle bookings, reduce no-shows, personalise guest experiences, and cut down on time-consuming admin.",
-    image: "/AIrestaurant.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Hospitality",
     date: "June 5, 2026",
     readTime: "13 min read",
@@ -3022,7 +3022,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "How to Choose the Right AI Development Company in Australia",
     description:
       "Not sure how to choose an AI development company in Australia? Here are the key things to check before you sign anything. Find out how. (136 characters)",
-    image: "/aiautomation/rightdev.jpeg",
+    image: "/zynex_banner_natural_logo_4K.png",
     date: "April 1, 2026",
     readTime: "9 min read",
     relatedSlugs: [
@@ -3185,7 +3185,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "Getting Started with Nemoclaw: Implementation Guide for Businesses",
     description:
       "Learn how to get started with Nemoclaw for your business. A practical implementation guide covering setup, use cases, and key benefits.",
-    image: "/aiautomation/Nemoclaw.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Legal Automation",
     date: "March 1, 2026",
     readTime: "12 min read",
@@ -3453,7 +3453,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "How to Get Started with Openclaw: A Business Implementation Guide",
     description:
       "Learn how to implement Openclaw in your business with a step-by-step guide. Build AI workflows that drive real results with Zynex Technologies.",
-    image: "/aiautomation/Openclaw.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Openclaw & AI Workflows",
     date: "March 1, 2026",
     readTime: "12 min read",
@@ -3680,7 +3680,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "10 Business Processes You Should Automate with AI",
     description:
       "Discover 10 business processes to automate with AI to save time, reduce costs, and improve efficiency across operations, marketing, and customer support.",
-    image: "/aiautomation/AIbusiness.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Process Automation",
     date: "March 1, 2026",
     readTime: "10 min read",
@@ -3934,7 +3934,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "How AI Automation is Transforming Businesses in Australia",
     description:
       "Learn how AI automation for businesses in Australia improves efficiency, reduces costs, and helps companies automate workflows and decision-making.",
-    image: "/aiautomation/aiautomation.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Automation for Australian Businesses",
     date: "March 1, 2026",
     readTime: "8 min read",
@@ -4227,7 +4227,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
   title: "Top AI Use Cases for Small and Medium Businesses",
   description:
     "Discover top AI use cases for small businesses to automate tasks, cut costs, and boost growth. Explore practical examples for SMEs today.",
-  image: "/aiautomation/aiuse.webp",
+  image: "/zynex_banner_natural_logo_4K.png",
   badge: "AI Solutions for Small Businesses",
   date: "March 1, 2026",
   readTime: "6 min read",
@@ -4500,7 +4500,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "AI Feasibility Analysis: Why Businesses Should Do It Before Implementing AI",
     description:
       "Learn what AI feasibility analysis is, why it matters, and how to conduct one. Avoid costly AI failures by evaluating data, costs, and ROI before you build.",
-    image: "/aiautomation/AIfes.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Feasibility",
     date: "March 1, 2026",
     readTime: "12 min read",
@@ -4722,7 +4722,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "AI Feasibility Study: Why Businesses Should Do It First",
     description:
       "An AI feasibility study is a structured assessment that determines whether artificial intelligence can solve a specific business problem, what that solution would cost, and whether the expected return justifies the investment. It answers the questions every business should ask before committing budget to any AI project.",
-    image: "/aiautomation/ai-feasibilty.png",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "AI Feasibility",
     date: "May 25, 2026",
     readTime: "12 min read",
@@ -4990,7 +4990,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       title: "Artificial Intelligence Solutions for Business Growth 2026",
       description:
         "Artificial intelligence solutions for business are no longer limited to large enterprises with dedicated tech teams. In 2026, businesses of all sizes are using AI to cut costs, speed up operations, and make sharper decisions with less effort. This post covers the most effective AI solutions available right now, what they actually do in a real business setting, and how to choose the right approach for your goals. Whether you're just starting to explore AI or ready to implement, this is the practical guide you need.",
-      image: "/aiautomation/artificial-sollution.png",
+      image: "/zynex_banner_natural_logo_4K.png",
       badge: "AI Solutions",
       date: "May 25, 2026",
       readTime: "12 min read",
@@ -5189,7 +5189,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       title: "Cost Reduction Strategies with AI Automation: A Practical Guide",
       description:
         "Businesses across Australia are under consistent pressure to do more with less, and AI automation is one of the most practical tools available for making that happen. This guide covers the specific ways that AI automation reduces operating costs, which processes deliver the fastest returns, and what a realistic implementation looks like from start to finish. Whether you're exploring the idea for the first time or ready to move into action, the information here is built around what actually works in practice, not what sounds good in a vendor brochure.",
-      image: "/aiautomation/reduce-codt.png",
+      image: "/zynex_banner_natural_logo_4K.png",
       badge: "Cost Reduction",
       date: "May 25, 2026",
       readTime: "11 min read",
@@ -5399,7 +5399,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       title: "How to Automate Your Business Using AI (Practical Guide)",
       description:
         "Business automation using AI has moved well past the experimental stage for Australian businesses. Across operations, finance, customer service, and sales, AI-driven automation is reducing manual workload, cutting error rates, and freeing up team capacity for work that actually requires human judgement. This guide covers exactly how to approach automation practically: which processes to target first, how to structure the rollout, and what separates the businesses that see real results from the ones that don't.",
-      image: "/aiautomation/automate-using.png",
+      image: "/zynex_banner_natural_logo_4K.png",
       badge: "Business Automation",
       date: "May 25, 2026",
       readTime: "14 min read",
@@ -5542,7 +5542,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       title: "AI Implementation: From Strategy to Execution for Businesses",
       description:
         "AI implementation services cover everything that happens between deciding to use artificial intelligence and having a system running productively in your business. For most Australian businesses, that gap is wider than expected and harder to cross without the right support. This guide walks through the full journey from strategy to execution, covering what each phase involves, what typically goes wrong, and how to choose an implementation partner who delivers results rather than just a project plan.",
-      image: "/aiautomation/ai-implementation.png",
+      image: "/zynex_banner_natural_logo_4K.png",
       badge: "AI Implementation",
       date: "May 25, 2026",
       readTime: "14 min read",
@@ -5677,7 +5677,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "How AI Development for Construction Businesses in Australia Is Changing Site Operations",
     description:
       "Construction businesses across Australia are under constant pressure to deliver projects on time, manage rising costs, and keep sites safe. This post breaks down where AI is making the biggest difference on Australian construction sites.",
-    image: "/AIconstruction.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Construction AI",
     date: "May 29, 2026",
     readTime: "12 min read",
@@ -5870,7 +5870,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "How Australian Construction Companies Are Using AI to Win More Tenders and Deliver Projects on Time",
     description:
       "AI for Australian construction companies is moving from a curiosity to a competitive necessity. This post breaks down how construction companies are using AI right now, from tender preparation to site scheduling and compliance.",
-    image: "/AIconstruction.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Construction AI",
     date: "May 29, 2026",
     readTime: "13 min read",
@@ -6082,7 +6082,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "How Australian Healthcare Clinics Are Cutting Admin Work With AI Without Hiring More Staff",
     description:
       "An AI solution for healthcare clinics in Australia is not about replacing good staff. It is about removing the operational drag that prevents those staff from doing the work they were actually hired to do.",
-    image: "/AIclinic.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Healthcare AI",
     date: "May 29, 2026",
     readTime: "12 min read",
@@ -6280,7 +6280,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "How Australian General Practitioner Clinics Are Using AI to Recover Missed Bookings and Reduce Front-Desk Pressure",
     description:
       "AI automation is changing how Australian GP clinics handle one of their most persistent problems: missed bookings and overwhelmed reception staff.",
-    image: "/AIclinic.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Healthcare AI",
     date: "June 04, 2026",
     readTime: "12 min read",
@@ -6470,7 +6470,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "How AI Is Helping Australian Real Estate Agencies Capture After-Hours Leads",
     description:
       "Australian real estate agencies are missing a significant number of leads every week simply because enquiries arrive outside business hours. AI tools built for property businesses are changing that.",
-    image: "/AIclinic.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Real Estate AI",
     date: "May 29, 2026",
     readTime: "12 min read",
@@ -6677,7 +6677,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     title: "How Australian Property Managers Are Using AI to Handle Tenant Requests Faster",
     description:
       "Australian property managers handling AI-powered tenant communication are cutting response times from hours to minutes without adding headcount. This post breaks down the specific ways AI is being deployed across residential and commercial property portfolios in Australia, what real property managers are seeing in practice, and how teams are using automation to handle routine tenant requests at scale.",
-    image: "/aiautomation/AImeeting.webp",
+    image: "/zynex_banner_natural_logo_4K.png",
     badge: "Property Management",
     date: "June 5, 2026",
     readTime: "12 min read",

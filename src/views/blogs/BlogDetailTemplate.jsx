@@ -1414,14 +1414,6 @@ const BlogDetailTemplate = () => {
     <div className="min-h-screen bg-[#fefdfb]">
       {/* Hero — fixed height + cover image (aligned with BlogTemplate image column: 300 / 400 / 500px) */}
       <section className={`relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden px-4 sm:px-6 lg:px-8 ${blogData.heroTopMargin ? 'mt-16 sm:mt-20 lg:mt-24' : ''}`}>
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={blogData.image || '/aiautomation/aiuse.webp'}
-            alt={blogData.title}
-            className="h-full w-full object-cover object-center"
-          />
-        </div>
 
         {/* Overlay Gradients — Lighter overlay for better image visibility */}
         <div className="absolute inset-0 z-[1] bg-gradient-to-br from-white/25 via-white/15 to-white/25"></div>

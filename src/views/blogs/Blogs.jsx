@@ -153,13 +153,14 @@ function BlogsContent() {
                     className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100"
                     onClick={() => router.push(`/blogs/${post.slug}`)}
                   >
-                    <div className="relative h-64 overflow-hidden bg-[#173607]">
+                    <div className="relative h-64 overflow-hidden">
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-contain transition-transform duration-500"
+                        className="w-full h-full object-cover transition-transform duration-500"
+                        onError={(e) => { e.target.src = '/zynex_banner_natural_logo_4K.png'; }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
                       <div className="absolute top-4 left-4">
                         <div
                           className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-white/90 backdrop-blur-sm"
@@ -168,24 +169,24 @@ function BlogsContent() {
                           Featured Post
                         </div>
                       </div>
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 className="text-lg font-heading font-bold text-white mb-2 line-clamp-2" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+                          {post.title}
+                        </h3>
+                        <div className="flex flex-wrap items-center gap-3 text-xs text-white/90">
+                          <div className="flex items-center gap-1">
+                            <Calendar className="w-3 h-3" />
+                            <span>{post.date}</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <User className="w-3 h-3" />
+                            <span>{post.author}</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <div className="p-6">
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" style={{ color: '#719334' }} />
-                          <span>{post.date}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <User className="w-4 h-4" style={{ color: '#719334' }} />
-                          <span>{post.author}</span>
-                        </div>
-                      </div>
-
-                      <h3 className="text-xl font-heading font-bold text-foreground mb-3 group-hover:text-brand-green transition-colors duration-300 line-clamp-2">
-                        {post.title}
-                      </h3>
-
                       <p className="text-base text-muted-foreground leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>
 
                       <div

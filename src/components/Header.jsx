@@ -237,7 +237,7 @@ const Header = () => {
                   )}
                 </div>
 
-                <Link href="/odoo-erp-development" className="cursor-pointer text-gray-700 px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group hover:text-brand-green">
+                <Link href="/odoo-erp-development-company-australia" className="cursor-pointer text-gray-700 px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group hover:text-brand-green">
                   ERP services
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}></span>
                 </Link>
@@ -356,7 +356,7 @@ const Header = () => {
                   Blogs
                 </Link>
 
-                <Link href="/odoo-erp-development" className="text-gray-700 block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green" onClick={handleLinkClick}>
+                <Link href="/odoo-erp-development-company-australia" className="text-gray-700 block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green" onClick={handleLinkClick}>
                   ERP services
                 </Link>
 

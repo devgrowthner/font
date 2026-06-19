@@ -631,60 +631,56 @@ const BlogTemplate = () => {
             </button>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <motion.div initial="initial" animate="animate" variants={fadeInLeft}>
-              {/* Badge */}
-              <motion.div
-                variants={fadeInUp}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6"
-                style={{ backgroundColor: 'rgba(113, 147, 52, 0.1)', borderColor: 'rgba(113, 147, 52, 0.3)', borderWidth: '1px', color: '#719334' }}
-              >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-                </svg>
-                {blogData.badge || 'Featured Article'}
-              </motion.div>
-
-              {/* Title */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-foreground mb-6 leading-tight">
-                {blogData.title}
-              </h1>
-
-              {/* Description */}
-              <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">{blogData.description}</p>
-
-              {/* Hero CTA button — label driven by ctaButtonText from data */}
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="group inline-flex items-center justify-center gap-2 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 hover:-translate-y-1 shadow-lg min-h-[44px]"
-                style={{ background: 'linear-gradient(to right, #719334, #719334)' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'linear-gradient(to right, #5a7529, #5a7529)';
-                  e.currentTarget.style.boxShadow = '0 12px 35px rgba(113, 147, 52, 0.5)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'linear-gradient(to right, #719334, #719334)';
-                  e.currentTarget.style.boxShadow = '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)';
-                }}
-              >
-                <span>{blogData.ctaButtonText || 'Talk to our AI experts today'}</span>
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="none">
-                  <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </motion.div>
-
-            {/* Hero image */}
+          <div className="grid lg:grid-cols-1 gap-8 lg:gap-12 items-center">
+            {/* Hero section with title */}
             <motion.div
               initial="initial"
               animate="animate"
-              variants={fadeInRight}
-              className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.12)]"
+              variants={fadeInUp}
+              className="relative h-[400px] sm:h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.12)]"
+              style={{ background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)' }}
             >
-              <img src={blogData.image} alt={blogData.title} className="w-full h-full object-cover" />
-              <img src="/aiautomation/zynex_blog_banner_ultraHD_8K.png" alt="Zynex Banner" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom right, rgba(113, 147, 52, 0.3), rgba(113, 147, 52, 0.3))' }}></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 flex flex-col justify-center p-8 sm:p-12 lg:p-16 z-10">
+                {/* Badge */}
+                <motion.div
+                  variants={fadeInUp}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6 w-fit"
+                  style={{ backgroundColor: 'rgba(113, 147, 52, 0.2)', borderColor: 'rgba(113, 147, 52, 0.5)', borderWidth: '1px', color: 'white' }}
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                  </svg>
+                  {blogData.badge || 'Featured Article'}
+                </motion.div>
+
+                {/* Title */}
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6 leading-tight" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+                  {blogData.title}
+                </h1>
+
+                {/* Description */}
+                <p className="text-base sm:text-lg text-white/90 mb-8 leading-relaxed max-w-3xl">{blogData.description}</p>
+
+                {/* Hero CTA button — label driven by ctaButtonText from data */}
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="group inline-flex items-center justify-center gap-2 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 hover:-translate-y-1 shadow-lg w-fit min-h-[44px]"
+                  style={{ background: 'linear-gradient(to right, #719334, #719334)' }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(to right, #5a7529, #5a7529)';
+                    e.currentTarget.style.boxShadow = '0 12px 35px rgba(113, 147, 52, 0.5)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'linear-gradient(to right, #719334, #719334)';
+                    e.currentTarget.style.boxShadow = '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)';
+                  }}
+                >
+                  <span>{blogData.ctaButtonText || 'Talk to our AI experts today'}</span>
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+              </div>
             </motion.div>
           </div>
         </div>
