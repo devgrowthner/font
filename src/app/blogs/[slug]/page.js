@@ -29,6 +29,7 @@ const DETAIL_TEMPLATE_SLUGS = [
   'odoo-erp-implementation-cost-australia',
   'odoo-customization-services',
   'odoo-business-process-automation',
+  'best-odoo-development-companies-australia',
   'ai-development-construction-businesses-australia',
   'australian-construction-companies-ai-win-tenders',
   'how-australian-clinics-cut-admin-work-with-ai',
