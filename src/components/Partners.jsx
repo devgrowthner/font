@@ -63,13 +63,13 @@ const Partners = () => {
           className="text-center mb-10 sm:mb-12 px-4 sm:px-6"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-gray-900 mb-4">
-            AI Technologies Powering{' '}
+            AI & ERP Technologies Powering{' '}
             <span className="text-brand-green">
               Our Products
             </span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We integrate industry-leading AI platforms and frameworks to build intelligent, scalable, and 
+            We integrate industry-leading AI platforms and ERP frameworks to build intelligent, scalable, and 
             reliable solutions.
           </p>
         </motion.div>

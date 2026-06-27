@@ -42,8 +42,8 @@ const WhatIsZynex = () => {
   const valueCards = [
     {
       icon: Target,
-      title: "Outcome-Driven AI",
-      description: "Focused on real KPIs—efficiency, growth, customer experience, and risk reduction. We measure success by the impact on your business, not just technical capability.",
+      title: "Outcome-Driven AI & ERP",
+      description: "Focused on real KPIs including efficiency, growth, customer experience, and risk reduction. Whether it is an AI deployment or an ERP rollout, we measure success by the impact on your business, not just technical capability.",
       gradient: "from-[#719334] to-[#719334]",
       shadow: "shadow-[0_8px_30px_rgba(59,130,246,0.2)]"
     },
@@ -118,7 +118,7 @@ const WhatIsZynex = () => {
             className="text-xl sm:text-2xl md:text-3xl font-heading font-bold text-gray-700 mb-4 sm:mb-5 leading-tight"
           >
             <span className="bg-clip-text text-transparent" style={{ backgroundImage: 'linear-gradient(to right, #719334, #719334, #719334)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              An AI innovation partner built for delivery
+              An AI and ERP innovation partner built for delivery
             </span>
           </motion.h3>
           
@@ -126,7 +126,7 @@ const WhatIsZynex = () => {
             variants={fadeInUp}
             className="text-base sm:text-lg text-gray-600 leading-relaxed font-body max-w-3xl mx-auto"
           >
-            We partner with businesses to design, validate, and deploy intelligent solutions—operating at the intersection of strategy and engineering. We help organisations move from "AI curiosity" to measurable outcomes with clarity, governance, and speed.
+            We partner with businesses to design, validate, and deploy intelligent solutions across AI and ERP, operating at the intersection of strategy and engineering. We help organisations move from "AI curiosity" and siloed legacy systems to measurable outcomes with clarity, governance, and speed.
           </motion.p>
         </motion.div>
 

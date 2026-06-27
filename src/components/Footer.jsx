@@ -12,6 +12,7 @@ const Footer = () => {
   const footerLinks = {
     solutions: [
       { name: 'Custom AI Development', href: '/custom-ai', isRoute: true },
+      { name: 'ERP Development (Odoo)', href: '/odoo-erp-development-company-australia', isRoute: true },
       { name: 'AI Strategy Report', href: 'https://competitorinsights.com.au/' },
       { name: 'CareCob Platform', href: 'https://www.carecob.com.au/' }
     ],
@@ -111,7 +112,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 flex-1 lg:justify-items-start">
             {/* AI Services */}
             <div>
-              <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">AI Services</h4>
+              <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">AI & ERP Services</h4>
               <ul className="space-y-2.5">
                 {footerLinks.solutions.map((link, index) => (
                   <li key={index}>

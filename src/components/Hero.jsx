@@ -47,7 +47,7 @@ const Hero = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-extrabold text-white leading-tight mb-4"
           >
-            AI Solutions That Drive{" "}
+            AI & ERP Solutions That Drive{" "}
             <span className="text-brand-green">
               Real Business Value
             </span>
@@ -71,7 +71,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-xl mb-6 sm:mb-8"
           >
-            Zynex Technologies delivers custom AI solutions with measurable ROI. We assess feasibility, develop competitive strategies, and deploy production-ready systems that transform your operations.
+            Zynex Technologies delivers custom AI and ERP solutions with measurable ROI. We assess feasibility, develop competitive strategies, and deploy production-ready systems that transform your operations.
           </motion.p>
 
           {/* CTA Buttons */}

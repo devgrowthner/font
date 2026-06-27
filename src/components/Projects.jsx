@@ -135,7 +135,7 @@ const Projects = () => {
           </h2>
           
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed font-body">
-            Real-world AI solutions that transform businesses and deliver measurable results
+            Proven pathways to AI and ERP-powered business transformation
           </p>
         </div>
 

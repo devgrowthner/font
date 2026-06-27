@@ -2,9 +2,9 @@ import Home from '@/views/Home';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'AI Development Company in Australia | Zynex Technologies',
+  title: 'AI & ERP Development Company in Australia | Zynex Technologies',
   description:
-    'Leading AI Development Company in Australia businesses trust for custom AI solutions, automation, and scalable software development services.',
+    'Leading AI and ERP Development Company in Australia businesses trust for custom AI solutions, Odoo ERP, automation, and scalable software development services.',
   path: '/',
 });
 
