@@ -367,6 +367,20 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blogs - Odoo Customization Services -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/odoo-customization-services</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Odoo Business Process Automation -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/odoo-business-process-automation</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blogs - How Australian Property Managers AI Tenant Requests Faster -->
   <url>
     <loc>https://zynextechnologies.com.au/blogs/how-australian-property-managers-ai-tenant-requests-faster</loc>

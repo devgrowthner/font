@@ -29,7 +29,8 @@ const Footer = () => {
     ],
     company: [
       { name: 'Learn More', href: '/what-is-zynex', isRoute: true },
-      { name: 'Contact', href: '#contact' }
+      { name: 'Contact', href: '#contact' },
+      { name: 'Blogs', href: '/blogs', isRoute: true }
     ]
   };
 

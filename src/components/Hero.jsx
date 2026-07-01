@@ -91,7 +91,17 @@ const Hero = () => {
                 <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
-          
+            <a
+              href="https://calendly.com/zynex-technologies/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group text-white px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-300 hover:shadow-xl transform hover:scale-105 shadow-lg inline-flex items-center gap-2 border-2 border-white hover:bg-white hover:text-gray-900"
+            >
+              <span>Book on Call</span>
+              <svg className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 20 20" fill="none">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
           </motion.div>
         </div>
       </div>
