@@ -37,6 +37,8 @@ const DETAIL_TEMPLATE_SLUGS = [
   'how-ai-helps-australian-real-estate-agencies-win-after-hours-leads',
   'how-ai-reservation-systems-help-australian-restaurants-stop-losing-after-hours-bookings',
   'what-is-ai-for-hospitality-businesses-in-australia-and-how-does-it-actually-work',
+  'best-erpnext-implementation-companies-australia',
+  'best-zoho-erp-implementation-companies-australia',
 ];
 
 export async function generateMetadata({ params }) {

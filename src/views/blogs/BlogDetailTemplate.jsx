@@ -1069,6 +1069,99 @@ const FinalThoughtsSection = ({ blogData }) => (
   </section>
 );
 
+const ComparisonSection = ({ blogData }) => {
+  const linkDefs = blogData.inlineInternalLinks;
+  return (
+    <section id="comparison" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
+      <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-6">
+          {blogData.comparisonTitle || 'Comparison'}
+        </h2>
+        {blogData.comparisonDescription?.split('\n\n').map((para, i) => (
+          <p key={i} className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
+            {linkDefs?.length ? renderWithInlineLinks(para, linkDefs) : para}
+          </p>
+        ))}
+      </motion.div>
+    </section>
+  );
+};
+
+const QuestionsSection = ({ blogData }) => {
+  const linkDefs = blogData.inlineInternalLinks;
+  return (
+    <section id="questions" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
+      <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-6">
+          {blogData.questionsTitle || 'Questions to Ask'}
+        </h2>
+        {blogData.questionsDescription && (
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
+            {linkDefs?.length ? renderWithInlineLinks(blogData.questionsDescription, linkDefs) : blogData.questionsDescription}
+          </p>
+        )}
+        {blogData.questions?.length > 0 && (
+          <div className="space-y-6">
+            {blogData.questions.map((item, index) => (
+              <div key={index}>
+                <h3 className="text-xl font-heading font-semibold text-foreground mb-2">{item.question}</h3>
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                  {linkDefs?.length ? renderWithInlineLinks(item.answer, linkDefs) : item.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+        {blogData.questionsClosing && (
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mt-6 italic">
+            {linkDefs?.length ? renderWithInlineLinks(blogData.questionsClosing, linkDefs) : blogData.questionsClosing}
+          </p>
+        )}
+      </motion.div>
+    </section>
+  );
+};
+
+const ImplementationSection = ({ blogData }) => {
+  const linkDefs = blogData.inlineInternalLinks;
+  return (
+    <section id="implementation" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
+      <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-6">
+          {blogData.implementationTitle || 'Implementation'}
+        </h2>
+        {blogData.implementationDescription && (
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
+            {linkDefs?.length ? renderWithInlineLinks(blogData.implementationDescription, linkDefs) : blogData.implementationDescription}
+          </p>
+        )}
+        {blogData.implementationSteps?.length > 0 && (
+          <div className="space-y-6">
+            {blogData.implementationSteps.map((step, index) => (
+              <div key={index} className="flex gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#719334] text-white flex items-center justify-center font-bold text-base">
+                  {index + 1}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-heading font-semibold text-foreground mb-2">{step.heading}</h3>
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    {linkDefs?.length ? renderWithInlineLinks(step.content, linkDefs) : step.content}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+        {blogData.implementationClosing && (
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed mt-6 italic">
+            {linkDefs?.length ? renderWithInlineLinks(blogData.implementationClosing, linkDefs) : blogData.implementationClosing}
+          </p>
+        )}
+      </motion.div>
+    </section>
+  );
+};
+
 const RelatedLinksSection = ({ currentSlug, blogData }) => {
   const otherPosts = resolveRelatedPosts(currentSlug, blogData);
 
@@ -1376,6 +1469,18 @@ const BlogDetailTemplate = () => {
       ? <FinalThoughtsSection blogData={blogData} />
       : null,
 
+    comparison: blogData.comparisonTitle
+      ? <ComparisonSection blogData={blogData} />
+      : null,
+
+    questions: blogData.questionsTitle
+      ? <QuestionsSection blogData={blogData} />
+      : null,
+
+    implementation: blogData.implementationTitle
+      ? <ImplementationSection blogData={blogData} />
+      : null,
+
     relatedLinks: <RelatedLinksSection currentSlug={slug} blogData={blogData} />,
 
     // handle both `faq` (blog 3) and `faqs` (blogs 1 & 2)
@@ -1400,6 +1505,9 @@ const BlogDetailTemplate = () => {
     future:       blogData.futureTitle       || 'Future',
     conclusion:   blogData.conclusionTitle   || 'Conclusion',
     finalThoughts: blogData.finalThoughtsTitle || 'Final Thoughts',
+    comparison:   blogData.comparisonTitle   || 'Comparison',
+    questions:    blogData.questionsTitle    || 'Questions',
+    implementation: blogData.implementationTitle || 'Implementation',
     relatedLinks: 'Related posts',
     faq:          'FAQ',
     cta:          'Get Started',

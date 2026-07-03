@@ -1,6 +1,30 @@
 // Blog metadata for listing cards
 export const blogList = [
   {
+    id: "36",
+    slug: "best-zoho-erp-implementation-companies-australia",
+    title: "5 Best Zoho ERP Implementation Companies in Australia",
+    excerpt:
+      "Compare the 5 best Zoho ERP implementation companies in Australia for 2026 and find the right partner to deploy, customise and support your system.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    date: "July 3, 2026",
+    author: "Zynex Team",
+    readTime: "15 min read",
+    route: "/blogs/best-zoho-erp-implementation-companies-australia",
+  },
+  {
+    id: "35",
+    slug: "best-erpnext-implementation-companies-australia",
+    title: "5 Best ERPNext Implementation Companies in Australia",
+    excerpt:
+      "Compare the 5 best ERPNext implementation companies in Australia for 2026 and find the right open source ERP partner for your business.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    date: "July 3, 2026",
+    author: "Zynex Team",
+    readTime: "14 min read",
+    route: "/blogs/best-erpnext-implementation-companies-australia",
+  },
+  {
     id: "34",
     slug: "odoo-business-process-automation",
     title: "10 Business Processes You Can Automate with Odoo ERP",
@@ -7417,7 +7441,793 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ctaPlainText: true,
     ctaDescription:
       "Get in touch with the Zynex Technologies team to discuss how our Odoo ERP development services can help your business automate manual processes and save time.",
+  },
+  "best-erpnext-implementation-companies-australia": {
+    metaTitle: "5 Best ERPNext Implementation Companies in Australia | Zynex Technologies",
+    metaDescription:
+      "Compare the 5 best ERPNext implementation companies in Australia for 2026 and find the right open source ERP partner for your business.",
+    title: "5 Best ERPNext Implementation Companies in Australia",
+    description:
+      "Finding the right ERPNext implementation company in Australia matters more than most businesses expect, because the open source platform only delivers value when someone configures it around real workflows. This guide compares five ERPNext implementation companies serving Australian businesses in 2026, covering their specialisations, localisation capability and the type of business each one suits best.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "ERP Implementation",
+    date: "July 3, 2026",
+    readTime: "14 min read",
+    relatedSlugs: [
+      "best-odoo-development-company-australia",
+      "odoo-erp-implementation-cost-australia",
+      "odoo-customization-services",
+    ],
+    inlineInternalLinks: [
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+      { match: "Odoo ERP implementation cost in Australia", href: "/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "Odoo ERP development company in Australia", href: "/blogs/best-odoo-development-company-australia" },
+    ],
+    sectionOrder: ["summary", "introduction", "guideSteps", "comparison", "questions", "implementation", "finalThoughts", "faq", "cta", "relatedLinks"],
+    guideStepsTocLabel: "Top companies",
+    guideStepsTitle: "The 5 Best ERPNext Implementation Companies in Australia for 2026",
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "Finding the right ERPNext implementation company in Australia matters more than most businesses expect, because the open source platform only delivers value when someone configures it around real workflows. This guide compares five ERPNext implementation companies serving Australian businesses in 2026, covering their specialisations, localisation capability and the type of business each one suits best. It also outlines what to check before you commit to a partner.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "ERPNext is one of the few genuinely open source ERP platforms with a real foothold in Australia, and that changes the economics of the decision. There is no per-user licensing fee sitting underneath the project, so most of what a business pays for is the implementation itself.\n\nThat makes the choice of ERPNext implementation company in Australia arguably more important than it is for licensed platforms. The software is free. The workflow mapping, GST configuration, data migration and training are not, and a rushed setup can cost far more in rework than a proper one would have cost upfront.\n\nThis list covers five ERPNext implementation companies in Australia worth shortlisting in 2026, based on local presence, specialisation and how each one approaches Australian compliance requirements.",
+    guideSteps: [
+      {
+        heading: "How to Evaluate an ERPNext Implementation Company",
+        bodyParagraphs: [
+          "Before ranking vendors, it helps to understand what actually separates a strong ERPNext implementation company from a generic software shop. Here is the criteria that shaped this list.",
+        ],
+        labeledBulletItems: [
+          {
+            label: "Genuine ERPNext and Frappe framework depth.",
+            content:
+              " ERPNext sits on the Frappe framework, and partners who understand doctypes, custom scripts and role-based workflows deliver far more reliable customisation than those treating it as an off-the-shelf CRM.",
+          },
+          {
+            label: "Australian GST and BAS localisation experience.",
+            content:
+              " ERPNext's Australian localisation app handles GST postings and BAS reporting, but only if a partner configures it correctly for your chart of accounts.",
+          },
+          {
+            label: "Data migration track record.",
+            content:
+              " Moving financial records and product catalogues cleanly out of legacy systems or spreadsheets is where most ERPNext projects run into trouble.",
+          },
+          {
+            label: "Integration capability.",
+            content:
+              " Businesses rarely run ERPNext in isolation, so proven connectors to platforms like Shopify, QuickBooks and Amazon matter.",
+          },
+          {
+            label: "Post-launch support structure.",
+            content:
+              " Open source software still needs upgrades, bug fixes and ongoing configuration as a business changes, and that needs a clear support model from day one.",
+          },
+        ],
+        closingParagraphs: [],
+      },
+      {
+        heading: "1. Zynex Technologies",
+        bodyParagraphs: [
+          "Zynex Technologies is a Melbourne-based ERP consulting partner that helps Australian businesses evaluate open source options like ERPNext alongside AI-enhanced Zoho and Odoo deployments, rather than pushing a single platform regardless of fit. Its AI ERP Readiness Review looks at whether an open source build or a managed platform makes more sense before any implementation work starts.",
+        ],
+        closingParagraphs: [
+          "For businesses drawn to ERPNext's cost model but unsure whether they have the internal technical capacity to run it, Zynex is a useful first call, since it can scope an ERPNext build honestly or recommend an AI-enhanced Zoho or Odoo alternative if that fits the business better.",
+        ],
+      },
+      {
+        heading: "2. Arus Ignite",
+        bodyParagraphs: [
+          "Arus Ignite is a Melbourne-based ERPNext and Frappe implementation specialist, and notably the creator of the official Australian localisation app used across the wider ERPNext community. That positioning gives it a genuine edge on GST postings, BAS reporting and local compliance configuration.",
+        ],
+        closingParagraphs: [
+          "The company focuses specifically on ERPNext and other Frappe framework apps rather than spreading across multiple ERP platforms, which suits businesses that want a deep specialist rather than a generalist software house.",
+        ],
+      },
+      {
+        heading: "3. Bytes Technolab",
+        bodyParagraphs: [
+          "Bytes Technolab runs a dedicated Australian ERPNext implementation practice covering consulting, configuration, integration and migration, delivered with local-hours support. Its process starts with a discovery sprint that maps processes across finance, supply chain, sales, HR and eCommerce before any configuration begins.",
+        ],
+        closingParagraphs: [
+          "The team leans into AI-assisted setup, embedding forecasting, document processing and smart approvals into the ERPNext build rather than treating automation as a separate add-on. It suits mid-sized businesses that want integration with tools like Shopify, Amazon or QuickBooks alongside the core ERP build.",
+        ],
+      },
+      {
+        heading: "4. HT Evolution",
+        bodyParagraphs: [
+          "HT Evolution is a Perth-based provider offering AI-powered ERPNext implementation, combining ERPNext's core modules with real-time insights and automation layered on top. Its process runs through requirement analysis, prototype building, workflow refinement and end-to-end testing across payroll, invoicing, inventory and reporting.",
+        ],
+        closingParagraphs: [
+          "Businesses that want visibility across every department without juggling multiple disconnected tools tend to get the most from this approach, particularly if AI-driven forecasting is a priority.",
+        ],
+      },
+      {
+        heading: "5. Tridots Tech",
+        bodyParagraphs: [
+          "Tridots Tech operates out of Perth and supports Western Australian and wider Australian businesses with ERPNext consulting, customisation, deployment and system integration. The company works across manufacturing, advanced engineering, education and construction, industries where ERPNext's project and procurement workflows carry real weight.",
+        ],
+        closingParagraphs: [
+          "Its regional focus on Perth and WA businesses makes it a sensible shortlist option for companies outside the Sydney and Melbourne markets that still want dedicated local support.",
+        ],
+      },
+    ],
+    comparisonTitle: "ERPNext vs Zoho and Odoo: What to Consider",
+    comparisonDescription:
+      "ERPNext is not the only ERP option Australian businesses weigh up, and it helps to understand where it sits relative to the other two platforms that come up most often in comparisons: Zoho and Odoo.\n\nAll three platforms cover finance, sales, inventory and operations in a connected system, but the underlying model differs in ways that matter for cost and control:\n\nERPNext is fully open source with no per-user licensing fee, which shifts almost all of the cost into implementation, customisation and support.\n\nOdoo, covered in detail by Zynex's Odoo ERP development company in Australia page, also has an open source Community edition, but its Enterprise tier introduces per-user subscription pricing similar to Zoho.\n\nZoho ERP suits businesses already invested in the Zoho ecosystem, since CRM, Books, Inventory and Creator all share the same underlying architecture and support model.\n\nImplementation timelines run similarly across all three, typically 6 to 12 weeks for a focused rollout and several months for a complex, multi-module deployment.\n\nThere is no universally correct choice here. ERPNext tends to appeal most to businesses with internal technical capability who want full control over customisation without ongoing licence costs, while Zoho and Odoo suit businesses that would rather pay for a more managed, supported ecosystem.",
+    questionsTitle: "Questions to Ask Before Signing With an ERPNext Partner",
+    questionsDescription:
+      "A confident sales pitch does not guarantee a smooth rollout. Ask these questions before committing to any ERPNext implementation company in Australia.",
+    questions: [
+      {
+        question: "How many full ERPNext implementations have you delivered, versus general Frappe app development?",
+        answer:
+          "The two overlap but are not identical skill sets.",
+      },
+      {
+        question: "Do you use the official Australian localisation app, and how is it configured for our chart of accounts?",
+        answer:
+          "GST and BAS handling needs to be correct from day one, not patched afterwards.",
+      },
+      {
+        question: "What does your data migration and cutover process actually involve?",
+        answer:
+          "Ask for detail on validation and parallel testing, not just an assurance that it is handled.",
+      },
+      {
+        question: "What happens after go-live?",
+        answer:
+          "Confirm whether upgrades, bug fixes and configuration changes are included in an ongoing support arrangement or billed separately each time.",
+      },
+      {
+        question: "How does implementation cost compare to a licensed platform?",
+        answer:
+          "For a useful benchmark, Zynex's breakdown of Odoo ERP implementation cost in Australia shows how licensing, services and support stack up on a comparable open source platform, which gives a reasonable frame of reference for ERPNext pricing conversations too.",
+      },
+    ],
+    questionsClosing:
+      "Vague answers on GST configuration or post-launch support tend to predict trouble later. Push for specifics on both.",
+    implementationTitle: "What a Strong ERPNext Implementation Actually Looks Like",
+    implementationDescription:
+      "A well-run ERPNext rollout tends to follow a consistent pattern, regardless of which partner delivers it.",
+    implementationSteps: [
+      {
+        heading: "Discovery and process mapping.",
+        content:
+          "The partner reviews current workflows, data sources and integration needs before touching any configuration, usually over one to two weeks.",
+      },
+      {
+        heading: "Solution design.",
+        content:
+          "A module selection and customisation plan gets built around actual business processes, with GST and BAS localisation configured against your real chart of accounts.",
+      },
+      {
+        heading: "Build and sandbox testing.",
+        content:
+          "Configuration and any custom doctypes or scripts are built and validated in a sandbox environment before anything touches live data.",
+      },
+      {
+        heading: "Data migration and parallel run.",
+        content:
+          "Legacy data gets cleaned, mapped and imported, often with a short parallel run so your team can verify accuracy before full cutover.",
+      },
+      {
+        heading: "Go-live and ongoing support.",
+        content:
+          "The system goes live with training included, followed by a clear support arrangement covering upgrades and bug fixes.",
+      },
+    ],
+    implementationClosing:
+      "Businesses that rush the sandbox testing stage, or work with a partner who skips it, are the ones most likely to hit data integrity issues after go-live.",
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "The five ERPNext implementation companies in Australia covered here each bring a different strength, from platform-agnostic ERP advisory through Zynex Technologies to building the official Australian localisation app and AI-enhanced, regionally focused deployment. There is no single correct answer for every business.\n\nWhat matters more than the ranking itself is matching a partner's depth of Frappe framework experience to your industry, and confirming their GST and BAS localisation work is genuinely solid rather than assumed. A partner with real ERPNext depth will configure a far more reliable system than one treating it as just another CRM project.\n\nERPNext's open source model removes licensing cost from the equation, but it does not remove the need for careful implementation. Treat the selection of an ERPNext implementation company with the same seriousness you would apply to any other major operational decision, because the quality of that setup shapes how your business runs for years afterwards.",
+    faq: [
+      {
+        question: "What is the best ERPNext implementation company in Australia?",
+        answer:
+          "There is no single best option for every business. Zynex Technologies suits businesses wanting honest platform advice across ERPNext, Zoho and Odoo, Arus Ignite offers deep local GST and BAS expertise, Bytes Technolab and HT Evolution lean into AI-enhanced deployment, and Tridots Tech offers a methodical, regionally focused rollout.",
+      },
+      {
+        question: "How much does ERPNext implementation cost in Australia?",
+        answer:
+          "There is no licensing fee for ERPNext itself, so cost sits almost entirely in implementation services. Most first-phase programs for small to mid-sized businesses start in the mid-five figures and scale up with the number of modules, integrations and customisation required.",
+      },
+      {
+        question: "How long does an ERPNext implementation take?",
+        answer:
+          "A standard deployment covering core modules typically goes live in 6 to 12 weeks. More complex projects with custom development and multi-site data migration can run 20 to 40 weeks depending on scope.",
+      },
+      {
+        question: "Is ERPNext compliant with Australian GST and BAS requirements?",
+        answer:
+          "Yes. ERPNext's official Australian localisation app handles GST postings by supplier and customer type and supports both Full and Simpler BAS reporting methods, provided a partner configures it correctly for your business.",
+      },
+      {
+        question: "Is ERPNext a good fit for small and medium Australian businesses?",
+        answer:
+          "Yes. The absence of per-user licensing fees makes ERPNext particularly attractive for SMBs that want full ERP functionality without the recurring cost of proprietary platforms, provided they have access to solid implementation support.",
+      },
+    ],
+    ctaTitle: "Get in Touch",
+    ctaDescription:
+      "Contact Zynex Technologies today for an honest ERP platform assessment, whether that points to ERPNext, Zoho or Odoo, at Zynex Technologies",
+  },
+  "odoo-business-process-automation": {
+    metaTitle: "10 Business Processes You Can Automate with Odoo ERP | Zynex Technologies",
+    metaDescription:
+      "Discover 10 business processes you can automate with Odoo ERP, from invoicing and inventory to HR, CRM, and customer support.",
+    title: "10 Business Processes You Can Automate with Odoo ERP",
+    description:
+      "Discover 10 business processes you can automate with Odoo ERP, from invoicing and inventory to HR, CRM, and customer support.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "Odoo Automation",
+    date: "June 22, 2026",
+    readTime: "12 min read",
+    relatedSlugs: [
+      "odoo-customization-services",
+      "odoo-erp-implementation-cost-australia",
+      "best-odoo-development-company-australia",
+    ],
+    inlineInternalLinks: [
+      { match: "Odoo ERP implementation cost in Australia", href: "/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "best Odoo development company in Australia", href: "/blogs/best-odoo-development-company-australia" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+    sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
+    guideStepsTocLabel: "Processes to automate",
+    guideStepsTitle: "10 Business Processes You Can Automate with Odoo ERP",
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "Discover 10 business processes you can automate with Odoo ERP, from invoicing and inventory to HR, CRM, and customer support.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "Odoo ERP connects every department into one system, and that connection makes automation possible across the business rather than in isolated pockets. The result is fewer manual tasks, fewer errors, and more time for work that actually matters.\n\nThis article covers 10 business processes you can automate with Odoo ERP, with practical examples of how each one works in a real business context.",
+    guideSteps: [
+      {
+        heading: "Invoicing and Payment Reconciliation",
+        bodyParagraphs: [
+          "Manual invoicing is where most businesses lose hours they never get back. Creating invoices, chasing payments, and reconciling bank statements by hand is repetitive, error-prone, and entirely preventable with the right automation in place.",
+        ],
+        closingParagraphs: [
+          "Odoo automates the entire cycle. Invoices generate automatically from sales orders or timesheets, payment reminders go out on schedule, and bank reconciliation matches transactions to invoices without manual entry. The finance team stops chasing paperwork and starts focusing on cash flow and forecasting.",
+        ],
+      },
+      {
+        heading: "Inventory Management and Reordering",
+        bodyParagraphs: [
+          "Running out of stock costs sales. Holding too much stock ties up cash. Getting the balance right without automation means constant manual checking, spreadsheets that never quite match reality, and reorder decisions based on gut feel rather than data.",
+        ],
+        closingParagraphs: [
+          "Odoo tracks inventory in real time across multiple warehouses, triggers automatic reorder points when stock runs low, and updates quantities automatically as sales come in and purchases go out. The result is fewer stockouts, less overstock, and purchasing decisions based on actual demand patterns.",
+        ],
+      },
+      {
+        heading: "Purchase Order Approvals",
+        bodyParagraphs: [
+          "Purchase requests sitting in someone's inbox for days is a common bottleneck. Without a clear approval workflow, teams work around the process, orders get placed without proper sign-off, and the business loses visibility over spending.",
+        ],
+        closingParagraphs: [
+          "Odoo routes purchase requests through configurable approval chains based on value, department, or project. Approvers get notifications, requests escalate if they sit too long, and every approval is tracked for audit purposes. The process moves faster, and spending stays under control.",
+        ],
+      },
+      {
+        heading: "Sales Order Processing",
+        bodyParagraphs: [
+          "Sales teams should be selling, not data entry. When every sales order requires manual entry into multiple systems, errors creep in, orders get delayed, and the team spends more time on administration than customer engagement.",
+        ],
+        closingParagraphs: [
+          "Odoo automates sales order processing from quote to delivery. Quotes convert to orders with one click, inventory is reserved automatically, shipping documents generate without manual input, and customers receive status updates at each stage. The sales cycle shortens, and the team stays focused on revenue.",
+        ],
+      },
+      {
+        heading: "Employee Onboarding",
+        bodyParagraphs: [
+          "New employee onboarding involves multiple departments, a stack of paperwork, and a checklist that someone has to track manually. Miss a step, and the new hire starts without access, equipment, or documentation they need.",
+        ],
+        closingParagraphs: [
+          "Odoo HR automates onboarding workflows. Contracts generate automatically, access requests route to IT, equipment orders trigger, and training assignments schedule without manual coordination. The new hire gets everything they need from day one, and HR stops chasing checklists.",
+        ],
+      },
+      {
+        heading: "Leave and Expense Management",
+        bodyParagraphs: [
+          "Leave requests and expense claims are administrative overhead that can swallow hours if handled manually. Paper forms get lost, approval chains are unclear, and reconciling expenses against budgets is a spreadsheet nightmare.",
+        ],
+        closingParagraphs: [
+          "Odoo handles leave requests and expense claims through self-service portals. Employees submit requests online, approvals route automatically based on policy, and expenses sync directly to accounting for reimbursement. The process is faster, more transparent, and far less prone to error.",
+        ],
+      },
+      {
+        heading: "CRM Lead Scoring and Assignment",
+        bodyParagraphs: [
+          "Not all leads are equal, but most businesses treat them that way. Without automated lead scoring, sales teams waste time on low-quality prospects while high-value opportunities sit unattended.",
+        ],
+        closingParagraphs: [
+          "Odoo CRM scores leads based on criteria you set: industry, company size, engagement level, or custom fields that matter to your business. High-scoring routes to senior reps, lower-scoring to junior team members or nurture campaigns. The team focuses on leads most likely to convert, and conversion rates improve.",
+        ],
+      },
+      {
+        heading: "Marketing Campaign Automation",
+        bodyParagraphs: [
+          "Running marketing campaigns manually means juggling multiple tools, copying data between systems, and losing track of what actually worked. Campaigns run inconsistently, and attribution is guesswork.",
+        ],
+        closingParagraphs: [
+          "Odoo Marketing automates campaigns across email, social media, and SMS from a single interface. Campaigns trigger based on customer behavior, responses track automatically, and ROI reports generate without manual data compilation. Marketing runs more consistently, and decisions are based on real results.",
+        ],
+      },
+      {
+        heading: "Project Management",
+        bodyParagraphs: [
+          "Projects without proper tracking drift. Tasks fall through cracks, deadlines get missed, and no one has a clear view of progress until it is too late to fix problems.",
+        ],
+        closingParagraphs: [
+          "Odoo Project keeps work on track with automated task assignment, deadline reminders, and progress tracking. Teams collaborate in one place, dependencies are managed, and stakeholders get status updates without manual report building. Projects finish on time, and everyone stays aligned.",
+        ],
+      },
+      {
+        heading: "Customer Support Ticketing",
+        bodyParagraphs: [
+          "Support teams drowning in email cannot respond quickly or consistently. Tickets get lost, response times vary wildly, and customers have no visibility into whether their issue is being handled.",
+        ],
+        closingParagraphs: [
+          "Odoo Helpdesk centralizes support tickets from email, chat, and web forms into one system. Tickets auto-assign based on category or priority, SLAs track response times, and customers get automatic acknowledgements and status updates. Support quality improves, and the team stays in control.",
+        ],
+      },
+    ],
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "Automating these 10 processes with Odoo ERP does not happen overnight. It starts with mapping current workflows, identifying the highest-friction manual tasks, and implementing automation in phases rather than attempting a big-bang rollout.\n\nThe businesses that see the fastest results typically start with finance or inventory automation, where the time savings are immediate and measurable, then expand into HR, CRM, and marketing as the team gains confidence in the system.\n\nOdoo ERP is flexible enough to support this phased approach. The key is working with a partner who understands both the platform and your business processes, so automation solves real problems rather than creating new ones.",
+    faq: [
+      {
+        question: "How much does Odoo ERP implementation cost for a small business?",
+        answer:
+          "Costs vary depending on the number of modules, users, and how much customisation is needed, but most small to medium businesses start with a focused rollout covering two or three core processes before expanding. A proper scoping conversation is the best way to get an accurate figure for a specific business.",
+      },
+      {
+        question: "How long does it take to implement Odoo ERP?",
+        answer:
+          "A straightforward implementation covering a few core modules typically takes between six and twelve weeks, while more complex, multi department rollouts can take several months. Timelines depend heavily on how much data migration and customisation is involved.",
+      },
+      {
+        question: "Is Odoo ERP suitable for small businesses, or only larger companies?",
+        answer:
+          "Odoo was actually built with scalability in mind, so small businesses can start with just one or two modules and add more as they grow. Plenty of Australian SMBs run lean Odoo setups covering only sales and invoicing before expanding into inventory or HR later on.",
+      },
+      {
+        question: "Can Odoo integrate with the software a business is already using?",
+        answer:
+          "Yes, Odoo connects with most common business tools through APIs, including payment gateways, shipping providers, and existing accounting software. Integration scope depends on the specific tools involved, so it's worth checking compatibility early in the planning process.",
+      },
+      {
+        question: "Does automating processes with Odoo mean losing control over how things are done?",
+        answer:
+          "Not at all, automation rules in Odoo are fully configurable, so businesses set the logic rather than relying on rigid default workflows. Teams still review and approve key actions like purchase orders or large invoices if that level of control matters to them.",
+      },
+    ],
+    ctaTitle: "Ready to Automate Your Business Processes with Odoo?",
+    ctaPlainText: true,
+    ctaDescription:
+      "Get in touch with the Zynex Technologies team to discuss how our Odoo ERP development services can help your business automate manual processes and save time.",
     ctaButtonText: "Contact Zynex Technologies",
+  },
+  "best-erpnext-implementation-companies-australia": {
+    metaTitle: "5 Best ERPNext Implementation Companies in Australia | Zynex Technologies",
+    metaDescription:
+      "Compare the 5 best ERPNext implementation companies in Australia for 2026 and find the right open source ERP partner for your business.",
+    title: "5 Best ERPNext Implementation Companies in Australia",
+    description:
+      "Finding the right ERPNext implementation company in Australia matters more than most businesses expect, because the open source platform only delivers value when someone configures it around real workflows. This guide compares five ERPNext implementation companies serving Australian businesses in 2026, covering their specialisations, localisation capability and the type of business each one suits best.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "ERP Implementation",
+    date: "July 3, 2026",
+    readTime: "14 min read",
+    relatedSlugs: [
+      "best-odoo-development-company-australia",
+      "odoo-erp-implementation-cost-australia",
+      "odoo-customization-services",
+    ],
+    inlineInternalLinks: [
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+      { match: "Odoo ERP implementation cost in Australia", href: "/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "Odoo ERP development company in Australia", href: "/blogs/best-odoo-development-company-australia" },
+    ],
+    sectionOrder: ["summary", "introduction", "guideSteps", "comparison", "questions", "implementation", "finalThoughts", "faq", "cta", "relatedLinks"],
+    guideStepsTocLabel: "Top companies",
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "Finding the right ERPNext implementation company in Australia matters more than most businesses expect, because the open source platform only delivers value when someone configures it around real workflows. This guide compares five ERPNext implementation companies serving Australian businesses in 2026, covering their specialisations, localisation capability and the type of business each one suits best. It also outlines what to check before you commit to a partner.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "ERPNext is one of the few genuinely open source ERP platforms with a real foothold in Australia, and that changes the economics of the decision. There is no per-user licensing fee sitting underneath the project, so most of what a business pays for is the implementation itself.\n\nThat makes the choice of ERPNext implementation company in Australia arguably more important than it is for licensed platforms. The software is free. The workflow mapping, GST configuration, data migration and training are not, and a rushed setup can cost far more in rework than a proper one would have cost upfront.\n\nThis list covers five ERPNext implementation companies in Australia worth shortlisting in 2026, based on local presence, specialisation and how each one approaches Australian compliance requirements.",
+    guideSteps: [
+      {
+        heading: "How to Evaluate an ERPNext Implementation Company",
+        bodyParagraphs: [
+          "Before ranking vendors, it helps to understand what actually separates a strong ERPNext implementation company from a generic software shop. Here is the criteria that shaped this list.",
+        ],
+        labeledBulletItems: [
+          {
+            label: "Genuine ERPNext and Frappe framework depth.",
+            content:
+              " ERPNext sits on the Frappe framework, and partners who understand doctypes, custom scripts and role-based workflows deliver far more reliable customisation than those treating it as an off-the-shelf CRM.",
+          },
+          {
+            label: "Australian GST and BAS localisation experience.",
+            content:
+              " ERPNext's Australian localisation app handles GST postings and BAS reporting, but only if a partner configures it correctly for your chart of accounts.",
+          },
+          {
+            label: "Data migration track record.",
+            content:
+              " Moving financial records and product catalogues cleanly out of legacy systems or spreadsheets is where most ERPNext projects run into trouble.",
+          },
+          {
+            label: "Integration capability.",
+            content:
+              " Businesses rarely run ERPNext in isolation, so proven connectors to platforms like Shopify, QuickBooks and Amazon matter.",
+          },
+          {
+            label: "Post-launch support structure.",
+            content:
+              " Open source software still needs upgrades, bug fixes and ongoing configuration as a business changes, and that needs a clear support model from day one.",
+          },
+        ],
+        closingParagraphs: [],
+      },
+      {
+        heading: "1. Zynex Technologies",
+        bodyParagraphs: [
+          "Zynex Technologies is a Melbourne-based ERP consulting partner that helps Australian businesses evaluate open source options like ERPNext alongside AI-enhanced Zoho and Odoo deployments, rather than pushing a single platform regardless of fit. Its AI ERP Readiness Review looks at whether an open source build or a managed platform makes more sense before any implementation work starts.",
+        ],
+        closingParagraphs: [
+          "For businesses drawn to ERPNext's cost model but unsure whether they have the internal technical capacity to run it, Zynex is a useful first call, since it can scope an ERPNext build honestly or recommend an AI-enhanced Zoho or Odoo alternative if that fits the business better.",
+        ],
+      },
+      {
+        heading: "2. Arus Ignite",
+        bodyParagraphs: [
+          "Arus Ignite is a Melbourne-based ERPNext and Frappe implementation specialist, and notably the creator of the official Australian localisation app used across the wider ERPNext community. That positioning gives it a genuine edge on GST postings, BAS reporting and local compliance configuration.",
+        ],
+        closingParagraphs: [
+          "The company focuses specifically on ERPNext and other Frappe framework apps rather than spreading across multiple ERP platforms, which suits businesses that want a deep specialist rather than a generalist software house.",
+        ],
+      },
+      {
+        heading: "3. Bytes Technolab",
+        bodyParagraphs: [
+          "Bytes Technolab runs a dedicated Australian ERPNext implementation practice covering consulting, configuration, integration and migration, delivered with local-hours support. Its process starts with a discovery sprint that maps processes across finance, supply chain, sales, HR and eCommerce before any configuration begins.",
+        ],
+        closingParagraphs: [
+          "The team leans into AI-assisted setup, embedding forecasting, document processing and smart approvals into the ERPNext build rather than treating automation as a separate add-on. It suits mid-sized businesses that want integration with tools like Shopify, Amazon or QuickBooks alongside the core ERP build.",
+        ],
+      },
+      {
+        heading: "4. HT Evolution",
+        bodyParagraphs: [
+          "HT Evolution is a Perth-based provider offering AI-powered ERPNext implementation, combining ERPNext's core modules with real-time insights and automation layered on top. Its process runs through requirement analysis, prototype building, workflow refinement and end-to-end testing across payroll, invoicing, inventory and reporting.",
+        ],
+        closingParagraphs: [
+          "Businesses that want visibility across every department without juggling multiple disconnected tools tend to get the most from this approach, particularly if AI-driven forecasting is a priority.",
+        ],
+      },
+      {
+        heading: "5. Tridots Tech",
+        bodyParagraphs: [
+          "Tridots Tech operates out of Perth and supports Western Australian and wider Australian businesses with ERPNext consulting, customisation, deployment and system integration. The company works across manufacturing, advanced engineering, education and construction, industries where ERPNext's project and procurement workflows carry real weight.",
+        ],
+        closingParagraphs: [
+          "Its regional focus on Perth and WA businesses makes it a sensible shortlist option for companies outside the Sydney and Melbourne markets that still want dedicated local support.",
+        ],
+      },
+    ],
+    comparisonTitle: "ERPNext vs Zoho and Odoo: What to Consider",
+    comparisonDescription:
+      "ERPNext is not the only ERP option Australian businesses weigh up, and it helps to understand where it sits relative to the other two platforms that come up most often in comparisons: Zoho and Odoo.\n\nAll three platforms cover finance, sales, inventory and operations in a connected system, but the underlying model differs in ways that matter for cost and control:\n\nERPNext is fully open source with no per-user licensing fee, which shifts almost all of the cost into implementation, customisation and support.\n\nOdoo, covered in detail by Zynex's Odoo ERP development company in Australia page, also has an open source Community edition, but its Enterprise tier introduces per-user subscription pricing similar to Zoho.\n\nZoho ERP suits businesses already invested in the Zoho ecosystem, since CRM, Books, Inventory and Creator all share the same underlying architecture and support model.\n\nImplementation timelines run similarly across all three, typically 6 to 12 weeks for a focused rollout and several months for a complex, multi-module deployment.\n\nThere is no universally correct choice here. ERPNext tends to appeal most to businesses with internal technical capability who want full control over customisation without ongoing licence costs, while Zoho and Odoo suit businesses that would rather pay for a more managed, supported ecosystem.",
+    questionsTitle: "Questions to Ask Before Signing With an ERPNext Partner",
+    questionsDescription:
+      "A confident sales pitch does not guarantee a smooth rollout. Ask these questions before committing to any ERPNext implementation company in Australia.",
+    questions: [
+      {
+        question: "How many full ERPNext implementations have you delivered, versus general Frappe app development?",
+        answer:
+          "The two overlap but are not identical skill sets.",
+      },
+      {
+        question: "Do you use the official Australian localisation app, and how is it configured for our chart of accounts?",
+        answer:
+          "GST and BAS handling needs to be correct from day one, not patched afterwards.",
+      },
+      {
+        question: "What does your data migration and cutover process actually involve?",
+        answer:
+          "Ask for detail on validation and parallel testing, not just an assurance that it is handled.",
+      },
+      {
+        question: "What happens after go-live?",
+        answer:
+          "Confirm whether upgrades, bug fixes and configuration changes are included in an ongoing support arrangement or billed separately each time.",
+      },
+      {
+        question: "How does implementation cost compare to a licensed platform?",
+        answer:
+          "For a useful benchmark, Zynex's breakdown of Odoo ERP implementation cost in Australia shows how licensing, services and support stack up on a comparable open source platform, which gives a reasonable frame of reference for ERPNext pricing conversations too.",
+      },
+    ],
+    questionsClosing:
+      "Vague answers on GST configuration or post-launch support tend to predict trouble later. Push for specifics on both.",
+    implementationTitle: "What a Strong ERPNext Implementation Actually Looks Like",
+    implementationDescription:
+      "A well-run ERPNext rollout tends to follow a consistent pattern, regardless of which partner delivers it.",
+    implementationSteps: [
+      {
+        heading: "Discovery and process mapping.",
+        content:
+          "The partner reviews current workflows, data sources and integration needs before touching any configuration, usually over one to two weeks.",
+      },
+      {
+        heading: "Solution design.",
+        content:
+          "A module selection and customisation plan gets built around actual business processes, with GST and BAS localisation configured against your real chart of accounts.",
+      },
+      {
+        heading: "Build and sandbox testing.",
+        content:
+          "Configuration and any custom doctypes or scripts are built and validated in a sandbox environment before anything touches live data.",
+      },
+      {
+        heading: "Data migration and parallel run.",
+        content:
+          "Legacy data gets cleaned, mapped and imported, often with a short parallel run so your team can verify accuracy before full cutover.",
+      },
+      {
+        heading: "Go-live and ongoing support.",
+        content:
+          "The system goes live with training included, followed by a clear support arrangement covering upgrades and bug fixes.",
+      },
+    ],
+    implementationClosing:
+      "Businesses that rush the sandbox testing stage, or work with a partner who skips it, are the ones most likely to hit data integrity issues after go-live.",
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "The five ERPNext implementation companies in Australia covered here each bring a different strength, from platform-agnostic ERP advisory through Zynex Technologies to building the official Australian localisation app and AI-enhanced, regionally focused deployment. There is no single correct answer for every business.\n\nWhat matters more than the ranking itself is matching a partner's depth of Frappe framework experience to your industry, and confirming their GST and BAS localisation work is genuinely solid rather than assumed. A partner with real ERPNext depth will configure a far more reliable system than one treating it as just another CRM project.\n\nERPNext's open source model removes licensing cost from the equation, but it does not remove the need for careful implementation. Treat the selection of an ERPNext implementation company with the same seriousness you would apply to any other major operational decision, because the quality of that setup shapes how your business runs for years afterwards.",
+    faq: [
+      {
+        question: "What is the best ERPNext implementation company in Australia?",
+        answer:
+          "There is no single best option for every business. Zynex Technologies suits businesses wanting honest platform advice across ERPNext, Zoho and Odoo, Arus Ignite offers deep local GST and BAS expertise, Bytes Technolab and HT Evolution lean into AI-enhanced deployment, and Tridots Tech offers a methodical, regionally focused rollout.",
+      },
+      {
+        question: "How much does ERPNext implementation cost in Australia?",
+        answer:
+          "There is no licensing fee for ERPNext itself, so cost sits almost entirely in implementation services. Most first-phase programs for small to mid-sized businesses start in the mid-five figures and scale up with the number of modules, integrations and customisation required.",
+      },
+      {
+        question: "How long does an ERPNext implementation take?",
+        answer:
+          "A standard deployment covering core modules typically goes live in 6 to 12 weeks. More complex projects with custom development and multi-site data migration can run 20 to 40 weeks depending on scope.",
+      },
+      {
+        question: "Is ERPNext compliant with Australian GST and BAS requirements?",
+        answer:
+          "Yes. ERPNext's official Australian localisation app handles GST postings by supplier and customer type and supports both Full and Simpler BAS reporting methods, provided a partner configures it correctly for your business.",
+      },
+      {
+        question: "Is ERPNext a good fit for small and medium Australian businesses?",
+        answer:
+          "Yes. The absence of per-user licensing fees makes ERPNext particularly attractive for SMBs that want full ERP functionality without the recurring cost of proprietary platforms, provided they have access to solid implementation support.",
+      },
+    ],
+    ctaTitle: "Get in Touch",
+    ctaDescription:
+      "Contact Zynex Technologies today for an honest ERP platform assessment, whether that points to ERPNext, Zoho or Odoo, at Zynex Technologies",
+  },
+  "best-zoho-erp-implementation-companies-australia": {
+    metaTitle: "5 Best Zoho ERP Implementation Companies in Australia | Zynex Technologies",
+    metaDescription:
+      "Compare the 5 best Zoho ERP implementation companies in Australia for 2026 and find the right partner to deploy, customise and support your system.",
+    title: "5 Best Zoho ERP Implementation Companies in Australia",
+    description:
+      "Choosing a Zoho ERP implementation company in Australia is not just a software decision, it is a decision about who configures the system your business will run on for years. This guide compares five of the strongest Zoho ERP implementation companies in Australia, covering their specialisations, deployment approach and the type of business each one suits best.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "ERP Implementation",
+    date: "July 3, 2026",
+    readTime: "15 min read",
+    relatedSlugs: [
+      "best-odoo-development-company-australia",
+      "odoo-erp-implementation-cost-australia",
+      "best-erpnext-implementation-companies-australia",
+    ],
+    inlineInternalLinks: [
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+      { match: "Odoo ERP development company in Australia", href: "/blogs/best-odoo-development-company-australia" },
+      { match: "Odoo ERP implementation cost in Australia", href: "/blogs/odoo-erp-implementation-cost-australia" },
+    ],
+    sectionOrder: ["summary", "introduction", "guideSteps", "comparison", "questions", "implementation", "finalThoughts", "faq", "cta", "relatedLinks"],
+    guideStepsTocLabel: "Top companies",
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "Choosing a Zoho ERP implementation company in Australia is not just a software decision, it is a decision about who configures the system your business will run on for years. This guide compares five of the strongest Zoho ERP implementation companies in Australia, covering their specialisations, deployment approach and the type of business each one suits best. It also breaks down how to evaluate a partner before you sign anything.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "Zoho ERP looks simple on the surface: connected modules for finance, sales, inventory and operations, all inside one platform. But the platform is only half the story. The other half is who sets it up.\n\nA Zoho ERP implementation company in Australia does more than tick boxes during configuration. It decides how your chart of accounts is structured, how approvals flow between departments, and whether your team actually uses the system or quietly slips back into spreadsheets six months later.\n\nThis list covers five Zoho ERP implementation companies in Australia worth shortlisting in 2026, based on specialisation, track record and the type of business each one is built to serve.",
+    guideSteps: [
+      {
+        heading: "How to Evaluate a Zoho ERP Implementation Company",
+        bodyParagraphs: [
+          "Before ranking vendors, it helps to know what actually separates a strong Zoho ERP implementation company from an average one. Here is the criteria that shaped this list.",
+        ],
+        labeledBulletItems: [
+          {
+            label: "Zoho partner status and depth of experience.",
+            content:
+              " Certified partner status matters, but so does how many full implementations, not just CRM setups, the team has actually delivered.",
+          },
+          {
+            label: "Industry specialisation.",
+            content:
+              " A partner that understands manufacturing bill of materials or multi-location retail stock will configure Zoho ERP far more accurately than a generalist.",
+          },
+          {
+            label: "Data migration capability.",
+            content:
+              " Moving years of financial and customer data cleanly is where most projects run into trouble, so this needs a proven process, not guesswork.",
+          },
+          {
+            label: "Post-launch support model.",
+            content:
+              " Go-live is the start, not the finish. A partner without a clear support structure leaves you exposed the moment something breaks.",
+          },
+          {
+            label: "Automation and AI capability.",
+            content:
+              " Zoho ERP includes Zia, its built-in AI engine, and the strongest partners build automation layers on top of it instead of leaving that capability untouched.",
+          },
+        ],
+        closingParagraphs: [],
+      },
+      {
+        heading: "1. Zynex Technologies",
+        bodyParagraphs: [
+          "Zynex Technologies is a Melbourne-based Zoho ERP development and implementation company in Australia that positions AI automation as part of the deployment itself, not an optional extra bolted on afterwards.",
+        ],
+        closingParagraphs: [
+          "Its process runs through discovery, strategy and design, agile build sprints, and a deploy-and-optimise phase, with an AI ERP Readiness Review offered upfront so businesses understand ROI before any configuration begins. Zynex focuses on operationally complex Australian businesses across wholesale, retail, manufacturing, construction and professional services, and configures finance modules directly against Australian GST and BAS requirements. It is a strong fit for SMB and mid-market businesses that want document processing automation, smart approval triggers and predictive inventory alerts built into the ERP from day one.",
+        ],
+      },
+      {
+        heading: "2. Smartmates",
+        bodyParagraphs: [
+          "Smartmates has been recognised as Zoho Partner of the Year in Australia across 2022, 2023, 2024 and 2025, selected by Zoho from more than 60 Australian Zoho partners. Its strongest specialisation is manufacturing ERP and inventory setup, covering batch and serial number tracking, bill of materials management and multi-location stock visibility.",
+        ],
+        closingParagraphs: [
+          "Businesses running discrete or batch production tend to get the most value here, since the team builds around actual shop floor workflows rather than a generic configuration template.",
+        ],
+      },
+      {
+        heading: "3. Flexbox Digital",
+        bodyParagraphs: [
+          "Flexbox Digital operates out of Melbourne and Sydney and describes itself as one of Australia's leading certified Zoho partners. The company covers Zoho One setup, CRM implementation, third-party integrations and Zoho Marketplace app development, with a particular focus on Enterprise CRM solutions that evolve as a business grows.",
+        ],
+        closingParagraphs: [
+          "Its integration work with accounting software, payment gateways and marketing automation tools makes it a reasonable option for businesses that need Zoho ERP to talk to several existing systems at once.",
+        ],
+      },
+      {
+        heading: "4. Aurelian Group",
+        bodyParagraphs: [
+          "Aurelian Group is a Sydney-based certified Zoho partner that runs its own operations entirely on Zoho One, which gives it first-hand experience with the platform beyond client projects. The company specialises in the full Zoho One application suite rather than isolated modules.",
+        ],
+        closingParagraphs: [
+          "That wall-to-wall approach suits businesses that want one connected system covering finance, HR, meetings and operations, rather than a narrower finance-and-inventory-only deployment.",
+        ],
+      },
+      {
+        heading: "5. FWRD CRM",
+        bodyParagraphs: [
+          "FWRD CRM has operated as an official Zoho partner in Australia for more than a decade, with a particular strength in data migration and CRM-to-ERP transitions. The team covers implementation, customisation, integrations and training across the Zoho product range.",
+        ],
+        closingParagraphs: [
+          "Its long track record makes it a sensible option for businesses migrating from legacy systems where clean, validated data migration matters more than speed of deployment.",
+        ],
+      },
+    ],
+    comparisonTitle: "Zoho ERP vs Other Platforms: What to Consider",
+    comparisonDescription:
+      "Zoho ERP is not the only option on the table, and a genuinely good implementation company will tell you that upfront rather than push whatever platform they happen to sell. Odoo is the other platform Australian businesses most often shortlist alongside Zoho.\n\nBoth platforms cover finance, sales, inventory and operations in a connected system, and both offer modular pricing that undercuts traditional platforms like SAP or Oracle. The practical differences usually come down to ecosystem preference, customisation depth and existing tool stack:\n\nZoho ERP suits businesses already using other Zoho products, since CRM, Books, Inventory and Creator share the same underlying architecture.\n\nOdoo, covered in detail by Zynex's Odoo ERP development company in Australia page, is open source at its core, which appeals to businesses that want more control over customisation.\n\nLicensing costs sit in a similar range for both platforms once you factor in per-user Enterprise pricing.\n\nImplementation timelines are comparable too, typically 6 to 12 weeks for a focused deployment and several months for a complex, multi-module rollout.\n\nNeither platform is objectively better. The right choice depends on what your team already knows and how much custom development your workflows actually need.",
+    questionsTitle: "Questions to Ask Before Signing With a Zoho ERP Partner",
+    questionsDescription:
+      "A polished sales pitch does not guarantee a smooth implementation. Ask these questions before committing to any Zoho ERP implementation company in Australia.",
+    questions: [
+      {
+        question: "How many full ERP implementations have you delivered, not just CRM setups?",
+        answer:
+          "CRM experience and ERP experience are not the same skill set.",
+      },
+      {
+        question: "What does your data migration process actually look like?",
+        answer:
+          "Ask for specifics on validation and parallel testing, not just a general assurance that \"it's handled.\"",
+      },
+      {
+        question: "What happens after go-live?",
+        answer:
+          "Confirm whether ongoing support, automation tuning and module expansion are included or billed separately.",
+      },
+      {
+        question: "Can you show industry-specific case studies?",
+        answer:
+          "A partner with relevant experience in your sector will spot workflow gaps faster than a generalist.",
+      },
+      {
+        question: "How is pricing structured?",
+        answer:
+          "For comparison, Zynex's breakdown of Odoo ERP implementation cost in Australia is a useful benchmark, since Zoho ERP pricing tends to follow a similar structure across licensing, implementation services and ongoing support.",
+      },
+    ],
+    questionsClosing:
+      "Watch for vague answers on data migration and support. Those two areas cause more project overruns than module selection ever does.",
+    implementationTitle: "What a Strong Zoho ERP Implementation Actually Looks Like",
+    implementationDescription:
+      "A well-run implementation follows a fairly consistent pattern, regardless of which partner you choose.",
+    implementationSteps: [
+      {
+        heading: "Discovery and assessment.",
+        content:
+          "The partner reviews current systems, workflow gaps and realistic ROI before any configuration work starts, usually over one to two weeks.",
+      },
+      {
+        heading: "Strategy and design.",
+        content:
+          "A custom architecture and implementation roadmap gets built around your actual workflows, not a generic Zoho template.",
+      },
+      {
+        heading: "Build and iterate.",
+        content:
+          "Configuration happens in structured sprints with continuous testing, typically running four to twelve weeks depending on complexity.",
+      },
+      {
+        heading: "Deploy and optimise.",
+        content:
+          "The system goes live with training and go-live support, followed by ongoing optimisation as the business grows.",
+      },
+    ],
+    implementationClosing:
+      "Businesses that skip the discovery phase, or work with a partner who skips it for them, are the ones most likely to end up with an ERP that gets ignored six months after launch.",
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "The five Zoho ERP implementation companies in Australia covered here each bring a different strength to the table, from AI-enhanced SMB deployments to deep manufacturing specialisation and long-standing data migration expertise. There is no single \"best\" answer that applies to every business.\n\nWhat matters more than the shortlist itself is matching the partner's specialisation to your industry, business size and technical complexity. A partner who understands your sector will configure a far more accurate system than one working from a generic playbook.\n\nZoho ERP is a genuinely capable platform, but its value depends almost entirely on the implementation behind it. Treat the selection of a Zoho ERP implementation company with the same seriousness you would apply to any other major operational investment, because that decision shapes how your business runs for years afterwards.",
+    faq: [
+      {
+        question: "What is the best Zoho ERP implementation company in Australia?",
+        answer:
+          "There is no single best option for every business. Zynex Technologies suits SMBs wanting AI-enhanced deployment, Smartmates is strongest for manufacturing, Aurelian Group specialises in full Zoho One rollouts, and FWRD CRM stands out for data migration heavy projects.",
+      },
+      {
+        question: "How much does Zoho ERP implementation cost in Australia?",
+        answer:
+          "Costs vary by business size and scope. A straightforward implementation for a small business typically starts from around $15,000 to $30,000 AUD, while more complex mid-market deployments often range from $50,000 to $150,000 AUD or more once customisation and training are included.",
+      },
+      {
+        question: "How long does a Zoho ERP implementation take?",
+        answer:
+          "A focused single-module implementation can be completed in 6 to 8 weeks. A full multi-module rollout for a more complex business usually takes 4 to 6 months, and enterprise-scale projects with heavy customisation can run 6 to 12 months.",
+      },
+      {
+        question: "Do I need a certified partner, or can I set up Zoho ERP myself?",
+        answer:
+          "Self-setup is technically possible, but most businesses underestimate how much workflow design, data migration and user training a proper implementation requires. A certified partner reduces the risk of costly rework and a system your team ends up avoiding.",
+      },
+      {
+        question: "Is Zoho ERP a good fit for small and medium Australian businesses?",
+        answer:
+          "Yes. Zoho ERP's modular pricing and lower total cost of ownership compared to platforms like SAP or Oracle make it accessible for SMBs, particularly those ready to move off spreadsheets and disconnected accounting tools.",
+      },
+    ],
+    ctaTitle: "Get in Touch",
+    ctaDescription:
+      "Contact Zynex Technologies today to book a free AI ERP Readiness Review and find the right Zoho ERP implementation approach for your business at ZynexTechnologies",
   },
 };
 
