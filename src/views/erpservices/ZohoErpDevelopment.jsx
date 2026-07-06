@@ -363,48 +363,56 @@ const ZohoErpDevelopment = () => {
         />
 
         <div className="relative container mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white/90">
-            <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
-            Zoho ERP Development &amp; Implementation Company
-            <span className="hidden sm:inline">• Melbourne, Australia</span>
-          </span>
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white/90">
+                <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
+                Zoho ERP Development &amp; Implementation Company
+                <span className="hidden sm:inline">• Melbourne, Australia</span>
+              </span>
 
-          <h1 className="mt-8 max-w-4xl text-4xl font-heading font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.35rem]">
-            Zoho ERP Development and Implementation Company in Australia
-          </h1>
+              <h1 className="mt-8 max-w-4xl text-4xl font-heading font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.35rem]">
+                Zoho ERP Development and Implementation Company in Australia
+              </h1>
 
-          <p className="mt-6 max-w-3xl text-base leading-8 text-white/90 sm:text-lg">
-            Zynex Technologies is a specialist Zoho ERP development and implementation company in Australia. We help SMB
-            and mid-market businesses connect finance, sales, inventory, projects, purchasing and approvals in one
-            intelligent system with AI-led automation built in from day one.
-          </p>
+              <p className="mt-6 max-w-3xl text-base leading-8 text-white/90 sm:text-lg">
+                Zynex Technologies is a specialist Zoho ERP development and implementation company in Australia. We help SMB
+                and mid-market businesses connect finance, sales, inventory, projects, purchasing and approvals in one
+                intelligent system with AI-led automation built in from day one.
+              </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <button
-              type="button"
-              onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-7 py-4 text-sm font-bold text-[#719334] shadow-lg transition hover:bg-slate-50"
-            >
-              Book an AI ERP Readiness Review
-              <ArrowRight className="h-4 w-4" />
-            </button>
-            <Link
-              href="#services"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white underline underline-offset-4 transition hover:text-white/85"
-            >
-              Explore our services
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(true)}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-7 py-4 text-sm font-bold text-[#719334] shadow-lg transition hover:bg-slate-50"
+                >
+                  Book an AI ERP Readiness Review
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+                <Link
+                  href="#services"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-white underline underline-offset-4 transition hover:text-white/85"
+                >
+                  Explore our services
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
 
-          <div className="mt-14 border-t border-white/20 pt-10">
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {heroStats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-3xl font-heading font-bold sm:text-4xl">{stat.value}</p>
-                  <p className="mt-2 text-sm text-white/80">{stat.label}</p>
+              <div className="mt-14 border-t border-white/20 pt-10">
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                  {heroStats.map((stat) => (
+                    <div key={stat.label}>
+                      <p className="text-3xl font-heading font-bold sm:text-4xl">{stat.value}</p>
+                      <p className="mt-2 text-sm text-white/80">{stat.label}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+            </div>
+
+            <div className="flex justify-center lg:justify-end">
+              <img src="/image_zohho.png" alt="Zoho ERP Implementation" className="h-auto w-full rounded-2xl object-cover shadow-2xl" />
             </div>
           </div>
         </div>
@@ -479,6 +487,10 @@ const ZohoErpDevelopment = () => {
                 <p className="mt-3 text-sm leading-7 text-slate-600">{description}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <img src="/image_zohoo_das.png" alt="Zoho ERP Solution" className="h-auto w-full rounded-2xl object-cover shadow-xl" />
           </div>
         </div>
       </section>
