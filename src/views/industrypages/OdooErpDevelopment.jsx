@@ -489,9 +489,6 @@ const OdooErpDevelopment = () => {
             ))}
           </div>
 
-          <div className="mt-12 flex justify-center">
-            <img src="/image.png" alt="Odoo ERP Solution" className="h-auto w-full rounded-2xl object-cover shadow-xl" />
-          </div>
         </div>
       </section>
 

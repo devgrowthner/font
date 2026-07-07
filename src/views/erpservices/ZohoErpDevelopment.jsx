@@ -400,7 +400,7 @@ const ZohoErpDevelopment = () => {
               </div>
 
               <div className="mt-14 border-t border-white/20 pt-10">
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
                   {heroStats.map((stat) => (
                     <div key={stat.label}>
                       <p className="text-3xl font-heading font-bold sm:text-4xl">{stat.value}</p>
@@ -487,10 +487,6 @@ const ZohoErpDevelopment = () => {
                 <p className="mt-3 text-sm leading-7 text-slate-600">{description}</p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-12 flex justify-center">
-            <img src="/image_zohoo_das.png" alt="Zoho ERP Solution" className="h-auto w-full rounded-2xl object-cover shadow-xl" />
           </div>
         </div>
       </section>
