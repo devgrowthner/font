@@ -742,7 +742,7 @@ const BenefitsSection = ({ blogData }) => (
       ))}
     </motion.div>
 
-    {blogData.benefitmainfooter && (
+    {(blogData.benefitmainfooter || blogData.benefitsClosing) && (
       <motion.p
         initial="initial"
         whileInView="animate"
@@ -751,8 +751,8 @@ const BenefitsSection = ({ blogData }) => (
         className="mt-8 pt-6 border-t border-gray-200 text-base sm:text-lg text-gray-700 leading-relaxed"
       >
         {blogData.inlineInternalLinks?.length
-          ? renderWithInlineLinks(blogData.benefitmainfooter, blogData.inlineInternalLinks)
-          : blogData.benefitmainfooter}
+          ? renderWithInlineLinks(blogData.benefitsClosing || blogData.benefitmainfooter, blogData.inlineInternalLinks)
+          : blogData.benefitsClosing || blogData.benefitmainfooter}
       </motion.p>
     )}
   </section>
@@ -871,6 +871,237 @@ const IndustriesSection = ({ blogData }) => (
         {blogData.industriesFooterNote}
       </motion.p>
     )}
+  </section>
+);
+
+// ─── Content Section ──────────────────────────────────────────────────────
+
+const ContentSection = ({ blogData }) => (
+  <section id="content" className="py-8 sm:py-10 px-0 sm:px-0">
+    <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+      {blogData.content?.map((item, index) => (
+        <div key={index} className="mb-8">
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+            {item.heading}
+          </h2>
+          {item.bodyParagraphs?.map((para, i) => (
+            <p key={i} className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
+              {blogData.inlineInternalLinks?.length
+                ? renderWithInlineLinks(para, blogData.inlineInternalLinks)
+                : para}
+            </p>
+          ))}
+          {item.closingParagraphs?.map((para, i) => (
+            <p key={i} className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
+              {blogData.inlineInternalLinks?.length
+                ? renderWithInlineLinks(para, blogData.inlineInternalLinks)
+                : para}
+            </p>
+          ))}
+        </div>
+      ))}
+    </motion.div>
+  </section>
+);
+
+// ─── Pricing Section ───────────────────────────────────────────────────────
+
+const PricingSection = ({ blogData }) => (
+  <section id="pricing" className="py-8 sm:py-10 px-0 sm:px-0">
+    <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+        {blogData.pricingTitle || 'Pricing'}
+      </h2>
+      
+      {blogData.pricingSteps?.length > 0 && (
+        <ol className="mt-4 mb-8 list-decimal pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed marker:font-medium">
+          {blogData.pricingSteps.map((step, i) => (
+            <li key={i} className="pl-2">
+              <strong className="font-semibold text-foreground">{step.heading}</strong>{' '}
+              {blogData.inlineInternalLinks?.length
+                ? renderWithInlineLinks(step.content, blogData.inlineInternalLinks)
+                : step.content}
+            </li>
+          ))}
+        </ol>
+      )}
+
+      {blogData.pricingTable?.length > 0 && (
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={fadeInUp}
+          className="mb-8 overflow-x-auto"
+        >
+          <table className="w-full min-w-[640px] border border-gray-200 rounded-lg overflow-hidden">
+            <thead>
+              <tr className="bg-gray-50">
+                <th className="text-left py-3 px-4 text-lg font-heading font-bold text-foreground border-b border-gray-200">Build Tier</th>
+                <th className="text-left py-3 px-4 text-lg font-heading font-bold text-foreground border-b border-gray-200">Typical Cost (AUD)</th>
+                <th className="text-left py-3 px-4 text-lg font-heading font-bold text-foreground border-b border-gray-200">Typical Timeline</th>
+              </tr>
+            </thead>
+            <tbody>
+              {blogData.pricingTable.map((row, rowIdx) => (
+                <tr key={rowIdx} className={rowIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td className="text-left py-3 px-4 text-base text-gray-700 border-b border-gray-200">{row.buildTier}</td>
+                  <td className="text-left py-3 px-4 text-base text-gray-700 border-b border-gray-200">{row.typicalCost}</td>
+                  <td className="text-left py-3 px-4 text-base text-gray-700 border-b border-gray-200">{row.typicalTimeline}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </motion.div>
+      )}
+
+      {blogData.pricingClosing && (
+        <motion.p
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={fadeInUp}
+          className="text-base sm:text-lg text-gray-700 leading-relaxed"
+        >
+          {blogData.inlineInternalLinks?.length
+            ? renderWithInlineLinks(blogData.pricingClosing, blogData.inlineInternalLinks)
+            : blogData.pricingClosing}
+        </motion.p>
+      )}
+    </motion.div>
+  </section>
+);
+
+// ─── Modules Section ───────────────────────────────────────────────────────
+
+const ModulesSection = ({ blogData }) => (
+  <section id="modules" className="py-8 sm:py-10 px-0 sm:px-0">
+    <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+        {blogData.modulesTitle || 'Modules'}
+      </h2>
+      
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: '-100px' }}
+        variants={staggerContainer}
+        className="space-y-6"
+      >
+        {blogData.modules?.map((module, index) => (
+          <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+            <h3 className="text-xl font-heading font-bold text-foreground mb-2">
+              {module.name}
+            </h3>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              {module.description}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {blogData.modulesClosing && (
+        <motion.p
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={fadeInUp}
+          className="mt-8 pt-6 border-t border-gray-200 text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line"
+        >
+          {blogData.inlineInternalLinks?.length
+            ? renderWithInlineLinks(blogData.modulesClosing, blogData.inlineInternalLinks)
+            : blogData.modulesClosing}
+        </motion.p>
+      )}
+    </motion.div>
+  </section>
+);
+
+// ─── Best Practices Section ─────────────────────────────────────────────────
+
+const BestPracticesSection = ({ blogData }) => (
+  <section id="bestPractices" className="py-8 sm:py-10 px-0 sm:px-0">
+    <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+        {blogData.bestPracticesTitle || 'Best Practices'}
+      </h2>
+      
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: '-100px' }}
+        variants={staggerContainer}
+        className="space-y-6"
+      >
+        {blogData.bestPractices?.map((practice, index) => (
+          <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+            <h3 className="text-xl font-heading font-bold text-foreground mb-2">
+              {practice.heading}
+            </h3>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              {blogData.inlineInternalLinks?.length
+                ? renderWithInlineLinks(practice.content, blogData.inlineInternalLinks)
+                : practice.content}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {blogData.bestPracticesClosing && (
+        <motion.p
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: '-100px' }}
+          variants={fadeInUp}
+          className="mt-8 pt-6 border-t border-gray-200 text-base sm:text-lg text-gray-700 leading-relaxed"
+        >
+          {blogData.inlineInternalLinks?.length
+            ? renderWithInlineLinks(blogData.bestPracticesClosing, blogData.inlineInternalLinks)
+            : blogData.bestPracticesClosing}
+        </motion.p>
+      )}
+    </motion.div>
+  </section>
+);
+
+// ─── Zynex Approach Section ────────────────────────────────────────────────
+
+const ZynexApproachSection = ({ blogData }) => (
+  <section id="zynexApproach" className="py-8 sm:py-10 px-0 sm:px-0">
+    <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+      <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+        {blogData.zynexApproachTitle || 'Our Approach'}
+      </h2>
+      
+      {blogData.zynexApproachDescription && (
+        <p className="text-lg text-gray-700 leading-relaxed mb-8 whitespace-pre-line">
+          {blogData.inlineInternalLinks?.length
+            ? renderWithInlineLinks(blogData.zynexApproachDescription, blogData.inlineInternalLinks)
+            : blogData.zynexApproachDescription}
+        </p>
+      )}
+      
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: '-100px' }}
+        variants={staggerContainer}
+        className="space-y-6"
+      >
+        {blogData.zynexApproach?.map((step, index) => (
+          <motion.div key={index} variants={fadeInUp} className="bg-white border border-gray-200 border-l-4 border-l-[#719334] rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
+            <h3 className="text-xl font-heading font-bold text-foreground mb-2">
+              {step.heading}
+            </h3>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              {blogData.inlineInternalLinks?.length
+                ? renderWithInlineLinks(step.content, blogData.inlineInternalLinks)
+                : step.content}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </motion.div>
   </section>
 );
 
@@ -1481,6 +1712,26 @@ const BlogDetailTemplate = () => {
       ? <ImplementationSection blogData={blogData} />
       : null,
 
+    content: blogData.content?.length > 0
+      ? <ContentSection blogData={blogData} />
+      : null,
+
+    pricing: (blogData.pricingTitle || blogData.pricingSteps?.length > 0 || blogData.pricingTable?.length > 0)
+      ? <PricingSection blogData={blogData} />
+      : null,
+
+    modules: (blogData.modulesTitle || blogData.modules?.length > 0)
+      ? <ModulesSection blogData={blogData} />
+      : null,
+
+    bestPractices: (blogData.bestPracticesTitle || blogData.bestPractices?.length > 0)
+      ? <BestPracticesSection blogData={blogData} />
+      : null,
+
+    zynexApproach: (blogData.zynexApproachTitle || blogData.zynexApproach?.length > 0)
+      ? <ZynexApproachSection blogData={blogData} />
+      : null,
+
     relatedLinks: <RelatedLinksSection currentSlug={slug} blogData={blogData} />,
 
     // handle both `faq` (blog 3) and `faqs` (blogs 1 & 2)
@@ -1508,6 +1759,11 @@ const BlogDetailTemplate = () => {
     comparison:   blogData.comparisonTitle   || 'Comparison',
     questions:    blogData.questionsTitle    || 'Questions',
     implementation: blogData.implementationTitle || 'Implementation',
+    content:      blogData.content?.[0]?.heading || 'Content',
+    pricing:      blogData.pricingTitle      || 'Pricing',
+    modules:      blogData.modulesTitle      || 'Modules',
+    bestPractices: blogData.bestPracticesTitle || 'Best Practices',
+    zynexApproach: blogData.zynexApproachTitle || 'Our Approach',
     relatedLinks: 'Related posts',
     faq:          'FAQ',
     cta:          'Get Started',

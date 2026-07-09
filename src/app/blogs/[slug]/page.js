@@ -39,6 +39,7 @@ const DETAIL_TEMPLATE_SLUGS = [
   'what-is-ai-for-hospitality-businesses-in-australia-and-how-does-it-actually-work',
   'best-erpnext-implementation-companies-australia',
   'best-zoho-erp-implementation-companies-australia',
+  'white-label-erp-development-australia',
 ];
 
 export async function generateMetadata({ params }) {
