@@ -40,6 +40,7 @@ const DETAIL_TEMPLATE_SLUGS = [
   'best-erpnext-implementation-companies-australia',
   'best-zoho-erp-implementation-companies-australia',
   'white-label-erp-development-australia',
+  'zoho-erp-software-business-efficiency',
 ];
 
 export async function generateMetadata({ params }) {

@@ -365,10 +365,16 @@ const OdooErpDevelopment = () => {
         <div className="relative container mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white/90">
-                <span className="h-1.5 w-1.5 rounded-full bg-white/80" />
-                Odoo Development &amp; Implementation Company
-                <span className="hidden sm:inline">• Melbourne, Australia</span>
+              <span class="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-white/25 bg-white/10 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white/90">
+                <span class="h-1.5 w-1.5 rounded-full bg-white/80 flex-shrink-0"></span>
+
+                <span class="whitespace-nowrap">
+                  Odoo Development &amp; Implementation Company
+                </span>
+
+                <span class="hidden sm:inline whitespace-nowrap">
+                  • Melbourne, Australia
+                </span>
               </span>
 
               <h1 className="mt-8 max-w-4xl text-4xl font-heading font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.35rem]">
@@ -614,7 +620,7 @@ const OdooErpDevelopment = () => {
             How We Work as an Odoo Implementation Company in Australia
           </h2>
           <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600">
-          Our implementation process is structured, transparent, and built around your business outcomes  not just technical delivery.
+            Our implementation process is structured, transparent, and built around your business outcomes  not just technical delivery.
 
           </p>
 

@@ -891,6 +891,28 @@ const ContentSection = ({ blogData }) => (
                 : para}
             </p>
           ))}
+          {item.numberedList?.length > 0 && (
+            <ol className="mt-4 mb-8 list-decimal pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed marker:font-medium">
+              {item.numberedList.map((listItem, i) => (
+                <li key={i} className="pl-2">
+                  {blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(listItem, blogData.inlineInternalLinks)
+                    : listItem}
+                </li>
+              ))}
+            </ol>
+          )}
+          {item.bulletList?.length > 0 && (
+            <ul className="mt-4 mb-8 list-disc pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed marker:font-medium">
+              {item.bulletList.map((listItem, i) => (
+                <li key={i} className="pl-2">
+                  {blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(listItem, blogData.inlineInternalLinks)
+                    : listItem}
+                </li>
+              ))}
+            </ul>
+          )}
           {item.closingParagraphs?.map((para, i) => (
             <p key={i} className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
               {blogData.inlineInternalLinks?.length
