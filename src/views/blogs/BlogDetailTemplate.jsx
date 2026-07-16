@@ -891,6 +891,45 @@ const ContentSection = ({ blogData }) => (
                 : para}
             </p>
           ))}
+          {item.table?.headers?.length > 0 && item.table?.rows?.length > 0 && (
+            <div className="mb-8 mt-2 overflow-x-auto">
+              <table className="w-full min-w-[640px] border border-gray-200 rounded-lg overflow-hidden">
+                <thead>
+                  <tr className="bg-gray-50">
+                    {item.table.headers.map((header, idx) => (
+                      <th
+                        key={idx}
+                        className="text-left py-3 px-4 text-lg font-heading font-bold text-foreground border-b border-gray-200"
+                      >
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {item.table.rows.map((row, rowIdx) => (
+                    <tr key={rowIdx} className={rowIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                      {row.map((cell, cellIdx) => (
+                        <td
+                          key={cellIdx}
+                          className="text-left py-3 px-4 text-base sm:text-lg text-gray-700 leading-relaxed border-b border-gray-100"
+                        >
+                          {cell}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+          {item.preListParagraphs?.map((para, i) => (
+            <p key={`pre-list-${i}`} className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
+              {blogData.inlineInternalLinks?.length
+                ? renderWithInlineLinks(para, blogData.inlineInternalLinks)
+                : para}
+            </p>
+          ))}
           {item.numberedList?.length > 0 && (
             <ol className="mt-4 mb-8 list-decimal pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed marker:font-medium">
               {item.numberedList.map((listItem, i) => (

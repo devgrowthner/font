@@ -5,6 +5,10 @@ import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'how-to-choose-erp-implementation-partner-australia',
+  'erpnext-vs-zoho-erp-comparison',
+  'odoo-vs-erpnext-comparison',
+  'odoo-vs-zoho',
   'when-should-business-invest-ai-automation',
   'ai-workflow-automation-business-efficiency',
   'ai-feasibility-analysis-why-every-business-needs-it',
@@ -25,7 +29,7 @@ const DETAIL_TEMPLATE_SLUGS = [
   'business-automation-using-ai',
   'ai-implementation-services-strategy-execution',
   'best-ai-development-companies-in-australia',
-  'best-odoo-development-company-australia',
+  'best-odoo-development-companies-australia',
   'odoo-erp-implementation-cost-australia',
   'odoo-customization-services',
   'odoo-business-process-automation',

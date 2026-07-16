@@ -29,6 +29,7 @@ const Footer = () => {
     ],
     company: [
       { name: 'Learn More', href: '/what-is-zynex', isRoute: true },
+      { name: 'White Label Partner', href: '/white-label-software-development-partner', isRoute: true },
       { name: 'Contact', href: '#contact' },
       { name: 'Blogs', href: '/blogs', isRoute: true }
     ]
