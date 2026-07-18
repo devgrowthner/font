@@ -28,6 +28,7 @@ const Footer = () => {
       { name: 'Hobart', href: '/ai-development-company-in-hobart', isRoute: true },
     ],
     company: [
+      { name: 'About Us', href: '/about-us', isRoute: true },
       { name: 'Learn More', href: '/what-is-zynex', isRoute: true },
       { name: 'White Label Partner', href: '/white-label-software-development-partner', isRoute: true },
       { name: 'Contact', href: '#contact' },
