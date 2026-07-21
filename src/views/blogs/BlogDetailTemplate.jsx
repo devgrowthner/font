@@ -881,9 +881,15 @@ const ContentSection = ({ blogData }) => (
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
       {blogData.content?.map((item, index) => (
         <div key={index} className="mb-8">
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
-            {item.heading}
-          </h2>
+          {item.heading === "How to Choose Between Odoo and ERPNext for Your Business" ? (
+            <h3 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+              {item.heading}
+            </h3>
+          ) : (
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+              {item.heading}
+            </h2>
+          )}
           {item.bodyParagraphs?.map((para, i) => (
             <p key={i} className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
               {blogData.inlineInternalLinks?.length

@@ -444,4 +444,32 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blogs - Odoo vs Zoho -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/odoo-vs-zoho</loc>
+    <lastmod>2026-07-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Zoho ERP Software Business Efficiency -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/zoho-erp-software-business-efficiency</loc>
+    <lastmod>2026-07-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - ERPNext vs Zoho ERP Comparison -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/erpnext-vs-zoho-erp-comparison</loc>
+    <lastmod>2026-07-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - How to Choose ERP Implementation Partner Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/how-to-choose-erp-implementation-partner-australia</loc>
+    <lastmod>2026-07-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

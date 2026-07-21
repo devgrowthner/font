@@ -8845,7 +8845,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "Contact Zynex Technologies today to discuss which ERP platform fits your business, at https://zynextechnologies.com.au",
   },
   "odoo-vs-erpnext-comparison": {
-    metaTitle: "Odoo vs ERPNext: Which ERP Is Better?",
+    metaTitle: "Odoo vs ERPNext: Which ERP Is Better? | Zynex Technologies",
     metaDescription:
       "Compare Odoo vs ERPNext on cost, features and support to choose the right open-source ERP for your business, with expert guidance from Zynex.",
     title: "Odoo vs ERPNext: Which Open-Source ERP Is Better?",
