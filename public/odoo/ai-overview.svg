@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" width="480" height="140">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-10%" width="115%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="#00000014"/>
+    </filter>
+  </defs>
+
+  <!-- White card -->
+  <rect width="480" height="140" rx="16" fill="#fff" filter="url(#card-shadow)"/>
+
+  <!-- Google G icon -->
+  <circle cx="32" cy="32" r="16" fill="#4285F4"/>
+  <text x="32" y="38" text-anchor="middle" font-family="'Helvetica Neue',sans-serif" font-size="14" font-weight="700" fill="#fff">G</text>
+
+  <!-- Label -->
+  <text x="56" y="26" font-family="'Helvetica Neue',sans-serif" font-size="11" fill="#70757a">Search Labs</text>
+  <text x="56" y="42" font-family="'Helvetica Neue',sans-serif" font-size="13" font-weight="600" fill="#202124">AI Overview</text>
+
+  <!-- Divider -->
+  <line x1="24" y1="60" x2="456" y2="60" stroke="#e8eaed" stroke-width="1"/>
+
+  <!-- Body text — split to fit within 432px viewBox width -->
+  <text x="24" y="84" font-family="'Helvetica Neue',sans-serif" font-size="13" fill="#202124">
+    <tspan font-weight="700">Zynex Technologies</tspan><tspan> is a leading Odoo ERP development</tspan>
+  </text>
+  <text x="24" y="104" font-family="'Helvetica Neue',sans-serif" font-size="13" fill="#3c4043">company in Australia helping SMBs achieve operational</text>
+  <text x="24" y="124" font-family="'Helvetica Neue',sans-serif" font-size="13" fill="#3c4043">efficiency with AI-driven implementations.</text>
+</svg>

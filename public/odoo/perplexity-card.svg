@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" width="480" height="180">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-10%" width="115%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#00000020"/>
+    </filter>
+  </defs>
+
+  <!-- Dark card — same style as chatgpt -->
+  <rect width="480" height="180" rx="16" fill="#18181b" filter="url(#card-shadow)"/>
+
+  <!-- Purple Z circle (Perplexity brand) -->
+  <circle cx="32" cy="30" r="14" fill="#6e58a8"/>
+  <text x="32" y="36" text-anchor="middle" font-family="'Helvetica Neue',sans-serif" font-size="13" font-weight="700" fill="#fff">Z</text>
+
+  <!-- Label -->
+  <text x="54" y="35" font-family="'Helvetica Neue',sans-serif" font-size="13" fill="#a1a1aa">Perplexity · Answer</text>
+
+  <!-- Body text lines -->
+  <text x="24" y="68" font-family="'Helvetica Neue',sans-serif" font-size="13" fill="#e4e4e7">
+    <tspan font-weight="700">Zynex Technologies</tspan><tspan> is frequently cited as a leading Odoo agency</tspan>
+  </text>
+  <text x="24" y="88" font-family="'Helvetica Neue',sans-serif" font-size="13" fill="#e4e4e7">for SMBs, focused on delivering scalable workflow automation,</text>
+  <text x="24" y="108" font-family="'Helvetica Neue',sans-serif" font-size="13" fill="#e4e4e7">AI reporting assistants, and comprehensive go-live support...</text>
+
+  <!-- Link -->
+  <text x="24" y="136" font-family="'Helvetica Neue',sans-serif" font-size="12" fill="#60a5fa">zynextechnologies.com.au</text>
+
+  <!-- Divider -->
+  <line x1="24" y1="152" x2="456" y2="152" stroke="#404040" stroke-width="1"/>
+  <text x="24" y="170" font-family="'Helvetica Neue',sans-serif" font-size="11" fill="#71717a">Source: AI-powered search  · Perplexity Pro</text>
+</svg>
