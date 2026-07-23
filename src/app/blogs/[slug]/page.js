@@ -1,10 +1,14 @@
 import BlogTemplate from '@/views/BlogTemplate';
-import BlogDetailTemplate from '@/views/blogs/BlogDetailTemplate';
-import { blogContents } from '@/constants/blogData';
+import BlogDetailContent from '@/views/blogs/BlogDetailContent';
+import { blogContents, blogList } from '@/constants/blogData';
 import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'how-to-choose-erp-implementation-partner-australia',
+  'erpnext-vs-zoho-erp-comparison',
+  'odoo-vs-erpnext-comparison',
+  'odoo-vs-zoho',
   'when-should-business-invest-ai-automation',
   'ai-workflow-automation-business-efficiency',
   'ai-feasibility-analysis-why-every-business-needs-it',
@@ -25,7 +29,7 @@ const DETAIL_TEMPLATE_SLUGS = [
   'business-automation-using-ai',
   'ai-implementation-services-strategy-execution',
   'best-ai-development-companies-in-australia',
-  'best-odoo-development-company-australia',
+  'best-odoo-development-companies-australia',
   'odoo-erp-implementation-cost-australia',
   'odoo-customization-services',
   'odoo-business-process-automation',
@@ -40,6 +44,7 @@ const DETAIL_TEMPLATE_SLUGS = [
   'best-erpnext-implementation-companies-australia',
   'best-zoho-erp-implementation-companies-australia',
   'white-label-erp-development-australia',
+  'zoho-erp-software-business-efficiency',
 ];
 
 export async function generateMetadata({ params }) {
@@ -59,7 +64,10 @@ export default async function BlogTemplatePage({ params }) {
   const { slug } = await params;
 
   if (DETAIL_TEMPLATE_SLUGS.includes(slug)) {
-    return <BlogDetailTemplate />;
+    const blogData = blogContents[slug];
+    const relatedPosts = blogList.filter((p) => p.slug !== slug).slice(0, 3);
+    
+    return <BlogDetailContent slug={slug} blogData={blogData} relatedPosts={relatedPosts} />;
   }
 
   return <BlogTemplate />;

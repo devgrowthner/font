@@ -65,10 +65,10 @@ const kpis = [
 ];
 
 const locationLinks = [
-  { title: 'Adelaide AI Development', href: '/ai-development-company-adelaide', body: 'AI systems for real estate agencies in Adelaide and South Australia.' },
-  { title: 'Canberra AI Development', href: '/ai-development-company-in-canberra', body: 'AI development for real estate businesses in the ACT.' },
-  { title: 'Gold Coast AI Development', href: '/ai-development-gold-coast', body: 'AI systems for real estate agencies on the Gold Coast.' },
-  { title: 'Hobart AI Development', href: '/ai-development-company-in-hobart', body: 'AI development for real estate businesses in Hobart and Tasmania.' },
+  { title: 'Adelaide AI Development', href: 'https://zynextechnologies.com.au/ai-development-company-adelaide', body: 'AI systems for real estate agencies in Adelaide and South Australia.' },
+  { title: 'Canberra AI Development', href: 'https://zynextechnologies.com.au/ai-development-company-in-canberra', body: 'AI development for real estate businesses in the ACT.' },
+  { title: 'Gold Coast AI Development', href: 'https://zynextechnologies.com.au/ai-development-gold-coast', body: 'AI systems for real estate agencies on the Gold Coast.' },
+  { title: 'Hobart AI Development', href: 'https://zynextechnologies.com.au/ai-development-company-in-hobart', body: 'AI development for real estate businesses in Hobart and Tasmania.' },
 ];
 
 const faqs = [
@@ -148,7 +148,7 @@ const AiDevelopmentCompanyForRealEstateAustralia = () => {
                 <button type="button" onClick={() => setIsModalOpen(true)} className="inline-flex items-center justify-center gap-2 bg-white text-[#719334] px-8 py-4 rounded-lg font-bold shadow-lg">
                   Book a Discovery Call <ArrowRight className="w-5 h-5" />
                 </button>
-                <Link href="/what-is-zynex" className="inline-flex items-center justify-center text-white px-8 py-4 rounded-lg font-bold border-2 border-white/80 hover:bg-white/10">
+                <Link href="https://zynextechnologies.com.au/what-is-zynex" className="inline-flex items-center justify-center text-white px-8 py-4 rounded-lg font-bold border-2 border-white/80 hover:bg-white/10">
                   See How Zynex Works
                 </Link>
               </div>
@@ -280,7 +280,7 @@ const AiDevelopmentCompanyForRealEstateAustralia = () => {
             <p className="text-base text-white/90 mb-8 max-w-2xl mx-auto">We look at your current setup, understand your biggest operational pressure points, and show you exactly where our AI system would have the most immediate impact.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button type="button" onClick={() => setIsModalOpen(true)} className="bg-white text-[#719334] px-8 py-4 rounded-lg font-bold">Book your free discovery call</button>
-              <Link href="/solutions" className="text-white px-8 py-4 rounded-lg font-bold border-2 border-white hover:bg-white/10">Explore other industries</Link>
+              <Link href="https://zynextechnologies.com.au/solutions" className="text-white px-8 py-4 rounded-lg font-bold border-2 border-white hover:bg-white/10">Explore other industries</Link>
             </div>
           </div>
         </div>

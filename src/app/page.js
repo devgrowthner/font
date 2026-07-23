@@ -5,7 +5,7 @@ export const metadata = buildPageMetadata({
   title: 'AI & ERP Development Company in Australia | Zynex Technologies',
   description:
     'Leading AI and ERP Development Company in Australia businesses trust for custom AI solutions, Odoo ERP, automation, and scalable software development services.',
-  path: '/',
+  path: 'https://zynextechnologies.com.au/',
 });
 
 export default function HomePage() {

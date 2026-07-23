@@ -5,7 +5,7 @@ export const metadata = buildPageMetadata({
   title: 'Chatbot Development Company and Solutions in Australia',
   description:
     'Looking for a chatbot development company in Australia? We build AI-powered chatbot solutions that improve support, automate tasks, and drive growth.',
-  path: '/chatbot',
+  path: 'https://zynextechnologies.com.au/chatbot',
 });
 
 export default function ChatbotPage() {

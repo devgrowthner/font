@@ -25,6 +25,11 @@ const nextConfig = {
         destination: '/ai-solution-healthcare-clinics-australia',
         permanent: true,
       },
+      {
+        source: '/blogs/best-odoo-development-company-australia',
+        destination: '/blogs/best-odoo-development-companies-australia',
+        permanent: true,
+      },
     ]
   },
 };

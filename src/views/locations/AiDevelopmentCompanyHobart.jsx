@@ -316,7 +316,7 @@ const AiDevelopmentCompanyHobart = () => {
                   <span aria-hidden>→</span>
                 </button>
                 <Link
-                  href="/solutions"
+                  href="https://zynextechnologies.com.au/solutions"
                   className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 rounded-xl text-sm sm:text-base font-semibold border-2 w-full sm:w-auto min-h-[48px] transition-all hover:-translate-y-0.5"
                   style={{ borderColor: 'rgba(113, 147, 52, 0.55)', color: brandGreen }}
                 >
@@ -513,7 +513,7 @@ const AiDevelopmentCompanyHobart = () => {
 
           <div className="mt-10 text-center">
             <Link
-              href="/solutions"
+              href="https://zynextechnologies.com.au/solutions"
               className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-[#719334] hover:underline underline-offset-4"
             >
               Explore all services

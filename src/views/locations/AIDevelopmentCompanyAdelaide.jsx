@@ -127,19 +127,19 @@ const nationalReach = [
   {
     title: 'AI Development Company in Sydney',
     body: 'Custom AI systems, machine learning models, and automation solutions built for Sydney businesses across every industry.',
-    href: '/ai-development-company-sydney',
+    href: 'https://zynextechnologies.com.au/ai-development-company-sydney',
     cta: 'Learn more: AI Development Company in Sydney',
   },
   {
     title: 'AI Automation Company in Australia',
     body: 'We automate workflows, data processes, and customer interactions for Australian businesses looking to reduce costs and scale operations.',
-    href: '/ai-automation',
+    href: 'https://zynextechnologies.com.au/ai-automation',
     cta: 'Learn more: AI Automation Company in Australia',
   },
   {
     title: 'AI Feasibility Analysis Company in Australia',
     body: 'Our structured feasibility analysis validates ROI and technical viability before your business commits to an AI development project.',
-    href: '/ai-feasibility-analysis',
+    href: 'https://zynextechnologies.com.au/ai-feasibility-analysis',
     cta: 'Learn more: AI Feasibility Analysis Company in Australia',
   },
 ];
