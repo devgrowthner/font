@@ -503,10 +503,10 @@ export const blogContents = {
       "ai-implementation-guide-for-businesses",
     ],
     inlineInternalLinks: [
-      { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
-      { match: "AI automation", href: "/ai-automation" },
-      { match: "custom AI development", href: "/custom-ai" },
-      { match: "AI development services", href: "/custom-ai" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI development services", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -714,10 +714,10 @@ export const blogContents = {
       "ai-implementation-guide-for-businesses",
     ],
     inlineInternalLinks: [
-      { match: "Odoo partner", href: "/custom-ai" },
-      { match: "AI automation", href: "/ai-automation" },
+      { match: "Odoo partner", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
       { match: "AI Automation", href: "https://zynextechnologies.com.au/ai-automation" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: [
@@ -1191,10 +1191,10 @@ export const blogContents = {
     ],
 
     inlineInternalLinks: [
-      { match: "Custom vs off-the-shelf AI", href: "/blogs/custom-ai-solutions-vs-off-the-shelf-ai-tools" },
-      { match: "AI workflow automation", href: "/blogs/ai-workflow-automation-business-efficiency" },
-      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
-      { match: "AI development company", href: "/blogs/how-to-choose-an-ai-development-company-in-australia" },
+      { match: "Custom vs off-the-shelf AI", href: "https://zynextechnologies.com.au/blogs/custom-ai-solutions-vs-off-the-shelf-ai-tools" },
+      { match: "AI workflow automation", href: "https://zynextechnologies.com.au/blogs/ai-workflow-automation-business-efficiency" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "AI development company", href: "https://zynextechnologies.com.au/blogs/how-to-choose-an-ai-development-company-in-australia" },
       { match: "zynex technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -1443,10 +1443,10 @@ export const blogContents = {
     ],
 
     inlineInternalLinks: [
-      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
-      { match: "AI automation", href: "/ai-automation" },
-      { match: "machine learning services", href: "/machine-learning" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "machine learning services", href: "https://zynextechnologies.com.au/machine-learning" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -1743,9 +1743,9 @@ export const blogContents = {
     ],
 
     inlineInternalLinks: [
-      { match: "AI automation", href: "/ai-automation" },
-      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -1968,15 +1968,15 @@ export const blogContents = {
     ],
 
     inlineInternalLinks: [
-      { match: "Chatbot development", href: "/chatbot" },
-      { match: "machine learning services", href: "/machine-learning" },
-      { match: "generative AI development", href: "/generative-ai" },
-      { match: "Computer vision development", href: "/computer-vision" },
-      { match: "Recommendation engine development", href: "/recommendation-engine" },
-      { match: "custom AI development", href: "/custom-ai" },
-      { match: "AI automation", href: "/ai-automation" },
-      { match: "AI automation", href: "/ai-automation" },
-      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "Chatbot development", href: "https://zynextechnologies.com.au/chatbot" },
+      { match: "machine learning services", href: "https://zynextechnologies.com.au/machine-learning" },
+      { match: "generative AI development", href: "https://zynextechnologies.com.au/generative-ai" },
+      { match: "Computer vision development", href: "https://zynextechnologies.com.au/computer-vision" },
+      { match: "Recommendation engine development", href: "https://zynextechnologies.com.au/recommendation-engine" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -2156,9 +2156,9 @@ export const blogContents = {
 
     inlineInternalLinks: [
       { match: "zynextechnologies.com.au", href: "https://zynextechnologies.com.au/" },
-      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
-      { match: "machine learning or generative AI", href: "/solutions" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "machine learning or generative AI", href: "https://zynextechnologies.com.au/solutions" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -2229,37 +2229,37 @@ export const blogContents = {
         ],
         bulletLinkItems: [
           {
-            href: "/chatbot",
+            href: "https://zynextechnologies.com.au/chatbot",
             name: "Chatbot development",
             suffix:
               " :  Ideal for businesses that handle high volumes of customer enquiries, internal helpdesk requests, or repetitive communication tasks. A well-built chatbot reduces response times and frees up staff for higher-value work.",
           },
           {
-            href: "/ai-automation",
+            href: "https://zynextechnologies.com.au/ai-automation",
             name: "AI automation",
             suffix:
               " :Best for processes that are rule-based, repetitive, and time-consuming. This includes document processing, data entry, approval workflows, and report generation.",
           },
           {
-            href: "/machine-learning",
+            href: "https://zynextechnologies.com.au/machine-learning",
             name: "Machine learning services",
             suffix:
               " : Suited for businesses that need predictive insight. Demand forecasting, churn prediction, fraud detection, and quality control are all strong machine learning use cases.",
           },
           {
-            href: "/generative-ai",
+            href: "https://zynextechnologies.com.au/generative-ai",
             name: "Generative AI development",
             suffix:
               " : The right choice when a business needs to produce content at scale, automate drafting tasks, or build intelligent assistants that can handle open-ended queries.",
           },
           {
-            href: "/computer-vision",
+            href: "https://zynextechnologies.com.au/computer-vision",
             name: "Computer vision development",
             suffix:
               " : Best for businesses operating in manufacturing, logistics, retail, or healthcare where visual inspection, defect detection, or image-based analysis is part of the workflow.",
           },
           {
-            href: "/recommendation-engine",
+            href: "https://zynextechnologies.com.au/recommendation-engine",
             name: "Recommendation engine development",
             suffix:
               " :The go-to for e-commerce, media, and content platforms that want to personalise what each user sees based on behaviour.",
@@ -2411,12 +2411,12 @@ export const blogContents = {
     ],
 
     inlineInternalLinks: [
-      { match: "AI development services", href: "/custom-ai" },
-      { match: "AI Automation", href: "/blogs/ai-automation-for-businesses-australia" },
-      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
-      { match: "OpenClaw", href: "/blogs/openclaw-implementation-guide-businesses" },
+      { match: "AI development services", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI Automation", href: "https://zynextechnologies.com.au/blogs/ai-automation-for-businesses-australia" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "OpenClaw", href: "https://zynextechnologies.com.au/blogs/openclaw-implementation-guide-businesses" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
-      { match: "NemoClaw", href: "/blogs/nemoclaw-implementation-guide-businesses" },
+      { match: "NemoClaw", href: "https://zynextechnologies.com.au/blogs/nemoclaw-implementation-guide-businesses" },
     ],
 
     sectionOrder: [
@@ -2601,10 +2601,10 @@ export const blogContents = {
     ],
 
     inlineInternalLinks: [
-      { match: "AI automation processes", href: "/blogs/business-processes-to-automate-with-ai" },
-      { match: "Australia AI automation", href: "/blogs/ai-automation-for-businesses-australia" },
-      { match: "AI use cases", href: "/blogs/ai-use-cases-for-small-businesses" },
-      { match: "AI processes", href: "/blogs/business-processes-to-automate-with-ai" },
+      { match: "AI automation processes", href: "https://zynextechnologies.com.au/blogs/business-processes-to-automate-with-ai" },
+      { match: "Australia AI automation", href: "https://zynextechnologies.com.au/blogs/ai-automation-for-businesses-australia" },
+      { match: "AI use cases", href: "https://zynextechnologies.com.au/blogs/ai-use-cases-for-small-businesses" },
+      { match: "AI processes", href: "https://zynextechnologies.com.au/blogs/business-processes-to-automate-with-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -2810,10 +2810,10 @@ export const blogContents = {
     ],
     inlineInternalLinks: [
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
-      { match: "NemoClaw", href: "/blogs/nemoclaw-implementation-guide-businesses" },
+      { match: "NemoClaw", href: "https://zynextechnologies.com.au/blogs/nemoclaw-implementation-guide-businesses" },
       { match: "AI automation services", href: "https://zynextechnologies.com.au/ai-automation" },
       { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
-      { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
     guideStepsTocLabel: "Key topics",
@@ -2973,10 +2973,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "ai-automation-for-businesses-australia",
     ],
     inlineInternalLinks: [
-      { match: "AI automation", href: "/ai-automation" },
-      { match: "custom AI development", href: "/custom-ai" },
-      { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
-      { match: "NemoClaw", href: "/blogs/nemoclaw-implementation-guide-businesses" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+      { match: "NemoClaw", href: "https://zynextechnologies.com.au/blogs/nemoclaw-implementation-guide-businesses" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -3152,10 +3152,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
 
     inlineInternalLinks: [
-      { match: "OpenClaw Implementation Guide", href: "/blogs/openclaw-implementation-guide-businesses" },
-      { match: "NemoClaw Implementation Guide", href: "/blogs/nemoclaw-implementation-guide-businesses" },
-      { match: "AI Feasibility Analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
-      { match: "AI automation companies", href: "/ai-automation" },
+      { match: "OpenClaw Implementation Guide", href: "https://zynextechnologies.com.au/blogs/openclaw-implementation-guide-businesses" },
+      { match: "NemoClaw Implementation Guide", href: "https://zynextechnologies.com.au/blogs/nemoclaw-implementation-guide-businesses" },
+      { match: "AI Feasibility Analysis", href: "https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "AI automation companies", href: "https://zynextechnologies.com.au/ai-automation" },
     ],
 
     sectionOrder: [
@@ -3316,10 +3316,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
 
     inlineInternalLinks: [
-      { match: "Custom AI Development Company in Australia", href: "/custom-ai" },
-      { match: "AI Automation Company in Australia", href: "/ai-automation" },
-      { match: "Custom AI Development Company", href: "/custom-ai" },
-      { match: "AI Automation Company", href: "/ai-automation" },
+      { match: "Custom AI Development Company in Australia", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI Automation Company in Australia", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "Custom AI Development Company", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI Automation Company", href: "https://zynextechnologies.com.au/ai-automation" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -3584,11 +3584,11 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
 
     inlineInternalLinks: [
-      { match: "Custom AI Development Company in Australia", href: "/custom-ai" },
-      { match: "Custom AI Developement Company in Australia", href: "/custom-ai" },
-      { match: "AI Automation Company in Australia", href: "/ai-automation" },
-      { match: "Custom AI Development Company", href: "/custom-ai" },
-      { match: "AI Automation Company", href: "/ai-automation" },
+      { match: "Custom AI Development Company in Australia", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "Custom AI Developement Company in Australia", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI Automation Company in Australia", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "Custom AI Development Company", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI Automation Company", href: "https://zynextechnologies.com.au/ai-automation" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -3811,12 +3811,12 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
 
     inlineInternalLinks: [
-      { match: "business processes to automate with AI", href: "/blogs/business-processes-to-automate-with-ai" },
-      { match: "Recommendation Engine Development", href: "/recommendation-engine" },
-      { match: "AI development Services", href: "/custom-ai" },
+      { match: "business processes to automate with AI", href: "https://zynextechnologies.com.au/blogs/business-processes-to-automate-with-ai" },
+      { match: "Recommendation Engine Development", href: "https://zynextechnologies.com.au/recommendation-engine" },
+      { match: "AI development Services", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
       { match: "ZynexTechnologies", href: "https://zynextechnologies.com.au/" },
-      { match: "AI chatbots", href: "/chatbot" },
+      { match: "AI chatbots", href: "https://zynextechnologies.com.au/chatbot" },
     ],
 
     sectionOrder: [
@@ -4065,10 +4065,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
 
     inlineInternalLinks: [
-      { match: "AI automation for businesses in Australia", href: "/blogs/ai-automation-for-businesses-australia" },
-      { match: "AI automation in Australia", href: "/blogs/ai-automation-for-businesses-australia" },
-      { match: "generative AI", href: "/generative-ai" },
-      { match: "AI chatbots", href: "/chatbot" },
+      { match: "AI automation for businesses in Australia", href: "https://zynextechnologies.com.au/blogs/ai-automation-for-businesses-australia" },
+      { match: "AI automation in Australia", href: "https://zynextechnologies.com.au/blogs/ai-automation-for-businesses-australia" },
+      { match: "generative AI", href: "https://zynextechnologies.com.au/generative-ai" },
+      { match: "AI chatbots", href: "https://zynextechnologies.com.au/chatbot" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -4632,12 +4632,12 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
 
     /** Glossary for inline <Link> replacement (longest match applied first in template). */
     inlineInternalLinks: [
-      { match: "AI Processes", href: "/blogs/business-processes-to-automate-with-ai" },
-      { match: "Australia AI Automation", href: "/blogs/ai-automation-for-businesses-australia" },
-      { match: "Australia AI automation", href: "/blogs/ai-automation-for-businesses-australia" },
-      { match: "Nemoclaw Guide", href: "/blogs/nemoclaw-implementation-guide-businesses" },
-      { match: "AI use cases", href: "/blogs/ai-use-cases-for-small-businesses" },
-      { match: "AI processes", href: "/blogs/business-processes-to-automate-with-ai" },
+      { match: "AI Processes", href: "https://zynextechnologies.com.au/blogs/business-processes-to-automate-with-ai" },
+      { match: "Australia AI Automation", href: "https://zynextechnologies.com.au/blogs/ai-automation-for-businesses-australia" },
+      { match: "Australia AI automation", href: "https://zynextechnologies.com.au/blogs/ai-automation-for-businesses-australia" },
+      { match: "Nemoclaw Guide", href: "https://zynextechnologies.com.au/blogs/nemoclaw-implementation-guide-businesses" },
+      { match: "AI use cases", href: "https://zynextechnologies.com.au/blogs/ai-use-cases-for-small-businesses" },
+      { match: "AI processes", href: "https://zynextechnologies.com.au/blogs/business-processes-to-automate-with-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -4853,10 +4853,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
 
     inlineInternalLinks: [
-      { match: "AI feasibility analysis", href: "/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
-      { match: "AI automation", href: "/blogs/ai-automation-for-businesses-australia" },
-      { match: "AI Processes", href: "/blogs/business-processes-to-automate-with-ai" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/blogs/ai-feasibility-analysis-why-every-business-needs-it" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/blogs/ai-automation-for-businesses-australia" },
+      { match: "AI Processes", href: "https://zynextechnologies.com.au/blogs/business-processes-to-automate-with-ai" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
 
@@ -5120,13 +5120,13 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
         "ai-implementation-guide-for-businesses",
       ],
       inlineInternalLinks: [
-        { match: "AI Automation", href: "/ai-automation" },
-        { match: "AI automation", href: "/ai-automation" },
-        { match: "AI Feasibility Analysis", href: "/ai-feasibility-analysis" },
-        { match: "AI feasibility assessment", href: "/ai-feasibility-analysis" },
-        { match: "Custom AI Development", href: "/custom-ai" },
-        { match: "custom AI development", href: "/custom-ai" },
-        { match: "OpenClaw", href: "/blogs/openclaw-implementation-guide-businesses" },
+        { match: "AI Automation", href: "https://zynextechnologies.com.au/ai-automation" },
+        { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+        { match: "AI Feasibility Analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+        { match: "AI feasibility assessment", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+        { match: "Custom AI Development", href: "https://zynextechnologies.com.au/custom-ai" },
+        { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+        { match: "OpenClaw", href: "https://zynextechnologies.com.au/blogs/openclaw-implementation-guide-businesses" },
         { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
       ],
       sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -5319,12 +5319,12 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
         "ai-automation-for-businesses-australia",
       ],
       inlineInternalLinks: [
-        { match: "AI Automation", href: "/ai-automation" },
-        { match: "AI automation", href: "/ai-automation" },
-        { match: "AI feasibility assessment", href: "/ai-feasibility-analysis" },
-        { match: "AI Development Services", href: "/custom-ai" },
-        { match: "Custom AI Development", href: "/custom-ai" },
-        { match: "OpenClaw", href: "/blogs/openclaw-implementation-guide-businesses" },
+        { match: "AI Automation", href: "https://zynextechnologies.com.au/ai-automation" },
+        { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+        { match: "AI feasibility assessment", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+        { match: "AI Development Services", href: "https://zynextechnologies.com.au/custom-ai" },
+        { match: "Custom AI Development", href: "https://zynextechnologies.com.au/custom-ai" },
+        { match: "OpenClaw", href: "https://zynextechnologies.com.au/blogs/openclaw-implementation-guide-businesses" },
         { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
       ],
       sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -5529,11 +5529,11 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
         "ai-implementation-guide-for-businesses",
       ],
       inlineInternalLinks: [
-        { match: "custom AI development", href: "/custom-ai" },
-        { match: "Custom AI development", href: "/custom-ai" },
-        { match: "AI development services", href: "/custom-ai" },
-        { match: "AI automation", href: "/ai-automation" },
-        { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
+        { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+        { match: "Custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+        { match: "AI development services", href: "https://zynextechnologies.com.au/custom-ai" },
+        { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+        { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
         { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
       ],
       sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -5672,11 +5672,11 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
         "how-to-choose-an-ai-development-company-in-australia",
       ],
       inlineInternalLinks: [
-        { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
-        { match: "AI automation", href: "/ai-automation" },
-        { match: "custom AI development", href: "/custom-ai" },
-        { match: "Custom AI development", href: "/custom-ai" },
-        { match: "AI development services", href: "/custom-ai" },
+        { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+        { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+        { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+        { match: "Custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+        { match: "AI development services", href: "https://zynextechnologies.com.au/custom-ai" },
         { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
       ],
       sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -5807,10 +5807,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "ai-automation-for-businesses-australia",
     ],
     inlineInternalLinks: [
-      { match: "AI development services", href: "/custom-ai" },
-      { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
-      { match: "custom AI development", href: "/custom-ai" },
-      { match: "AI automation solutions", href: "/ai-automation" },
+      { match: "AI development services", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI automation solutions", href: "https://zynextechnologies.com.au/ai-automation" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -6000,10 +6000,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "ai-implementation-services-strategy-execution",
     ],
     inlineInternalLinks: [
-      { match: "AI development for construction businesses", href: "/ai-development-company-construction-businesses-australia" },
-      { match: "custom AI development", href: "/custom-ai" },
-      { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
-      { match: "AI automation", href: "/ai-automation" },
+      { match: "AI development for construction businesses", href: "https://zynextechnologies.com.au/ai-development-company-construction-businesses-australia" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -6212,9 +6212,9 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "ai-workflow-automation-business-efficiency",
     ],
     inlineInternalLinks: [
-      { match: "AI solution for healthcare clinics", href: "/ai-solution-healthcare-clinics-australia" },
-      { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "AI solution for healthcare clinics", href: "https://zynextechnologies.com.au/ai-solution-healthcare-clinics-australia" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -6410,9 +6410,9 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "ai-feasibility-analysis-why-every-business-needs-it",
     ],
     inlineInternalLinks: [
-      { match: "AI automation", href: "/ai-automation" },
-      { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -6602,12 +6602,12 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     inlineInternalLinks: [
       {
         match: "AI development company for real estate Australia",
-        href: "/ai-development-company-for-real-estate-australia",
+        href: "https://zynextechnologies.com.au/ai-development-company-for-real-estate-australia",
       },
-      { match: "OpenClaw", href: "/blogs/openclaw-implementation-guide-businesses" },
-      { match: "AI automation", href: "/ai-automation" },
-      { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "OpenClaw", href: "https://zynextechnologies.com.au/blogs/openclaw-implementation-guide-businesses" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "AI feasibility analysis", href: "https://zynextechnologies.com.au/ai-feasibility-analysis" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
     guideStepsTocLabel: "Real Estate AI",
@@ -6808,10 +6808,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "ai-feasibility-study-businesses-first",
     ],
     inlineInternalLinks: [
-      { match: "AI development company for real estate Australia", href: "/ai-development-company-for-real-estate-australia" },
-      { match: "NemoClaw", href: "/blogs/nemoclaw-implementation-guide-businesses" },
-      { match: "AI automation", href: "/ai-automation" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "AI development company for real estate Australia", href: "https://zynextechnologies.com.au/ai-development-company-for-real-estate-australia" },
+      { match: "NemoClaw", href: "https://zynextechnologies.com.au/blogs/nemoclaw-implementation-guide-businesses" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -7001,10 +7001,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "ai-implementation-guide-for-businesses",
     ],
     inlineInternalLinks: [
-      { match: "Odoo customization services", href: "/custom-ai" },
-      { match: "AI automation", href: "/ai-automation" },
+      { match: "Odoo customization services", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
       { match: "AI Automation", href: "https://zynextechnologies.com.au/ai-automation" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: [
@@ -7266,10 +7266,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "odoo-erp-implementation-cost-australia",
     ],
     inlineInternalLinks: [
-      { match: "Odoo ERP development services", href: "/custom-ai" },
-      { match: "AI automation", href: "/ai-automation" },
+      { match: "Odoo ERP development services", href: "https://zynextechnologies.com.au/custom-ai" },
+      { match: "AI automation", href: "https://zynextechnologies.com.au/ai-automation" },
       { match: "AI Automation", href: "https://zynextechnologies.com.au/ai-automation" },
-      { match: "custom AI development", href: "/custom-ai" },
+      { match: "custom AI development", href: "https://zynextechnologies.com.au/custom-ai" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: [
@@ -7532,8 +7532,8 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
     inlineInternalLinks: [
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
-      { match: "Odoo ERP implementation cost in Australia", href: "/blogs/odoo-erp-implementation-cost-australia" },
-      { match: "Odoo ERP development companies in Australia", href: "/blogs/best-odoo-development-companies-australia" },
+      { match: "Odoo ERP implementation cost in Australia", href: "https://zynextechnologies.com.au/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "Odoo ERP development companies in Australia", href: "https://zynextechnologies.com.au/blogs/best-odoo-development-companies-australia" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "comparison", "questions", "implementation", "finalThoughts", "faq", "cta", "relatedLinks"],
     guideStepsTocLabel: "Top companies",
@@ -7743,8 +7743,8 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "best-odoo-development-companies-australia",
     ],
     inlineInternalLinks: [
-      { match: "Odoo ERP implementation cost in Australia", href: "/blogs/odoo-erp-implementation-cost-australia" },
-      { match: "best Odoo development companies in Australia", href: "/blogs/best-odoo-development-companies-australia" },
+      { match: "Odoo ERP implementation cost in Australia", href: "https://zynextechnologies.com.au/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "best Odoo development companies in Australia", href: "https://zynextechnologies.com.au/blogs/best-odoo-development-companies-australia" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],
@@ -7902,8 +7902,8 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
     inlineInternalLinks: [
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
-      { match: "Odoo ERP implementation cost in Australia", href: "/blogs/odoo-erp-implementation-cost-australia" },
-      { match: "Odoo ERP development companies in Australia", href: "/blogs/best-odoo-development-companies-australia" },
+      { match: "Odoo ERP implementation cost in Australia", href: "https://zynextechnologies.com.au/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "Odoo ERP development companies in Australia", href: "https://zynextechnologies.com.au/blogs/best-odoo-development-companies-australia" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "comparison", "questions", "implementation", "finalThoughts", "faq", "cta", "relatedLinks"],
     guideStepsTocLabel: "Top companies",
@@ -8113,8 +8113,8 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
     inlineInternalLinks: [
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
-      { match: "Odoo ERP development companies in Australia", href: "/blogs/best-odoo-development-companies-australia" },
-      { match: "Odoo ERP implementation cost in Australia", href: "/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "Odoo ERP development companies in Australia", href: "https://zynextechnologies.com.au/blogs/best-odoo-development-companies-australia" },
+      { match: "Odoo ERP implementation cost in Australia", href: "https://zynextechnologies.com.au/blogs/odoo-erp-implementation-cost-australia" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "comparison", "questions", "implementation", "finalThoughts", "faq", "cta", "relatedLinks"],
     guideStepsTocLabel: "Top companies",
@@ -8319,9 +8319,9 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
     inlineInternalLinks: [
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
-      { match: "Odoo ERP Development Companies Australia", href: "/blogs/best-odoo-development-companies-australia" },
-      { match: "ERPNext Implementation Company Australia", href: "/blogs/best-erpnext-implementation-companies-australia" },
-      { match: "Zoho ERP Development Company Australia", href: "/blogs/best-zoho-erp-implementation-companies-australia" },
+      { match: "Odoo ERP Development Companies Australia", href: "https://zynextechnologies.com.au/blogs/best-odoo-development-companies-australia" },
+      { match: "ERPNext Implementation Company Australia", href: "https://zynextechnologies.com.au/blogs/best-erpnext-implementation-companies-australia" },
+      { match: "Zoho ERP Development Company Australia", href: "https://zynextechnologies.com.au/blogs/best-zoho-erp-implementation-companies-australia" },
     ],
     sectionOrder: ["summary", "introduction", "content", "pricing", "modules", "benefits", "bestPractices", "zynexApproach", "finalThoughts", "faq", "cta", "relatedLinks"],
     summaryTitle: "Blog Summary",
@@ -8544,10 +8544,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "best-erpnext-implementation-companies-australia",
     ],
     inlineInternalLinks: [
-      { match: "odoo ERP development company", href: "/blogs/best-odoo-development-companies-australia" },
-      { match: "zoho ERP implementation companies", href: "/blogs/best-zoho-erp-implementation-companies-australia" },
-      { match: "zoho ERP development company", href: "/blogs/best-zoho-erp-implementation-companies-australia" },
-      { match: "white-label ERP development", href: "/blogs/white-label-erp-development-australia" },
+      { match: "odoo ERP development company", href: "https://zynextechnologies.com.au/blogs/best-odoo-development-companies-australia" },
+      { match: "zoho ERP implementation companies", href: "https://zynextechnologies.com.au/blogs/best-zoho-erp-implementation-companies-australia" },
+      { match: "zoho ERP development company", href: "https://zynextechnologies.com.au/blogs/best-zoho-erp-implementation-companies-australia" },
+      { match: "white-label ERP development", href: "https://zynextechnologies.com.au/blogs/white-label-erp-development-australia" },
     ],
     sectionOrder: ["summary", "introduction", "content", "conclusion", "faq", "cta", "relatedLinks"],
     summaryTitle: "Blog Summary",
@@ -8699,10 +8699,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "odoo-vs-erpnext-comparison",
     ],
     inlineInternalLinks: [
-      { match: "ERPNext development company", href: "/blogs/best-erpnext-implementation-companies-australia" },
-      { match: "Zoho ERP partners in Australia services", href: "/blogs/best-zoho-erp-implementation-companies-australia" },
-      { match: "best ERPNext companies list", href: "/blogs/best-erpnext-implementation-companies-australia" },
-      { match: "zoho ERP services provider", href: "/blogs/best-zoho-erp-implementation-companies-australia" },
+      { match: "ERPNext development company", href: "https://zynextechnologies.com.au/blogs/best-erpnext-implementation-companies-australia" },
+      { match: "Zoho ERP partners in Australia services", href: "https://zynextechnologies.com.au/blogs/best-zoho-erp-implementation-companies-australia" },
+      { match: "best ERPNext companies list", href: "https://zynextechnologies.com.au/blogs/best-erpnext-implementation-companies-australia" },
+      { match: "zoho ERP services provider", href: "https://zynextechnologies.com.au/blogs/best-zoho-erp-implementation-companies-australia" },
     ],
     sectionOrder: ["summary", "introduction", "content", "conclusion", "faq", "cta", "relatedLinks"],
     summaryTitle: "Blog Summary",
@@ -8861,10 +8861,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "white-label-erp-development-australia",
     ],
     inlineInternalLinks: [
-      { match: "ERPNext Implementation Companies in Australia", href: "/blogs/best-erpnext-implementation-companies-australia" },
-      { match: "White Label ERP Development in Australia", href: "/blogs/white-label-erp-development-australia" },
-      { match: "Zoho ERP Automation Benefits", href: "/blogs/zoho-erp-software-business-efficiency" },
-      { match: "Odoo ERP Implementation Checklist", href: "/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "ERPNext Implementation Companies in Australia", href: "https://zynextechnologies.com.au/blogs/best-erpnext-implementation-companies-australia" },
+      { match: "White Label ERP Development in Australia", href: "https://zynextechnologies.com.au/blogs/white-label-erp-development-australia" },
+      { match: "Zoho ERP Automation Benefits", href: "https://zynextechnologies.com.au/blogs/zoho-erp-software-business-efficiency" },
+      { match: "Odoo ERP Implementation Checklist", href: "https://zynextechnologies.com.au/blogs/odoo-erp-implementation-cost-australia" },
     ],
     sectionOrder: ["summary", "introduction", "content", "conclusion", "faq", "cta", "relatedLinks"],
     summaryTitle: "Blog Summary",
@@ -9011,10 +9011,10 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "white-label-erp-development-australia",
     ],
     inlineInternalLinks: [
-      { match: "White Label ERP Development in Australia", href: "/blogs/white-label-erp-development-australia" },
-      { match: "ERPNext Implementation Companies in Australia", href: "/blogs/best-erpnext-implementation-companies-australia" },
-      { match: "Odoo ERP Implementation Checklist", href: "/blogs/odoo-erp-implementation-cost-australia" },
-      { match: "Zoho ERP Automation Benefits", href: "/blogs/zoho-erp-software-business-efficiency" },
+      { match: "White Label ERP Development in Australia", href: "https://zynextechnologies.com.au/blogs/white-label-erp-development-australia" },
+      { match: "ERPNext Implementation Companies in Australia", href: "https://zynextechnologies.com.au/blogs/best-erpnext-implementation-companies-australia" },
+      { match: "Odoo ERP Implementation Checklist", href: "https://zynextechnologies.com.au/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "Zoho ERP Automation Benefits", href: "https://zynextechnologies.com.au/blogs/zoho-erp-software-business-efficiency" },
     ],
     sectionOrder: ["summary", "introduction", "content", "conclusion", "faq", "cta", "relatedLinks"],
     summaryTitle: "Blog Summary",
@@ -9191,7 +9191,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     ],
     inlineInternalLinks: [
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
-      { match: "white label ERP development in Australia", href: "/blogs/white-label-erp-development-australia" },
+      { match: "white label ERP development in Australia", href: "https://zynextechnologies.com.au/blogs/white-label-erp-development-australia" },
     ],
     sectionOrder: ["summary", "introduction", "content", "conclusion", "faq", "cta", "relatedLinks"],
     summaryTitle: "Summary",

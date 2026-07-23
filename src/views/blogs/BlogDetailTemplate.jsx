@@ -15,12 +15,12 @@ import { SITE_URL } from '../../lib/seo';
 
 /** Key site pages for SEO internal linking from blog posts */
 const PILLAR_INTERNAL_LINKS = [
-  { href: '/solutions', label: 'AI solutions' },
-  { href: '/custom-ai', label: 'Custom AI development' },
-  { href: '/ai-automation', label: 'AI automation' },
-  { href: '/ai-feasibility-analysis', label: 'AI feasibility analysis' },
-  { href: '/strategy-report', label: 'Strategy report' },
-  { href: '/blogs', label: 'All blog articles' },
+  { href: 'https://zynextechnologies.com.au/solutions', label: 'AI solutions' },
+  { href: 'https://zynextechnologies.com.au/custom-ai', label: 'Custom AI development' },
+  { href: 'https://zynextechnologies.com.au/ai-automation', label: 'AI automation' },
+  { href: 'https://zynextechnologies.com.au/ai-feasibility-analysis', label: 'AI feasibility analysis' },
+  { href: 'https://zynextechnologies.com.au/strategy-report', label: 'Strategy report' },
+  { href: 'https://zynextechnologies.com.au/blogs', label: 'All blog articles' },
 ];
 
 /** Insert related posts section at the end (after CTA) */

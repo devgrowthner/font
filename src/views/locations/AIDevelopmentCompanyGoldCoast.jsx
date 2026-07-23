@@ -285,7 +285,7 @@ const AIDevelopmentCompanyGoldCoast = () => {
                   Request a Free Consultation
                 </button>
                 <Link
-                  href="/ai-feasibility-analysis"
+                  href="https://zynextechnologies.com.au/ai-feasibility-analysis"
                   className="group inline-flex items-center justify-center gap-2 text-[#719334] px-6 py-3.5 sm:px-8 rounded-xl text-sm sm:text-base font-semibold transition-all duration-300 hover:-translate-y-0.5 shadow-lg w-full sm:w-auto min-h-[48px] border border-[#719334] bg-white"
                 >
                   View AI Feasibility Analysis
@@ -368,7 +368,7 @@ const AIDevelopmentCompanyGoldCoast = () => {
               <p className="text-base text-muted-foreground leading-relaxed mb-4">
                 We start every engagement with a thorough{' '}
                 <Link
-                  href="/ai-feasibility-analysis"
+                  href="https://zynextechnologies.com.au/ai-feasibility-analysis"
                   className="text-[#719334] underline hover:text-[#5a7529] transition-colors font-medium"
                 >
                   AI Feasibility Analysis
@@ -617,7 +617,7 @@ const AIDevelopmentCompanyGoldCoast = () => {
                 Request a Free Consultation
               </button>
               <Link
-                href="/ai-feasibility-analysis"
+                href="https://zynextechnologies.com.au/ai-feasibility-analysis"
                 className="inline-flex items-center justify-center text-[#719334] px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:-translate-y-1 shadow-lg border border-[#719334] bg-white"
               >
                 View AI Feasibility Analysis

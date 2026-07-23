@@ -104,7 +104,7 @@ const services = [
       'Bespoke machine learning models, NLP pipelines, and AI systems trained on your proprietary data. Every solution is purpose-built for your specific challenge, not adapted from a template.',
     Icon: Sparkles,
     linkText: 'Custom AI Development Company',
-    href: '/custom-ai',
+    href: 'https://zynextechnologies.com.au/custom-ai',
   },
   {
     title: 'Chatbot Development',
@@ -112,7 +112,7 @@ const services = [
       'Enterprise-grade conversational AI powered by GPT-4, Claude, and Gemini. We build chatbots that handle support, sales, onboarding, and complex multi-turn dialogue at scale.',
     Icon: MessageSquare,
     linkText: 'Chatbot Development Company',
-    href: '/chatbot',
+    href: 'https://zynextechnologies.com.au/chatbot',
   },
   {
     title: 'Agentic AI Development',
@@ -120,7 +120,7 @@ const services = [
       'Autonomous AI agents that plan, reason, and execute multi-step tasks using LangGraph, CrewAI, and AutoGen. Ideal for research automation, email intelligence, and document workflows.',
     Icon: Bot,
     linkText: 'Agentic AI Development Company',
-    href: '/agentic-ai',
+    href: 'https://zynextechnologies.com.au/agentic-ai',
   },
   {
     title: 'AI Process Automation',
@@ -128,7 +128,7 @@ const services = [
       'Replace time-consuming manual workflows with intelligent automation. From document processing and data entry to reporting and customer onboarding, we automate what slows your team down.',
     Icon: Workflow,
     linkText: 'AI Automation Company',
-    href: '/ai-automation',
+    href: 'https://zynextechnologies.com.au/ai-automation',
   },
   {
     title: 'Predictive Analytics',
@@ -136,7 +136,7 @@ const services = [
       'Forecast demand, detect churn early, and uncover hidden growth opportunities with advanced predictive modelling built directly on your business data and operational history.',
     Icon: LineChart,
     linkText: 'Machine learning & analytics',
-    href: '/machine-learning',
+    href: 'https://zynextechnologies.com.au/machine-learning',
   },
   {
     title: 'AI Integration Services',
@@ -144,7 +144,7 @@ const services = [
       'Connect AI capabilities to your existing CRM, ERP, and SaaS platforms without disrupting operations. Seamless, secure integration with zero downtime across your tech stack.',
     Icon: Link2,
     linkText: 'Explore custom AI integration',
-    href: '/custom-ai',
+    href: 'https://zynextechnologies.com.au/custom-ai',
   },
 ];
 
@@ -281,7 +281,7 @@ const AiDevelopmentCompanyBrisbane = () => {
                   <span aria-hidden>→</span>
                 </button>
                 <Link
-                  href="/custom-ai"
+                  href="https://zynextechnologies.com.au/custom-ai"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 rounded-xl text-sm sm:text-base font-semibold border-2 w-full sm:w-auto min-h-[48px] transition-all hover:-translate-y-0.5"
                   style={{ borderColor: 'rgba(113, 147, 52, 0.55)', color: brandGreen }}
                 >

@@ -206,7 +206,7 @@ const PaymentSuccess = () => {
             {/* CTA */}
             <motion.div variants={fadeInUp}>
               <Link
-                href="/dashboard"
+                href="https://zynextechnologies.com.au/dashboard"
                 className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#719334] hover:bg-[#5a7529] text-white text-sm sm:text-base font-semibold py-3.5 px-6 transition-all duration-300 shadow-lg hover:shadow-xl group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/15 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />

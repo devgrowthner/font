@@ -11,28 +11,28 @@ const Footer = () => {
 
   const footerLinks = {
     solutions: [
-      { name: 'Custom AI Development', href: '/custom-ai', isRoute: true },
-      { name: 'ERP Development (Odoo)', href: '/odoo-erp-development-company-australia', isRoute: true },
+      { name: 'Custom AI Development', href: 'https://zynextechnologies.com.au/custom-ai', isRoute: true },
+      { name: 'ERP Development (Odoo)', href: 'https://zynextechnologies.com.au/odoo-erp-development-company-australia', isRoute: true },
       { name: 'AI Strategy Report', href: 'https://competitorinsights.com.au/' },
       { name: 'CareCob Platform', href: 'https://www.carecob.com.au/' }
     ],
     locations: [
-      { name: 'Sydney', href: '/ai-development-company-sydney', isRoute: true },
-      { name: 'Melbourne', href: '/ai-development-company-melbourne', isRoute: true },
-      { name: 'Brisbane', href: '/ai-development-company-in-brisbane', isRoute: true },
-      { name: 'Adelaide', href: '/ai-development-company-adelaide', isRoute: true },
-      { name: 'Perth', href: '/custom-ai-development-company-in-perth', isRoute: true },
-      { name: 'Canberra', href: '/ai-development-company-in-canberra', isRoute: true },
-      { name: 'Gold Coast', href: '/ai-development-gold-coast', isRoute: true },
-      { name: 'Darwin', href: '/ai-development-company-darwin', isRoute: true },
-      { name: 'Hobart', href: '/ai-development-company-in-hobart', isRoute: true },
+      { name: 'Sydney', href: 'https://zynextechnologies.com.au/ai-development-company-sydney', isRoute: true },
+      { name: 'Melbourne', href: 'https://zynextechnologies.com.au/ai-development-company-melbourne', isRoute: true },
+      { name: 'Brisbane', href: 'https://zynextechnologies.com.au/ai-development-company-in-brisbane', isRoute: true },
+      { name: 'Adelaide', href: 'https://zynextechnologies.com.au/ai-development-company-adelaide', isRoute: true },
+      { name: 'Perth', href: 'https://zynextechnologies.com.au/custom-ai-development-company-in-perth', isRoute: true },
+      { name: 'Canberra', href: 'https://zynextechnologies.com.au/ai-development-company-in-canberra', isRoute: true },
+      { name: 'Gold Coast', href: 'https://zynextechnologies.com.au/ai-development-gold-coast', isRoute: true },
+      { name: 'Darwin', href: 'https://zynextechnologies.com.au/ai-development-company-darwin', isRoute: true },
+      { name: 'Hobart', href: 'https://zynextechnologies.com.au/ai-development-company-in-hobart', isRoute: true },
     ],
     company: [
-      { name: 'About Us', href: '/about-us', isRoute: true },
-      { name: 'Learn More', href: '/what-is-zynex', isRoute: true },
-      { name: 'White Label Partner', href: '/white-label-software-development-partner', isRoute: true },
+      { name: 'About Us', href: 'https://zynextechnologies.com.au/about-us', isRoute: true },
+      { name: 'Learn More', href: 'https://zynextechnologies.com.au/what-is-zynex', isRoute: true },
+      { name: 'White Label Partner', href: 'https://zynextechnologies.com.au/white-label-software-development-partner', isRoute: true },
       { name: 'Contact', href: '#contact' },
-      { name: 'Blogs', href: '/blogs', isRoute: true }
+      { name: 'Blogs', href: 'https://zynextechnologies.com.au/blogs', isRoute: true }
     ]
   };
 
