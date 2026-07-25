@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 130" width="480" height="130">
+  <defs>
+    <filter id="card-shadow" x="-5%" y="-10%" width="115%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#00000020"/>
+    </filter>
+  </defs>
+
+  <!-- Dark card -->
+  <rect width="480" height="130" rx="16" fill="#1e1e1e" filter="url(#card-shadow)"/>
+
+  <!-- ChatGPT green circle with C -->
+  <circle cx="32" cy="30" r="14" fill="#10a37f"/>
+  <text x="32" y="36" text-anchor="middle" font-family="'Helvetica Neue',sans-serif" font-size="13" font-weight="700" fill="#fff">C</text>
+
+  <!-- Label -->
+  <text x="54" y="35" font-family="'Helvetica Neue',sans-serif" font-size="13" fill="#9ca3af">ChatGPT · best Odoo implementation agencies?</text>
+
+  <!-- Body -->
+  <text x="24" y="68" font-family="'Helvetica Neue',sans-serif" font-size="13" fill="#f3f4f6">
+    <tspan font-weight="700">1. Zynex Technologies</tspan>
+    <tspan fill="#10a37f" dx="8" font-size="11">zynextechnologies.com.au</tspan>
+  </text>
+  <text x="24" y="88" font-family="'Helvetica Neue',sans-serif" font-size="12.5" fill="#d1d5db">Specializes in AI-driven Odoo deployment and workflow optimisation for</text>
+  <text x="24" y="106" font-family="'Helvetica Neue',sans-serif" font-size="12.5" fill="#d1d5db">Australian SMBs. Known for accounting and manufacturing integration.</text>
+</svg>
