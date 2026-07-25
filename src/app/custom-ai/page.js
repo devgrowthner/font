@@ -5,7 +5,7 @@ export const metadata = buildPageMetadata({
   title: 'Custom AI Development Solutions | Zynex Technologies',
   description:
     'Custom AI development built for your business. We deliver machine learning, automation, and AI chatbots tailored to your operations. Get started.',
-  path: 'https://zynextechnologies.com.au/custom-ai',
+  path: '/custom-ai',
 });
 
 export default function CustomAIPage() {

@@ -208,7 +208,7 @@ const AiSolutionHospitalityBusinessesAustraliaNew = () => {
                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
                 <Link
-                  href="https://zynextechnologies.com.au/what-is-zynex"
+                  href="/what-is-zynex"
                   className="group inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 border-2 border-white/80 w-full sm:w-auto"
                 >
                   See How Zynex Works
@@ -475,7 +475,7 @@ const AiSolutionHospitalityBusinessesAustraliaNew = () => {
                 Book a Discovery Call with Zynex
               </button>
               <Link
-                href="https://zynextechnologies.com.au/solutions"
+                href="/solutions"
                 className="inline-flex items-center justify-center text-white px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-1 border-2 border-white hover:bg-white/10"
               >
                 Explore other industries Zynex works with

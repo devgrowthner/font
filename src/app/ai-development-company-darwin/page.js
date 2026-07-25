@@ -5,8 +5,8 @@ export const metadata = buildPageMetadata({
   title: 'AI Development Company in Darwin | Zynex Technologies',
   description:
     'AI development company in Darwin that delivers custom AI systems in 3 to 6 weeks. Get a free feasibility assessment with clear pricing from day one. Start now.',
-  path: 'https://zynextechnologies.com.au/ai-development-company-darwin',
-  canonicalpath: 'https://zynextechnologies.com.au/ai-development-company-darwin',
+  path: '/ai-development-company-darwin',
+  canonicalPath: '/ai-development-company-darwin',
 });
 
 export default function AIDevelopmentCompanyDarwinPage() {

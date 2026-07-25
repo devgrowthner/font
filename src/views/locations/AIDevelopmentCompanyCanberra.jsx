@@ -160,19 +160,19 @@ const nationalReach = [
   {
     title: 'AI Development Company in Sydney',
     body: 'Custom AI systems, machine learning models, and automation solutions built for Sydney businesses across every industry.',
-    href: 'https://zynextechnologies.com.au/ai-development-company-sydney',
+    href: '/ai-development-company-sydney',
     cta: 'Learn more: AI Development Company in Sydney',
   },
   {
     title: 'AI Automation Company in Australia',
     body: 'We automate workflows, data processes, and customer interactions for Australian businesses looking to reduce costs and scale operations.',
-    href: 'https://zynextechnologies.com.au/ai-automation',
+    href: '/ai-automation',
     cta: 'Learn more: AI Automation Company in Australia',
   },
   {
     title: 'AI Feasibility Analysis Company in Australia',
     body: 'Our structured feasibility analysis validates ROI and technical viability before your business commits to an AI development project.',
-    href: 'https://zynextechnologies.com.au/ai-feasibility-analysis',
+    href: '/ai-feasibility-analysis',
     cta: 'Learn more: AI Feasibility Analysis Company in Australia',
   },
 ];
@@ -628,7 +628,7 @@ const AIDevelopmentCompanyCanberra = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                href="https://zynextechnologies.com.au/ai-feasibility-analysis"
+                href="/ai-feasibility-analysis"
                 className="inline-flex items-center justify-center text-white px-8 py-4 rounded-xl text-base font-semibold transition-all duration-300 hover:-translate-y-1 shadow-lg"
                 style={{ background: 'linear-gradient(to right, #719334, #5a7529)' }}
               >

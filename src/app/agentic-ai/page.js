@@ -5,7 +5,7 @@ export const metadata = buildPageMetadata({
   title: 'Agentic AI Development Company in Australia',
   description:
     'Leading Agentic AI Development Company in Australia offering custom autonomous AI agents and intelligent automation solutions for modern businesses.',
-  path: 'https://zynextechnologies.com.au/agentic-ai',
+  path: '/agentic-ai',
 });
 
 export default function AgenticAIPage() {

@@ -280,7 +280,7 @@ const Header = () => {
 
   const navLinks = [
 
-    { name: 'Learn More', href: 'https://zynextechnologies.com.au/what-is-zynex', isRoute: true }
+    { name: 'Learn More', href: '/what-is-zynex', isRoute: true }
 
   ];
 
@@ -344,7 +344,7 @@ const Header = () => {
 
             <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 shrink-0">
 
-              <Link href="https://zynextechnologies.com.au/" className="flex items-center justify-center group -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-5">
+              <Link href="/" className="flex items-center justify-center group -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-5">
 
                 <img
 
@@ -620,7 +620,7 @@ const Header = () => {
 
 
 
-                <Link href="https://zynextechnologies.com.au/blogs" className="cursor-pointer text-gray-700 px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group hover:text-brand-green">
+                <Link href="/blogs" className="cursor-pointer text-gray-700 px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group hover:text-brand-green">
 
                   Blogs
 
@@ -910,7 +910,7 @@ const Header = () => {
 
 
 
-                <Link href="https://zynextechnologies.com.au/blogs" className="text-gray-700 block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green" onClick={handleLinkClick}>
+                <Link href="/blogs" className="text-gray-700 block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green" onClick={handleLinkClick}>
 
                   Blogs
 

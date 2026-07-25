@@ -741,7 +741,7 @@ const AiDevelopmentCompanyConstructionBusinessesAustralia = () => {
                 Book a Discovery Call with Zynex
               </button>
               <Link
-                href="https://zynextechnologies.com.au/solutions"
+                href="/solutions"
                 className="inline-flex items-center justify-center text-white px-8 py-4 rounded-lg text-base font-bold transition-all duration-300 hover:-translate-y-1 border-2 border-white hover:bg-white/10"
               >
                 Explore other industries Zynex works with

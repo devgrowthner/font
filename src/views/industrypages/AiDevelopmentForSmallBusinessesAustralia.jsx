@@ -152,10 +152,10 @@ const deploys = [
 ];
 
 const locationLinks = [
-  { title: 'Adelaide AI Development', href: 'https://zynextechnologies.com.au/ai-development-company-adelaide' },
-  { title: 'Canberra AI Development', href: 'https://zynextechnologies.com.au/ai-development-company-in-canberra' },
-  { title: 'Gold Coast AI Development', href: 'https://zynextechnologies.com.au/ai-development-gold-coast' },
-  { title: 'Hobart AI Development', href: 'https://zynextechnologies.com.au/ai-development-company-in-hobart' },
+  { title: 'Adelaide AI Development', href: '/ai-development-company-adelaide' },
+  { title: 'Canberra AI Development', href: '/ai-development-company-in-canberra' },
+  { title: 'Gold Coast AI Development', href: '/ai-development-gold-coast' },
+  { title: 'Hobart AI Development', href: '/ai-development-company-in-hobart' },
 ];
 
 const faqs = [
@@ -239,7 +239,7 @@ const AiDevelopmentForSmallBusinessesAustralia = () => {
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <Link
-                  href="https://zynextechnologies.com.au/what-is-zynex"
+                  href="/what-is-zynex"
                   className="inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-lg text-base font-bold border-2 border-white/80 hover:bg-white/10 transition-all"
                 >
                   See How Zynex Works
@@ -489,7 +489,7 @@ const AiDevelopmentForSmallBusinessesAustralia = () => {
               >
                 Book a Discovery Call with Zynex
               </button>
-              <Link href="https://zynextechnologies.com.au/solutions" className="inline-flex items-center justify-center text-white px-8 py-4 rounded-lg font-bold border-2 border-white hover:bg-white/10 transition-all">
+              <Link href="/solutions" className="inline-flex items-center justify-center text-white px-8 py-4 rounded-lg font-bold border-2 border-white hover:bg-white/10 transition-all">
                 Explore other industries Zynex works with
               </Link>
             </div>

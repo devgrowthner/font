@@ -5,7 +5,7 @@ export const metadata = buildPageMetadata({
   title: 'Zynex Technologies – Custom IT & Web Solutions Australia',
   description:
     'Zynex Technologies delivers custom websites, SEO & digital solutions tailored for Australian businesses. Learn more about who we are & what we do.',
-  path: 'https://zynextechnologies.com.au/what-is-zynex',
+  path: '/what-is-zynex',
 });
 
 export default function WhatIsZynexPage() {

@@ -1,6 +1,6 @@
 import BlogTemplate from '@/views/BlogTemplate';
-import BlogDetailContent from '@/views/blogs/BlogDetailContent';
-import { blogContents, blogList } from '@/constants/blogData';
+import BlogDetailTemplate from '@/views/blogs/BlogDetailTemplate';
+import { blogContents } from '@/constants/blogData';
 import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
@@ -64,10 +64,7 @@ export default async function BlogTemplatePage({ params }) {
   const { slug } = await params;
 
   if (DETAIL_TEMPLATE_SLUGS.includes(slug)) {
-    const blogData = blogContents[slug];
-    const relatedPosts = blogList.filter((p) => p.slug !== slug).slice(0, 3);
-    
-    return <BlogDetailContent slug={slug} blogData={blogData} relatedPosts={relatedPosts} />;
+    return <BlogDetailTemplate />;
   }
 
   return <BlogTemplate />;

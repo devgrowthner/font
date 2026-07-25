@@ -45,11 +45,11 @@ const NotFound = () => {
   };
 
   const quickLinks = [
-    { name: 'Home', path: 'https://zynextechnologies.com.au/' },
-    { name: 'Solutions', path: 'https://zynextechnologies.com.au/solutions' },
-    { name: 'Custom AI', path: 'https://zynextechnologies.com.au/custom-ai' },
-    { name: 'Strategy Report', path: 'https://zynextechnologies.com.au/strategy-report' },
-    { name: 'Learn More', path: 'https://zynextechnologies.com.au/what-is-zynex' },
+    { name: 'Home', path: '/' },
+    { name: 'Solutions', path: '/solutions' },
+    { name: 'Custom AI', path: '/custom-ai' },
+    { name: 'Strategy Report', path: '/strategy-report' },
+    { name: 'Learn More', path: '/what-is-zynex' },
   ];
 
   return (
@@ -95,7 +95,7 @@ const NotFound = () => {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-12"
             >
               <Link
-                href="https://zynextechnologies.com.au/"
+                href="/"
                 className="inline-flex items-center gap-2 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group"
                 style={{ background: 'linear-gradient(to right, #719334, #719334)' }}
               >
