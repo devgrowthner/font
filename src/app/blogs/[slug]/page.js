@@ -5,6 +5,9 @@ import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'migrate-spreadsheets-to-erp-system',
+  'what-does-an-erp-implementation-include',
+  'salesforce-implementation-small-business',
   'integrate-erp-crm-software',
   'erp-implementation-process-guide',
   'erp-implementation-australia-guide',
