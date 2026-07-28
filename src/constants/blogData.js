@@ -738,6 +738,7 @@ export const blogContents = {
     content: [
       {
         heading: "Why ERP Implementation Projects Need Clear Scope",
+        headingLevel: 2,
         bodyParagraphs: [
           "An ERP system touches almost every department: finance, inventory, HR, sales, and often customer service too. That reach is exactly why scope has to be locked down early, well before a single module gets configured.",
           "Without a defined scope document, an ERP implementation project tends to expand on its own. Someone in sales asks for a new reporting field, someone in warehousing wants a barcode feature added, and suddenly the six-month project stretches into ten. None of these requests are unreasonable on their own, but added up without a review process, they quietly derail the original budget and deadline.",
@@ -748,10 +749,12 @@ export const blogContents = {
       },
       {
         heading: "The ERP Implementation Process Step by Step",
+        headingLevel: 2,
         bodyParagraphs: [
           "Every credible ERP implementation process follows a similar sequence, even if the terminology differs between vendors. Here's how it typically plays out.",
         ],
-        numberedList: [
+        headingListPrefix: "Step",
+        headingList: [
           "Discovery and requirements gathering. The implementation team maps current workflows, pain points, and must-have features across every department that will use the system, usually through workshops rather than a single questionnaire.",
           "System design and configuration. Based on discovery, the ERP is configured to match how the business actually operates, not the other way around. This is where approval chains, custom fields, and reporting templates get built.",
           "Data migration and cleansing. Historical records get cleaned, mapped, and moved from old systems into the new one, a step that's covered in more detail below.",
@@ -766,6 +769,7 @@ export const blogContents = {
       },
       {
         heading: "Core Components Included in an ERP Implementation Project",
+        headingLevel: 2,
         bodyParagraphs: [
           "A proper statement of work should list specific deliverables, not vague phases. These are the components that belong in almost every ERP project, regardless of industry:",
         ],
@@ -785,6 +789,7 @@ export const blogContents = {
       },
       {
         heading: "Data Migration and System Integration Requirements",
+        headingLevel: 2,
         bodyParagraphs: [
           "Data migration is where most ERP implementation delays actually happen, even though it rarely gets the attention it deserves during sales conversations.",
           "Old systems accumulate years of duplicate customer records, outdated pricing, and inconsistent product codes. Moving that data into a new ERP without cleaning it first just recreates the same mess in a shinier interface.",
@@ -802,10 +807,12 @@ export const blogContents = {
       },
       {
         heading: "Team Roles and Change Management in ERP Projects",
+        headingLevel: 2,
         bodyParagraphs: [
           "Software alone doesn't make an implementation succeed. The internal team assembled around the project matters just as much as the vendor delivering it.",
         ],
-        numberedList: [
+        headingListPrefix: "Step",
+        headingList: [
           "Executive sponsor. Someone senior enough to resolve disputes between departments and keep the project prioritised against other business demands.",
           "Project manager. A single point of contact who tracks milestones, budget, and communication between the business and the implementation partner.",
           "Department champions. Representatives from finance, operations, and sales who validate that configuration actually matches how their teams work.",
@@ -819,6 +826,7 @@ export const blogContents = {
       },
       {
         heading: "ERP Implementation Cost and Timeline Factors",
+        headingLevel: 2,
         bodyParagraphs: [
           "ERP implementation cost varies enormously between businesses, and the software licence is usually the smallest part of the total figure. What actually drives cost and timeline are the factors below.",
         ],
@@ -9242,6 +9250,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
     content: [
       {
         heading: "What Is ERP Implementation and Why Does the Process Matter?",
+        headingLevel: 2,
         bodyParagraphs: [
           "ERP implementation is the process of selecting, configuring, deploying, and adopting an enterprise resource planning system across your organisation. It covers everything from the initial discovery phase through to system go-live and ongoing support.",
           "The process matters because ERP touches almost every part of a business. Finance, operations, inventory, procurement, HR, customer management — they all feed into a single connected system. If the implementation is done without proper planning, the ripple effects reach every department.",
@@ -9251,11 +9260,13 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "6 Stages of a Successful ERP Implementation",
+        headingLevel: 2,
         bodyParagraphs: [],
         closingParagraphs: [],
       },
       {
         heading: "Stage 1: Discovery, Scoping, and Business Process Mapping",
+        headingLevel: 3,
         bodyParagraphs: [
           "Every successful ERP implementation starts with a discovery phase. This is where you define the scope of the project before any software decisions are made.",
         ],
@@ -9272,6 +9283,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "Stage 2: Choosing the Right ERP Platform for Your Business",
+        headingLevel: 3,
         bodyParagraphs: [
           "Platform selection is where many businesses lose weeks to indecision or, worse, make a quick choice they later regret. The right ERP platform depends on your industry, your growth stage, your team size, and how much customisation your processes require.",
           "Australian businesses commonly evaluate platforms like Odoo, ERPNext, and Zoho ERP. Each has distinct strengths. For businesses that need deep customisation and modular flexibility, Odoo ERP development offers a wide ecosystem of apps that can be tailored to almost any workflow.",
@@ -9290,6 +9302,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "Stage 3: Implementation Planning and Project Structure",
+        headingLevel: 3,
         bodyParagraphs: [
           "With a platform selected, the project planning phase defines how the implementation will actually run. This is where timelines, team responsibilities, and milestones get formalised.",
           "A typical ERP implementation plan includes:",
@@ -9307,6 +9320,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "Stage 4: System Configuration and Customisation",
+        headingLevel: 3,
         bodyParagraphs: [
           "This is the stage where your implementation partner builds out the ERP environment based on the business process maps from Stage 1.",
           "Configuration covers the standard platform settings — chart of accounts, tax codes, user roles, approval workflows, and module activation. Customisation goes further, adjusting or extending the platform to handle processes that don't fit the default setup.",
@@ -9319,10 +9333,11 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "Stage 5: Data Migration, Testing, and User Training",
+        headingLevel: 3,
         bodyParagraphs: [
           "Three things need to happen in parallel during this stage: data migration, system testing, and user training. Getting all three right before go-live is what separates a smooth launch from a chaotic one.",
         ],
-        bulletList: [
+        subheadingList: [
           "Data Migration — Clean your data before it goes into the new system, not after. Duplicate records, inconsistent formats, and missing fields cause reporting errors that take weeks to untangle. Run a test migration first, validate the results against your source data, and only proceed to the full migration once the test is clean.",
           "Testing — Run structured testing across three levels. Unit testing checks individual functions. Integration testing checks that different modules talk to each other correctly. User acceptance testing lets your team validate that the system actually works the way the business needs it to.",
           "Training — Train users on real scenarios from their own department, not generic demos. Role-based training is far more effective than one-size-fits-all sessions. Give team members time to practise in a test environment before go-live so they're not learning the system under pressure on day one.",
@@ -9333,6 +9348,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "Stage 6: Go-Live, Hypercare, and Post-Implementation Support",
+        headingLevel: 3,
         bodyParagraphs: [
           "Go-live is not the end of the ERP implementation process. It's the beginning of a new phase.",
           "In the weeks immediately after launch, plan for heightened support from your implementation partner. This is sometimes called hypercare: an intensive support period where issues are resolved quickly, user questions are answered in real time, and any configuration gaps identified during live use are addressed without delay.",
@@ -9402,21 +9418,29 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       "best-zoho-erp-implementation-companies-australia",
       "best-erpnext-implementation-companies-australia",
     ],
-    inlineInternalLinks: [],
+    inlineInternalLinks: [
+      { match: "Zynex Technologies", href: "/" },
+      { match: "ERP implementation services", href: "/blogs/how-to-choose-erp-implementation-partner-australia" },
+      { match: "ERP implementation process", href: "/blogs/erp-implementation-process-guide" },
+      { match: "ERP implementation support", href: "/blogs/how-to-choose-erp-implementation-partner-australia" },
+    ],
     sectionOrder: ["summary", "introduction", "content", "conclusion", "faq", "cta", "relatedLinks"],
     summaryTitle: "Blog Summary",
     summaryDescription:
       "ERP implementation services in Australia help businesses replace disconnected spreadsheets and legacy software with one system that actually talks to itself. Getting there involves planning, data migration, testing and training, and the process rarely looks the same for two businesses. This post walks through what to expect at each stage, what it tends to cost, and how long a realistic rollout takes. It's written for operations managers and business owners weighing up their first ERP project.",
     introductionTitle: "Introduction",
+    showIntroductionTitle: false,
     introductionDescription:
       "Most business owners don't wake up one day and decide they love the idea of ERP implementation. They get there because the spreadsheets stopped working. Stock counts don't match what's in the warehouse, finance is reconciling three systems by hand, and nobody trusts the numbers in the Friday report anymore.\n\nERP implementation services in Australia exist to fix exactly that problem: replacing a patchwork of disconnected tools with one system that holds inventory, finance, sales, and operations data in a single place. But the process of getting there is often misunderstood, and that's usually where projects run into trouble.\n\nThis post breaks down what a genuine ERP implementation involves, what it costs, how long it takes, and what tends to go wrong when businesses underestimate the work involved.",
     content: [
       {
         heading: "Top ERP Implementation Companies in Australia",
+        headingLevel: 2,
         bodyParagraphs: [
           "Australia has a crowded ERP implementation market, and the right partner depends on your platform, industry, and the size of the rollout. Here are seven providers worth putting on a shortlist.",
         ],
-        bulletList: [
+        subheadingLevel: 3,
+        subheadingList: [
           "Zynex Technologies — An Australian IT solutions and managed services provider that handles ERP implementation end to end, covering discovery, process mapping, data migration, integration, staff training, and post-launch support. Zynex also works across cloud services, cybersecurity, and AI automation, which means an ERP rollout can be connected into a wider IT and automation strategy rather than treated as an isolated project. This broader scope tends to suit businesses that want one partner managing both the ERP system and the infrastructure it sits on.",
           "Fusion5 — One of the larger implementation firms operating in Australia and New Zealand, with a strong focus on Microsoft Dynamics 365 and Oracle NetSuite deployments. Fusion5 is typically engaged by mid-sized to enterprise businesses that need deep platform expertise and the resourcing to manage complex, multi-module rollouts across several departments or locations.",
           "Leverage Technologies — An award-winning ERP partner with a long track record supporting small and medium businesses through Microsoft Dynamics and MYOB Advanced implementations. Leverage has built a reputation around practical, business-first configuration rather than heavy customisation, which tends to appeal to businesses that want a straightforward path to go-live.",
@@ -9431,6 +9455,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "What ERP Implementation Actually Involves",
+        headingLevel: 2,
         bodyParagraphs: [
           "ERP implementation is not just installing software and flicking a switch. It's closer to a business process overhaul that happens to run on new technology.",
           "A proper implementation touches how orders are processed, how stock is tracked, how invoices move through approval, and how reports get built. Every one of those workflows needs to be mapped before a single module goes live.",
@@ -9440,6 +9465,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "The ERP Implementation Process, Step by Step",
+        headingLevel: 2,
         bodyParagraphs: [
           "Every ERP project follows roughly the same skeleton, even if the details shift depending on the industry or the software chosen.",
         ],
@@ -9458,6 +9484,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "Key Benefits Businesses Should Expect",
+        headingLevel: 2,
         bodyParagraphs: [
           "A well-executed ERP implementation changes how a business actually runs day to day, not just how its data looks on paper.",
         ],
@@ -9474,6 +9501,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "Common Costs and Budget Considerations",
+        headingLevel: 2,
         bodyParagraphs: [
           "Cost is usually the first question business owners ask, and the honest answer is that it depends heavily on business size, industry complexity, and how much customisation is required.",
           "Small businesses running a handful of core modules with limited customisation should expect implementation costs in the tens of thousands of dollars. Mid-sized businesses with multiple locations, industry-specific requirements, or complex integrations typically sit in a much wider range, and enterprise rollouts can run well beyond that.",
@@ -9492,6 +9520,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "How Long Does ERP Implementation Take?",
+        headingLevel: 2,
         bodyParagraphs: [
           "Most ERP implementations for small to mid-sized Australian businesses take between three and nine months, depending on scope, data complexity, and how many integrations are involved. Simple, single-location deployments can move faster, while multi-site or heavily customised projects often take longer.",
         ],
@@ -9510,6 +9539,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "Avoiding Common ERP Implementation Pitfalls",
+        headingLevel: 2,
         bodyParagraphs: [
           "Most ERP projects that go badly don't fail because of the software. They fail because of decisions made, or not made, before the system ever goes live.",
         ],
@@ -9919,6 +9949,7 @@ Stop losing after-hours bookings let Zynex Technologies handle reservations 24/7
       },
       {
         heading: "How to Choose Between Odoo and ERPNext for Your Business",
+        headingLevel: 3,
         bodyParagraphs: [],
         numberedList: [
           "Map your core processes first. List every business process that touches inventory, finance or customer records today, including the manual workarounds. This becomes the checklist both platforms get tested against, not marketing feature lists.",

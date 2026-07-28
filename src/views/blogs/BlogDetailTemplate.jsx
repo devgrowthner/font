@@ -295,9 +295,11 @@ const IntroductionSection = ({ blogData }) => (
   <section id="introduction" className="py-8 sm:py-10 px-0 sm:px-0 max-w-4xl">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
       <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow">
-        <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
-          {blogData.introductionTitle || 'Introduction'}
-        </h2>
+        {blogData.showIntroductionTitle !== false && (
+          <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-6">
+            {blogData.introductionTitle || 'Introduction'}
+          </h2>
+        )}
         <div className="prose prose-lg max-w-none">
           <RichParagraphs
             text={blogData.introductionDescription}
@@ -879,17 +881,19 @@ const IndustriesSection = ({ blogData }) => (
 const ContentSection = ({ blogData }) => (
   <section id="content" className="py-8 sm:py-10 px-0 sm:px-0">
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
-      {blogData.content?.map((item, index) => (
-        <div key={index} className="mb-8">
-          {item.heading === "How to Choose Between Odoo and ERPNext for Your Business" ? (
-            <h3 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
+      {blogData.content?.map((item, index) => {
+        const HeadingTag = `h${item.headingLevel || 2}`;
+        const headingClasses = {
+          2: 'text-3xl sm:text-4xl',
+          3: 'text-2xl sm:text-3xl',
+          4: 'text-xl sm:text-2xl',
+        };
+
+        return (
+          <div key={index} className="mb-8">
+            <HeadingTag className={`${headingClasses[item.headingLevel || 2] || headingClasses[2]} font-heading font-bold text-foreground mb-4`}>
               {item.heading}
-            </h3>
-          ) : (
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
-              {item.heading}
-            </h2>
-          )}
+            </HeadingTag>
           {item.bodyParagraphs?.map((para, i) => (
             <p key={i} className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
               {blogData.inlineInternalLinks?.length
@@ -947,6 +951,47 @@ const ContentSection = ({ blogData }) => (
               ))}
             </ol>
           )}
+          {item.headingList?.map((entry, i) => {
+            const [title, ...content] = entry.split(/\.\s+/);
+            const headingPrefix = item.headingListPrefix ? `${item.headingListPrefix} ${i + 1}: ` : '';
+
+            return (
+              <div key={i} className="mb-6">
+                <h3 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-3">
+                  {blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(`${headingPrefix}${title}`, blogData.inlineInternalLinks)
+                    : `${headingPrefix}${title}`}
+                </h3>
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                  {blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(content.join('. '), blogData.inlineInternalLinks)
+                    : content.join('. ')}
+                </p>
+              </div>
+            );
+          })}
+          {item.subheadingList?.map((subheading, i) => {
+            const [title, ...content] = subheading.split(/\s+(?:â€”|—)\s+/);
+
+            return (
+              <div key={i} className="mb-6">
+            {item.subheadingLevel === 3 ? (
+              <h3 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-3">
+                {blogData.inlineInternalLinks?.length ? renderWithInlineLinks(title, blogData.inlineInternalLinks) : title}
+              </h3>
+            ) : (
+              <h4 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3">
+                {blogData.inlineInternalLinks?.length ? renderWithInlineLinks(title, blogData.inlineInternalLinks) : title}
+              </h4>
+            )}
+                <p className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                  {blogData.inlineInternalLinks?.length
+                    ? renderWithInlineLinks(content.join(' — '), blogData.inlineInternalLinks)
+                    : content.join(' — ')}
+                </p>
+              </div>
+            );
+          })}
           {item.bulletList?.length > 0 && (
             <ul className="mt-4 mb-8 list-disc pl-6 sm:pl-8 space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed marker:font-medium">
               {item.bulletList.map((listItem, i) => (
@@ -965,8 +1010,9 @@ const ContentSection = ({ blogData }) => (
                 : para}
             </p>
           ))}
-        </div>
-      ))}
+          </div>
+        );
+      })}
     </motion.div>
   </section>
 );
@@ -1729,7 +1775,7 @@ const BlogDetailTemplate = () => {
       ? <SummarySection blogData={blogData} />
       : null,
 
-    introduction: blogData.introductionTitle
+    introduction: blogData.introductionDescription
       ? <IntroductionSection blogData={blogData} />
       : null,
 
@@ -1813,7 +1859,9 @@ const BlogDetailTemplate = () => {
   const tocLabelMap = {
     preface: undefined,
     summary:      blogData.summaryTitle      || 'Summary',
-    introduction: blogData.introductionTitle || 'Introduction',
+    introduction: blogData.showIntroductionTitle === false
+      ? undefined
+      : blogData.introductionTitle || 'Introduction',
     services:     blogData.servicesTitle     || 'Services',
     guideSteps:   blogData.guideStepsTocLabel || 'Steps',
     process:      blogData.processTitle      || 'Process',
