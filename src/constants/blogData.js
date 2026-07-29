@@ -625,11 +625,13 @@ export const blogContents = {
       },
       {
         heading: "The Core Stages of an ERP Migration",
+        headingLevel: 2,
         bodyParagraphs: [
           "A migration done properly follows a clear sequence. Skipping stages doesn't save time. It creates rework.",
           "Think of it in five phases.",
         ],
-        numberedList: [
+        headingListPrefix: "Step",
+        headingList: [
           "Discovery and scoping. Map every business process that currently runs through a spreadsheet. Document the inputs, the outputs, and the people involved. This becomes your migration brief.",
           "System configuration. Before any data moves, the ERP needs to be set up to match your business structure. Chart of accounts, tax settings, product categories, and user roles all need to be configured first.",
           "Data migration and testing. Import a sample dataset and run it through the system. Check that values carry across correctly, reports generate as expected, and workflows trigger at the right points.",
@@ -734,7 +736,7 @@ export const blogContents = {
       "An ERP implementation project involves far more than installing software. It spans planning, data migration, integration, testing, training, and ongoing support. This post breaks down every phase so business owners and operations managers know what to expect before signing a contract. Read on for a practical, stage-by-stage view of what a proper implementation actually looks like.",
     introductionTitle: "Introduction",
     introductionDescription:
-      "Most businesses that shop for new ERP software focus on features. Reporting dashboards, inventory modules, payroll integrations, the list looks impressive on a sales deck. But an ERP implementation project is not the software itself. It's everything that happens between signing the contract and having a system that actually runs the business day to day.\n\nThat gap is where projects go wrong. A vendor demo can look flawless, yet six months later the finance team is still reconciling spreadsheets by hand because data migration was rushed. Knowing what a proper implementation includes, before it starts, is the difference between a system that sticks and one that gets quietly abandoned.\n\nThis guide walks through every stage of an ERP implementation project, from initial scoping through to post-launch support, so there are no surprises halfway through. Industry research consistently points to poor scoping and rushed data migration as the top two reasons implementations run over budget, and both are entirely avoidable with the right project plan.",
+      "Most businesses that shop for new ERP software focus on features. Reporting dashboards, inventory modules, payroll integrations, the list looks impressive on a sales deck. But an ERP implementation project is not the software itself. It's everything that happens between signing the contract and having a system that actually runs the business day to day.\n\nThat gap is where projects go wrong. A vendor demo can look flawless, yet six months later the finance team is still reconciling spreadsheets by hand because data migration was rushed. Knowing what a proper implementation includes, before it starts, is the difference between a system that sticks and one that gets quietly abandoned.\n\nThis guide walks through every stage of an ERP implementation project, from initial scoping through to post-launch support, so there are no surprises halfway through. Industry research consistently points to poor scoping and rushed data migration as the top two reasons An ERP system touches almost every department: finance, inventory, HR, sales, and often customer service too. That reach is exactly why scope has to be locked down early, well before a single module gets configured.implementations run over budget, and both are entirely avoidable with the right project plan.",
     content: [
       {
         heading: "Why ERP Implementation Projects Need Clear Scope",

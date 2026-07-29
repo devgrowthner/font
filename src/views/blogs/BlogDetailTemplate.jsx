@@ -888,10 +888,11 @@ const ContentSection = ({ blogData }) => (
           3: 'text-2xl sm:text-3xl',
           4: 'text-xl sm:text-2xl',
         };
+        const headingClassName = item.headingClassName || `${headingClasses[item.headingLevel || 2] || headingClasses[2]} font-heading font-bold text-foreground mb-4`;
 
         return (
           <div key={index} className="mb-8">
-            <HeadingTag className={`${headingClasses[item.headingLevel || 2] || headingClasses[2]} font-heading font-bold text-foreground mb-4`}>
+            <HeadingTag className={headingClassName}>
               {item.heading}
             </HeadingTag>
           {item.bodyParagraphs?.map((para, i) => (
@@ -951,6 +952,18 @@ const ContentSection = ({ blogData }) => (
               ))}
             </ol>
           )}
+          {item.phaseList?.map((phase, i) => (
+            <div key={i} className="mb-4">
+              <h3 className="text-base font-normal text-foreground mb-3">
+                {`Phase ${i + 1}: ${phase.title}`}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
+                {blogData.inlineInternalLinks?.length
+                  ? renderWithInlineLinks(phase.description, blogData.inlineInternalLinks)
+                  : phase.description}
+              </p>
+            </div>
+          ))}
           {item.headingList?.map((entry, i) => {
             const [title, ...content] = entry.split(/\.\s+/);
             const headingPrefix = item.headingListPrefix ? `${item.headingListPrefix} ${i + 1}: ` : '';
