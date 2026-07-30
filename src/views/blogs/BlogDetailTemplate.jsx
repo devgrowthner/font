@@ -966,7 +966,12 @@ const ContentSection = ({ blogData }) => (
           ))}
           {item.headingList?.map((entry, i) => {
             const [title, ...content] = entry.split(/\.\s+/);
-            const headingPrefix = item.headingListPrefix ? `${item.headingListPrefix} ${i + 1}: ` : '';
+            let headingPrefix = '';
+            if (item.headingListPrefix === 'numbered') {
+              headingPrefix = `${i + 1}. `;
+            } else if (item.headingListPrefix) {
+              headingPrefix = `${item.headingListPrefix} ${i + 1}: `;
+            }
 
             return (
               <div key={i} className="mb-6">

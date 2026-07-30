@@ -472,4 +472,60 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blogs - Migrate Spreadsheets to ERP System -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/migrate-spreadsheets-to-erp-system</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - What Does an ERP Implementation Include -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/what-does-an-erp-implementation-include</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Salesforce Implementation Small Business -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/salesforce-implementation-small-business</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Integrate ERP CRM Software -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/integrate-erp-crm-software</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - ERP Implementation Process Guide -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/erp-implementation-process-guide</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - ERP Implementation Australia Guide -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/erp-implementation-australia-guide</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Odoo Implementation Guide Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/odoo-implementation-guide-australia</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - ERPNext Implementation Manufacturing -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/erpnext-implementation-manufacturing</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
