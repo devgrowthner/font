@@ -1702,7 +1702,7 @@ export const blogContents = {
           "The key word is 'well.' Poorly scoped or rushed implementations deliver poor outcomes regardless of how good the software is. The businesses that get the most from Odoo are the ones that treat implementation as a strategic project, not just a software purchase.",
           "For Australian SMEs that are growing quickly or managing increasingly complex operations, Odoo is one of the most cost-effective ERP platforms available. The modular pricing means you only pay for what you use, and the open-source Community edition removes the licensing barrier entirely for simpler setups.",
           "The question isn't really whether Odoo is worth it. It's whether your business is ready to implement it properly. That starts with an honest assessment of your current processes, your internal capacity to manage the project, and a realistic budget that includes all the costs outlined above.",
-          "Businesses exploring how [AI Development Services](https://zynextechnologies.com.au/blogs/best-ai-development-companies-in-australia) can extend the value of an ERP investment should consider how purpose-built AI tools can automate decisions and tasks that even the best ERP software leaves to humans.",
+          "Businesses exploring how AI Development Services can extend the value of an ERP investment should consider how purpose-built AI tools can automate decisions and tasks that even the best ERP software leaves to humans.",
         ],
       },
     ],
