@@ -1,6 +1,30 @@
 // Blog metadata for listing cards
 export const blogList = [
   {
+    id: "52",
+    slug: "erp-retail-australia-inventory-sales",
+    title: "How ERP Helps Retail Businesses Manage Inventory and Sales in Australia",
+    excerpt:
+      "Learn how ERP helps Australian retail businesses manage inventory, sales, pricing, multiple stores, online orders and reporting from one system.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    date: "August 6, 2026",
+    author: "Zynex Team",
+    readTime: "12 min read",
+    route: "/blogs/erp-retail-australia-inventory-sales",
+  },
+  {
+    id: "51",
+    slug: "manufacturing-erp-implementation-challenges",
+    title: "5 Common ERP Implementation Challenges in Manufacturing and How to Solve Them",
+    excerpt:
+      "Learn how to solve common manufacturing ERP implementation challenges, including poor data quality, excessive customisation, low employee adoption, system integration issues and production cutover risks.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    date: "August 6, 2026",
+    author: "Zynex Team",
+    readTime: "14 min read",
+    route: "/blogs/manufacturing-erp-implementation-challenges",
+  },
+  {
     id: "50",
     slug: "erpnext-implementation-manufacturing",
     title: "ERPNext Implementation for Manufacturing Businesses: A Detailed Guide",
@@ -582,6 +606,326 @@ export const blogList = [
 
 // Full content per blog for detail pages
 export const blogContents = {
+  "erp-retail-australia-inventory-sales": {
+    metaTitle: "How ERP Helps Australian Retailers Manage Inventory & Sales | Zynex Technologies",
+    metaDescription:
+      "Learn how ERP helps Australian retail businesses manage inventory, sales, pricing, multiple stores, online orders and reporting from one system.",
+    title: "How ERP Helps Retail Businesses Manage Inventory and Sales in Australia",
+    description:
+      "ERP for retail in Australia pulls point of sale, warehouse, online orders and accounting into one live record, changing how retailers order, price and report.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "Retail ERP",
+    date: "August 6, 2026",
+    readTime: "12 min read",
+    relatedSlugs: [
+      "erpnext-implementation-manufacturing",
+      "odoo-implementation-guide-australia",
+      "erp-implementation-australia-guide",
+    ],
+    inlineInternalLinks: [
+      { match: "ERPNext for manufacturing", href: "/blogs/erpnext-implementation-manufacturing" },
+      { match: "Odoo ERP development", href: "/odoo-erp-development-company-australia" },
+      { match: "ERP implementation guide", href: "/blogs/erp-implementation-australia-guide" },
+      { match: "Odoo implementation guide", href: "/blogs/odoo-implementation-guide-australia" },
+      { match: "choose an ERP partner", href: "/blogs/how-to-choose-erp-implementation-partner-australia" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+    sectionOrder: ["summary", "introduction", "content", "finalThoughts", "faq", "cta", "relatedLinks"],
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "ERP for retail in Australia solves a problem most store owners know too well: stock numbers that disagree depending on which screen you look at. This guide explains how an ERP pulls point of sale, warehouse, online orders and accounting into one live record, and what that changes for ordering, pricing and month end. It is written for retailers running more than one location or more than one sales channel. By the end you will know what to expect from a rollout and what it takes to get real value from it.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "Ask most Australian retailers how much stock they have of their best selling line and you get three answers. The POS says one number, the online store says another, and the person in the stockroom says both are wrong. Nobody is lying. The systems just never talk to each other.\n\nThat gap is where margin quietly disappears. Overselling online triggers refunds and bad reviews. Understocking sends customers to a competitor. Dead stock ties up cash you needed for the next season.\n\nERP for retail in Australia exists to close that gap. Here is what it actually does, section by section.",
+    content: [
+      {
+        heading: "Why Retail Inventory and Sales Data Falls Apart Without ERP",
+        bodyParagraphs: [
+          "The typical setup grows by accident. A POS system comes first, then Shopify or an eBay store, then a spreadsheet for purchase orders, then Xero for the books. Each tool works. None of them share a source of truth.",
+          "So every number becomes an estimate. A sale in store does not reduce online availability until someone exports a CSV. A supplier delivery sits in an email until it is keyed in. By the time the numbers reconcile, the week has moved on.",
+          "The cost shows up in three places. Staff time spent re-keying and reconciling. Cash locked in stock that is not selling. And decisions made on data that was accurate on Tuesday and is fiction by Friday.",
+          "Seasonal peaks make it worse. Black Friday and Boxing Day compress a month of trading into days, and manual reconciliation simply cannot keep up at that speed.",
+        ],
+      },
+      {
+        heading: "How ERP Keeps Inventory Accurate Across Stores and Channels",
+        bodyParagraphs: [
+          "An ERP replaces the estimate with one live stock ledger. Every store, warehouse and online channel reads from and writes to the same record, in real time.",
+        ],
+        preListParagraphs: ["Here is how that works in practice:"],
+        bulletList: [
+          "Every movement hits one ledger. A sale at the register, a click and collect order, a supplier receipt and a warehouse transfer all update the same stock figure the moment they happen.",
+          "Availability is published to channels automatically. Your website, marketplace listings and POS all reflect the same count, so you stop selling what you do not have.",
+          "Reorder points trigger purchase orders. Set a minimum level per product per location, and the system raises a draft PO when stock drops below it, based on actual sell-through rather than gut feel.",
+          "Stock transfers get tracked properly. Moving 20 units from the Brisbane store to Melbourne creates an in-transit record, so neither location double-counts it.",
+          "Cycle counting replaces the annual stocktake. Count a small subset of lines each week against system numbers. Variances get caught while they are still small enough to explain.",
+          "Batch, serial and expiry tracking apply where they matter. For food, cosmetics, supplements or electronics, this turns a recall from a panic into a query.",
+        ],
+        closingParagraphs: [
+          "Retailers who assemble kits, run private label lines or do light production need more than shelf counting. That is closer to a production problem, and the same principles behind ERPNext for manufacturing apply directly to bundling, bill of materials and component-level stock.",
+          "Once stock is trustworthy, the sales side gets far more interesting.",
+        ],
+      },
+      {
+        heading: "What ERP Changes About Sales, Pricing and Customer Data",
+        bodyParagraphs: ["Accurate stock is the foundation. The revenue gains come from what sits on top of it."],
+        bulletList: [
+          "Channel-level margin visibility. See what each store, marketplace and the website actually contributes after fees, freight and returns, not just gross revenue.",
+          "Pricing rules that hold everywhere. Set trade pricing, member pricing and promotional windows once, and they apply consistently at every touchpoint.",
+          "Promotions that respect stock. Stop discounting a line that is nearly sold out and stop hiding one that is overstocked.",
+          "One customer record. In-store and online purchases attach to the same profile, so loyalty points, credit and returns history follow the customer, not the channel.",
+          "Returns handled as a workflow. Refund, restock, quarantine or write off, each with the accounting entry made automatically.",
+          "Sales reporting without exports. Same-store growth, basket size and category performance available daily instead of two weeks after month end.",
+        ],
+        closingParagraphs: [
+          "Retail rarely fits a system perfectly out of the box. Loyalty rules, wholesale tiers and marketplace quirks usually need configuration work, which is where a Odoo ERP development team earns its keep rather than forcing the business to bend around the software.",
+        ],
+      },
+      {
+        heading: "GST, BAS and the Compliance Side Australian Retailers Cannot Skip",
+        bodyParagraphs: [
+          "A direct answer: An ERP applies the correct GST treatment at the transaction level, keeps digital records in the form the ATO expects, and produces BAS-ready figures without manual consolidation. For retailers selling across states, channels and both taxable and GST-free lines, that removes most of the guesswork from quarterly reporting.",
+        ],
+        preListParagraphs: ["The detail that matters for Australian retailers:"],
+        bulletList: [
+          "GST-free lines are handled at product level. Basic food, certain health items and specific categories carry different treatment, and tagging them once beats correcting them every quarter.",
+          "BAS preparation becomes a report, not a project. Sales, purchases and GST collected pull straight from live transaction data.",
+          "Record keeping meets the five year requirement. Invoices, receipts and adjustments stay linked to the transactions that created them.",
+          "Payroll and rostering connect to trading data. Retail award rates, penalty rates and public holiday loadings are easier to manage when rosters sit alongside actual sales by hour.",
+          "Multi-entity and multi-currency work cleanly. Useful if you import stock or run separate trading entities per brand.",
+        ],
+        closingParagraphs: [
+          "Getting tax codes, chart of accounts and entity structure right during setup is far cheaper than fixing them after go-live, and the sequencing is covered in this ERP implementation guide.",
+          "So which platform actually suits an Australian retailer?",
+        ],
+      },
+      {
+        heading: "Choosing an ERP for Retail in Australia: Odoo, ERPNext or Something Else",
+        bodyParagraphs: ["There is no single right answer, but there are patterns worth knowing."],
+        table: {
+          headers: ["Option", "Best suited to", "Watch out for"],
+          rows: [
+            ["Odoo", "Retailers wanting POS, inventory, eCommerce and accounting in one system with room to customise", "Costs rise as you add apps and users, and configuration quality varies hugely by partner"],
+            ["ERPNext", "Businesses wanting open source with no per-user licensing, especially with production or assembly needs", "Smaller local support pool, so your partner choice matters more"],
+            ["NetSuite or similar", "Larger multi-entity retailers with complex consolidation", "Higher cost and longer implementation, often more system than a mid-sized retailer needs"],
+            ["POS plus accounting integrations", "Single-store retailers under moderate volume", "Breaks down quickly once you add a second location or third channel"],
+          ],
+        },
+        closingParagraphs: [
+          "Most Australian retailers in the 5 to 100 staff range land on Odoo or ERPNext, because both cover the full retail flow without enterprise pricing. If Odoo is the direction, this Odoo implementation guide walks through what the process involves locally.",
+          "One honest warning. The platform matters less than the configuration. A well configured ERPNext beats a poorly configured Odoo every time, and the reverse is equally true.",
+        ],
+      },
+      {
+        heading: "What a Realistic ERP Rollout Looks Like for an Australian Retailer",
+        bodyParagraphs: ["Most retail ERP projects fail for the same reason: they are treated as a software purchase instead of an operations change."],
+        preListParagraphs: ["A rollout that works usually runs like this:"],
+        bulletList: [
+          "Map the current process first. Two weeks of documenting how stock, orders and returns actually move today, including the workarounds nobody admits to.",
+          "Clean the data before migrating it. Duplicate SKUs, missing barcodes and stale supplier records will follow you into the new system if you let them.",
+          "Configure the core, then stop. Inventory, POS, purchasing and accounting first. Resist adding loyalty, advanced reporting and automation in phase one.",
+          "Run a parallel period. Trade on both systems for two to four weeks so variances surface while the old system is still there as a safety net.",
+          "Train by role, not by module. A store assistant needs 40 minutes on the register flow, not a full system tour.",
+          "Go live outside peak. February to March or May to July suit most Australian retailers. Never in the run up to Christmas.",
+        ],
+        closingParagraphs: [
+          "Typical timelines run 8 to 16 weeks for a single-brand retailer with a handful of locations, longer if you have heavy customisation or messy historical data. Budget as much attention to the partner as to the platform, because implementation quality is the single biggest variable in the outcome, which is why it pays to choose an ERP partner with genuine retail experience rather than generic ERP credentials.",
+        ],
+      },
+    ],
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "The retailers who get the most from ERP for retail in Australia are not the ones chasing features. They are the ones who were honest about which parts of their operation were running on memory and goodwill.\n\nStock accuracy is the foundation. Everything else, smarter buying, better promotions, faster reporting, sits on top of it. Get the first part right and the rest follows within a trading season or two.\n\nRetail conditions in Australia are not getting simpler. Freight costs, wage pressure and thinner margins all reward businesses that know their numbers in real time. If your current systems cannot give you that, it is worth having a proper conversation about what would.",
+    faqs: [
+      { question: "How much does an ERP cost for a retail business in Australia?", answer: "For a small to mid-sized retailer, expect implementation to sit somewhere between the low tens of thousands and well into six figures depending on complexity, with ongoing licensing or hosting on top. Open source options like ERPNext remove per-user licensing but still carry implementation and support costs. The honest answer depends on store count, channel count and how much customisation you need." },
+      { question: "How long does a retail ERP implementation take?", answer: "A focused rollout for a retailer with a few locations typically runs 8 to 16 weeks from kickoff to go-live. Data cleanup and staff availability are what usually stretch that, not the software itself. Larger multi-entity retailers should plan for four to six months." },
+      { question: "Can an ERP connect to my existing Shopify or eBay store?", answer: "Yes. Both Odoo and ERPNext support integration with major eCommerce platforms and marketplaces, so orders flow in and stock levels flow out automatically. The setup work is in mapping SKUs, tax treatment and shipping rules correctly, which is worth doing carefully at the start." },
+      { question: "Is ERP overkill for a single store?", answer: "Often, yes. A single store with one sales channel and modest volume is usually well served by a good POS connected to accounting software. ERP starts paying for itself once you add a second location, a serious online channel, or enough SKUs that manual reconciliation eats real hours every week." },
+      { question: "Will an ERP replace my accounting software?", answer: "It can, since most ERPs include full accounting, though plenty of Australian retailers keep Xero or MYOB and integrate it instead. Either approach works. The decision usually comes down to what your accountant is comfortable with and how complex your reporting needs are." },
+    ],
+    ctaTitle: "Bring Your Retail Data Into One Place",
+    ctaDescription:
+      "Get in touch with the Zynex Technologies team to discuss how the right ERP setup can bring your inventory, sales and reporting into one place at Zynex Technologies.",
+    ctaButtonText: "Get in Touch",
+  },
+  "manufacturing-erp-implementation-challenges": {
+    metaTitle: "5 ERP Implementation Challenges in Manufacturing and How to Solve Them | Zynex Technologies",
+    metaDescription:
+      "Learn how to solve common manufacturing ERP implementation challenges, including poor data quality, excessive customisation, low employee adoption, system integration issues and production cutover risks.",
+    title: "5 Common ERP Implementation Challenges in Manufacturing and How to Solve Them",
+    description:
+      "ERP implementation challenges in manufacturing rarely come from the software itself. They come from messy master data, over-customisation, a shop floor that was never consulted, machines that won't talk to anything, and a cutover planned around the finance calendar instead of the production schedule.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "ERP Implementation",
+    date: "August 6, 2026",
+    readTime: "14 min read",
+    relatedSlugs: [
+      "erpnext-implementation-manufacturing",
+      "erp-implementation-australia-guide",
+      "odoo-implementation-guide-australia",
+    ],
+    inlineInternalLinks: [
+      { match: "ERP implementation guide", href: "/blogs/erp-implementation-australia-guide" },
+      { match: "ERPNext for manufacturing", href: "/blogs/erpnext-implementation-manufacturing" },
+      { match: "Odoo ERP development", href: "/odoo-erp-development-company-australia" },
+      { match: "choosing an ERP partner", href: "/blogs/how-to-choose-erp-implementation-partner-australia" },
+      { match: "Odoo implementation guide", href: "/blogs/odoo-implementation-guide-australia" },
+      { match: "AI feasibility analysis", href: "/ai-feasibility-analysis" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+    sectionOrder: ["summary", "introduction", "content", "questions", "finalThoughts", "faq", "cta", "relatedLinks"],
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "ERP implementation challenges in manufacturing rarely come from the software itself. They come from messy master data, over-customisation, a shop floor that was never consulted, machines that won't talk to anything, and a cutover planned around the finance calendar instead of the production schedule. This guide breaks down the five problems that derail factory ERP rollouts most often, and what to do about each one before it costs you a month of output.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "Most manufacturers don't get a second shot at an ERP rollout. The budget is approved once, the disruption is tolerated once, and if the first attempt goes badly the business carries the scar tissue for years. That's why understanding the common ERP implementation challenges in manufacturing before you start matters more here than in almost any other industry.\n\nThe frustrating part is that these projects rarely fail for exotic reasons. They fail for the same five reasons, over and over, in plants across the country.\n\nNone of the five are software problems. They're operational problems that the software exposes. And every one of them is fixable if it gets attention early enough.",
+    content: [
+      {
+        heading: "Why ERP Projects Fail More Often in Manufacturing",
+        bodyParagraphs: [
+          "A finance team switching accounting systems can work around a bad week. A production line can't. When the ERP goes wrong in a factory, the consequences are physical: pickers can't find stock, machines sit idle, and dispatch trucks leave half empty.",
+          "Manufacturing also runs on data that most other industries never have to think about. Bills of materials, routings, work centres, lead times, scrap rates, lot traceability. Every one of those has to be right before the system can schedule a single job.",
+          "Then there's the third shift problem. Office software gets adopted because everyone sits in the same building and sees each other struggle. A night shift operator learns the new system alone, at 2am, with no one to ask.",
+          "If you're still at the planning stage, this ERP implementation guide covers the phases and decision points that sit around the five challenges below.",
+        ],
+      },
+      {
+        heading: "The 5 ERP Implementation Challenges That Derail Manufacturing Projects",
+        headingLevel: 2,
+      },
+      {
+        heading: "Challenge 1: Master Data That Was Never Clean to Begin With",
+        headingLevel: 3,
+        bodyParagraphs: [
+          "This is the one that sinks the most projects, and it's almost always underestimated.",
+          "Your existing system has been running for a decade. Somewhere in it are three item codes for the same washer, a bill of materials that still lists a supplier who closed in 2019, and routings that reflect how the line was set up before the last reconfiguration. Nobody noticed, because experienced staff quietly worked around it.",
+          "The ERP won't work around it. It will schedule production against whatever you give it.",
+        ],
+        preListParagraphs: ["How to fix it:"],
+        bulletList: [
+          "Start the data audit before you sign the contract. Pull item masters, BOMs, routings and supplier records into a spreadsheet and count the duplicates. This single exercise tells you more about your real project timeline than any vendor demo.",
+          "Assign an owner to each data set. Not the IT team. The person who actually knows the parts, usually a production planner or a senior storeman.",
+          "Fix the source, don't just clean the extract. If item codes are created ad hoc, cleaning the file once means the mess returns within a year. Put a naming standard and an approval step in place first.",
+          "Validate BOMs against physical builds. Take your ten highest volume products and physically reconcile the BOM to what actually goes into the product. The gaps will surprise you.",
+          "Migrate in waves and test each one. Load master data first, verify, then transactional history. Never load everything on one weekend and hope.",
+        ],
+        closingParagraphs: [
+          "Automated deduplication and pattern matching help with large item catalogues, but they work properly only once someone has defined what 'correct' looks like. Tools speed up cleanup. They don't decide the rules. The data model matters here too, and this breakdown of ERPNext for manufacturing shows how BOMs, routings and work centres need to be structured before migration starts.",
+        ],
+      },
+      {
+        heading: "Challenge 2: Customising the ERP Instead of Fixing the Process",
+        headingLevel: 3,
+        bodyParagraphs: [
+          "Every manufacturer believes their process is unique. Some of it genuinely is. Most of it is habit that hardened into policy because the old system couldn't do it any other way.",
+          "The pattern is predictable. During workshops, someone says 'that's not how we do it here,' a change request gets raised, and the modification list grows. Six months later the system is heavily customised, expensive to maintain, and impossible to upgrade without a project of its own.",
+        ],
+        preListParagraphs: ["Here's the trade-off worth being blunt about:"],
+        bulletList: [
+          "Heavy customisation locks you out of upgrades. Every vendor release becomes a regression testing exercise instead of a routine update.",
+          "It hides bad process rather than fixing it. If approval takes four signatures because of a problem from 2015, the fix is fewer signatures, not custom code.",
+          "It multiplies support cost. Custom code has no vendor documentation and often only one person who understands it.",
+          "It slows the project. Each modification adds specification, build, test and rework time.",
+          "It rarely delivers the promised benefit. Most modifications get used far less than the person who requested them expected.",
+        ],
+        closingParagraphs: [
+          "A workable rule: customise only where the process is genuinely a competitive advantage. If a competitor could copy it tomorrow and gain nothing, configure instead of customise.",
+          "Where the platform is extensible, that line is easier to hold. Open source systems handled by an Odoo ERP development team let you build genuine differentiators as clean modules rather than core code changes, which keeps upgrades survivable. Everywhere else, standard functionality wins on cost and longevity.",
+        ],
+      },
+      {
+        heading: "Challenge 3: The Shop Floor Never Bought In",
+        headingLevel: 3,
+        bodyParagraphs: [
+          "Ask most manufacturers who was in the ERP selection workshops and you'll hear finance, operations management, IT and maybe purchasing. Ask who wasn't there, and it's the people who will use the system forty hours a week.",
+          "Then go-live arrives and a leading hand is asked to scan, confirm and back-flush on a terminal he's never seen, while the line is running.",
+          "Resistance on the floor is almost never about technology. It's about being handed a process that makes their job harder without anyone explaining why.",
+        ],
+        preListParagraphs: ["What works better:"],
+        bulletList: [
+          "Put two operators on the project team from day one. Not as observers. As people who sign off on the transactions they'll perform.",
+          "Train on the shop floor, not in a meeting room. Muscle memory forms at the terminal, standing up, in the noise.",
+          "Build for the environment. Gloves, poor lighting, dust and cold rooms all matter. A screen designed for an office desk fails at a workstation.",
+          "Cover every shift. Night and weekend crews need equal training time and a real escalation contact after hours.",
+          "Translate where needed. Many Australian plants run multilingual crews. Quick reference cards in the right languages remove a whole category of error.",
+          "Explain the why, once, properly. People accept extra scanning when they understand it's what makes traceability and stock accuracy possible.",
+        ],
+        closingParagraphs: [
+          "Adoption is measurable. Track transaction compliance by shift in week one and you'll know exactly where the training gap sits. Worth asking about this when choosing an ERP partner, because plenty of implementers price training as an afterthought and never set foot on the floor.",
+        ],
+      },
+      {
+        heading: "Challenge 4: Integrating With Machines and Legacy Systems",
+        headingLevel: 3,
+        bodyParagraphs: [
+          "ERP doesn't run a factory on its own. It sits alongside machine controllers, an MES if you have one, barcode and RFID hardware, quality systems, freight platforms and whatever custom database someone built years ago that turns out to be running a critical process.",
+          "Worth being clear on the boundary, because it causes constant confusion: ERP handles planning, purchasing, costing, inventory and orders. MES handles what happens on the line, minute by minute. When a project tries to make ERP do the MES job, scheduling accuracy usually suffers.",
+          "Integration is where budgets quietly blow out, mostly because the discovery work happens too late.",
+        ],
+        preListParagraphs: ["Do this instead:"],
+        bulletList: [
+          "Map every system before vendor selection. Include the spreadsheets and the Access database. Especially the Access database.",
+          "Identify which machines can actually export data. Older equipment may need a gateway or an operator entry step, and that changes the scope.",
+          "Decide direction and frequency for every interface. One way or two way, real time or batch. Ambiguity here creates rework later.",
+          "Build the awkward integrations first. The hardest one should be proven months before go-live, not the week of.",
+          "Plan for failure states. What happens to production when an interface drops for two hours? There should be a defined answer, not an improvised one.",
+        ],
+        closingParagraphs: [
+          "Middleware and workflow automation platforms are often the practical answer for older equipment that will never speak natively to a modern ERP, letting you connect the plant without replacing capital assets that still have years of life in them.",
+        ],
+      },
+      {
+        heading: "Challenge 5: A Cutover That Stops Production",
+        headingLevel: 3,
+        bodyParagraphs: [
+          "The cutover is the highest risk moment of the entire project, and it gets planned around the finance calendar far too often. End of financial year looks tidy on paper. It's frequently the worst possible time for the plant.",
+          "You're switching systems while raw material is arriving, work in progress is sitting on the floor, and customers still expect their orders.",
+        ],
+        preListParagraphs: ["Steps for a cutover that doesn't cost you output:"],
+        bulletList: [
+          "Choose the window based on production, not accounting. A genuine shutdown period beats a clean month end every time.",
+          "Run a full dress rehearsal. Complete practice migration, timed, with the real team doing the real tasks. Anything that took longer than planned is your risk register.",
+          "Count stock as close to cutover as possible. Every day between the count and the switch is a day of drift you'll spend weeks reconciling.",
+          "Freeze changes early. No new modifications in the final weeks. Late changes are how tested systems become untested systems.",
+          "Decide your work in progress approach. Either finish open jobs in the old system or migrate them deliberately. Half-migrated WIP creates months of costing confusion.",
+          "Staff hypercare properly. Two to four weeks of on-site support across every shift, with a visible escalation path.",
+          "Set a rollback trigger in advance. Define what 'bad enough to revert' means before go-live, while everyone is calm.",
+        ],
+        closingParagraphs: [
+          "Platform choice changes the detail of these steps but not the principle. This Odoo implementation guide sets out what a staged cutover looks like in practice for Australian businesses.",
+        ],
+      },
+    ],
+    questionsTitle: "How to Tell if Your ERP Project Is Already Off Track",
+    questionsDescription:
+      "If you're mid-project rather than pre-project, these are the early warning signs worth acting on this week:",
+    questions: [
+      { question: "Data cleanup", answer: "The data cleanup task has been 'in progress' for more than two months with no completion percentage attached." },
+      { question: "Customisation", answer: "The modification list has grown since the last steering meeting instead of shrinking." },
+      { question: "Shop-floor involvement", answer: "No one from the shop floor has attended a workshop in the last month." },
+      { question: "Integration testing", answer: "The integration testing date has moved twice." },
+      { question: "User testing", answer: "Testing is being done by the project team rather than the people who'll use the system daily." },
+      { question: "Post-go-live fixes", answer: "Someone senior has started using the phrase 'we'll sort that out after go-live.'" },
+    ],
+    questionsClosing:
+      "Two or more of these means the timeline is already at risk, whatever the project plan says. A structured AI feasibility analysis approach applies here too. Before adding intelligence, forecasting or automation on top of an ERP, the underlying data and process need to be sound. Sequencing that correctly saves manufacturers a substantial amount of wasted spend.",
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "The manufacturers who get ERP right aren't the ones with the biggest budgets. They're the ones who accepted early that the project was going to expose every weak process and every dirty record in the business, and planned for that instead of hoping it wouldn't happen.\n\nClean the data before it becomes urgent. Resist customisation you can't justify. Get operators in the room. Prove the hard integrations early. Pick a cutover window that respects the production schedule.\n\nDo those five things and the software will mostly take care of itself.",
+    faqs: [
+      { question: "How long does an ERP implementation take in a manufacturing business?", answer: "For a small to mid-sized manufacturer, a realistic range is six to twelve months from selection to go-live. Multi-site operations, complex traceability requirements or heavy integration work push that towards eighteen months. Timelines usually slip because of data readiness, not software configuration." },
+      { question: "How much does ERP implementation cost for a manufacturer?", answer: "Cost varies with user count, number of sites and integration complexity, and licensing is typically the smaller part of the total. Implementation services, data migration, integration and training often exceed the software cost. Ask any vendor for a breakdown of those four line items specifically before comparing quotes." },
+      { question: "Can we implement ERP without stopping production?", answer: "Yes, and most manufacturers do. It requires a cutover window aligned to a genuine production lull, a rehearsed migration, a stocktake close to the switch date, and on-site support across every shift for the first few weeks." },
+      { question: "Should we customise the ERP to match our current processes?", answer: "Only where the process is a real competitive advantage. Everything else should be configured using standard functionality, because customisation increases upgrade cost and support risk for benefits that are usually modest." },
+      { question: "What is the difference between ERP and MES in a factory?", answer: "ERP manages planning, purchasing, inventory, costing and orders across the business. MES manages execution on the production line in real time. Larger or more complex manufacturing operations generally run both, connected by an interface." },
+      { question: "Who should lead an ERP project internally?", answer: "Someone with operational authority, not just technical knowledge. The most effective project leads are usually operations or production managers who can make process decisions and hold other departments to deadlines." },
+    ],
+    ctaTitle: "Ready to Plan Your ERP Implementation?",
+    ctaDescription:
+      "Get in touch with the Zynex Technologies team to discuss your ERP implementation and where automation can support it at Zynex Technologies.",
+    ctaButtonText: "Get in Touch",
+  },
   "migrate-spreadsheets-to-erp-system": {
     metaTitle: "How to Migrate From Spreadsheets to an ERP System | Zynex Technologies",
     metaDescription:

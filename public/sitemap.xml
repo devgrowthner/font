@@ -528,4 +528,18 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blogs - Manufacturing ERP Implementation Challenges -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/manufacturing-erp-implementation-challenges</loc>
+    <lastmod>2026-08-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - ERP for Retail Inventory and Sales Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/erp-retail-australia-inventory-sales</loc>
+    <lastmod>2026-08-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
