@@ -82,7 +82,7 @@ const faqs = [
 ];
 
 function Label({ children }) {
-  return <p className="mb-5 inline-flex rounded-full border border-[#719334]/20 bg-[#eef4e3] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-[#5a7529]">{children}</p>;
+  return <p className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-[#719334]/20 bg-[#eef4e3] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-[#5a7529]"><span className="h-1.5 w-1.5 rounded-full bg-[#719334]" aria-hidden="true" />{children}</p>;
 }
 
 export default function SalesforceImplementation() {
@@ -95,9 +95,9 @@ export default function SalesforceImplementation() {
   return (
     <div className="min-h-screen bg-[#f8faf5] text-slate-900">
       <Schema schema={faqSchema} />
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#fcfbf7] to-[#f1f5ec] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#fcfbf7] to-[#f4f0e6] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div aria-hidden="true" className="absolute inset-0 opacity-30" style={{ backgroundImage: 'linear-gradient(rgba(113,147,52,.12) 1px, transparent 1px),linear-gradient(90deg,rgba(113,147,52,.12) 1px,transparent 1px)', backgroundSize: '72px 72px', maskImage: 'radial-gradient(ellipse 90% 80% at 50% 0%, black 35%, transparent 100%)' }} />
-        <div className="relative container mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.08fr_.92fr] lg:items-center">
+        <div className="relative container mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.08fr_.92fr] lg:items-center">
           <div>
             <Label>Salesforce implementation <span className="mx-2 opacity-50">•</span> Australia</Label>
             <h1 className="max-w-3xl text-4xl font-heading font-bold leading-tight sm:text-5xl lg:text-6xl">Salesforce Implementation &amp; <span className="text-[#719334]">Customization</span> Services in Australia</h1>
@@ -107,7 +107,7 @@ export default function SalesforceImplementation() {
               <Link href="#how-zynex-works" className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-7 py-4 text-sm font-bold text-slate-700">See How Zynex Works</Link>
             </div>
           </div>
-          <div className="relative rounded-3xl border border-[#719334]/20 bg-white p-6 shadow-[0_24px_70px_rgba(113,147,52,.16)] sm:p-8">
+          <div className="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-100 sm:p-8">
             <div className="rounded-2xl bg-[#eef4e3] p-6">
               <Activity className="h-12 w-12 text-[#719334]" />
               <p className="mt-8 text-xs font-bold uppercase tracking-[.2em] text-[#5a7529]">AI-led Salesforce</p>

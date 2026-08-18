@@ -1157,7 +1157,7 @@ const ErpNextImplementation = () => {
             {/* Left: relevant images */}
             <div className="flex flex-col gap-4">
               <img
-                src="/download_erp.png"
+                src="/image7ca4e0.webp"
                 alt="AI ERP Readiness Review progress"
                 className="w-full rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.07)] transition-transform duration-500 hover:-translate-y-1"
               />

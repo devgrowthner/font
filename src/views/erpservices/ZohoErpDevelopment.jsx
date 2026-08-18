@@ -31,8 +31,8 @@ const brandGreenDark = '#5a7529';
 
 function SectionLabel({ children }) {
   return (
-    <p className="mb-4 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#719334]">
-      <span className="h-px w-8 bg-[#719334]" aria-hidden="true" />
+    <p className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-[#719334]/20 bg-[#eef4e3] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-[#5a7529]">
+      <span className="h-1.5 w-1.5 rounded-full bg-[#719334]" aria-hidden="true" />
       {children}
     </p>
   );
@@ -248,6 +248,7 @@ const whyChooseItems = [
   {
     title: 'Structured Delivery Process',
     description: 'Discovery, workflow mapping, configuration, testing, deployment, training and optimisation. A structured handoff, not a loose implementation.',
+
   },
   {
     title: 'Industry-Specific Focus',
@@ -345,28 +346,28 @@ const ZohoErpDevelopment = () => {
 
       {/* Hero */}
       <section
-        className="relative overflow-hidden text-white"
-        style={{ background: 'linear-gradient(135deg, #7a9440 0%, #719334 45%, #5f7f2d 100%)' }}
+        className="relative overflow-hidden text-slate-900"
+        style={{ background: 'linear-gradient(to bottom, #fcfbf7, #f4f0e6)' }}
       >
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 opacity-30"
+          className="pointer-events-none absolute inset-0 opacity-40"
           style={{
             backgroundImage:
-              'linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px)',
+              'linear-gradient(rgba(113,147,52,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(113,147,52,0.12) 1px, transparent 1px)',
             backgroundSize: '72px 72px',
           }}
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-white/10 blur-3xl"
+          className="pointer-events-none absolute -top-24 right-0 h-96 w-96 rounded-full bg-[#719334]/10 blur-3xl"
         />
 
         <div className="relative container mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
             <div>
-              <span className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-white/25 bg-white/10 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90">
-                <span className="h-1.5 w-1.5 rounded-full bg-white/80 flex-shrink-0"></span>
+              <span className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-[#719334]/20 bg-[#eef4e3] px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#5a7529]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#719334] flex-shrink-0"></span>
 
                 <span className="whitespace-nowrap">
                   Zoho ERP Development &amp; Implementation Company
@@ -377,11 +378,11 @@ const ZohoErpDevelopment = () => {
                 </span>
               </span>
 
-              <h1 className="mt-8 max-w-4xl text-4xl font-heading font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.35rem]">
+              <h1 className="mt-8 max-w-4xl text-4xl font-heading font-bold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.35rem]">
                 Zoho ERP Development and Implementation Company in Australia
               </h1>
 
-              <p className="mt-6 max-w-3xl text-base leading-8 text-white/90 sm:text-lg">
+              <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">
                 Zynex Technologies is a specialist Zoho ERP development and implementation company in Australia. We help SMB
                 and mid-market businesses connect finance, sales, inventory, projects, purchasing and approvals in one
                 intelligent system with AI-led automation built in from day one.
@@ -391,37 +392,38 @@ const ZohoErpDevelopment = () => {
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(true)}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-7 py-4 text-sm font-bold text-[#719334] shadow-lg transition hover:bg-slate-50"
+                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#719334] to-[#5a7529] px-7 py-4 text-sm font-bold text-white shadow-xl shadow-[#719334]/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl"
                 >
                   Book an AI ERP Readiness Review
                   <ArrowRight className="h-4 w-4" />
                 </button>
                 <Link
                   href="#services"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-white underline underline-offset-4 transition hover:text-white/85"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white/50 px-6 py-4 text-sm font-semibold text-slate-700 backdrop-blur-sm transition hover:bg-white"
                 >
                   Explore our services
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
 
-              <div className="mt-14 border-t border-white/20 pt-10">
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-                  {heroStats.map((stat) => (
-                    <div key={stat.label}>
-                      <p className="text-3xl font-heading font-bold sm:text-4xl">{stat.value}</p>
-                      <p className="mt-2 text-sm text-white/80">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
 
             <div className="flex justify-center lg:justify-end">
-              <img src="/image_zohho.png" alt="Zoho ERP Implementation" className="h-auto w-full rounded-2xl object-cover shadow-2xl" />
+              <div className="relative w-full"><div aria-hidden="true" className="absolute -bottom-4 -right-4 hidden h-full w-full rounded-2xl border-2 border-slate-200 sm:block" /><img src="/image_zohho.png" alt="Zoho ERP Implementation" className="relative h-auto w-full rounded-2xl object-contain shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-200" /></div>
+            </div>
+          </div>
+          <div className="mt-16 w-full border-t border-slate-200 pt-10 sm:mt-20">
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:gap-8">
+              {heroStats.map((stat) => (
+                <div key={stat.label} className="rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                  <p className="text-3xl font-heading font-bold text-[#719334] sm:text-4xl">{stat.value}</p>
+                  <p className="mt-2 text-[13px] font-semibold uppercase tracking-wider text-slate-500">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+        <div aria-hidden="true" className="relative h-8 w-full"><div className="absolute inset-x-0 bottom-0 h-8 rounded-t-[2.5rem] bg-white" /></div>
       </section>
 
       {/* The Problem */}
@@ -441,7 +443,8 @@ const ZohoErpDevelopment = () => {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-[#f8faf5] p-6 sm:p-8">
+            <div className="relative overflow-hidden rounded-2xl border border-[#719334]/15 bg-[#f8faf5] p-6 shadow-[0_2px_16px_rgba(15,23,42,0.05)] sm:p-8">
+              <div aria-hidden="true" className="absolute left-0 top-0 h-full w-1.5 bg-gradient-to-b from-[#719334] to-[#a3c46a]" />
               <p className="text-lg font-semibold leading-8 text-slate-900">
                 &ldquo;Your accounting system records the result.{' '}
                 <span className="text-[#719334]">ERP helps manage the operation</span> that creates the result.&rdquo;
@@ -454,16 +457,15 @@ const ZohoErpDevelopment = () => {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {problemItems.map(({ title, description, Icon }) => (
-              <div key={title} className="flex gap-4">
-                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl bg-[#eef4e3] text-[#719334]">
-                  <Icon className="h-5 w-5" />
+              <div key={title} className="group relative overflow-hidden rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#719334]/25 hover:shadow-[0_18px_44px_rgba(113,147,52,0.16)]">
+                <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-[#719334] to-[#a3c46a] transition-transform duration-500 group-hover:scale-x-100" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#719334] to-[#5a7529] text-white shadow-lg shadow-[#719334]/25">
+                  <Icon className="h-6 w-6" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-slate-600 sm:text-base">{description}</p>
-                </div>
+                <h3 className="mt-5 text-base font-semibold text-slate-900">{title}</h3>
+                <p className="mt-2.5 text-sm leading-7 text-slate-600">{description}</p>
               </div>
             ))}
           </div>
@@ -471,7 +473,7 @@ const ZohoErpDevelopment = () => {
       </section>
 
       {/* The Solution */}
-      <section className="border-t border-slate-200 bg-[#f8faf5] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section className="relative overflow-hidden border-t border-slate-100 bg-[#f8faf5] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="container mx-auto max-w-7xl">
           <SectionLabel>The Solution</SectionLabel>
           <h2 className="max-w-4xl text-3xl font-heading font-bold leading-tight text-slate-900 sm:text-4xl">
@@ -485,8 +487,8 @@ const ZohoErpDevelopment = () => {
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {solutionServices.map(({ title, description, Icon }) => (
-              <div key={title} className="rounded-2xl border border-slate-200 bg-white p-6">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[#719334] text-white">
+              <div key={title} className="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#719334]/25 hover:shadow-[0_18px_44px_rgba(113,147,52,0.14)]">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#719334] to-[#5a7529] text-white shadow-md shadow-[#719334]/25">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
@@ -498,6 +500,7 @@ const ZohoErpDevelopment = () => {
       </section>
 
       {/* AI Capabilities */}
+
       <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="container mx-auto max-w-7xl">
           <div className="grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-start">
@@ -549,7 +552,7 @@ const ZohoErpDevelopment = () => {
 
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {pathways.slice(0, 4).map((item, index) => (
-              <div key={item.title} className="relative rounded-2xl border border-slate-200 bg-white p-6">
+              <div key={item.title} className="group relative rounded-2xl border border-slate-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#719334]/25 hover:shadow-[0_18px_44px_rgba(113,147,52,0.16)]">
                 {item.recommended && (
                   <span className="absolute right-4 top-4 rounded-full bg-[#eef4e3] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#719334]">
                     Recommended Start
@@ -598,7 +601,7 @@ const ZohoErpDevelopment = () => {
 
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-5">
             {industries.map(({ title, description, Icon }) => (
-              <div key={title} className="rounded-2xl border border-slate-200 bg-[#f8faf5] p-6 text-center">
+              <div key={title} className="group rounded-2xl border border-slate-100 bg-[#f8faf5] p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#719334]/25 hover:shadow-lg">
                 <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#719334] shadow-sm">
                   <Icon className="h-6 w-6" />
                 </div>
@@ -748,6 +751,7 @@ const ZohoErpDevelopment = () => {
           <SectionLabel>FAQ</SectionLabel>
           <h2 className="max-w-4xl text-3xl font-heading font-bold leading-tight text-slate-900 sm:text-4xl">
             Questions About Our Zoho ERP Development and Implementation Services
+
           </h2>
           <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600">
             Every Zoho ERP implementation question answered from what AI-driven ERP actually means to how migration works
@@ -756,7 +760,7 @@ const ZohoErpDevelopment = () => {
 
           <div className="mt-12 grid gap-5 lg:grid-cols-2">
             {faqs.map((faq) => (
-              <div key={faq.question} className="rounded-2xl border border-slate-200 bg-[#f8faf5] p-6">
+              <div key={faq.question} className="rounded-2xl border border-slate-100 bg-[#f8faf5] p-6 shadow-sm transition-all duration-300 hover:border-[#719334]/25 hover:shadow-md">
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="text-base font-semibold leading-7 text-slate-900">{faq.question}</h3>
                   <Plus className="h-5 w-5 flex-shrink-0 text-[#719334]" aria-hidden="true" />
