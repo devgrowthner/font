@@ -33,6 +33,7 @@ import ContactModal from '../../components/ContactModal';
 import Footer from '../../components/Footer';
 import Schema from '../../components/Schema';
 import { useSeo } from '../../hooks/useSeo';
+import erpNextLogo from '../../assets/Machine/erpnext.png';
 
 const brandGreen = '#719334';
 const brandGreenDark = '#5a7529';
@@ -769,8 +770,12 @@ const ErpNextImplementation = () => {
 
               {/* inner circle */}
               <div className="relative z-10 flex h-52 w-52 flex-col items-center justify-center rounded-full border border-slate-200 bg-white text-center shadow-[0_18px_44px_rgba(15,23,42,0.10)]">
-                <span className="font-heading text-4xl font-bold tracking-tight text-[#714B67]">ERPNext</span>
-                <p className="mt-2 px-8 text-sm font-semibold leading-6 text-slate-700">
+                <img
+                  src={erpNextLogo.src}
+                  alt="ERPNext"
+                  className="h-20 w-20 rounded-[22%] object-contain"
+                />
+                <p className="mt-3 px-8 text-sm font-semibold leading-6 text-slate-700">
                   Unified. Intelligent. Connected.
                 </p>
               </div>
