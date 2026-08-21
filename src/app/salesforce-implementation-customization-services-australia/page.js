@@ -2,9 +2,9 @@ import SalesforceImplementation from '@/views/salesforce/SalesforceImplementatio
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'Salesforce Implementation & Customization Services Australia | Zynex Technologies',
-  description: 'Zynex builds and customizes Salesforce for Australian businesses, with AI-led automation baked in. Get a working system in weeks, not months. Book a call.',
-  path: '/salesforce-implementation-customization-services-australia',
+  title: 'Salesforce Implementation & Customization in Australia | Zynex Technologies',
+  description: 'Salesforce implementation and customisation for Australian businesses. AI-enabled Sales, Service and Field Service builds. Book a readiness review.',
+  path: '/salesforce-implementation-services-australia',
 });
 
 export default function SalesforceImplementationPage() {

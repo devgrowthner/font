@@ -19,6 +19,7 @@ import {
   Layers,
   Database,
   Mic2,
+  Check,
 } from 'lucide-react';
 import ContactModal from '../../components/ContactModal';
 import Footer from '../../components/Footer';
@@ -39,54 +40,71 @@ const staggerContainer = {
 };
 
 const heroStats = [
-  { metric: '95%', label: 'Client Satisfaction Rate' },
-  { metric: '3x', label: 'Average ROI Delivered' },
-  { metric: '6–12', label: 'Weeks to Deployment' },
-  { metric: '24/7', label: 'Production Support' },
+  { metric: '95%', label: 'Client satisfaction rate' },
+  { metric: '3x', label: 'Average ROI delivered' },
+  { metric: '6 to 12 weeks', label: 'Typical time to production' },
+  { metric: '24/7', label: 'Production support' },
+];
+
+const builtFor = [
+  'Professional services firms in the CBD drowning in document review',
+  'Financial services and fintech teams in Barangaroo and Martin Place',
+  'Healthcare clinics and allied health groups across Greater Sydney',
+  'Logistics and supply chain operators around Port Botany and Western Sydney',
+  'Property, construction and real estate groups',
+  'Retail and ecommerce brands scaling customer support',
+  'SaaS and technology companies embedding AI into their product',
+];
+
+const adoptionStats = [
+  { metric: '40%', label: 'of Australian SMEs are adopting AI, up five points in a single quarter', source: 'National AI Centre and Fifth Quadrant, Oct to Dec 2024' },
+  { metric: '34%', label: 'AI adoption in metro NSW, against 18% in regional NSW', source: 'National AI Centre and Fifth Quadrant, Oct to Dec 2024' },
+  { metric: '21%', label: 'of businesses say they do not know how to apply AI at all', source: 'National AI Centre and Fifth Quadrant, Oct to Dec 2024' },
+  { metric: '$54B', label: 'contributed to the NSW economy by the tech sector in the past year', source: "ACS Australia's Digital Pulse, October 2025" },
 ];
 
 const painPoints = [
   {
-    title: 'AI Hype Without Substance',
+    title: 'The pilot never had a number attached to it',
     description:
-      "Agencies promise AI transformation but deliver generic chatbots or off-the-shelf tools that don't move your KPIs.",
+      'Teams build a proof of concept to see what AI can do, not to solve a costed problem. When the demo ends there is nothing to justify a budget, so the project quietly dies.',
   },
   {
-    title: 'Projects That Drag On for Years',
+    title: 'The AI never touched the systems that matter',
     description:
-      'Traditional software firms scope, redesign, and delay—while your competitors who ship faster gain the edge.',
+      'A chatbot that cannot read your CRM, your ERP or your document store is a toy. Real value comes from AI that has permission to act inside the systems your team already lives in.',
   },
   {
-    title: 'Investment With Uncertain Returns',
+    title: 'Nobody owned it after launch',
     description:
-      "Building AI without validating ROI first means expensive re-work when the solution doesn't fit the problem.",
+      'Models drift. Prompts break. Data changes. Without monitoring and a support agreement, accuracy degrades within months and trust evaporates faster than that.',
   },
   {
-    title: 'Governance & Security Blind Spots',
+    title: 'Compliance was an afterthought',
     description:
-      'Enterprise AI must meet compliance and security requirements—overlooking these creates risk at scale.',
+      'Australian Privacy Principles, data residency and client confidentiality obligations are not optional for Sydney firms in finance, law or health. Retrofitting governance costs more than designing for it.',
   },
 ];
 
 const keyBenefits = [
   {
-    title: 'Feasibility-First AI Strategy',
-    body: 'We quantify ROI potential and data readiness before a single line of production code is written.',
+    title: 'Feasibility comes before features',
+    body: 'We assess whether AI is the right answer, model the return and tell you plainly when it is not before quoting a build.',
     Icon: LineChart,
   },
   {
     title: 'Custom AI Development in Sydney',
-    body: 'Purpose-built machine learning models, NLP systems, and multi-agent AI platforms—not templates.',
+    body: 'Purpose-built machine learning models, generative AI applications, automation pipelines and internal tools designed around your data and workflow.',
     Icon: Cpu,
   },
   {
-    title: 'Enterprise-Grade Security & Compliance',
-    body: 'Every system is architected with governance, data privacy, and operational excellence from day one.',
+    title: 'Australian compliance from day one',
+    body: 'Australian Privacy Principles, data residency, audit trails and role-based access are designed in, not bolted on.',
     Icon: Shield,
   },
   {
     title: 'End-to-End AI Integration Services',
-    body: 'We connect AI systems to your existing CRMs, ERPs, and workflows for seamless adoption.',
+    body: 'We connect AI systems to Salesforce, HubSpot, Odoo, NetSuite, Xero, Microsoft 365, Slack and custom systems.',
     Icon: Link2,
   },
 ];
@@ -94,23 +112,27 @@ const keyBenefits = [
 const processSteps = [
   {
     step: '01',
-    title: 'Discovery & AI Feasibility Assessment',
-    duration: '1–2 weeks',
+    title: 'Discovery and AI Feasibility Assessment',
+    duration: '1 to 2 weeks',
+    description: 'We map the workflow, audit your data, size the opportunity in dollars and stress test whether AI is the right tool. The output is a feasibility report with a recommendation.',
   },
   {
     step: '02',
-    title: 'AI Strategy & Architecture Design',
-    duration: '1–2 weeks',
+    title: 'AI Strategy and Architecture Design',
+    duration: '1 to 2 weeks',
+    description: 'We define model selection, system architecture, integration points, security and governance, then agree a fixed scope and price before build begins.',
   },
   {
     step: '03',
-    title: 'Agile Build & Iterative Testing',
-    duration: '4–12 weeks',
+    title: 'Agile Build and Iterative Testing',
+    duration: '4 to 12 weeks',
+    description: 'Two-week sprints produce a working demo each cycle. Accuracy is measured against the agreed baseline and evaluation runs are shared with you.',
   },
   {
     step: '04',
-    title: 'Deploy, Integrate & Continuously Optimise',
+    title: 'Deploy, Integrate and Continuously Optimise',
     duration: 'Ongoing',
+    description: 'We deploy into your environment, enable your staff, provide monitoring dashboards and 24/7 support, and track drift on a retraining schedule.',
   },
 ];
 
@@ -118,37 +140,37 @@ const services = [
   {
     title: 'Custom AI Development',
     description:
-      'Bespoke AI systems built for your exact business challenge—machine learning models, automation pipelines, and intelligent applications tailored to your industry.',
+      'Purpose-built machine learning models, generative AI applications, automation pipelines and internal tools designed around your data and workflow. You own the code and the models.',
     Icon: Sparkles,
   },
   {
-    title: 'Multi-Agent AI Systems',
+    title: 'Multi-Agent AI Systems and AI Agents',
     description:
-      'Enterprise-grade autonomous AI agents that collaborate to handle complex workflows—from knowledge management to end-to-end process automation.',
+      'Specialised agents that plan, delegate and verify each other’s work for research, reconciliation, claims triage and complex multi-step workflows.',
     Icon: Bot,
   },
   {
     title: 'Natural Language Processing',
     description:
-      'Intelligent NLP solutions for document analysis, customer support automation, email classification, and semantic search—powered by OpenAI, Claude, and Gemini.',
+      'NLP for contract review, invoice extraction, clinical note summarisation, sentiment analysis and support ticket routing, built for Australian document formats and English.',
     Icon: MessageSquare,
   },
   {
     title: 'AI Strategy Consulting in Sydney',
     description:
-      'A rigorous feasibility analysis and AI roadmap with clear ROI projections—so Sydney business leaders make data-driven decisions before committing budget.',
+      'A costed AI roadmap with ROI projections, prioritised use cases, a data readiness assessment and a build-or-buy recommendation for each.',
     Icon: LineChart,
   },
   {
     title: 'AI Integration Services',
     description:
-      'Seamlessly connect AI capabilities to your existing CRM, ERP, and communication systems with enterprise-grade security and minimal operational disruption.',
+      'Connect models to Salesforce, HubSpot, Odoo, NetSuite, Xero, Microsoft 365, Slack and custom systems with role-based access and audit logging.',
     Icon: Wrench,
   },
   {
     title: 'Machine Learning Model Development',
     description:
-      'Predictive analytics, recommendation engines, and classification models built with TensorFlow, PyTorch, and Scikit-Learn—trained on your data, optimised for your outcomes.',
+      'Forecasting, churn prediction, demand planning, recommendation engines and anomaly detection, trained on your data and evaluated against an agreed baseline.',
     Icon: Cpu,
   },
 ];
@@ -156,85 +178,119 @@ const services = [
 const techStackGroups = [
   {
     title: 'Foundation models',
-    description: 'Commercial and open models matched to your data and latency needs.',
-    items: ['OpenAI GPT', 'Claude AI', 'Google Gemini', 'Meta Llama'],
+    description: 'Models selected for accuracy, cost, latency and data residency.',
+    items: ['OpenAI GPT', 'Anthropic Claude', 'Google Gemini', 'Meta Llama'],
     Icon: Brain,
   },
   {
     title: 'Orchestration & agents',
     description: 'Multi-step workflows, tool use, and agent coordination.',
-    items: ['LangChain', 'CrewAI', 'AutoGen'],
+    items: ['LangChain', 'LangGraph', 'CrewAI', 'AutoGen'],
     Icon: Layers,
   },
   {
     title: 'ML, vectors & analytics',
     description: 'Training, inference, and retrieval that scale in production.',
-    items: ['TensorFlow', 'PyTorch', 'Scikit-Learn', 'Pinecone'],
+    items: ['TensorFlow', 'PyTorch', 'Scikit-Learn', 'Pinecone', 'pgvector'],
     Icon: Database,
   },
   {
     title: 'Voice & conversational UX',
     description: 'Speech, telephony, and realtime customer experiences.',
-    items: ['Vapi', 'ElevenLabs'],
+    items: ['Vapi', 'ElevenLabs', 'Twilio'],
     Icon: Mic2,
+  },
+  {
+    title: 'Deployment & data',
+    description: 'Australian cloud regions or your own infrastructure.',
+    items: ['AWS Sydney', 'Azure Australia East', 'Google Cloud Sydney', 'Docker', 'Kubernetes'],
+    Icon: Database,
   },
 ];
 
+const differentiators = [
+  { title: 'We tell you when not to build.', body: 'Feasibility comes before scope. If the numbers do not work, you get that in writing in week two, not after the invoice.' },
+  { title: 'Strategy and engineering are the same team.', body: 'No handover from a consulting deck to an offshore build team. The person who scoped it is accountable for shipping it.' },
+  { title: 'You own everything.', body: 'Source code, model weights where applicable, prompts, evaluation sets and documentation. No platform lock-in and no per-seat licence.' },
+  { title: 'Built for Australian compliance from day one.', body: 'Australian Privacy Principles, Sydney-region data residency, audit trails and role-based access are designed in, not bolted on.' },
+  { title: 'We integrate with what you already run.', body: 'CRM, ERP, finance, communications and custom internal systems. AI that cannot reach your data does not change your numbers.' },
+  { title: 'Support does not end at handover.', body: '24/7 production support, drift monitoring and scheduled retraining. Accuracy is a maintained property, not a launch-day claim.' },
+];
+
+const industries = [
+  { title: 'AI for healthcare clinics', href: 'https://zynextechnologies.com.au/ai-solution-healthcare-clinics-australia' },
+  { title: 'AI for legal firms', href: 'https://zynextechnologies.com.au/ai-development-company-legal-firms-australia' },
+  { title: 'AI for real estate', href: 'https://zynextechnologies.com.au/ai-development-company-for-real-estate-australia' },
+  { title: 'AI for construction', href: 'https://zynextechnologies.com.au/ai-development-company-construction-businesses-australia' },
+  { title: 'AI for hospitality', href: 'https://zynextechnologies.com.au/ai-solution-hospitality-businesses-australia' },
+  { title: 'AI for small business', href: 'https://zynextechnologies.com.au/ai-development-for-small-businesses-australia' },
+];
+
 const socialMetrics = [
-  { metric: '95%', label: 'Client Satisfaction Rate' },
-  { metric: '3x', label: 'Average ROI Delivered' },
-  { metric: '6–12 weeks', label: 'Average Deployment Time' },
-  { metric: '24/7', label: 'Production Support' },
+  { metric: '9 weeks', label: 'Kickoff to production on a multi-agent deployment' },
+  { metric: '3x', label: 'Average return on AI investment across delivered projects' },
+  { metric: '95%', label: 'Client satisfaction rate' },
+  { metric: '24/7', label: 'Production support' },
 ];
 
 const testimonials = [
   {
     quote:
-      "Zynex didn't just build us an AI tool—they helped us understand exactly where AI would move the needle. The feasibility process alone saved us months of wasted spend.",
-    role: 'Chief Operating Officer, Sydney-based Professional Services Firm',
+      'Their feasibility process saved us months of wasted spend. We came in wanting a chatbot and left with a document pipeline that was worth ten times more.',
+    role: 'Chief Operating Officer, professional services firm, Sydney',
   },
   {
     quote:
-      'From our first discovery session to going live, the entire project took 9 weeks. The multi-agent system they built handles what used to take our team two full days—every single day.',
-    role: 'Head of Operations, Australian Financial Services Company',
+      'The multi-agent system went live in nine weeks and now handles the reconciliation work that used to take two people a full day each week.',
+    role: 'Head of Operations, financial services, Sydney',
   },
 ];
 
 const faqs = [
   {
-    question: 'What makes Zynex Technologies the best AI development company in Sydney?',
+    question: 'What makes Zynex a leading AI development company in Sydney?',
     answer:
-      'Zynex combines strategy and engineering under one roof. We validate AI feasibility and model ROI before writing a single line of code—which means clients only invest in solutions with a clear path to return. Our track record of 95% client satisfaction and average 3x ROI sets us apart from traditional agencies in Sydney.',
+      'Zynex runs a paid feasibility assessment before any build, so you know the projected return before you commit budget. Strategy and engineering sit in the same team, which removes the handover gap that kills most AI projects. Clients report a 3x average return and a 95% satisfaction rate.',
   },
   {
     question: 'How long does custom AI development take in Sydney?',
     answer:
-      'Most Zynex projects are fully deployed within 6–12 weeks. We run a 1–2 week discovery and feasibility sprint, followed by architecture design, then agile build sprints. We deploy faster than traditional firms because we validate before we build—eliminating expensive re-work.',
-  },
-  {
-    question: 'What AI development services does Zynex offer in Sydney?',
-    answer:
-      'Our services include custom AI development, multi-agent AI systems, machine learning model development, NLP solutions, AI strategy consulting, AI integration services, and full-stack AI product deployment. Every engagement is tailored to your specific business challenge, not templated.',
+      'Most Zynex projects reach production in 6 to 12 weeks. Discovery and feasibility take 1 to 2 weeks, architecture design another 1 to 2 weeks, and the agile build runs 4 to 12 weeks depending on integration complexity. You see a working demo every two weeks.',
   },
   {
     question: 'How much does AI development cost for a Sydney business?',
     answer:
-      'Costs vary by scope and complexity. Every Zynex engagement begins with a feasibility assessment that includes ROI modelling—so you understand the expected return before committing to a full build. Contact us for a scoped estimate.',
+      'Cost depends on scope, data readiness and how many systems the AI needs to touch. Every engagement starts with a feasibility assessment that produces a fixed price for the build and a modelled ROI, so you approve a number rather than an estimate.',
   },
   {
-    question: 'Can Zynex integrate AI into my existing business systems?',
+    question: 'Can Zynex integrate AI into our existing CRM and ERP?',
     answer:
-      'Yes. Zynex specialises in AI integration with existing infrastructure—CRMs, ERPs, communication platforms, and proprietary data systems. Every integration is built with enterprise-grade security, compliance, and long-term scalability in mind.',
+      'Yes. AI integration services cover Salesforce, HubSpot, Odoo, NetSuite, Xero, Microsoft 365 and custom internal systems. Integrations include role-based access control, audit logging and Australian data residency where your compliance obligations require it. Every integration point is mapped during architecture design, before the build starts, so nothing surfaces late.',
   },
   {
-    question: 'Does Zynex provide ongoing AI support after deployment?',
+    question: 'What are multi-agent AI systems and does my business need one?',
     answer:
-      'Yes. We provide 24/7 production support and continuous optimisation. After deployment, we monitor real-world performance and iteratively improve your AI system to maximise ROI as your business grows and your data matures.',
+      'Multi-agent AI systems split a complex process across specialised agents that plan, execute and check each other. They suit workflows with many steps and exceptions, such as claims triage or reconciliation. For a single, well-defined task, a simpler model is usually cheaper and more reliable.',
   },
   {
-    question: 'What AI technologies and platforms does Zynex use for development?',
+    question: 'Do you keep our data in Australia?',
     answer:
-      'We integrate leading AI platforms including OpenAI, Claude AI, Google Gemini, Meta Llama, LangChain, TensorFlow, PyTorch, Scikit-Learn, Pinecone, and CrewAI. We choose the right technology stack for each project rather than forcing one approach onto every problem.',
+      'Yes, where required. Zynex deploys into AWS Sydney, Azure Australia East or Google Cloud Sydney regions, or into your own infrastructure. Architecture is designed around the Australian Privacy Principles and your sector’s confidentiality obligations from the first design session, rather than being retrofitted once the system is already running.',
+  },
+  {
+    question: 'What support do we get after the AI system goes live?',
+    answer:
+      'Every production deployment includes 24/7 support, monitoring dashboards, model drift detection and scheduled retraining. Accuracy is tracked against the baseline agreed during architecture design, and you receive a performance report rather than a status update. Support terms are written into the engagement, not sold to you separately after launch.',
+  },
+  {
+    question: 'Do we own the AI system Zynex builds?',
+    answer:
+      'Yes. You own the source code, prompts, evaluation sets, fine-tuned model artefacts and documentation. There is no platform licence and no per-seat fee on a system you paid to have built. If you later move the work in house or to another partner, nothing sits locked behind a Zynex account.',
+  },
+  {
+    question: 'Do you offer AI consulting in Sydney, or only development?',
+    answer:
+      'Both. AI consulting in Sydney is available as a standalone engagement covering feasibility, data readiness and a costed roadmap, with no obligation to build with us. Most clients continue into development afterwards, but the consulting deliverable stands on its own and is yours to take anywhere.',
   },
 ];
 
@@ -256,9 +312,9 @@ const AiDevelopmentCompanySydney = () => {
   };
 
   useSeo({
-    title: 'Best AI Development Company in Sydney | Zynex Technologies',
+    title: 'AI Development Company Sydney | Zynex Technologies',
     description:
-      "Zynex Technologies is Sydney's leading AI development company. We build custom AI solutions with measurable ROI—from strategy to deployment in weeks. Get a free consultation today.",
+      'Zynex is an AI development company in Sydney building custom AI systems, AI agents and integrations. Validated first, live in 6 to 12 weeks. Book a free call.',
   });
 
   return (
@@ -292,17 +348,17 @@ const AiDevelopmentCompanySydney = () => {
                   color: brandGreen,
                 }}
               >
-                Sydney&apos;s AI Development Leaders
+                AI DEVELOPMENT COMPANY IN SYDNEY
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-heading font-extrabold text-foreground mb-5 sm:mb-6 leading-tight tracking-tight">
-                Best AI Development Company in{' '}
-                <span className="text-[#719334]">Sydney</span>
+                AI Development Company in Sydney That Ships{' '}
+                <span className="text-[#719334]">Working Systems</span>
               </h1>
 
               <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
-                Zynex Technologies delivers custom AI solutions with measurable ROI—from feasibility assessment through
-                to production deployment in as little as 6 weeks.
+                Zynex builds custom AI systems for Sydney businesses that need results, not pilots. We validate the
+                business case before a single line of code is written, then deploy in 6 to 12 weeks.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-12">
@@ -312,17 +368,20 @@ const AiDevelopmentCompanySydney = () => {
                   className="group inline-flex items-center justify-center gap-2 text-white px-6 py-3.5 sm:px-8 rounded-xl text-sm sm:text-base font-semibold transition-all duration-300 hover:-translate-y-0.5 shadow-lg w-full sm:w-auto min-h-[48px]"
                   style={{ background: `linear-gradient(to right, ${brandGreen}, ${brandGreen})` }}
                 >
-                  Start Your AI Project
+                  Book a Free AI Strategy Session
                   <span aria-hidden>→</span>
                 </button>
                 <Link
-                  href="/custom-ai"
+                  href="/custom-ai-development"
                   className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 rounded-xl text-sm sm:text-base font-semibold border-2 w-full sm:w-auto min-h-[48px] transition-all hover:-translate-y-0.5"
                   style={{ borderColor: 'rgba(113, 147, 52, 0.55)', color: brandGreen }}
                 >
-                  Explore Services
+                  Explore AI Services
                 </Link>
               </div>
+              <p className="text-sm text-muted-foreground">
+                Trusted by professional services, financial services, healthcare and logistics teams across NSW.
+              </p>
             </motion.div>
 
             <motion.div
@@ -331,7 +390,7 @@ const AiDevelopmentCompanySydney = () => {
               transition={{ duration: 0.55, ease: 'easeOut' }}
               className="relative h-[260px] sm:h-[360px] lg:h-[440px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl"
             >
-              <img src={bg2} alt="AI development company Sydney" className="w-full h-full object-cover" />
+              <img src={bg2} alt="Zynex Technologies AI development team building a custom AI system for a Sydney business" className="w-full h-full object-cover" />
               <div
                 className="absolute inset-0"
                 style={{ background: 'linear-gradient(135deg, rgba(113,147,52,0.25), rgba(0,0,0,0.15))' }}
@@ -363,6 +422,20 @@ const AiDevelopmentCompanySydney = () => {
         </div>
       </section>
 
+      {/* Built for */}
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#fefdfb]">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp} className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-3">Built for Sydney businesses</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-4">Who We Build AI for in Sydney</h2>
+            <p className="text-base sm:text-lg text-muted-foreground">We work with operations leaders who already know where the bottleneck is and need someone who can actually build the fix.</p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
+            {builtFor.map((item, index) => <motion.div key={item} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.04 }} className="flex gap-3 rounded-2xl border bg-white p-5 shadow-sm" style={{ borderColor: 'rgba(113, 147, 52, 0.22)' }}><Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#719334]" /><p className="text-sm sm:text-base text-foreground leading-relaxed">{item}</p></motion.div>)}
+          </div>
+        </div>
+      </section>
+
       {/* Problem */}
       <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-gray-100">
         <div className="container mx-auto max-w-6xl">
@@ -374,13 +447,18 @@ const AiDevelopmentCompanySydney = () => {
             className="text-center max-w-3xl mx-auto mb-10 sm:mb-14"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-4">
-              Why Sydney Businesses Struggle with AI Adoption
+              Why Sydney Businesses Stall on AI Adoption
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground">
-              Most AI projects fail before they launch. Zynex is built to change that.
+              Sydney has more technology jobs than any other city in Australia, and NSW businesses are among the fastest adopters of AI in the country. That has not made AI projects easier. Most stall at a promising pilot because there is no clear business case, integration plan or owner after launch.
             </p>
           </motion.div>
 
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-10 sm:mb-14">
+            {adoptionStats.map((stat) => <motion.div key={stat.metric} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-xl border bg-[#fefdfb] p-4 sm:p-5" style={{ borderColor: 'rgba(113, 147, 52, 0.3)' }}><p className="text-2xl sm:text-3xl font-heading font-extrabold text-[#719334]">{stat.metric}</p><p className="mt-2 text-xs sm:text-sm leading-relaxed text-foreground">{stat.label}</p><p className="mt-3 text-[10px] sm:text-xs leading-relaxed text-muted-foreground">{stat.source}</p></motion.div>)}
+          </div>
+
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-center mb-7">The Four Things That Actually Go Wrong</h3>
           <div className="grid sm:grid-cols-2 gap-5 sm:gap-6">
             {painPoints.map((p, i) => (
               <motion.div
@@ -411,11 +489,10 @@ const AiDevelopmentCompanySydney = () => {
             className="max-w-3xl mb-10 sm:mb-12"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-4">
-              Custom AI Development Built for Real Results
+              Custom AI Development Built Around a Business Case, Not a Demo
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              As Sydney&apos;s leading AI development company, Zynex Technologies validates your AI opportunity before
-              building—so every dollar invested is on a path to measurable return.
+              Zynex is an AI development company Sydney businesses call when a pilot has to become a production system. We start with feasibility, not features. Before we quote a build, we assess whether AI is the right answer, model the return and tell you plainly when it is not. Roughly one in five projects we assess should not be built as originally scoped. Strategy and delivery sit under one roof, so the people who scope the work are the people who ship it.
             </p>
           </motion.div>
 
@@ -443,6 +520,10 @@ const AiDevelopmentCompanySydney = () => {
               </motion.div>
             ))}
           </div>
+          <blockquote className="mt-8 rounded-2xl border-l-4 border-[#719334] bg-[#eef4e3] p-6 sm:p-7 text-base sm:text-lg leading-relaxed text-foreground">
+            &ldquo;Their feasibility process saved us months of wasted spend. They told us what not to build before they told us what to build.&rdquo;
+            <footer className="mt-4 text-sm font-medium text-muted-foreground">Chief Operating Officer, Sydney professional services firm</footer>
+          </blockquote>
         </div>
       </section>
 
@@ -450,7 +531,7 @@ const AiDevelopmentCompanySydney = () => {
       <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-foreground mb-8 sm:mb-10 text-center">
-            Our Process
+            How a Sydney AI Development Project Runs
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {processSteps.map((step, i) => (
@@ -468,6 +549,7 @@ const AiDevelopmentCompanySydney = () => {
                   {step.title}
                 </h3>
                 <p className="text-sm text-[#719334] font-medium">{step.duration}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-3">{step.description}</p>
               </motion.div>
             ))}
           </div>
@@ -488,8 +570,7 @@ const AiDevelopmentCompanySydney = () => {
               AI Development Services for Sydney Businesses
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground">
-              From machine learning consulting to full-stack AI product deployment—we cover the entire AI development
-              lifecycle.
+              Six service lines, all delivered by the same in-house team. Most engagements combine two or three.
             </p>
           </motion.div>
 
@@ -507,16 +588,18 @@ const AiDevelopmentCompanySydney = () => {
                 <Icon className="w-8 h-8 text-[#719334] mb-3" strokeWidth={1.75} />
                 <h3 className="font-heading font-bold text-lg text-foreground mb-2">{title}</h3>
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{description}</p>
+                {title === 'Custom AI Development' && <Link href="/custom-ai-development" className="inline-flex mt-4 text-sm font-semibold text-[#719334] hover:underline">Custom AI development →</Link>}
+                {title === 'AI Strategy Consulting in Sydney' && <Link href="/strategy-report" className="inline-flex mt-4 text-sm font-semibold text-[#719334] hover:underline">AI strategy consulting →</Link>}
               </motion.div>
             ))}
           </div>
 
           <div className="mt-10 text-center">
             <Link
-              href="/solutions"
+              href="/custom-ai-development"
               className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-[#719334] hover:underline underline-offset-4"
             >
-              Explore all services
+              Explore all AI services
               <span aria-hidden>→</span>
             </Link>
           </div>
@@ -535,11 +618,10 @@ const AiDevelopmentCompanySydney = () => {
             <div className="text-center sm:text-left max-w-3xl mx-auto sm:mx-0 mb-8 sm:mb-10">
               <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-2">Technology</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-3">
-                AI technology stack we integrate
+                The AI Technology Stack We Build On
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                We pick the right combination for each engagement—no one-size-fits-all stack. Everything below is
-                battle-tested in production with Sydney clients.
+                We are not tied to one vendor. Model choice is a per-project decision based on accuracy, cost, latency and where the data is allowed to sit.
               </p>
             </div>
 
@@ -580,6 +662,9 @@ const AiDevelopmentCompanySydney = () => {
                 </motion.div>
               ))}
             </div>
+            <p className="mt-7 rounded-2xl border-l-4 border-[#719334] bg-[#eef4e3] p-5 text-sm sm:text-base text-foreground leading-relaxed">
+              Where Australian data residency is required, we deploy into Sydney-based cloud regions or your own infrastructure. Secure <Link href="/odoo-erp-development-company-australia" className="font-semibold text-[#719334] underline underline-offset-4">ERP integration</Link> is available for connected operational workflows.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -595,13 +680,21 @@ const AiDevelopmentCompanySydney = () => {
             className="text-center max-w-3xl mx-auto mb-10"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-4">
-              Why Sydney Businesses Choose Zynex
+              Why Sydney Businesses Choose Zynex Over Generic AI Vendors
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground">
-              Our track record speaks in numbers. Measurable outcomes that drive genuine business growth.
+              Feasibility comes first, strategy and engineering stay together, and you own the resulting system.
             </p>
           </motion.div>
 
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 mb-14">
+            {differentiators.map((item, index) => <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (index % 3) * 0.05 }} className="rounded-2xl border bg-[#fefdfb] p-5 sm:p-6" style={{ borderColor: 'rgba(113, 147, 52, 0.22)' }}><h3 className="font-heading font-bold text-lg text-foreground">{item.title}</h3><p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">{item.body}</p></motion.div>)}
+          </div>
+
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-3">Results</p>
+            <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-foreground">What Sydney Clients Say</h2>
+          </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-12 sm:mb-14">
             {socialMetrics.map((s) => (
               <div
@@ -631,6 +724,20 @@ const AiDevelopmentCompanySydney = () => {
                 </footer>
               </motion.blockquote>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries */}
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-[#fefdfb]">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div initial="initial" whileInView="animate" viewport={{ once: true }} variants={fadeInUp} className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#719334] mb-3">Industries</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold text-foreground mb-4">AI Solutions Across Industries</h2>
+            <p className="text-base sm:text-lg text-muted-foreground">Sydney businesses in these sectors work with Zynex on industry-specific AI builds.</p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6">
+            {industries.map((industry, index) => <motion.div key={industry.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (index % 3) * 0.05 }}><Link href={industry.href} className="group flex h-full items-center justify-between gap-4 rounded-2xl border bg-white p-5 sm:p-6 font-heading font-bold text-foreground shadow-sm transition-all hover:-translate-y-1 hover:border-[#719334] hover:text-[#719334] hover:shadow-md"><span>{industry.title}</span><span aria-hidden className="transition-transform group-hover:translate-x-1">→</span></Link></motion.div>)}
           </div>
         </div>
       </section>
@@ -670,7 +777,7 @@ const AiDevelopmentCompanySydney = () => {
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#719334] to-emerald-600">Questions</span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Common questions about AI development services in Sydney
+              Practical answers about AI development services in Sydney
             </p>
           </motion.div>
 
@@ -749,8 +856,7 @@ const AiDevelopmentCompanySydney = () => {
                 </span>
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-                Join Sydney businesses already transforming their operations with Zynex&apos;s custom AI development—proven
-                ROI, fast deployment, and 24/7 support.
+                Book a free strategy session to validate the opportunity, model the return and define the fastest route to a production AI system.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

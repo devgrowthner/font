@@ -4,7 +4,7 @@ import { buildPageMetadata } from '@/lib/seo';
 export const metadata = buildPageMetadata({
   title: 'AI Development Company Sydney | Zynex Technologies',
   description:
-    'AI development company Sydney businesses trust for custom ML models, NLP, and multi-agent AI. Deployed in 6–12 weeks with 3x average ROI. Get started.',
+    'Zynex is an AI development company in Sydney building custom AI systems, AI agents and integrations. Validated first, live in 6 to 12 weeks. Book a free call.',
   path: '/ai-development-company-sydney',
   canonicalPath: '/ai-development-company-sydney',
 });
