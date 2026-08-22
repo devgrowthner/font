@@ -1,6 +1,30 @@
 // Blog metadata for listing cards
 export const blogList = [
   {
+    id: "57",
+    slug: "erp-food-manufacturing-compliance-traceability",
+    title: "How ERP Helps Food Manufacturers Improve Compliance and Traceability",
+    excerpt:
+      "See how ERP for food manufacturers tightens compliance, speeds batch traceability and cuts recall risk in Australian plants.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    date: "August 22, 2026",
+    author: "Zynex Team",
+    readTime: "13 min read",
+    route: "/blogs/erp-food-manufacturing-compliance-traceability",
+  },
+  {
+    id: "56",
+    slug: "how-to-choose-odoo-consultant-australia",
+    title: "How to Choose the Right Odoo Consultant in Australia",
+    excerpt:
+      "Learn how to evaluate an Odoo consultant's experience, industry fit, delivery approach and support before choosing an Australian partner.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    date: "August 22, 2026",
+    author: "Zynex Team",
+    readTime: "12 min read",
+    route: "/blogs/how-to-choose-odoo-consultant-australia",
+  },
+  {
     id: "55",
     slug: "top-salesforce-implementation-companies-australia",
     title: "10 Top Salesforce Implementation Companies in Australia for 2026",
@@ -642,6 +666,323 @@ export const blogList = [
 
 // Full content per blog for detail pages
 export const blogContents = {
+  "erp-food-manufacturing-compliance-traceability": {
+    metaTitle: "How ERP Helps Food Manufacturers: Compliance & Traceability | Zynex Technologies",
+    metaDescription:
+      "See how ERP for food manufacturers tightens compliance, speeds batch traceability and cuts recall risk in Australian plants. Read the guide.",
+    title: "How ERP Helps Food Manufacturers Improve Compliance and Traceability",
+    description:
+      "Learn how connected ERP data improves batch traceability, allergen control, audit readiness and recall response for Australian food manufacturers.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "Food Manufacturing ERP",
+    date: "August 22, 2026",
+    readTime: "13 min read",
+    relatedSlugs: [
+      "erpnext-implementation-manufacturing",
+      "migrate-spreadsheets-to-erp-system",
+      "how-to-choose-erp-implementation-partner-australia",
+    ],
+    inlineInternalLinks: [
+      { match: "ERP for manufacturing", href: "/blogs/erpnext-implementation-manufacturing" },
+      { match: "spreadsheets to ERP", href: "/blogs/migrate-spreadsheets-to-erp-system" },
+      { match: "ERPNext implementation", href: "/erpnext-implementation-company-australia" },
+      { match: "ERP partner", href: "/blogs/how-to-choose-erp-implementation-partner-australia" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+    sectionOrder: ["summary", "introduction", "content", "conclusion", "faq", "cta", "relatedLinks"],
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "ERP for food manufacturers has moved well past being a finance tool. It's now the system that holds the compliance record together. This guide covers how batch level traceability, allergen control and audit ready records actually work inside a modern ERP, and what changes on the factory floor once they do. It's written for Australian producers still reconciling lot numbers across spreadsheets and paper run sheets, and it ends with a clear view of what to fix first.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "Food Standards Australia New Zealand coordinated 92 food recalls in 2025. Undeclared allergens caused most of them, and the leading root cause was an error during packaging.\n\nRead that again. Not a failed cook step. Not a contaminated water line. A label on the wrong pack, and nobody could prove otherwise quickly enough to contain it.\n\nThat's the gap ERP for food manufacturers is built to close. Compliance rarely fails because a producer doesn't care. It fails because the proof sits in six places at once: a paper run sheet, a supplier email, a spreadsheet, a QA folder, a label printer, and somebody's memory.\n\nHere's what changes when all of it lives in one system.",
+    content: [
+      {
+        heading: "Food Traceability and Compliance Requirements in Australia",
+        bodyParagraphs: [
+          "Traceability in Australia is a legal obligation, not best practice. Under the Food Standards Code, manufacturers must identify every supplier and every immediate customer, hold batch or lot identifiers, record dates and quantities, and run a documented recall system. One step back, one step forward, on demand.",
+          "Three parts of the Code carry most of the weight. Standard 3.2.2 governs food receipt records and recall systems. Standard 1.2.2 covers lot identification on labels. Standards 4.2.1 to 4.2.9 set primary production and processing rules by commodity, so a dairy plant and a seafood processor carry different evidence burdens.",
+          "Labelling tightened again this year. The stock in trade period for Plain English Allergen Labelling closed on 25 February 2026, five years after the rule landed. Every packaged food on an Australian shelf now needs allergens in bold inside the ingredients list plus a separate Contains statement, using prescribed plain terms. ‘Soy’ not ‘soya’. Individual tree nuts named, not grouped.",
+          "Then there's certification. BRCGS expects traceability to be achievable within four hours. SQF and FSSC 22000 require annual testing against a target you set and then defend to an auditor. None of that is negotiable if you supply the major chains.",
+          "Consider a mid sized sauce producer in Melbourne running 40 SKUs. A supplier changes a spice blend and the new formulation contains mustard. The certificate of analysis arrives by email, gets filed, and never reaches the person who owns the label artwork. Nothing on the floor catches it. The reason this pattern repeats is structural: the compliance record is scattered, so no single check can see the whole picture. A properly configured ERP for manufacturing puts supplier documents, bills of material and label data in the same place, so a spec change surfaces where it matters.",
+          "That connection is what makes traceability workable rather than theoretical.",
+        ],
+      },
+      {
+        heading: "How ERP Creates End-to-End Batch Traceability",
+        bodyParagraphs: [
+          "The value isn't in any single feature. It's in the handover between steps, where paper systems usually break. Here's the sequence a well configured system follows.",
+        ],
+        headingListPrefix: "Step",
+        headingList: [
+          "Capture the lot at goods receipt. Every incoming delivery gets a batch number, supplier reference, received quantity and expiry date at the dock. Nothing enters stock without an identity, so there's no orphan pallet to explain later.",
+          "Hold stock until quality releases it. Received material sits in a quarantine state. QA records the inspection, attaches the certificate of analysis, then releases or rejects. Production physically cannot consume unreleased stock, which removes the most common shortcut in a busy week.",
+          "Consume specific lots, not generic quantities. When a work order runs, operators scan the exact batches going into the mix. The system records which lot of which ingredient went into which production run, at what time, on which line.",
+          "Give every output its own identity. Finished goods get a batch code, production date, shelf life and expiry calculated from the recipe rules. That code carries the full genealogy of what went into it.",
+          "Tie the batch to the customer at dispatch. Pick, pack and despatch records link finished batches to delivery dockets and customers. Forward traceability stops being a phone call and becomes a query.",
+          "Run the trace in both directions on demand. Enter any lot number and the system returns everything upstream and everything downstream in seconds, with quantities that reconcile.",
+        ],
+        closingParagraphs: [
+          "Most producers moving off manual records find the hard part isn't the software. It's the cleanup that comes first, which is why spreadsheets to ERP migrations deserve their own planning phase rather than being treated as a data import task.",
+          "Once the chain holds, a lot of daily compliance work stops needing a human at all.",
+        ],
+      },
+      {
+        heading: "Compliance Tasks ERP Can Automate",
+        bodyParagraphs: [
+          "This is where the return shows up in hours saved rather than risk avoided. The tasks below run in the background once the master data is right.",
+        ],
+        bulletList: [
+          "Allergen flags on every bill of material. Change an ingredient and the system recalculates the allergen profile for every affected finished good, then flags labels needing revision.",
+          "Expiry driven picking. First expired, first out becomes the default pick logic, so short dated stock moves before it becomes waste or a customer complaint.",
+          "Supplier approval with expiry dates. Certifications, insurance and audit reports carry review dates, and the system blocks or warns on purchase orders raised against a lapsed supplier.",
+          "Specification version control. Recipes, packaging specs and label artwork are versioned with approval history, so an auditor sees who changed what and when.",
+          "Digital HACCP checks. Critical control point readings are captured against the batch, with out of spec values escalating immediately instead of being discovered at month end.",
+          "A permanent audit trail. Every transaction records the user, timestamp and prior value. Nothing gets quietly corrected after the fact.",
+        ],
+        closingParagraphs: [
+          "Not every plant needs all six from day one. Australian SMB manufacturers usually get the fastest payback from lot capture, allergen linking and FEFO picking, then add the rest. A structured ERPNext implementation sequences these deliberately rather than switching everything on at once.",
+        ],
+      },
+      {
+        heading: "How Connected Data Reduces Recall Risk",
+        bodyParagraphs: [
+          "The real test of all this arrives on a bad day.",
+          "It's 2am. A supplier notifies you that a batch of milk powder shipped six weeks ago may contain undeclared egg protein. You have one lot number and no idea yet how far it travelled.",
+          "What happens next depends entirely on how your records are structured. The difference isn't small, and regulators notice it.",
+          "The gap matters commercially, not just legally. A narrow, fast recall pulls three batches. A slow one pulls a month of production because you cannot prove which pallets were clean. Recall costs rise with uncertainty, and so does the volume of product destroyed for no reason.",
+          "That's the case for connected data, made in the only terms that matter at 2am.",
+        ],
+      },
+      {
+        heading: "What to Look For in Food Manufacturing ERP Software",
+        bodyParagraphs: [
+          "Most food manufacturing ERP software claims food capability. Fewer handle the details that decide whether an audit goes smoothly, so the evaluation needs to get specific fast.",
+          "Start with batch and lot handling at the transaction level. Ask to see a live trace performed on demo data, both directions, with mass balance reconciliation. If the vendor needs to prepare it in advance, that tells you something.",
+          "Check catch weight support if you sell by variable weight. Meat, seafood and cheese producers get caught here constantly, because a system that only handles fixed units will force manual workarounds that reintroduce the exact errors you're trying to remove.",
+          "Test the label data path next. Allergen declarations should flow from the item master to the printed label without a manual retype anywhere in between. Every manual step is a place PEAL compliance can break.",
+          "Then look at how quality integrates. Digital HACCP checks, non conformance workflows and CoA storage should live inside the ERP, not in a bolted on tool that nobody opens. Two systems means two versions of the truth, which is how the Melbourne sauce producer got caught earlier.",
+        ],
+      },
+      {
+        heading: "ERP Vendor Red Flags",
+        bulletList: [
+          "The vendor demonstrates traceability using slides rather than the actual system",
+          "Batch tracking is described as an add on module priced separately after go live",
+          "No named reference customer in Australian food or beverage manufacturing",
+          "Vague answers on who owns your data and configuration if the relationship ends",
+          "Timelines quoted before anyone has seen your production process",
+        ],
+        closingParagraphs: [
+          "Choosing the platform is only part of the decision. Picking the right ERP partner matters just as much, because food specific configuration is where most value is won or lost.",
+          "With the shortlist settled, attention shifts to getting live without losing production.",
+        ],
+      },
+      {
+        heading: "A Practical ERP Rollout for Food Manufacturers",
+        bodyParagraphs: [
+          "Nobody can halt a food plant for a system rollout. Perishable stock, standing orders and seasonal peaks make a hard cutover risky, so sequencing matters more than speed.",
+          "The realistic pattern for an Australian SMB manufacturer runs like this.",
+        ],
+        numberedList: [
+          "Clean the master data before touching software. Items, suppliers, recipes and units of measure. This is the step everyone underestimates and the one that decides whether traceability actually works.",
+          "Go live on inventory and lot capture first. Get batch identity flowing at receipt and despatch. Value appears immediately, and the floor learns the scanning habit on low risk transactions.",
+          "Add production and quality next. Work orders, BOM consumption, HACCP checks. Run these parallel to existing paper for two to three weeks so nothing is lost during the changeover.",
+          "Switch finance last. Costing pulls from production data, so it's more accurate once the operational layers are stable.",
+          "Prove it with a mock recall. Run a full trace exercise in the live system within the first month. If it clears four hours with reconciled quantities, the implementation worked.",
+        ],
+        closingParagraphs: [
+          "Simple deployments run 4 to 8 weeks. Mid sized food manufacturers typically land between 3 and 6 months, and multi site rollouts stretch to 6 to 12 months. Budgets scale similarly, with small deployments starting around $5,000 to $20,000 and mid market programmes reaching $60,000 to $150,000.",
+          "Plenty of projects still stall, usually for predictable reasons, and knowing the common ERP rollout challenges in manufacturing beforehand is the cheapest insurance available.",
+        ],
+      },
+    ],
+    conclusionTitle: "Why Food Manufacturers Need Connected Traceability Now",
+    conclusionDescription:
+      "Australian food recalls have trended upward for a decade, averaging 87 a year since 2016. Retailer expectations have tightened, allergen rules have tightened, and export markets ask harder questions than they did five years ago. That direction isn't reversing.\n\nWhat's changing is the cost of doing this properly. ERP for food manufacturers used to mean a seven figure project reserved for large processors. Open source and mid market platforms have pulled that within reach of producers running one or two lines, which means the gap between compliant and exposed is now a decision rather than a budget ceiling.\n\nThe producers handling this well aren't the ones with the biggest QA teams. They're the ones who stopped treating traceability as paperwork and started treating it as data. If your last mock recall took days instead of hours, that's the signal worth acting on.",
+    faqTitle: "Frequently Asked Questions",
+    faq: [
+      {
+        question: "How much does ERP for food manufacturers cost?",
+        answer:
+          "Small producers running one line typically spend $5,000 to $20,000 for implementation, while growing manufacturers land in the $20,000 to $60,000 range and mid market plants sit between $60,000 and $150,000. Licensing usually runs $30 to $45 per user per month on top, and adding a 15 to 20 percent contingency is sensible because food specific configuration such as catch weight and label integration often surfaces mid project.",
+      },
+      {
+        question: "How long does food manufacturing ERP implementation take?",
+        answer:
+          "A single site producer with clean data can be live in 4 to 8 weeks, while most mid sized food manufacturers take 3 to 6 months and multi site operations run 6 to 12 months. The variable is almost never the software. It's how long master data cleanup takes, so starting that work before vendor selection genuinely shortens the timeline.",
+      },
+      {
+        question: "Can ERP replace paper HACCP records?",
+        answer:
+          "Yes, provided the quality module captures critical control point checks against specific batches with timestamps and user identity. Digital records satisfy auditors and are usually preferred, because they're harder to backdate than paper. The catch is that the system has to be configured around your existing HACCP plan rather than a generic template.",
+      },
+      {
+        question: "Do small food manufacturers need ERP?",
+        answer:
+          "If you're managing multiple SKUs, tracking lot numbers and supplying anyone who audits you, then yes. The threshold is lower than most owners assume. Modern food traceability software Australia wide is available on subscription, and small producers often see the fastest gains simply because they have less legacy process to unwind.",
+      },
+      {
+        question: "Can ERP support food export compliance?",
+        answer:
+          "A well configured batch traceability system produces the lot level evidence export authorities and overseas buyers request, including production dates, supplier chains and quality results. Export certificates themselves usually still involve government systems, but the underlying data assembly stops being a manual scramble every shipment.",
+      },
+    ],
+    ctaTitle: "Ready to Improve Food Compliance and Traceability?",
+    ctaDescription:
+      "Get in touch with the Zynex Technologies team to discuss how a food ready ERP can tighten compliance and traceability across your plant at Zynex Technologies.",
+  },
+  "how-to-choose-odoo-consultant-australia": {
+    metaTitle: "How to Choose the Right Odoo Consultant in Australia | Zynex Technologies",
+    metaDescription:
+      "Looking for an Odoo consultant in Australia? Here's how to evaluate experience, industry fit, and support to find the right partner.",
+    title: "How to Choose the Right Odoo Consultant in Australia",
+    description:
+      "Evaluate experience, industry fit, delivery methods, costs and support before choosing an Odoo consultant for your Australian business.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "Odoo Consulting",
+    date: "August 22, 2026",
+    readTime: "12 min read",
+    relatedSlugs: [
+      "best-odoo-development-companies-australia",
+      "odoo-erp-implementation-cost-australia",
+      "odoo-implementation-guide-australia",
+    ],
+    inlineInternalLinks: [
+      { match: "Odoo ERP development", href: "/odoo-erp-development-company-australia" },
+      { match: "Odoo development company in Australia", href: "/blogs/best-odoo-development-companies-australia" },
+      { match: "Odoo ERP implementation cost", href: "/blogs/odoo-erp-implementation-cost-australia" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+    sectionOrder: ["summary", "introduction", "content", "conclusion", "faq", "cta", "relatedLinks"],
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "Choosing the right Odoo consultant in Australia can make or break your ERP implementation. The wrong partner leads to missed deadlines, cost blowouts, and a system that doesn't fit how your business actually works. This post walks through the key criteria to evaluate before signing with any Odoo partner, including what to ask, what to watch out for, and how to find a consultant who understands the Australian business environment.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "Finding a reliable Odoo consultant in Australia isn't as simple as a quick Google search and a phone call. Odoo is a powerful, modular ERP platform, but its flexibility also means the quality of your implementation depends almost entirely on the partner you choose.\n\nGet it right and you end up with a system that saves hours every week and scales with your business. Get it wrong and you're stuck with a half-configured platform, a mounting support bill, and a team that doesn't trust the software.\n\nHere's what to look for.",
+    content: [
+      {
+        heading: "What Does an Odoo Consultant Do?",
+        bodyParagraphs: [
+          "An Odoo consultant in Australia manages the full journey from business analysis through to go-live and beyond. They map your current processes, configure the Odoo modules to match your workflows, migrate your data, train your team, and handle the technical integration with any tools you already use. This is the core of proper Odoo ERP development, not just installing software and hoping it fits.",
+          "The best consultants don't just set up software. They ask the right questions about how your business runs and then design a system that reflects that reality, not a generic template.",
+          "Experience matters here. A consultant who has done five Odoo projects across five different industries is very different from one who has done forty projects in your specific sector. Depth beats breadth when you need someone who understands the nuances of your business model.",
+        ],
+      },
+      {
+        heading: "How to Evaluate an Odoo Consultant's Experience",
+        bodyParagraphs: [
+          "Not all experience is equal. Before shortlisting any partner, work through these steps to assess whether they're actually qualified for your project. Our guide to the best Odoo development company in Australia breaks down additional benchmarks worth checking before you commit.",
+        ],
+        bulletList: [
+          "Check their Odoo partner status. Odoo certifies partners at different levels based on the number of successful implementations and certified developers on their team. A Gold or Silver certified partner has met minimum benchmarks. An uncertified freelancer hasn't.",
+          "Ask for case studies in your industry. A consultant who has implemented Odoo for a wholesale distributor will struggle with a manufacturing business if they've never handled bills of materials or work orders. Ask for two or three examples directly relevant to what you do.",
+          "Request a technical capability rundown. Find out how many certified Odoo developers are on the team. If the answer is one or two, ask what happens when they're sick or move on. Single-developer shops carry real delivery risk.",
+          "Verify their version experience. Odoo releases major updates annually. A consultant still specialising in Odoo 14 or 15 when Odoo 17 is current isn't keeping pace with the platform.",
+          "Ask about custom development. Some projects need custom modules. Find out whether the consultant builds these in-house or outsources to a third party. Outsourced development adds cost, risk, and communication delay.",
+          "Look at their team structure. Good Odoo partners separate the business analyst role from the technical developer role. If one person is doing both, something usually gets less attention than it should.",
+        ],
+      },
+      {
+        heading: "Questions to Ask Before You Sign",
+        bodyParagraphs: [
+          "Before you sign anything, sit down with the shortlisted consultants and ask these directly. How they answer tells you as much as what they answer.",
+        ],
+        bulletList: [
+          "How do you handle scope changes mid-project? Every project evolves. A good consultant has a documented change management process, not just a verbal reassurance that ‘it'll be fine.’",
+          "What does your project methodology look like? Ask for a written overview. Structured consultants use phased approaches with sign-off points. Unstructured ones figure it out as they go.",
+          "Who will be our day-to-day point of contact? Sometimes the senior consultant who sells the project disappears and a junior takes over. Know exactly who you're working with from the start.",
+          "What does your data migration process involve? Poor data migration is one of the most common causes of Odoo go-live failures. A strong consultant will ask detailed questions about your current data quality early in the process.",
+          "How do you handle post-go-live issues? The first few weeks after launch are critical. Find out whether support is included in the project price or billed separately, and what the expected response time is.",
+        ],
+      },
+      {
+        heading: "Red Flags to Watch For",
+        bodyParagraphs: [
+          "Some issues are easy to spot if you know what to look for. Watch for these signals during the evaluation process.",
+        ],
+        bulletList: [
+          "Vague pricing with no fixed scope. If a consultant can't give you a reasonably accurate project estimate after a discovery session, either the scope isn't defined or they're building in padding. Either way, it's a problem.",
+          "Promises of unrealistic timelines. A properly configured Odoo implementation for a mid-sized business takes time. Anyone promising full go-live in four to six weeks without a very small scope is overpromising.",
+          "No discovery phase. A consultant who sends you a proposal after a thirty-minute call hasn't done enough work to understand your business. Discovery should happen before any quote is finalised.",
+          "Limited local presence. Offshore or remote-only consultants can work well, but time zone differences and communication gaps cause real delays. Australian businesses generally benefit from a partner who can meet in person when needed.",
+          "No reference clients. Ask for three references and actually call them. A confident, experienced consultant won't hesitate.",
+        ],
+      },
+      {
+        heading: "Confirm Who Owns Custom Odoo Modules",
+        bodyParagraphs: [
+          "One area where businesses sometimes get caught out is intellectual property. If the consultant is building custom modules for your business, confirm in writing that your company owns the code, not the consultant.",
+          "This is non-negotiable: bespoke Odoo modules should belong to the business that paid for them, not the consultant who wrote the code.",
+        ],
+      },
+      {
+        heading: "What Does an Odoo Consultant Cost in Australia?",
+        bodyParagraphs: [
+          "Odoo projects in Australia vary significantly in cost depending on the scope, modules, level of customisation, and the consultant's rate structure. Here's what typically drives the final number.",
+        ],
+        numberedList: [
+          "The base licence. Odoo Community is free, and Odoo Enterprise is priced per user per month. Most Australian businesses with serious operational needs choose Enterprise for the additional modules and official support.",
+          "Consultant fees. This is where the range opens up. Hourly rates for quality Australian Odoo consultants typically sit between $150 and $300 per hour. Project-based pricing for a mid-sized implementation covering five to eight modules generally ranges from $30,000 to $120,000 depending on complexity.",
+          "Training. Often underpriced in proposals and underestimated by clients. A team that isn't properly trained doesn't use the system properly. Budget for it and hold the consultant accountable for delivering it before go-live.",
+          "Ongoing support contracts. Worth discussing upfront. Monthly retainers give you predictable costs and a dedicated partner for ongoing changes. Ad hoc billing can be cheaper in theory but tends to cost more in practice when issues stack up.",
+        ],
+        closingParagraphs: [
+          "For a full breakdown of what drives the final number on your invoice, see our detailed guide on Odoo ERP implementation cost.",
+        ],
+      },
+      {
+        heading: "Post-Implementation Support Matters",
+        bodyParagraphs: [
+          "Post-implementation support is where the difference between a good Odoo consultant and a great one really shows.",
+          "The first two to four weeks after launch are the most critical period of any ERP project. Staff are adjusting, edge cases appear that weren't caught in testing, and small configuration issues that seemed minor in UAT suddenly matter at production volume.",
+          "A strong consultant builds a hypercare period into every project. This is a defined window, usually two to four weeks, where the team is on standby to resolve issues quickly without additional billing. If a consultant doesn't offer this, ask why.",
+        ],
+        bulletList: [
+          "Tiered support packages. The best consultants offer basic support for minor questions and bug fixes, standard support for ongoing changes and small developments, and premium support for businesses that treat Odoo as a critical operational system.",
+          "Written response times. ‘We're responsive’ is not an SLA. A documented commitment to respond within four hours for critical issues and twenty-four hours for standard requests is.",
+        ],
+        closingParagraphs: [
+          "Get the support model right and Odoo keeps paying off long after the go-live date has passed.",
+        ],
+      },
+    ],
+    conclusionTitle: "Final Thoughts",
+    conclusionDescription:
+      "Choosing the right Odoo consultant in Australia is a decision that affects your business for years. A well-implemented Odoo system reduces operational friction, improves visibility across the business, and grows with you as your needs change.\n\nThe consultants worth working with are the ones who ask more questions than they answer in early conversations. They want to understand your business before they suggest a solution. They have documented processes, real references, and a team that doesn't depend on one person.\n\nTake the time to evaluate properly. Request written proposals. Call references. Ask hard questions about scope management and post-launch support. The effort upfront saves significant cost and frustration down the track.",
+    faqTitle: "Frequently Asked Questions",
+    faq: [
+      {
+        question: "How much does an Odoo consultant cost in Australia?",
+        answer:
+          "Costs vary based on scope and the number of modules involved. Small implementations with three to four modules typically start from $15,000. Mid-sized projects covering operations, accounting, inventory, and CRM generally range from $30,000 to $80,000. Complex implementations with significant customisation can exceed $120,000. Always request a detailed project scope before accepting any quote.",
+      },
+      {
+        question: "How long does an Odoo implementation take?",
+        answer:
+          "A focused implementation covering five to six core modules for a mid-sized business typically takes three to six months from discovery to go-live. Shorter timelines are possible with limited scope and strong data readiness. Larger, more complex projects can take nine to twelve months. Any consultant promising full go-live in under six weeks for a multi-department business deserves careful scrutiny.",
+      },
+      {
+        question: "Do Odoo consultants provide staff training?",
+        answer:
+          "Most do, but the depth varies considerably. Some include a set number of training hours in the project price. Others charge separately for end-user training and admin training. Confirm the training scope in writing before signing. Good training documentation that the team can refer back to after go-live is worth asking for specifically.",
+      },
+      {
+        question: "What is the difference between Odoo Community and Odoo Enterprise?",
+        answer:
+          "Odoo Community is the open-source, free version of the platform. It covers core functionality but lacks several advanced modules and official support from Odoo. Odoo Enterprise is a paid subscription that includes additional modules such as accounting, payroll, sign, and marketing automation, as well as access to official Odoo support and upgrades. Most Australian businesses with more than ten users and complex operations choose Enterprise.",
+      },
+      {
+        question: "Can Odoo integrate with other business software?",
+        answer:
+          "Yes, and this is an important capability to confirm. Most Australian businesses run Odoo alongside other tools such as Xero, Shopify, third-party logistics platforms, or payroll software. A strong consultant will have experience with Odoo's REST API and standard connectors, and should be able to advise on the best integration approach for your current stack.",
+      },
+    ],
+    ctaTitle: "Ready to Choose the Right Odoo Consultant?",
+    ctaDescription:
+      "Get in touch with the Zynex Technologies team to discuss how the right Odoo implementation can streamline your operations and set your business up for long-term growth at Zynex Technologies.",
+  },
   "top-salesforce-implementation-companies-australia": {
     metaTitle: "10 Top Salesforce Implementation Companies in Australia 2026 | Zynex Technologies",
     metaDescription:
