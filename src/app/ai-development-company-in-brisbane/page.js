@@ -1,5 +1,6 @@
 import AiDevelopmentCompanyBrisbane from '@/views/locations/AiDevelopmentCompanyBrisbane';
 import { buildPageMetadata } from '@/lib/seo';
+import ServiceSchema from '@/components/ServiceSchema';
 
 export const metadata = buildPageMetadata({
   title: 'AI Development Company in Brisbane: Custom AI | Zynex Technologies',
@@ -10,5 +11,10 @@ export const metadata = buildPageMetadata({
 });
 
 export default function AiDevelopmentCompanyBrisbanePage() {
-  return <AiDevelopmentCompanyBrisbane />;
+  return (
+    <>
+      <ServiceSchema path="/ai-development-company-in-brisbane" />
+      <AiDevelopmentCompanyBrisbane />
+    </>
+  );
 }

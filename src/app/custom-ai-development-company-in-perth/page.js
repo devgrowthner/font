@@ -1,5 +1,6 @@
 import CustomAIDevelopmentCompanyPerth from '@/views/locations/CustomAIDevelopmentCompanyPerth';
 import { buildPageMetadata } from '@/lib/seo';
+import ServiceSchema from '@/components/ServiceSchema';
 
 export const metadata = buildPageMetadata({
   title: 'Custom AI Development Company in Perth | Zynex Technologies',
@@ -10,6 +11,11 @@ export const metadata = buildPageMetadata({
 });
 
 export default function CustomAIDevelopmentCompanyPerthPage() {
-  return <CustomAIDevelopmentCompanyPerth />;
+  return (
+    <>
+      <ServiceSchema path="/custom-ai-development-company-in-perth" />
+      <CustomAIDevelopmentCompanyPerth />
+    </>
+  );
 }
 

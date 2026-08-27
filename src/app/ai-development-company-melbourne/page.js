@@ -1,5 +1,6 @@
 import AiDevelopmentCompanyMelbourne from '@/views/locations/AiDevelopmentCompanyMelbourne';
 import { buildPageMetadata } from '@/lib/seo';
+import ServiceSchema from '@/components/ServiceSchema';
 
 export const metadata = buildPageMetadata({
   title: 'AI Development Company Melbourne | Zynex Technologies',
@@ -10,5 +11,10 @@ export const metadata = buildPageMetadata({
 });
 
 export default function AiDevelopmentCompanyMelbournePage() {
-  return <AiDevelopmentCompanyMelbourne />;
+  return (
+    <>
+      <ServiceSchema path="/ai-development-company-melbourne" />
+      <AiDevelopmentCompanyMelbourne />
+    </>
+  );
 }

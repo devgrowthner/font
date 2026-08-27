@@ -1,5 +1,6 @@
 import AiDevelopmentCompanyHobart from '@/views/locations/AiDevelopmentCompanyHobart';
 import { buildPageMetadata } from '@/lib/seo';
+import ServiceSchema from '@/components/ServiceSchema';
 
 export const metadata = buildPageMetadata({
   title: 'AI Development Company in Hobart | Zynex Technologies',
@@ -10,5 +11,10 @@ export const metadata = buildPageMetadata({
 });
 
 export default function AiDevelopmentCompanyHobartPage() {
-  return <AiDevelopmentCompanyHobart />;
+  return (
+    <>
+      <ServiceSchema path="/ai-development-company-in-hobart" />
+      <AiDevelopmentCompanyHobart />
+    </>
+  );
 }

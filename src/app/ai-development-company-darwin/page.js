@@ -1,5 +1,6 @@
 import AIDevelopmentCompanyDarwin from '@/views/locations/AIDevelopmentCompanyDarwin';
 import { buildPageMetadata } from '@/lib/seo';
+import ServiceSchema from '@/components/ServiceSchema';
 
 export const metadata = buildPageMetadata({
   title: 'AI Development Company in Darwin | Zynex Technologies',
@@ -10,5 +11,10 @@ export const metadata = buildPageMetadata({
 });
 
 export default function AIDevelopmentCompanyDarwinPage() {
-  return <AIDevelopmentCompanyDarwin />;
+  return (
+    <>
+      <ServiceSchema path="/ai-development-company-darwin" />
+      <AIDevelopmentCompanyDarwin />
+    </>
+  );
 }
