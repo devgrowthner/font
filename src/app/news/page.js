@@ -1,5 +1,8 @@
 import Footer from '@/components/Footer';
 import { buildPageMetadata } from '@/lib/seo';
+import { newsArticles } from '@/constants/newsData';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata = buildPageMetadata({
   title: 'News & Updates | Zynex Technologies | AI & ERP Solutions',
@@ -41,6 +44,28 @@ export default function NewsPage() {
               success stories from our clients, product announcements, and expert perspectives on digital transformation
               trends shaping Australian and global businesses.
             </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {newsArticles.map((article) => (
+              <article key={article.slug} className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                <Link href={`/news/${article.slug}`} className="block">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+                    <Image src={article.image} alt="" fill className="object-cover transition duration-500 hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500">
+                      <span className="font-semibold text-[#719334]">{article.category}</span>
+                      <span aria-hidden="true">•</span>
+                      <time dateTime={article.datePublished}>{article.date}</time>
+                    </div>
+                    <h3 className="mt-3 font-heading text-2xl font-bold leading-snug text-gray-900">{article.title}</h3>
+                    <p className="mt-4 line-clamp-3 leading-7 text-gray-600">{article.excerpt}</p>
+                    <span className="mt-5 inline-flex font-semibold text-[#719334]">Read full story →</span>
+                  </div>
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
