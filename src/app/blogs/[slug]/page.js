@@ -17,6 +17,7 @@ const DETAIL_TEMPLATE_SLUGS = [
   'erpnext-implementation-manufacturing',
   'odoo-implementation-guide-australia',
   'migrate-spreadsheets-to-erp-system',
+  'how-to-migrate-from-spreadsheets-to-zoho-crm',
   'what-does-an-erp-implementation-include',
   'salesforce-implementation-small-business',
   'integrate-erp-crm-software',
