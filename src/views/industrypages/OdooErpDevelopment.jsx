@@ -585,7 +585,7 @@ const OdooErpDevelopment = () => {
         <div className="relative container mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <div className="grid gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
             <div>
-              <span className="inline-flex whitespace-nowrap items-center gap-2.5 rounded-full border border-[#719334]/20 bg-[#eef4e3] px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#5a7529] backdrop-blur-sm sm:px-4 sm:text-[11px]">
+              <span className="inline-flex max-w-full flex-wrap items-center gap-x-2.5 gap-y-1 rounded-full border border-[#719334]/20 bg-[#eef4e3] px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-[#5a7529] backdrop-blur-sm sm:px-4 sm:text-[11px]">
                 <span className="relative flex h-1.5 w-1.5 shrink-0">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#719334]/70" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#719334]" />
@@ -595,7 +595,7 @@ const OdooErpDevelopment = () => {
                 </span>
               </span>
 
-              <h1 className="mt-8 max-w-4xl text-4xl font-heading font-bold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.35rem]">
+              <h1 className="mt-6 max-w-4xl text-3xl font-heading font-bold leading-[1.12] tracking-tight text-slate-900 sm:mt-8 sm:text-5xl sm:leading-[1.08] lg:text-[3.35rem]">
                 Odoo ERP Development and Implementation Company in Australia
               </h1>
 
@@ -638,7 +638,7 @@ const OdooErpDevelopment = () => {
           </div>
 
           <div className="mt-16 w-full border-t border-slate-200 pt-10 sm:mt-20">
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:gap-8">
+            <div className="grid grid-cols-2 gap-x-3 gap-y-6 sm:grid-cols-4 sm:gap-6 lg:gap-8">
               {heroStats.map((stat) => (
                 <div
                   key={stat.label}
@@ -766,7 +766,7 @@ const OdooErpDevelopment = () => {
                 .map(({ title, description, Icon, Art }) => (
                   <div
                     key={title}
-                    className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#719334]/25 hover:shadow-[0_18px_44px_rgba(113,147,52,0.16)] sm:p-6"
+                    className="group relative flex flex-col items-start gap-4 overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#719334]/25 hover:shadow-[0_18px_44px_rgba(113,147,52,0.16)] sm:flex-row sm:items-center sm:p-6"
                   >
                     <span
                       aria-hidden="true"
@@ -835,7 +835,7 @@ const OdooErpDevelopment = () => {
                 .map(({ title, description, Icon, Art }) => (
                   <div
                     key={title}
-                    className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#719334]/25 hover:shadow-[0_18px_44px_rgba(113,147,52,0.16)] sm:p-6"
+                    className="group relative flex flex-col items-start gap-4 overflow-hidden rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#719334]/25 hover:shadow-[0_18px_44px_rgba(113,147,52,0.16)] sm:flex-row sm:items-center sm:p-6"
                   >
                     <span
                       aria-hidden="true"
@@ -1074,7 +1074,7 @@ const OdooErpDevelopment = () => {
               return (
                 <div
                   key={title}
-                  className={`group relative bg-white rounded-[24px] p-6 shadow-[0_2px_12px_rgba(15,23,42,0.04)] border border-slate-100 flex items-stretch hover:shadow-[0_16px_40px_rgba(113,147,52,0.12)] transition-shadow duration-300 ${colSpanClass}`}
+                  className={`group relative flex flex-col items-stretch rounded-[24px] border border-slate-100 bg-white p-5 shadow-[0_2px_12px_rgba(15,23,42,0.04)] transition-shadow duration-300 hover:shadow-[0_16px_40px_rgba(113,147,52,0.12)] sm:flex-row sm:p-6 ${colSpanClass}`}
                 >
                   {/* Left Content block */}
                   <div className="flex-1 flex flex-col items-start pr-3 relative z-10">
@@ -1089,8 +1089,8 @@ const OdooErpDevelopment = () => {
                   
                   {/* Right Image element dynamically scaling to text height */}
                   {img && (
-                    <div className="w-[45%] flex-shrink-0 relative z-0">
-                      <img src={img} alt={title} className="absolute inset-0 w-full h-full object-contain object-right drop-shadow-[0_8px_16px_rgba(0,0,0,0.08)] opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-300" />
+                    <div className="relative z-0 mt-4 h-36 w-full flex-shrink-0 sm:mt-0 sm:h-auto sm:w-[45%]">
+                      <img src={img} alt={title} className="absolute inset-0 h-full w-full object-contain object-center opacity-95 drop-shadow-[0_8px_16px_rgba(0,0,0,0.08)] transition-transform duration-300 group-hover:scale-105 group-hover:opacity-100 sm:object-right" />
                     </div>
                   )}
                 </div>

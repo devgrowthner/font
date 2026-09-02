@@ -58,7 +58,7 @@ export default async function NewsArticlePage({ params }) {
   return (
     <main className="min-h-screen bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
-      <header className="bg-gradient-to-br from-[#123d5a] via-[#245d8b] to-[#4f82b8] px-4 pb-16 pt-32 text-white sm:px-6 sm:pb-20 sm:pt-36 lg:px-8">
+      <header className="bg-gradient-to-br from-[#709034] via-[#709034] to-[#709034] px-4 pb-16 pt-32 text-white sm:px-6 sm:pb-20 sm:pt-36 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <Link href="/news" className="text-sm font-semibold text-white/80 hover:text-white">← Back to news</Link>
           <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-white/75">{article.category}</p>
