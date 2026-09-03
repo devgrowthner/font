@@ -14,7 +14,7 @@ export const metadata = buildPageMetadata({
 export default function NewsPage() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="relative flex min-h-[430px] items-center overflow-hidden bg-gradient-to-br from-[#123d5a] via-[#245d8b] to-[#4f82b8] px-4 pb-20 pt-32 sm:min-h-[500px] sm:px-6 sm:pb-24 sm:pt-36 lg:px-8">
+      <section className="relative flex min-h-[430px] items-center overflow-hidden bg-gradient-to-br from-[#709034] via-[#709034] to-[#709034] px-4 pb-20 pt-32 sm:min-h-[500px] sm:px-6 sm:pb-24 sm:pt-36 lg:px-8">
         <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_75%_25%,rgba(255,255,255,0.35),transparent_32%),linear-gradient(120deg,transparent_25%,rgba(255,255,255,0.08)_50%,transparent_75%)]" />
         <div className="relative mx-auto w-full max-w-5xl text-center text-white">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-white/75">
