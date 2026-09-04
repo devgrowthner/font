@@ -1703,12 +1703,21 @@ const CTASection = ({ blogData, onContactClick }) => (
                 'Get expert guidance on choosing the right AI use case for your business. Our team will help you identify opportunities and implement solutions that drive real results.'}
           </p>
 
-          <button
-            onClick={onContactClick}
-            className="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#719334] rounded-lg font-heading font-bold hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            {blogData.ctaButtonText || 'Get Started Today'}
-          </button>
+          {blogData.ctaButtonHref ? (
+            <Link
+              href={blogData.ctaButtonHref}
+              className="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#719334] rounded-lg font-heading font-bold hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              {blogData.ctaButtonText || 'Get Started Today'}
+            </Link>
+          ) : (
+            <button
+              onClick={onContactClick}
+              className="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#719334] rounded-lg font-heading font-bold hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              {blogData.ctaButtonText || 'Get Started Today'}
+            </button>
+          )}
 
           {/* ctaBadge1 / ctaBadge2 */}
           {(blogData.ctaBadge1 || blogData.ctaBadge2) && (

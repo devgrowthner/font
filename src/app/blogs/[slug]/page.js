@@ -5,6 +5,8 @@ import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'top-ai-automation-agencies-australia',
+  'erp-migration-australia-guide',
   'erp-benefits-medical-clinics-healthcare',
   'choose-odoo-implementation-partner-australia',
   'erp-food-manufacturing-compliance-traceability',
