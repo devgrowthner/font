@@ -34,7 +34,7 @@ const industryPages = [
     title: 'AI Development for Legal Firms',
     description: 'AI for document review, client intake, matter workflows, compliance, and firm reporting.',
     href: '/ai-development-company-legal-firms-australia',
-    image: '/zynex1.webp',
+    image: '/zynex1.png',
   },
   {
     slug: 'real-estate',

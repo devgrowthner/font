@@ -20,7 +20,7 @@ import Schema from '../../components/Schema';
 import RelatedIndustryPages from '../../components/RelatedIndustryPages';
 import { useSeo } from '../../hooks/useSeo';
 
-const heroImage = 'zynex1.webp';
+const heroImage = 'zynex1.png';
 const brandGreen = '#719334';
 
 const fadeInUp = {

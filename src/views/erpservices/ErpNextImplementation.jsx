@@ -595,7 +595,7 @@ const ErpNextImplementation = () => {
                 <div aria-hidden="true" className="absolute -inset-3 rounded-[1.75rem] bg-[#719334]/5 blur-lg" />
                 <div aria-hidden="true" className="absolute -bottom-4 -right-4 hidden h-full w-full rounded-2xl border-2 border-slate-200 sm:block" />
                 <img
-                  src="/zynex1.webp"
+                  src="/zynex1.png"
                   alt="ERPNext Implementation"
                   className="relative h-auto w-full rounded-2xl object-contain shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-200"
                 />
@@ -709,7 +709,11 @@ const ErpNextImplementation = () => {
             </h2>
             {/* brand lockup (matches reference image) */}
             <div className="hidden items-center gap-4 lg:flex" aria-hidden="true">
-              <span className="font-heading text-3xl font-bold tracking-tight text-[#8f9bb3]">ERPNext</span>
+              <img
+                src="/erpnextlog.png"
+                alt="ERPNext"
+                className="h-18 w-50 object-contain"
+              />
               <span className="h-9 w-px bg-slate-300" />
               <span className="rounded-lg bg-gradient-to-br from-[#719334] to-[#5a7529] px-4 py-2 font-heading text-xl font-bold tracking-wide text-white shadow-md">
                 ZYNEX
@@ -1131,7 +1135,7 @@ const ErpNextImplementation = () => {
             <div className="lg:sticky lg:top-24">
               <div className="rounded-2xl bg-white p-5 shadow-[0_8px_40px_rgba(113,147,52,0.12)] ring-1 ring-slate-200 transition-transform duration-500 hover:scale-[1.01]">
                 <img
-                  src="/computer.webp"
+                  src="/computer.png"
                   alt="ERPNext ROI and performance graph"
                   className="w-full h-auto"
                 />

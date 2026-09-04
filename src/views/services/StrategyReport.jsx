@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-const bg3 = "/computer.webp";
+const bg3 = "/computer.png";
 import ContactModal from "../../components/ContactModal";
 import SampleReportModal from "../../components/SampleReportModal";
 import RequestReportModal from "../../components/RequestReportModal";

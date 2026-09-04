@@ -42,9 +42,6 @@ import javascriptImg from '../assets/Machine/JavaScript-logo.png';
 import qwebImg from '../assets/Machine/Qweb.png';
 import html5Img from '../assets/Machine/HTML5 Logo.svg';
 import odooImg from '../assets/Machine/oddo.png';
-import erp from '../assets/Machine/erp.jpeg';
-import salesforce from '../assets/Machine/salesforce.png';
-import zoho from '../assets/Machine/zoho.jpeg';
 import erpnext from '../assets/Machine/erpnext.png';
 
 
@@ -88,13 +85,12 @@ const Partners = () => {
   // Odoo ERP core tech stack — static display, no scrolling
   const erpStack = [
     // { name: "Python", logo: pythonImg },
-    // { name: "ERP", logo: erp },
-    { name: "Sales Force", logo: salesforce },
+    { name: "Salesforce", logo: "/salesforce-logo.png" },
     // { name: "QWeb", logo: qwebImg },
     // { name: "HTML5 & CSS/SCSS", logo: html5Img },
     { name: "ODOO", logo: odooImg },
     { name: "ERPNext", logo: erpnext },
-    { name: "Zoho", logo: zoho },
+    { name: "Zoho ERP", logo: "/zoho-erp.png" },
 
   ];
 

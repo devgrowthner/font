@@ -29,7 +29,6 @@ import ContactModal from '../../components/ContactModal';
 import Footer from '../../components/Footer';
 import Schema from '../../components/Schema';
 import { useSeo } from '../../hooks/useSeo';
-import zohoLogo from '../../assets/Machine/zoho.jpeg';
 
 const brandGreen = '#719334';
 const brandGreenDark = '#5a7529';
@@ -611,7 +610,11 @@ const ZohoErpDevelopment = () => {
             </h2>
             {/* brand lockup (matches reference image) */}
             <div className="hidden items-center gap-4 lg:flex" aria-hidden="true">
-              <span className="font-heading text-3xl font-bold tracking-tight text-[#8f9bb3]">Zoho ERP</span>
+              <img
+                src="/zoho-erp.png"
+                alt="Zoho ERP"
+                className="h-18 w-50 object-contain"
+              />
               <span className="h-9 w-px bg-slate-300" />
               <span className="rounded-lg bg-gradient-to-br from-[#719334] to-[#5a7529] px-4 py-2 font-heading text-xl font-bold tracking-wide text-white shadow-md">
                 ZYNEX
@@ -673,7 +676,7 @@ const ZohoErpDevelopment = () => {
               {/* inner circle */}
               <div className="relative z-10 flex h-52 w-52 flex-col items-center justify-center rounded-full border border-slate-200 bg-white text-center shadow-[0_18px_44px_rgba(15,23,42,0.10)]">
                 <img
-                  src={zohoLogo.src}
+                  src="/zoho-erp.png"
                   alt="Zoho ERP"
                   className="h-auto w-[142px] object-contain"
                 />

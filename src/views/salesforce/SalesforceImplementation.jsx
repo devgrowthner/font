@@ -610,7 +610,7 @@ const SalesforceImplementation = () => {
                 <div aria-hidden="true" className="absolute -inset-3 rounded-[1.75rem] bg-[#719334]/5 blur-lg" />
                 <div aria-hidden="true" className="absolute -bottom-4 -right-4 hidden h-full w-full rounded-2xl border-2 border-slate-200 sm:block" />
                 <img
-                  src="/salesforce/salesforce-crm-hero.png"
+                  src="/salesforce-crm-hero.png"
                   alt="Salesforce implementation dashboard for Australian businesses"
                   className="relative h-auto w-full rounded-2xl object-contain shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-200"
                 />
@@ -720,7 +720,11 @@ const SalesforceImplementation = () => {
             </h2>
             {/* brand lockup (matches reference image) */}
             <div className="hidden items-center gap-4 lg:flex" aria-hidden="true">
-              <span className="font-heading text-3xl font-bold tracking-tight text-[#8f9bb3]">Salesforce</span>
+              <img
+                src="/salesforce-logo.png"
+                alt="Salesforce"
+                className="h-18 w-50 object-contain"
+              />
               <span className="h-9 w-px bg-slate-300" />
               <span className="rounded-lg bg-gradient-to-br from-[#719334] to-[#5a7529] px-4 py-2 font-heading text-xl font-bold tracking-wide text-white shadow-md">
                 ZYNEX
@@ -979,7 +983,7 @@ const SalesforceImplementation = () => {
             
             <div className="hidden lg:flex w-full h-[380px] justify-center items-center relative z-10 mt-6 lg:mt-0">
                {/* Center Laptop Composite Image (contains all the badges) */}
-               <img src="/salesforce/salesforce-field-service.png" alt="Connected Salesforce field service, work order and customer account dashboard" className="absolute h-full w-full rounded-2xl object-cover object-center drop-shadow-[0_12px_24px_rgba(0,0,0,0.08)]" />
+               <img src="/salesforce-field-service.png" alt="Connected Salesforce field service, work order and customer account dashboard" className="absolute h-full w-full rounded-2xl object-cover object-center drop-shadow-[0_12px_24px_rgba(0,0,0,0.08)]" />
             </div>
           </div>
 

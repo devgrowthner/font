@@ -246,7 +246,7 @@ const LearnMore = () => {
               className="relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.12)] order-first lg:order-last"
             >
               <motion.img
-                src="/zynex1.webp"
+                src="/zynex1.png"
                 alt="About Zynex Technologies"
                 className="w-full h-full object-cover"
                 initial={{ scale: 1.2 }}
