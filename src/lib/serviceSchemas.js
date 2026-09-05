@@ -643,7 +643,7 @@ export const serviceSchemas = {
     "name": "Custom AI Development Services",
     "alternateName": "Custom AI Development Company in Perth",
     "serviceType": "Custom AI Development",
-    "description": "Zynex Technologies is a custom AI development company in Perth building AI automation, machine learning models, chatbots, computer vision and agentic AI systems, with feasibility validated before build and an average deployment time of 3 to 6 weeks.",
+    "description": "Zynex Technologies is a custom AI development company in Perth building AI automation, machine learning models, chatbots, computer vision and agentic AI systems, with feasibility validated before build and deployment in 6 to 12 weeks.",
     "url": "https://zynextechnologies.com.au/custom-ai-development-company-in-perth",
     "category": "Artificial Intelligence Development",
     "provider": {

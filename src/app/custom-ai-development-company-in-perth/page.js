@@ -5,7 +5,7 @@ import ServiceSchema from '@/components/ServiceSchema';
 export const metadata = buildPageMetadata({
   title: 'Custom AI Development Company in Perth | Zynex Technologies',
   description:
-    'Custom AI development company in Perth with proven 3x ROI. Chatbots, computer vision, agentic AI feasibility validated before build. Book a free session.',
+    "Zynex Technologies is Perth's leading custom AI development company. Chatbot, computer vision, agentic AI and more. Deploy in 6-12 weeks. Get a free strategy session.",
   path: '/custom-ai-development-company-in-perth',
   canonicalPath: '/custom-ai-development-company-in-perth',
 });
