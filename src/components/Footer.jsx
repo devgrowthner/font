@@ -1,20 +1,19 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import ContactModal from './ContactModal';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const footerLinks = {
     solutions: [
       { name: 'Custom AI Development', href: '/custom-ai', isRoute: true },
       { name: 'ERP Development (Odoo)', href: '/odoo-erp-development-company-australia', isRoute: true },
-      { name: 'AI Strategy Report', href: 'https://competitorinsights.com.au/' },
-      { name: 'CareCob Platform', href: 'https://www.carecob.com.au/' }
+      { name: 'AI Strategy Report', href: '/strategy-report', isRoute: true },
+      { name: 'CareCob Platform', href: '/solutions', isRoute: true }
     ],
     locations: [
       { name: 'Sydney', href: '/ai-development-company-sydney', isRoute: true },
@@ -31,7 +30,7 @@ const Footer = () => {
       { name: 'About Us', href: '/about-us', isRoute: true },
       { name: 'Learn More', href: '/what-is-zynex', isRoute: true },
       { name: 'White Label Partner', href: '/white-label-software-development-partner', isRoute: true },
-      { name: 'Contact', href: '#contact' },
+      { name: 'Contact', href: '/#contact' },
       { name: 'Blogs', href: '/blogs', isRoute: true }
     ]
   };
@@ -119,26 +118,12 @@ const Footer = () => {
               <ul className="space-y-2.5">
                 {footerLinks.solutions.map((link, index) => (
                   <li key={index}>
-                    {link.isRoute ? (
-                      <button
-                        onClick={() => {
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
-                          router.push(link.href);
-                        }}
-                        className="text-muted-foreground transition-colors font-body text-sm text-left hover:text-brand-green block"
-                      >
-                        {link.name}
-                      </button>
-                    ) : (
-                      <a 
-                        href={link.href} 
-                        className="text-muted-foreground transition-colors font-body text-sm hover:text-brand-green block"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {link.name}
-                      </a>
-                    )}
+                    <Link
+                      href={link.href}
+                      className="text-muted-foreground transition-colors font-body text-sm hover:text-brand-green block"
+                    >
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -150,15 +135,12 @@ const Footer = () => {
               <ul className="space-y-2.5">
                 {footerLinks.locations.map((link, index) => (
                   <li key={index}>
-                    <button
-                      onClick={() => {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                        router.push(link.href);
-                      }}
-                      className="text-muted-foreground transition-colors font-body text-sm text-left hover:text-brand-green block"
+                    <Link
+                      href={link.href}
+                      className="text-muted-foreground transition-colors font-body text-sm hover:text-brand-green block"
                     >
                       {link.name}
-                    </button>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -171,22 +153,23 @@ const Footer = () => {
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
                     {link.name === 'Contact' ? (
-                      <button
-                        onClick={() => setIsModalOpen(true)}
-                        className="text-muted-foreground transition-colors font-body text-sm text-left hover:text-brand-green block"
-                      >
-                        {link.name}
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => {
-                          window.scrollTo({ top: 0, behavior: 'smooth' });
-                          router.push(link.href);
+                      <Link
+                        href={link.href}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          setIsModalOpen(true);
                         }}
-                        className="text-muted-foreground transition-colors font-body text-sm text-left hover:text-brand-green block"
+                        className="text-muted-foreground transition-colors font-body text-sm hover:text-brand-green block"
                       >
                         {link.name}
-                      </button>
+                      </Link>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-muted-foreground transition-colors font-body text-sm hover:text-brand-green block"
+                      >
+                        {link.name}
+                      </Link>
                     )}
                   </li>
                 ))}

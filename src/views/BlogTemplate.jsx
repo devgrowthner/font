@@ -457,6 +457,44 @@ const CtaSection = ({ blogData, onOpenModal }) => (
   </section>
 );
 
+const AuthorSection = () => (
+  <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto max-w-4xl border-t border-gray-200 pt-8">
+      <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+        <div className="overflow-hidden rounded-2xl border border-[#719334]/20 bg-gradient-to-br from-[#f7fbf1] via-white to-[#f8fafc] shadow-sm">
+          <div className="h-1.5 bg-[#719334]" />
+          <div className="p-6 sm:p-8">
+            <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#719334]">About the Author</p>
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+              <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#719334] text-2xl font-heading font-bold text-white shadow-md">
+                HK
+              </div>
+              <div className="min-w-0 flex-1">
+                <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground">Harsh Kakkar</h2>
+                <p className="mt-1 text-sm sm:text-base font-semibold text-[#5a7529]">
+                  Technology &amp; Business Writer at Zynex Technologies
+                </p>
+                <p className="mt-5 text-base leading-relaxed text-gray-700">
+                  Harsh Kakkar writes about ERP systems, AI automation, CRM, business process automation, and emerging technologies for Zynex Technologies. His content focuses on helping Australian businesses understand how technologies such as Odoo, ERPNext, Zoho, Salesforce, and AI can be applied to improve day-to-day operations and support business growth.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/harsh-kakkar-aa82a0206/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#719334] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#5a7529]"
+                >
+                  Connect with Harsh on LinkedIn
+                  <span aria-hidden="true">-&gt;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  </section>
+);
+
 const FaqSection = ({ blogData, openFaqIndex, setOpenFaqIndex }) => (
   <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#f0fdf4]">
     <div className="container mx-auto max-w-4xl">
@@ -601,12 +639,19 @@ const BlogTemplate = () => {
         bgClass="bg-gradient-to-br from-[#f0fdf4] via-[#fefdfb] to-[#ecfdf5]"
       />
     ) : null,
+    author: <AuthorSection />,
     cta: <CtaSection blogData={blogData} onOpenModal={() => setIsModalOpen(true)} />,
     faq: blogData.faqs ? <FaqSection blogData={blogData} openFaqIndex={openFaqIndex} setOpenFaqIndex={setOpenFaqIndex} /> : null,
   };
 
   // Render sections in the order defined per blog in blogData.sectionOrder
-  const sectionOrder = blogData.sectionOrder || ['services', 'process', 'industries', 'benefits', 'whyChooseUs', 'cta', 'faq'];
+  const configuredSectionOrder = blogData.sectionOrder || ['services', 'process', 'industries', 'benefits', 'whyChooseUs', 'cta', 'faq'];
+  const ctaIndex = configuredSectionOrder.indexOf('cta');
+  const sectionOrder = configuredSectionOrder.includes('author')
+    ? configuredSectionOrder
+    : ctaIndex >= 0
+      ? [...configuredSectionOrder.slice(0, ctaIndex), 'author', ...configuredSectionOrder.slice(ctaIndex)]
+      : [...configuredSectionOrder, 'author'];
 
   return (
     <div className="min-h-screen bg-[#fefdfb]">

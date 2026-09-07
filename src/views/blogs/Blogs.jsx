@@ -1,31 +1,10 @@
-'use client';
-
-import React, { useMemo, useEffect, Suspense } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useSearchParams } from 'next/navigation';
-import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, User, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import Footer from '../../components/Footer';
-import { useSeo } from '../../hooks/useSeo';
 import { blogList } from '../../constants/blogData';
 
 const PAGE_SIZE = 9;
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 60 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: 'easeOut' },
-};
-
-const staggerContainer = {
-  initial: {},
-  animate: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
 
 const paginationBtnClass =
   'inline-flex items-center justify-center gap-1.5 min-h-11 px-4 rounded-lg text-sm font-semibold transition-colors border';
@@ -36,34 +15,15 @@ const paginationInactiveClass =
 const paginationDisabledClass =
   ' border-gray-100 bg-gray-50 text-gray-400 cursor-not-allowed pointer-events-none';
 
-function BlogsContent() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-
-  const rawPage = searchParams.get('page');
+function BlogsContent({ page }) {
+  const rawPage = Array.isArray(page) ? page[0] : page;
   const parsedPage = parseInt(rawPage || '1', 10);
   const pageFromUrl = Number.isFinite(parsedPage) && parsedPage >= 1 ? parsedPage : 1;
 
   const totalPages = Math.max(1, Math.ceil((blogList?.length || 0) / PAGE_SIZE));
   const currentPage = Math.min(pageFromUrl, totalPages);
-
-  const paginatedPosts = useMemo(() => {
-    if (!blogList?.length) return [];
-    const start = (currentPage - 1) * PAGE_SIZE;
-    return blogList.slice(start, start + PAGE_SIZE);
-  }, [currentPage]);
-
-  useEffect(() => {
-    if (pageFromUrl > totalPages && totalPages >= 1) {
-      router.replace(totalPages === 1 ? '/blogs' : `/blogs?page=${totalPages}`);
-    }
-  }, [pageFromUrl, totalPages, router]);
-
-  useSeo({
-    title: 'AI Insights & Solutions | Zynex Technologies Blog',
-    description:
-      'Discover how AI can transform your business with expert analysis, automation strategies, and proven implementation approaches.',
-  });
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const paginatedPosts = blogList?.slice(start, start + PAGE_SIZE) || [];
 
   return (
     <div className="min-h-screen bg-[#fefdfb]">
@@ -91,20 +51,16 @@ function BlogsContent() {
 
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="mb-8 sm:mb-12">
-            <button
-              type="button"
-              onClick={() => router.push('/')}
+            <Link
+              href="/"
               className="inline-flex items-center gap-2 text-muted-foreground transition-colors duration-300 font-medium text-sm text-white sm:text-base group hover:text-brand-green"
             >
               <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:-translate-x-1" />
               Back
-            </button>
+            </Link>
           </div>
 
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={fadeInUp}
+          <div
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-foreground mb-6 leading-tight">
@@ -125,7 +81,7 @@ function BlogsContent() {
               Discover how AI can transform your business with expert analysis, automation strategies, and proven
               implementation approaches
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -139,26 +95,20 @@ function BlogsContent() {
             </div>
           ) : (
             <>
-              <motion.div
-                key={currentPage}
-                initial="initial"
-                animate="animate"
-                variants={staggerContainer}
+              <div
                 className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {paginatedPosts.map((post) => (
-                  <motion.article
+                  <Link
                     key={`${currentPage}-${post.id}`}
-                    variants={fadeInUp}
-                    className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100"
-                    onClick={() => router.push(`/blogs/${post.slug}`)}
+                    href={`/blogs/${post.slug}`}
+                    className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100"
                   >
                     <div className="relative h-64 overflow-hidden">
                       <img
                         src={post.image}
                         alt={post.title}
                         className="w-full h-full object-cover transition-transform duration-500"
-                        onError={(e) => { e.target.src = '/zynex_banner_natural_logo_4K.png'; }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent"></div>
                       <div className="absolute top-4 left-4">
@@ -197,9 +147,9 @@ function BlogsContent() {
                         <ArrowRight className="w-4 h-4" />
                       </div>
                     </div>
-                  </motion.article>
+                  </Link>
                 ))}
-              </motion.div>
+              </div>
 
               {totalPages > 1 ? (
                 <nav
@@ -268,21 +218,6 @@ function BlogsContent() {
   );
 }
 
-function BlogsFallback() {
-  return (
-    <div className="min-h-screen bg-[#fefdfb] flex items-center justify-center px-4">
-      <div className="text-center">
-        <div className="inline-block h-10 w-10 animate-spin rounded-full border-2 border-[#719334] border-t-transparent" />
-        <p className="mt-4 text-sm text-muted-foreground">Loading blog…</p>
-      </div>
-    </div>
-  );
-}
-
-export default function Blogs() {
-  return (
-    <Suspense fallback={<BlogsFallback />}>
-      <BlogsContent />
-    </Suspense>
-  );
+export default function Blogs({ page }) {
+  return <BlogsContent page={page} />;
 }

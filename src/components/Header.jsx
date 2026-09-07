@@ -146,7 +146,7 @@ const Header = () => {
 
     { name: 'Custom AI Development', link: '/custom-ai', tag: 'Custom AI Development', isExternal: false },
 
-    { name: 'AI Competitive Strategy Report', link: 'https://competitorinsights.com.au/', tag: 'Strategic Intelligence', isExternal: true },
+    { name: 'AI Competitive Strategy Report', link: '/strategy-report', tag: 'Strategic Intelligence', isExternal: false },
 
     { name: 'CareCob: AI Companion', link: '/solutions', tag: 'Healthcare AI', isExternal: false },
 
@@ -384,9 +384,13 @@ const Header = () => {
 
                 <div className="relative" ref={servicesRef}>
 
-                  <button
+                  <a
 
-                    onClick={() => {
+                    href="/custom-ai"
+
+                    onClick={(event) => {
+
+                      event.preventDefault();
 
                       setIsServicesOpen(!isServicesOpen);
 
@@ -406,7 +410,7 @@ const Header = () => {
 
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}></span>
 
-                  </button>
+                  </a>
 
 
 
@@ -466,9 +470,13 @@ const Header = () => {
 
                 <div className="relative" ref={industryRef}>
 
-                  <button
+                  <a
 
-                    onClick={() => {
+                    href="/solutions"
+
+                    onClick={(event) => {
+
+                      event.preventDefault();
 
                       setIsIndustryOpen(!isIndustryOpen);
 
@@ -490,7 +498,7 @@ const Header = () => {
 
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}></span>
 
-                  </button>
+                  </a>
 
 
 
@@ -550,9 +558,13 @@ const Header = () => {
 
                 <div className="relative" ref={erpRef}>
 
-                  <button
+                  <a
 
-                    onClick={() => {
+                    href="/odoo-erp-development-company-australia"
+
+                    onClick={(event) => {
+
+                      event.preventDefault();
 
                       setIsErpOpen(!isErpOpen);
 
@@ -576,7 +588,7 @@ const Header = () => {
 
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}></span>
 
-                  </button>
+                  </a>
 
 
 
@@ -778,7 +790,7 @@ const Header = () => {
 
                 <div ref={mobileServicesRef}>
 
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setIsServicesOpen(!isServicesOpen); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
+                  <a href="/custom-ai" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsServicesOpen(!isServicesOpen); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
 
                     <span>AI Services</span>
 
@@ -788,7 +800,7 @@ const Header = () => {
 
                     </svg>
 
-                  </button>
+                  </a>
 
 
 
@@ -830,7 +842,7 @@ const Header = () => {
 
                 <div ref={mobileIndustryRef}>
 
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setIsIndustryOpen(!isIndustryOpen); setIsServicesOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
+                  <a href="/solutions" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsIndustryOpen(!isIndustryOpen); setIsServicesOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
 
                     <span>Industry</span>
 
@@ -840,7 +852,7 @@ const Header = () => {
 
                     </svg>
 
-                  </button>
+                  </a>
 
 
 
@@ -882,7 +894,7 @@ const Header = () => {
 
                 <div ref={mobileErpRef}>
 
-                  <button type="button" onClick={(e) => { e.stopPropagation(); setIsErpOpen(!isErpOpen); setIsServicesOpen(false); setIsIndustryOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
+                  <a href="/odoo-erp-development-company-australia" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsErpOpen(!isErpOpen); setIsServicesOpen(false); setIsIndustryOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
 
                     <span>ERP services</span>
 
@@ -892,7 +904,7 @@ const Header = () => {
 
                     </svg>
 
-                  </button>
+                  </a>
 
 
 

@@ -8,6 +8,8 @@ export const metadata = buildPageMetadata({
   path: '/blogs',
 });
 
-export default function BlogsPage() {
-  return <Blogs />;
+export default async function BlogsPage({ searchParams }) {
+  const { page } = await searchParams;
+
+  return <Blogs page={page} />;
 }

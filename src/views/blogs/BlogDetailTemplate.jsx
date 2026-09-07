@@ -33,6 +33,15 @@ function insertRelatedLinksOrder(order) {
   return [...order, 'relatedLinks'];
 }
 
+function insertAuthorBeforeCta(order) {
+  if (!order?.length || order.includes('author')) return order;
+  const ctaIdx = order.indexOf('cta');
+  if (ctaIdx >= 0) {
+    return [...order.slice(0, ctaIdx), 'author', ...order.slice(ctaIdx)];
+  }
+  return [...order, 'author'];
+}
+
 /** Resolve related list cards: per-page `relatedSlugs` in blogData, else first 3 other posts */
 function resolveRelatedPosts(currentSlug, blogData) {
   const bySlug = Object.fromEntries(blogList.map((p) => [p.slug, p]));
@@ -1597,6 +1606,42 @@ const RelatedLinksSection = ({ currentSlug, blogData }) => {
   );
 };
 
+const AuthorSection = () => (
+  <section id="author" className="py-10 sm:py-14 px-4 sm:px-6 max-w-4xl">
+    <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
+      <div className="overflow-hidden rounded-2xl border border-[#719334]/20 bg-gradient-to-br from-[#f7fbf1] via-white to-[#f8fafc] shadow-sm">
+        <div className="h-1.5 bg-[#719334]" />
+        <div className="p-6 sm:p-8">
+          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#719334]">About the Author</p>
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#719334] text-2xl font-heading font-bold text-white shadow-md">
+              HK
+            </div>
+            <div className="min-w-0 flex-1">
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold text-foreground">Harsh Kakkar</h2>
+              <p className="mt-1 text-sm sm:text-base font-semibold text-[#5a7529]">
+                Technology &amp; Business Writer at Zynex Technologies
+              </p>
+              <p className="mt-5 text-base leading-relaxed text-gray-700">
+                Harsh Kakkar writes about ERP systems, AI automation, CRM, business process automation, and emerging technologies for Zynex Technologies. His content focuses on helping Australian businesses understand how technologies such as Odoo, ERPNext, Zoho, Salesforce, and AI can be applied to improve day-to-day operations and support business growth.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/harsh-kakkar-aa82a0206/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#719334] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#5a7529]"
+              >
+                Connect with Harsh on LinkedIn
+                <span aria-hidden="true">-&gt;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  </section>
+);
+
 const FAQSection = ({ blogData }) => (
   <section id="faq" className="py-12 sm:py-16 px-0 sm:px-0 max-w-4xl">
     {blogData.beforeFaqNote && (
@@ -1790,7 +1835,7 @@ const BlogDetailTemplate = () => {
     'summary', 'introduction', 'services', 'process',
     'benefits', 'industries', 'whyChooseUs', 'future', 'conclusion', 'faq', 'cta',
   ];
-  const sectionOrder = insertRelatedLinksOrder(blogData.sectionOrder || defaultSectionOrder);
+  const sectionOrder = insertAuthorBeforeCta(insertRelatedLinksOrder(blogData.sectionOrder || defaultSectionOrder));
 
   // ─── Section map — keyed by sectionOrder ids ───────────────────────────
   const sectionMap = {
@@ -1873,6 +1918,8 @@ const BlogDetailTemplate = () => {
       : null,
 
     relatedLinks: <RelatedLinksSection currentSlug={slug} blogData={blogData} />,
+
+    author: <AuthorSection />,
 
     // handle both `faq` (blog 3) and `faqs` (blogs 1 & 2)
     faq: (blogData.faq && Array.isArray(blogData.faq) && blogData.faq.length > 0) || (blogData.faqs && Array.isArray(blogData.faqs) && blogData.faqs.length > 0)
