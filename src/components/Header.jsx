@@ -465,7 +465,6 @@ const Header = () => {
                 </div>
 
 
-
                  {/* Industry Dropdown */}
 
                 <div className="relative" ref={industryRef}>
@@ -602,11 +601,10 @@ const Header = () => {
 
                           {erpServices.map((service, index) => (
 
-                            <button
+                            <a
+                              href={service.link}
 
                               key={index}
-
-                              type="button"
 
                               onClick={(e) => handleServiceClick(service.link, service.isExternal, e)}
 
@@ -628,7 +626,7 @@ const Header = () => {
 
                               </svg>
 
-                            </button>
+                            </a>
 
                           ))}
 
@@ -641,7 +639,6 @@ const Header = () => {
                   )}
 
                 </div>
-
 
 
                 <Link href="/blogs" className="cursor-pointer text-gray-700 px-3 lg:px-4 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group hover:text-brand-green">
@@ -914,11 +911,10 @@ const Header = () => {
 
                       {erpServices.map((service, index) => (
 
-                        <button
+                        <a
+                          href={service.link}
 
                           key={index}
-
-                          type="button"
 
                           onClick={(e) => handleServiceClick(service.link, service.isExternal, e)}
 
@@ -930,7 +926,7 @@ const Header = () => {
 
                           <div className="text-xs text-gray-500 mt-0.5">{service.tag}</div>
 
-                        </button>
+                        </a>
 
                       ))}
 

@@ -40,7 +40,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-16">
           {/* Brand Section - Left Side */}
-          <div className="lg:max-w-md">
+          <div className="lg:max-w-[22rem]">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 rounded-lg flex items-center justify-center shadow-md" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}>
                 <span className="text-white font-heading font-bold text-xl">Z</span>
@@ -111,7 +111,7 @@ const Footer = () => {
           </div>
 
           {/* Links Section - Right Side with Equal Gaps */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-10 sm:gap-12 lg:gap-16 flex-1 lg:justify-items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-10 sm:gap-12 flex-1 lg:justify-items-start">
             {/* AI Services */}
             <div>
               <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">AI & ERP Services</h4>
