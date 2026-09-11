@@ -90,6 +90,7 @@ const Partners = () => {
     // { name: "HTML5 & CSS/SCSS", logo: html5Img },
     { name: "ODOO", logo: odooImg },
     { name: "ERPNext", logo: erpnext },
+    { name: "SAP ERP", logo: "/sap-logo.png" },
     { name: "Zoho ERP", logo: "/zoho-erp.png" },
 
   ];

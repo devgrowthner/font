@@ -12,6 +12,7 @@ const Footer = () => {
     solutions: [
       { name: 'Custom AI Development', href: '/custom-ai', isRoute: true },
       { name: 'ERP Development (Odoo)', href: '/odoo-erp-development-company-australia', isRoute: true },
+      { name: 'SAP ERP Implementation', href: '/sap-erp-implementation-company-australia', isRoute: true },
       { name: 'AI Strategy Report', href: '/strategy-report', isRoute: true },
       { name: 'CareCob Platform', href: '/solutions', isRoute: true }
     ],

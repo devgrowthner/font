@@ -264,6 +264,18 @@ const Header = () => {
 
     {
 
+      name: 'SAP ERP Implementation',
+
+      link: '/sap-erp-implementation-company-australia',
+
+      tag: 'Enterprise SAP ERP deployment',
+
+      isExternal: false,
+
+    },
+
+    {
+
       name: 'Zoho ERP Development',
 
       link: '/zoho-erp-development-company-australia',

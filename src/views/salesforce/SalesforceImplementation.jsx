@@ -786,10 +786,11 @@ const SalesforceImplementation = () => {
 
               {/* inner circle */}
               <div className="relative z-10 flex h-52 w-52 flex-col items-center justify-center rounded-full border border-slate-200 bg-white text-center shadow-[0_18px_44px_rgba(15,23,42,0.10)]">
-                <span className="font-heading text-3xl font-bold tracking-tight text-[#0176d3]">Salesforce</span>
-                <p className="mt-2 px-8 text-sm font-semibold leading-6 text-slate-700">
-                  Unified. Intelligent. Connected.
-                </p>
+                <img
+                  src="/salesforce-logo.png"
+                  alt="Salesforce"
+                  className="h-28 w-40 object-contain"
+                />
               </div>
 
               {/* orbiting module nodes */}

@@ -7,6 +7,7 @@ import { buildPageMetadata } from '@/lib/seo';
 const DETAIL_TEMPLATE_SLUGS = [
   'top-ai-automation-agencies-australia',
   'erp-migration-australia-guide',
+  'erp-migration-companies-australia',
   'erp-benefits-medical-clinics-healthcare',
   'choose-odoo-implementation-partner-australia',
   'erp-food-manufacturing-compliance-traceability',
