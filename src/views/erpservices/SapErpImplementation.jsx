@@ -363,7 +363,7 @@ const SapErpImplementation = () => {
               <div className="relative w-full lg:w-[145%] xl:w-[165%] max-w-none">
                 <div aria-hidden="true" className="absolute -inset-3 rounded-[1.75rem] bg-[#719334]/5 blur-lg" />
                 <div aria-hidden="true" className="absolute -bottom-4 -right-4 hidden h-full w-full rounded-2xl border-2 border-slate-200 sm:block" />
-                <img src="/sap-logo.png" alt="SAP ERP" className="relative h-auto w-full max-w-md rounded-2xl object-contain shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-200 mx-auto" />
+                <img src="/new-sap-logo.png" alt="SAP ERP" className="relative h-auto w-full max-w-md rounded-2xl object-contain shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] ring-1 ring-slate-200 mx-auto" />
               </div>
             </div>
           </div>
@@ -682,7 +682,7 @@ const SapErpImplementation = () => {
 
             <div className="lg:sticky lg:top-24">
               <div className="rounded-2xl bg-white p-5 shadow-[0_8px_40px_rgba(113,147,52,0.12)] ring-1 ring-slate-200 transition-transform duration-500 hover:scale-[1.01]">
-                <img src="/computer.png" alt="SAP ERP dashboards and performance monitoring" className="w-full h-auto" />
+                <img src="/computer-sap.png" alt="SAP ERP dashboards and performance monitoring" className="w-full h-auto" />
               </div>
             </div>
           </div>
@@ -702,7 +702,7 @@ const SapErpImplementation = () => {
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:items-stretch">
             <div className="flex flex-col gap-4">
-              <img src="/image7ca4e0.webp" alt="SAP ERP readiness review" className="w-full rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.07)] transition-transform duration-500 hover:-translate-y-1" />
+              <img src="/image-sap.png" alt="SAP ERP readiness review" className="w-full rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.07)] transition-transform duration-500 hover:-translate-y-1" />
             </div>
 
             <div className="relative overflow-hidden rounded-3xl border border-[#719334]/15 bg-gradient-to-br from-[#f1f5ec] to-[#eef4e3] p-6 shadow-[0_8px_32px_rgba(113,147,52,0.10)] sm:p-8">

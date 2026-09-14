@@ -19,7 +19,7 @@ const locationPages = [
     slug: 'brisbane',
     title: 'AI Development Company in Brisbane',
     description: 'AI automation, chatbots, and intelligent systems for Brisbane businesses.',
-    href: 'https://zynextechnologies.com.au/ai-development-company-brisbane',
+    href: 'https://zynextechnologies.com.au/ai-development-company-in-brisbane',
     image: '/AIBrisbane.webp',
   },
   {
@@ -33,21 +33,21 @@ const locationPages = [
     slug: 'perth',
     title: 'Custom AI Development Company in Perth',
     description: 'Custom AI systems, computer vision, chatbots, and automation for Perth businesses.',
-    href: 'https://zynextechnologies.com.au/ai-development-company-perth',
+    href: 'https://zynextechnologies.com.au/custom-ai-development-company-in-perth',
     image: '/perth.jpeg',
   },
   {
     slug: 'canberra',
     title: 'AI Development Company in Canberra',
     description: 'AI development, automation, and machine learning services for Canberra organisations.',
-    href: 'https://zynextechnologies.com.au/ai-development-company-canberra',
+    href: 'https://zynextechnologies.com.au/ai-development-company-in-canberra',
     image: '/CanberraAI.webp',
   },
   {
     slug: 'gold-coast',
     title: 'AI Development Company in Gold Coast',
     description: 'Custom AI, automation, and machine learning systems for Gold Coast businesses.',
-    href: 'https://zynextechnologies.com.au/ai-development-company-gold-coast',
+    href: 'https://zynextechnologies.com.au/ai-development-gold-coast',
     image: '/GoldCoast.webp',
   },
   {
@@ -61,7 +61,7 @@ const locationPages = [
     slug: 'hobart',
     title: 'AI Development Company in Hobart',
     description: 'AI development, automation, and machine learning solutions for Hobart teams.',
-    href: 'https://zynextechnologies.com.au/ai-development-company-hobart',
+    href: 'https://zynextechnologies.com.au/ai-development-company-in-hobart',
     image: '/HobartAI.webp',
   },
 ];
