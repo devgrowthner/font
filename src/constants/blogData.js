@@ -2898,6 +2898,7 @@ export const blogContents = {
       { match: "AI automation", href: "/ai-automation" },
       { match: "custom AI development", href: "/custom-ai" },
       { match: "AI development services", href: "/custom-ai" },
+      { match: "zynextechnologies.com.au", href: "https://zynextechnologies.com.au/" },
       { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
     ],
     sectionOrder: ["summary", "introduction", "guideSteps", "finalThoughts", "faq", "cta", "relatedLinks"],

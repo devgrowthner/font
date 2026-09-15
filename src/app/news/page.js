@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import { buildPageMetadata } from '@/lib/seo';
 import { newsArticles } from '@/constants/newsData';
+import { ArrowRight, Calendar, User } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -48,23 +49,50 @@ export default function NewsPage() {
 
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {newsArticles.map((article) => (
-              <article key={article.slug} className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                <Link href={`/news/${article.slug}`} className="block">
-                  <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
-                    <Image src={article.image} alt="" fill className="object-cover transition duration-500 hover:scale-105" sizes="(max-width: 768px) 100vw, 33vw" />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500">
-                      <span className="font-semibold text-[#719334]">{article.category}</span>
-                      <span aria-hidden="true">•</span>
-                      <time dateTime={article.datePublished}>{article.date}</time>
+              <Link
+                key={article.slug}
+                href={`/news/${article.slug}`}
+                className="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <div className="relative h-64 overflow-hidden bg-[#263313]">
+                  <Image
+                    src={article.image}
+                    alt=""
+                    fill
+                    className="object-cover opacity-30 transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#709034]/90 via-[#35491c]/80 to-[#111a0a]/95" />
+                  <span className="absolute left-4 top-4 inline-flex items-center rounded-full bg-white/95 px-3 py-1 text-xs font-medium text-[#719334] shadow-sm">
+                    Featured Post
+                  </span>
+                  <span className="absolute right-4 top-5 text-[10px] font-bold uppercase tracking-[0.18em] text-white/90">
+                    Zynex Technologies
+                  </span>
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="mb-2 line-clamp-2 font-heading text-lg font-bold leading-snug text-white">
+                      {article.title}
+                    </h3>
+                    <div className="flex flex-wrap items-center gap-3 text-xs text-white/90">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        <time dateTime={article.datePublished}>{article.date}</time>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <User className="h-3 w-3" />
+                        <span>Zynex Team</span>
+                      </div>
                     </div>
-                    <h3 className="mt-3 font-heading text-2xl font-bold leading-snug text-gray-900">{article.title}</h3>
-                    <p className="mt-4 line-clamp-3 leading-7 text-gray-600">{article.excerpt}</p>
-                    <span className="mt-5 inline-flex font-semibold text-[#719334]">Read full story →</span>
                   </div>
-                </Link>
-              </article>
+                </div>
+                <div className="p-6">
+                  <p className="line-clamp-3 text-base leading-relaxed text-gray-600">{article.excerpt}</p>
+                  <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-[#719334] transition-all duration-300 group-hover:gap-3">
+                    <span>Read More</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>

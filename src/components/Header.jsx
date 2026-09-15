@@ -436,16 +436,11 @@ const Header = () => {
 
                           {servicesItems.map((service, index) => (
 
-                            <button
-
+                            <a
+                              href={service.link}
                               key={index}
-
-                              type="button"
-
                               onClick={(e) => handleServiceClick(service.link, service.isExternal, e)}
-
                               className="w-full text-left rounded-xl px-3 py-2.5 sm:py-3 text-sm text-gray-700 border border-transparent hover:bg-gray-50/80 hover:border-gray-100 transition-all duration-200 flex items-start gap-2 group"
-
                             >
 
                               <div className="flex-1 min-w-0">
@@ -462,7 +457,7 @@ const Header = () => {
 
                               </svg>
 
-                            </button>
+                            </a>
 
                           ))}
 
@@ -523,16 +518,11 @@ const Header = () => {
 
                           {industryServices.map((service, index) => (
 
-                            <button
-
+                            <a
+                              href={service.link}
                               key={index}
-
-                              type="button"
-
                               onClick={(e) => handleServiceClick(service.link, service.isExternal, e)}
-
                               className="w-full text-left rounded-xl px-3 py-2.5 sm:py-3 text-sm text-gray-700 border border-transparent hover:bg-gray-50/80 hover:border-gray-100 transition-all duration-200 flex items-start gap-2 group"
-
                             >
 
                               <div className="flex-1 min-w-0">
@@ -549,7 +539,7 @@ const Header = () => {
 
                               </svg>
 
-                            </button>
+                            </a>
 
                           ))}
 
@@ -819,23 +809,18 @@ const Header = () => {
 
                       {servicesItems.map((service, index) => (
 
-                        <button
-
+                        <a
+                          href={service.link}
                           key={index}
-
-                          type="button"
-
                           onClick={(e) => handleServiceClick(service.link, service.isExternal, e)}
-
                           className="text-gray-600 block px-4 py-2 rounded-lg text-sm font-medium w-full text-left cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green"
-
                         >
 
                           <div className="font-semibold">{service.name}</div>
 
                           <div className="text-xs text-gray-500 mt-0.5">{service.tag}</div>
 
-                        </button>
+                        </a>
 
                       ))}
 
@@ -871,23 +856,18 @@ const Header = () => {
 
                       {industryServices.map((service, index) => (
 
-                        <button
-
+                        <a
+                          href={service.link}
                           key={index}
-
-                          type="button"
-
                           onClick={(e) => handleServiceClick(service.link, service.isExternal, e)}
-
                           className="text-gray-600 block px-4 py-2 rounded-lg text-sm font-medium w-full text-left cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green"
-
                         >
 
                           <div className="font-semibold">{service.name}</div>
 
                           <div className="text-xs text-gray-500 mt-0.5">{service.tag}</div>
 
-                        </button>
+                        </a>
 
                       ))}
 
