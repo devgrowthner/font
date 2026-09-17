@@ -2914,7 +2914,7 @@ export const blogContents = {
       {
         heading: "Zynex Technologies",
         bodyParagraphs: [
-          "Zynex Technologies ranks first among the 5 best AI development companies in Australia, and the reasons become clear quickly. Based in Brisbane, Zynex builds production-ready AI systems from the ground up, designed specifically around each client's data, existing workflows, and commercial goals. There are no templated solutions here, and no off-the-shelf tools repackaged with a new label.",
+          "Zynex Technologies ranks first among the 5 best AI development companies in Australia, and the reasons become clear quickly. Based in Fraser Rise, Melbourne, Zynex builds production-ready AI systems from the ground up, designed specifically around each client's data, existing workflows, and commercial goals. There are no templated solutions here, and no off-the-shelf tools repackaged with a new label.",
           "What distinguishes Zynex from the rest of the field is the feasibility-first approach. Before any code gets written, the team runs a structured ROI validation process: assessing data readiness, infrastructure compatibility, and whether the anticipated business outcome justifies the investment. That kind of discipline is genuinely rare in this industry, and it's the reason clients commit with confidence rather than cross their fingers.",
           "Core services:",
         ],
@@ -2947,7 +2947,7 @@ export const blogContents = {
         ],
         closingParagraphs: [
           "For Australian businesses serious about building AI that earns its keep rather than sitting on a server unused, Zynex Technologies is the logical starting point. The team is not the cheapest option in the market. But for organisations that care about measurable outcomes, it is the most dependable one.",
-          "Website: zynextechnologies.com.au\nLocation: Brisbane, QLD, Australia (serves all of Australia)\nBest suited for: SMBs to enterprise seeking bespoke, production-ready AI",
+          "Website: zynextechnologies.com.au\nLocation: Fraser Rise, Melbourne, VIC, Australia (serves all of Australia)\nBest suited for: SMBs to enterprise seeking bespoke, production-ready AI",
         ],
       },
       {
