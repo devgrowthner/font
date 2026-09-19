@@ -6,6 +6,8 @@ import { buildPageMetadata } from '@/lib/seo';
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
   'sap-implementation-companies-australia',
+  'sap-erp-migration-from-legacy-systems',
+  'sap-erp-implementation-checklist-growing-businesses',
   'top-ai-automation-agencies-australia',
   'erp-migration-australia-guide',
   'erp-migration-companies-australia',
