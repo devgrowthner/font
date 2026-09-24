@@ -542,4 +542,137 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- About Us Page -->
+  <url>
+    <loc>https://zynextechnologies.com.au/about-us</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- White Label Software Development Partner Page -->
+  <url>
+    <loc>https://zynextechnologies.com.au/white-label-software-development-partner</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- SAP ERP Implementation Company Australia Page -->
+  <url>
+    <loc>https://zynextechnologies.com.au/sap-erp-implementation-company-australia</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- News Page -->
+  <url>
+    <loc>https://zynextechnologies.com.au/news</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Best AI Development Companies in Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/best-ai-development-companies-in-australia</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Best Odoo Development Companies Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/best-odoo-development-companies-australia</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Business Processes to Automate with AI -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/business-processes-to-automate-with-ai</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Choose Odoo Implementation Partner Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/choose-odoo-implementation-partner-australia</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - ERP Benefits for Medical Clinics and Healthcare -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/erp-benefits-medical-clinics-healthcare</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - ERP Migration Australia Guide -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/erp-migration-australia-guide</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - ERP Migration Companies Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/erp-migration-companies-australia</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - How to Choose an Odoo Consultant Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/how-to-choose-odoo-consultant-australia</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - How to Migrate from Spreadsheets to Zoho CRM -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/how-to-migrate-from-spreadsheets-to-zoho-crm</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - Odoo vs ERPNext Comparison -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/odoo-vs-erpnext-comparison</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - SAP ERP Implementation Checklist for Growing Businesses -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/sap-erp-implementation-checklist-growing-businesses</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - SAP ERP Migration from Legacy Systems -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/sap-erp-migration-from-legacy-systems</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blogs - SAP Implementation Companies Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/sap-implementation-companies-australia</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- News - Albanese AI Data Centre Standards -->
+  <url>
+    <loc>https://zynextechnologies.com.au/news/albanese-ai-data-centre-standards</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- News - Australia AI Misinformation Survey -->
+  <url>
+    <loc>https://zynextechnologies.com.au/news/australia-ai-misinformation-survey</loc>
+    <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
