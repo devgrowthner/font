@@ -304,10 +304,24 @@
     <priority>0.85</priority>
   </url>
 
+  <!-- Healthcare ERP, CRM & AI Automation Solutions Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/healthcare-erp-crm-ai-automation-australia</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.85</priority>
+  </url>
+
   <!-- AI Development for Small Businesses in Australia -->
   <url>
     <loc>https://zynextechnologies.com.au/ai-development-for-small-businesses-australia</loc>
     <lastmod>2026-05-19</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ERP, CRM & AI Automation Solutions for Small Businesses Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/small-business-erp-crm-ai-automation-australia</loc>
+    <lastmod>2026-09-30</lastmod>
     <priority>0.85</priority>
   </url>
 
@@ -329,6 +343,13 @@
   <url>
     <loc>https://zynextechnologies.com.au/ai-development-company-construction-businesses-australia</loc>
     <lastmod>2026-05-16</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Construction ERP, CRM & AI Automation Solutions in Australia -->
+  <url>
+    <loc>https://zynextechnologies.com.au/construction-erp-crm-ai-automation-australia</loc>
+    <lastmod>2026-09-28</lastmod>
     <priority>0.85</priority>
   </url>
 

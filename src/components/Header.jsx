@@ -174,6 +174,18 @@ const Header = () => {
 
     {
 
+      name: 'Healthcare ERP, CRM & AI Automation (Australia)',
+
+      link: '/healthcare-erp-crm-ai-automation-australia',
+
+      tag: 'Clinic workflows, ERP & CRM',
+
+      isExternal: false,
+
+    },
+
+    {
+
       name: 'AI Solution for Hospitality (Australia)',
 
       link: '/ai-solution-hospitality-businesses-australia',
@@ -198,11 +210,35 @@ const Header = () => {
 
     {
 
+      name: 'Construction ERP, CRM & AI Automation (Australia)',
+
+      link: '/construction-erp-crm-ai-automation-australia',
+
+      tag: 'Workflow automation, ERP & CRM',
+
+      isExternal: false,
+
+    },
+
+    {
+
       name: 'AI Development for Small Businesses (Australia)',
 
       link: '/ai-development-for-small-businesses-australia',
 
       tag: 'SMB automation & lead capture',
+
+      isExternal: false,
+
+    },
+
+    {
+
+      name: 'Small Business ERP, CRM & AI Automation (Australia)',
+
+      link: '/small-business-erp-crm-ai-automation-australia',
+
+      tag: 'Process automation, ERP & CRM',
 
       isExternal: false,
 
