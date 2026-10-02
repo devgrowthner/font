@@ -934,7 +934,9 @@ const ContentSection = ({ blogData }) => (
                           key={cellIdx}
                           className="text-left py-3 px-4 text-base sm:text-lg text-gray-700 leading-relaxed border-b border-gray-100"
                         >
-                          {cell}
+                          {blogData.inlineInternalLinks?.length
+                            ? renderWithInlineLinks(cell, blogData.inlineInternalLinks)
+                            : cell}
                         </td>
                       ))}
                     </tr>

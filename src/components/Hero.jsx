@@ -47,10 +47,8 @@ const Hero = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-heading font-extrabold text-white leading-tight mb-4"
           >
-            AI & ERP Solutions That Drive{" "}
-            <span className="text-brand-green">
-              Real Business Value
-            </span>
+            ERP, AI Automation and AI Security Company in Melbourne for{" "}
+            <span className="text-brand-green">Australian SMBs</span>
           </motion.h1>
 
           {/* Sub-headline */}

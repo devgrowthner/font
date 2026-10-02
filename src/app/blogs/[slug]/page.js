@@ -5,6 +5,10 @@ import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'odoo-vs-sap-business-one-australia',
+  'ai-agents-vs-chatbots-australia',
+  'sap-crm-integration-questions-service-provider',
+  'sap-implementation-partner-vs-in-house-team',
   'sap-implementation-companies-australia',
   'sap-erp-migration-from-legacy-systems',
   'sap-erp-implementation-checklist-growing-businesses',

@@ -14,6 +14,13 @@
   <!-- Solutions Page -->
   <url>
     <loc>https://zynextechnologies.com.au/solutions</loc>
+
+  <!-- Excel to Odoo for small businesses -->
+  <url>
+    <loc>https://zynextechnologies.com.au/excel-to-odoo-small-business</loc>
+    <lastmod>2026-10-02</lastmod>
+    <priority>0.8</priority>
+  </url>
     <lastmod>2026-03-05</lastmod>
     <priority>0.9</priority>
   </url>
