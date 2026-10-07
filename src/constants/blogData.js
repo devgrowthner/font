@@ -1,6 +1,30 @@
 // Blog metadata for listing cards
 export const blogList = [
   {
+    id: "72",
+    slug: "ai-compliance-audit-australia",
+    title: "AI Compliance Audit: 7 Steps to Meet Australia's 10 December 2026 Privacy Deadline",
+    excerpt:
+      "An AI compliance audit maps every automated decision your business makes before the 10 December 2026 Privacy Act deadline. Here are the 7 steps.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    date: "October 7, 2026",
+    author: "Zynex Team",
+    readTime: "13 min read",
+    route: "/blogs/ai-compliance-audit-australia",
+  },
+  {
+    id: "71",
+    slug: "sap-business-one-cost-australia",
+    title: "How Much Does SAP Business One Cost in Australia? 2026 Pricing Breakdown",
+    excerpt:
+      "SAP Business One cost in Australia starts around AUD 53 to 128 per user per month, plus implementation. See licences, hosting and real budget ranges.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    date: "October 7, 2026",
+    author: "Zynex Team",
+    readTime: "11 min read",
+    route: "/blogs/sap-business-one-cost-australia",
+  },
+  {
     id: "70",
     slug: "odoo-vs-sap-business-one-australia",
     title: "Odoo vs SAP Business One: Which ERP Is Right for Your Australian Business in 2026?",
@@ -5109,6 +5133,363 @@ export const blogContents = {
     ctaDescription:
       "Get in touch with the Zynex Technologies team to discuss how a well-planned ERP or AI-powered solution can help your business operate more efficiently.",
     ctaButtonText: "Contact Zynex Technologies",
+  },
+
+  "sap-business-one-cost-australia": {
+    metaTitle: "SAP Business One Cost Australia: 2026 Pricing Breakdown",
+    metaDescription:
+      "SAP Business One cost in Australia starts around AUD 53 to 128 per user per month, plus implementation. See licences, hosting and real budget ranges.",
+    title: "How Much Does SAP Business One Cost in Australia? 2026 Pricing Breakdown",
+    description:
+      "SAP Business One cost in Australia comes down to licences, hosting, implementation and ongoing support. Subscription licences start at about AUD 53 per user per month for a Starter user and reach AUD 128 for a Professional user, while perpetual licences run from roughly AUD 1,600 to 3,800 per user plus 18 to 20% annual maintenance. This guide breaks down the real costs for Australian businesses to help you plan a realistic budget before speaking with a partner.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "SAP Business One",
+    date: "October 7, 2026",
+    readTime: "12 min read",
+    relatedSlugs: [
+      "odoo-vs-sap-business-one-australia",
+      "sap-erp-implementation-checklist-growing-businesses",
+      "sap-implementation-companies-australia",
+    ],
+    inlineInternalLinks: [
+      { match: "SAP implementation partner", href: "/blogs/sap-implementation-partner-vs-in-house-team" },
+      { match: "SAP ERP implementation checklist", href: "/blogs/sap-erp-implementation-checklist-growing-businesses" },
+      { match: "SAP implementation companies", href: "/blogs/sap-implementation-companies-australia" },
+      { match: "Odoo vs SAP Business One", href: "/blogs/odoo-vs-sap-business-one-australia" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+    sectionOrder: [
+      "summary",
+      "introduction",
+      "guideSteps",
+      "finalThoughts",
+      "faq",
+      "cta",
+      "relatedLinks",
+    ],
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "SAP Business One cost in Australia comes down to licences, hosting, implementation and ongoing support. Subscription licences start at about AUD 53 per user per month for Starter users and reach AUD 128 for Professional users, while perpetual licences run from roughly AUD 1,600 to 3,800 per user plus 18 to 20% annual maintenance. Cloud hosting starts at around AUD 13 per user per month. Implementation is usually the biggest cost and often exceeds the first year of licences. Add-ons, custom reports and post go-live support can add another 20 to 40%. Right-sizing user types and getting a fixed-scope quote are the two best ways to keep your budget realistic.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "SAP Business One cost in Australia has two parts: licences and implementation. Published 2026 subscription prices range from about AUD 53 per user per month for a Starter user to AUD 128 for a Professional user, or roughly AUD 1,600 to 3,800 per user for a perpetual licence. Implementation, data migration and training usually cost more than the first year of licences.\n\nThis breakdown is for Australian businesses comparing SAP Business One with other mid-market ERPs. We cover each licence type, subscription versus perpetual, hosting, implementation, ongoing support, and a worked example for a 10-user business, so you can build a realistic budget before you talk to any partner.",
+    guideSteps: [
+      {
+        heading: "What is SAP Business One?",
+        bodyParagraphs: [
+          "SAP Business One is an ERP system from SAP built for small and mid-sized businesses, covering finance, inventory, purchasing, sales, CRM and basic manufacturing in one database. It is a separate product from SAP S/4HANA, which targets large enterprises. SAP Business One runs on either the SAP HANA database or Microsoft SQL Server and is sold and implemented through SAP partners rather than directly by SAP.",
+          "For Australian businesses, SAP Business One is typically considered once Xero or MYOB can no longer handle multiple entities, complex inventory or growing transaction volumes.",
+        ],
+      },
+      {
+        heading: "How much do SAP Business One licences cost in Australia?",
+        bodyParagraphs: [
+          "SAP Business One licences in Australia cost roughly AUD 53 to 128 per user per month on subscription, or AUD 1,599 to 3,786 per user as a one-off purchase, depending on user type. These figures come from one reseller's published Australian price list, last updated January 2026. Partner pricing varies, so treat these as reference points, and check whether quotes include GST.",
+        ],
+        comparisonTable: {
+          headers: ["User type", "Who it's for", "Subscription (licence only, per user/month)", "Perpetual licence (per user, one-off)"],
+          rows: [
+            ["Professional", "Finance, operations, managers who need full access", "AUD 128", "AUD 3,786"],
+            ["Limited", "Staff in one area, such as sales, logistics or finance only", "AUD 66", "AUD 1,963"],
+            ["Starter Package", "Very small businesses (capped user numbers, reduced functionality)", "AUD 53", "AUD 1,599"],
+          ],
+        },
+        closingParagraphs: [
+          "The mix matters more than the headcount. A 20-person business rarely needs 20 Professional users. In most projects we scope, fewer than half the users need full access.",
+        ],
+      },
+      {
+        heading: "Subscription or perpetual: which is cheaper?",
+        bodyParagraphs: [
+          "Subscription is cheaper in the first two to three years; a perpetual licence usually becomes cheaper after that, once you account for annual maintenance. Perpetual licences carry an annual maintenance fee, typically 18 to 20% of the licence value, which covers upgrades and SAP support.",
+          "Subscription suits businesses that want predictable monthly costs, expect headcount to change, or plan to host in the cloud. Perpetual suits stable businesses with their own IT team and a long planning horizon. Cash flow often decides it more than total cost does.",
+        ],
+      },
+      {
+        heading: "What does hosting cost?",
+        bodyParagraphs: [
+          "Cloud hosting for SAP Business One starts at around AUD 13 per user per month in Australia. Some partners bundle hosting into the subscription price. Others host on Microsoft Azure or AWS and bill separately.",
+          "If you host on your own servers, budget for the server, Microsoft SQL Server or SAP HANA licensing, backups and someone to maintain it. For most businesses under 50 users, partner hosting is simpler and the cost difference is small. Ask where your data will be stored. Many Australian businesses want an Australian data centre for privacy and customer contract reasons.",
+        ],
+      },
+      {
+        heading: "How much does SAP Business One implementation cost?",
+        bodyParagraphs: [
+          "SAP Business One implementation typically costs more than the first year of licences, and published industry ranges run from about USD 15,000 for a basic 5-user rollout to USD 150,000 for complex projects. In Australia, a typical 10-user implementation often sits somewhere between AUD 18,000 and 45,000 depending on data migration, integrations and training needs.",
+          "Five things drive the implementation number:",
+        ],
+        numberedItems: [
+          {
+            content:
+              "Number of entities and currencies. Each extra company file adds configuration, intercompany rules and reporting.",
+          },
+          {
+            content:
+              "Data migration. Moving clean opening balances is quick. Migrating years of transaction history from MYOB or a legacy system is not.",
+          },
+          {
+            content:
+              "Integrations. eCommerce, EDI with retailers, payroll, banking feeds and warehouse systems each add time.",
+          },
+          {
+            content:
+              "Customisation and add-ons. Industry add-ons for manufacturing, retail or field service are common and can be licensed separately.",
+          },
+          {
+            content:
+              "Training and change management. Underinvesting here is the most common reason projects stall after go-live.",
+          },
+        ],
+      },
+      {
+        heading: "Worked example: 10-user business",
+        bodyParagraphs: [
+          "A 10-user Australian business with 4 Professional and 6 Limited users would pay about AUD 908 per month or AUD 10,896 per year in subscription licences based on the January 2026 reseller list prices above.",
+        ],
+        plainBulletItems: [
+          "Subscription model: Licences (4 Professional, 6 Limited) AUD 10,896 per year; Cloud hosting from AUD 1,560 per year; Implementation and training typically range from AUD 18,000 to 45,000 depending on scope.",
+          "Perpetual model: Licences (4 Professional, 6 Limited) AUD 26,922 one-off; Annual maintenance AUD 4,846 to 5,384 per year; Cloud hosting from AUD 1,560 per year.",
+        ],
+        closingParagraphs: [
+          "Licence maths is the easy part. Implementation and support are where budgets go wrong, so get those quoted with a fixed scope.",
+        ],
+      },
+      {
+        heading: "What hidden costs should you plan for?",
+        bodyParagraphs: [
+          "The most common hidden costs are add-ons, extra reports, integration maintenance and post go-live support, which can add 20 to 40% on top of the initial project.",
+          "None of these are hidden on purpose. They just don't show up in a licence quote.",
+        ],
+        plainBulletItems: [
+          "Industry add-ons licensed per user or per company.",
+          "Custom reports and dashboards beyond the standard set.",
+          "Changes to integrations when your eCommerce platform or bank updates its API.",
+          "Extra training for new staff after go-live.",
+          "Version upgrades if you're on a perpetual licence without maintenance.",
+        ],
+      },
+      {
+        heading: "How does SAP Business One compare on cost with other ERPs?",
+        bodyParagraphs: [
+          "SAP Business One usually sits above Odoo and Zoho on licence cost and below larger systems such as NetSuite on total cost of ownership, but the right choice depends on your processes, not the price list. SAP Business One is strong for multi-entity groups, distribution and businesses that want an established vendor. Lighter ERPs can be better value for simpler operations.",
+          "If you're comparing, it's worth reading our Odoo cost guide alongside this guide, since the two are often shortlisted together.",
+        ],
+      },
+    ],
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "SAP Business One is not just a software purchase; it is a business operating model decision. The licence is visible, but the real budget lives in implementation, configuration, data cleanup, training and support. If you want a realistic number, the fastest way to get there is a fixed-scope quote that separates licences, hosting, implementation and post-go-live support.\n\nThe businesses that stay on budget are the ones that right-size user types, plan around data quality, and avoid scope creep before the project starts.",
+    faq: [
+      {
+        question: "Is SAP Business One cheaper than SAP S/4HANA?",
+        answer:
+          "Yes, by a wide margin. SAP Business One is designed and priced for small and mid-sized businesses, while SAP S/4HANA targets large enterprises with far higher licence and implementation costs. Most Australian businesses under a few hundred staff that choose SAP end up on SAP Business One rather than S/4HANA.",
+      },
+      {
+        question: "Can I buy SAP Business One directly from SAP?",
+        answer:
+          "No. SAP Business One is sold, implemented and supported through SAP partners. Pricing can therefore vary between partners, especially for implementation, hosting and support. Ask each partner for a quote that separates licences, implementation, hosting and support so you can compare like for like.",
+      },
+      {
+        question: "How long does SAP Business One implementation take?",
+        answer:
+          "Most SAP Business One implementations for small and mid-sized Australian businesses take between 6 and 16 weeks. Simple single-entity rollouts with clean data sit at the shorter end. Multi-entity groups with integrations, custom reports and complex data migration take longer. Data preparation is usually the factor that decides the timeline.",
+      },
+      {
+        question: "Do SAP Business One prices include GST?",
+        answer:
+          "It depends on the partner. Many Australian partners quote licence and service prices excluding GST, then add 10% on the invoice. Always confirm whether a quote is GST inclusive or exclusive before comparing it against other ERP quotes, because a 10% difference can change which option looks cheaper.",
+      },
+      {
+        question: "What is the minimum number of users for SAP Business One?",
+        answer:
+          "There is no high minimum. Small businesses can start with a handful of users, and the Starter Package is designed for very small teams with capped user numbers. That said, SAP Business One is usually best value for businesses with around 10 or more users that need its multi-entity and inventory strength.",
+      },
+      {
+        question: "Is annual maintenance compulsory on a perpetual licence?",
+        answer:
+          "Maintenance is usually required for the first year and strongly recommended after that, because it covers version upgrades and SAP support. Dropping maintenance saves around 18 to 20% of licence value each year, but re-joining later can be costly and you lose access to upgrades in the meantime.",
+      },
+    ],
+    ctaTitle: "Get a fixed-price SAP Business One quote",
+    ctaPlainText: true,
+    ctaDescription:
+      "Want a budget you can actually take to the board? Book a call with the Zynex team and we will scope your SAP Business One licences, implementation and support with a fixed price before you commit.",
+    ctaButtonText: "Book a call",
+  },
+
+  "ai-compliance-audit-australia": {
+    metaTitle: "AI Compliance Audit Australia: 7 Steps Before 10 Dec 2026 | Zynex Technologies",
+    metaDescription:
+      "An AI compliance audit maps every automated decision your business makes before the 10 December 2026 Privacy Act deadline. Here are the 7 steps.",
+    title: "AI Compliance Audit: 7 Steps to Meet Australia's 10 December 2026 Privacy Deadline",
+    description:
+      "An AI compliance audit in Australia is a structured review of every computer program, AI tool and automated workflow your business uses to make or support decisions about people. From 10 December 2026, Privacy Act entities must disclose these decisions in their privacy policy. Most mid-sized businesses can complete the audit and policy update in 3 to 6 weeks.",
+    image: "/zynex_banner_natural_logo_4K.png",
+    badge: "AI Compliance",
+    date: "October 7, 2026",
+    readTime: "13 min read",
+    relatedSlugs: [
+      "ai-security-risk-management-safe-systems",
+      "when-should-business-invest-ai-automation",
+      "cost-of-ai-development-for-businesses-in-australia",
+    ],
+    inlineInternalLinks: [
+      { match: "custom AI development", href: "/custom-ai" },
+      { match: "AI security and risk management", href: "/blogs/ai-security-risk-management-safe-systems" },
+      { match: "AI Strategy Report", href: "/strategy-report" },
+      { match: "Privacy Act", href: "/blogs/ai-security-risk-management-safe-systems" },
+      { match: "Zynex Technologies", href: "https://zynextechnologies.com.au/" },
+    ],
+    sectionOrder: [
+      "summary",
+      "introduction",
+      "guideSteps",
+      "finalThoughts",
+      "faq",
+      "cta",
+      "relatedLinks",
+    ],
+    summaryTitle: "Blog Summary",
+    summaryDescription:
+      "An AI compliance audit in Australia is a structured review of every computer program, AI tool and automated workflow your business uses to make or support decisions about people. From 10 December 2026, Privacy Act entities must disclose these decisions in their privacy policy. Most mid-sized businesses can complete the audit and policy update in 3 to 6 weeks.",
+    introductionTitle: "Introduction",
+    introductionDescription:
+      "An AI compliance audit in Australia is a structured review of every computer program, AI tool and automated workflow your business uses to make or support decisions about people. From 10 December 2026, Privacy Act entities must disclose these decisions in their privacy policy. Most mid-sized businesses can complete the audit and policy update in 3 to 6 weeks.\n\nThis guide is for Australian businesses that are covered by the Privacy Act and use software to approve, price, rank, screen or flag people. It walks through what the new rule actually requires, the seven audit steps we use with clients, what it costs in time and money, and where most businesses trip up.",
+    guideSteps: [
+      {
+        heading: "What changes on 10 December 2026?",
+        bodyParagraphs: [
+          "From 10 December 2026, APP entities must add automated decision-making disclosures to their privacy policies. The change comes from the Privacy and Other Legislation Amendment Act 2024, which gave businesses two years to prepare.",
+          "According to the OAIC's guidance, the obligation applies when three things are true:",
+        ],
+        numberedItems: [
+          { content: "You have arranged for a computer program to make a decision, or to do something substantially and directly related to making a decision." },
+          { content: "The decision could reasonably be expected to significantly affect the rights or interests of an individual." },
+          { content: "Personal information is used in the operation of that program." },
+        ],
+        closingParagraphs: [
+          "When all three apply, your privacy policy must state the kinds of personal information used, the kinds of decisions made solely by the program, and the kinds of decisions where the program does something substantially and directly related to the decision.",
+        ],
+      },
+      {
+        heading: "Who has to complete an AI compliance audit?",
+        bodyParagraphs: [
+          "Any business covered by the Privacy Act that uses software in decisions about people should run an AI compliance audit before the deadline. In practice, that means businesses with annual turnover above $3 million, plus smaller businesses that are covered anyway, such as health service providers and businesses that trade in personal information.",
+          "One trap we see often: businesses assume 'we don't use AI' and stop there. The law says 'computer program', not 'artificial intelligence'. A rules-based eligibility check written in 2015 is in scope just as much as a machine learning model built last month.",
+        ],
+      },
+      {
+        heading: "Which decisions fall inside the scope?",
+        bodyParagraphs: [
+          "A decision is in scope when it could significantly affect someone's legal rights, finances, employment, housing, health, or access to important services. Allens' summary of the OAIC guidance highlights a vulnerability lens: would the outcome land differently on a vulnerable person than on the general population?",
+        ],
+        comparisonTable: {
+          headers: ["System or workflow", "Example decision", "Likely in scope?"],
+          rows: [
+            ["Credit or payment terms engine", "Approves or declines trade credit for a customer", "Yes"],
+            ["Recruitment platform filter", "Rejects applicants who fail a knockout question", "Yes"],
+            ["Dynamic pricing tool", "Shows different prices to different customers using their data", "Likely"],
+            ["Tenant or customer screening API", "Flags an applicant as high risk", "Yes"],
+            ["CRM lead scoring", "Ranks leads so sales calls the top 20% first", "Depends on impact, assess case by case"],
+            ["Chatbot answering opening hours", "No decision about the person", "No"],
+            ["Inventory reorder automation", "Uses no personal information", "No"],
+          ],
+        },
+      },
+      {
+        heading: "The 7-step AI compliance audit",
+        bodyParagraphs: [
+          "An AI compliance audit has seven steps: inventory, filter, trace data, classify, check vendors, draft disclosures and set up governance. Here is how we run each one.",
+        ],
+        numberedItems: [
+          { label: "Step 1: ", content: "Build a full inventory of programs that touch decisions. List every system that makes, recommends, scores, filters or ranks anything involving a person, including CRM, HR, finance tools and spreadsheet logic." },
+          { label: "Step 2: ", content: "Filter for decisions with significant effect. Run each item through the impact test. If it changes what someone gets, pays or is allowed to do, keep it on the list." },
+          { label: "Step 3: ", content: "Trace the personal information each program uses. Write down the categories of personal information it consumes, such as contact details, transaction history, location, employment records or behaviour data." },
+          { label: "Step 4: ", content: "Classify each decision as 'solely automated' or 'substantially supported'. Be honest here. A human who rubber-stamps most recommendations is not a meaningful check." },
+          { label: "Step 5: ", content: "Check your vendors and integrations. Third-party software counts if you arranged for it to be used. Ask vendors what personal information their tools use and what logic they apply." },
+          { label: "Step 6: ", content: "Draft and publish the privacy policy disclosures. Group decisions into plain English categories, describe the personal information used and get legal review before publishing." },
+          { label: "Step 7: ", content: "Set up governance so the policy stays accurate. Add a procurement and change check: if a tool makes or supports decisions about people, update the register and the policy." },
+        ],
+      },
+      {
+        heading: "How long does an AI compliance audit take, and what does it cost?",
+        bodyParagraphs: [
+          "For most mid-sized Australian businesses, an AI compliance audit takes 3 to 6 weeks from kickoff to published policy update. The biggest variable is how many systems and vendors are involved, not the size of the business.",
+        ],
+        comparisonTable: {
+          headers: ["Business profile", "Typical scope", "Indicative timeline"],
+          rows: [
+            ["Single entity, 3 to 5 core systems", "One workshop, vendor checks, policy update", "2 to 3 weeks"],
+            ["Multi-site, 6 to 12 systems including HR and finance tools", "Department interviews, vendor review, register build", "3 to 5 weeks"],
+            ["Group with custom AI or in-house models", "Model documentation, data lineage, governance design", "5 to 8 weeks"],
+          ],
+        },
+        closingParagraphs: [
+          "With roughly nine weeks between early October and the deadline, businesses with more than a handful of systems should start now. Vendor responses are almost always the slowest part.",
+        ],
+      },
+      {
+        heading: "What we see in practice",
+        bodyParagraphs: [
+          "We run these audits alongside our custom AI development work, so we see both sides: the systems being built and the policies describing them. A few patterns come up again and again.",
+        ],
+        numberedItems: [
+          { content: "The inventory is always bigger than expected. On a typical first workshop, the client lists four or five systems. By the end of week one the register often has 10 to 15 because HR, finance and marketing each have their own tools." },
+          { content: "Spreadsheets get missed. A credit approval spreadsheet with nested IF formulas is a computer program making a decision. We have found these in businesses that were sure they had no automation at all." },
+          { content: "Human in the loop is often thinner than people think. If a manager approves a day's recommendations in one bulk click, regulators are unlikely to see that as meaningful human review." },
+          { content: "Vendors are slow. Ask them early, in writing, and keep a record of what they tell you." },
+          { content: "The policy is not the finish line. The businesses that cope best treat the register as a living document and connect it to their wider AI security and risk management practices." },
+        ],
+      },
+      {
+        heading: "Should you run the audit yourself or bring in a partner?",
+        bodyParagraphs: [
+          "You can run an AI compliance audit in-house if you have a small number of systems and someone with time to chase vendors. Bring in a partner if you have custom AI, many integrations or a tight deadline. The steps above are not secret. What a partner adds is speed, a tested inventory template, and technical people who can read a model or integration and tell you what it actually does.",
+          "If you're also deciding where AI should go next, our AI Strategy Report combines the compliance view with a roadmap, so the audit doubles as planning.",
+        ],
+      },
+    ],
+    finalThoughtsTitle: "Final Thoughts",
+    finalThoughtsDescription:
+      "The deadline is close enough that businesses need to treat this as an operational compliance task, not a legal side project. The cheapest and safest approach is to map all automated decisions, classify the impact, review vendors, and update the privacy policy before the policy rewrite becomes urgent.\n\nThe businesses that keep a live register and connect it to change control will be in the strongest position when new AI tools are introduced in the next twelve months.",
+    faq: [
+      {
+        question: "Does the 10 December 2026 rule ban automated decisions?",
+        answer:
+          "No. The rule is about transparency, not prohibition. Businesses can keep using automated and AI-assisted decisions, but their privacy policy must explain the kinds of decisions made and the kinds of personal information used.",
+      },
+      {
+        question: "Do we need to disclose how our algorithm works?",
+        answer:
+          "No. The privacy policy needs to describe the kinds of decisions and the kinds of personal information involved, not the underlying logic or scoring method. Clear, plain-English categories are what regulators expect to see.",
+      },
+      {
+        question: "Does using ChatGPT or Copilot at work put us in scope?",
+        answer:
+          "Only if those tools are used to make, or substantially and directly support, decisions that significantly affect individuals using their personal information. Staff using an AI assistant to draft emails is usually out of scope. Using it to screen job applications or assess customer eligibility is a different matter and should be audited.",
+      },
+      {
+        question: "Are third-party tools our responsibility?",
+        answer:
+          "Yes, if you arranged for the tool to be used in your decision-making. A recruitment platform, credit check service or pricing engine supplied by a vendor still counts as your computer program for disclosure purposes. Ask vendors what personal information their tool uses and record their answers in your register.",
+      },
+      {
+        question: "How much does an AI compliance audit cost in Australia?",
+        answer:
+          "Cost depends mainly on how many systems and vendors are involved. A small business with a few core systems needs far less work than a group running custom AI models. Expect separate costs for legal review of the final privacy policy wording. Ask any provider for a fixed scope and timeline before you start.",
+      },
+      {
+        question: "What happens if we miss the deadline?",
+        answer:
+          "Missing the deadline exposes your business to OAIC complaints and regulatory action, and the 2024 amendments expanded the OAIC's enforcement tools. Beyond the legal risk, an inaccurate privacy policy is a trust problem with customers and enterprise clients, many of whom now ask about AI use in their supplier due diligence.",
+      },
+    ],
+    ctaTitle: "Talk to us before the deadline",
+    ctaPlainText: true,
+    ctaDescription:
+      "Not sure how many of your systems are in scope? Book a call with our Melbourne team and we'll scope your AI compliance audit, give you a timeline, and tell you honestly whether you need us or can do it yourself.",
+    ctaButtonText: "Book a call",
   },
 
   "when-should-business-invest-ai-automation": {

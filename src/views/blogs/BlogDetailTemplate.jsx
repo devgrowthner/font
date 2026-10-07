@@ -429,13 +429,20 @@ const GuideStepsSection = ({ blogData }) => {
               whileInView="animate"
               viewport={{ once: true, margin: '-100px' }}
               variants={fadeInUp}
-              className="mb-8 mt-2 overflow-x-auto"
+              className="mb-10 mt-4 overflow-x-auto"
             >
-              <table className="w-full min-w-[640px]">
+              <table className="w-full min-w-[680px] border-separate border-spacing-y-0 border-spacing-x-0">
                 <thead>
                   <tr>
                     {step.comparisonTable.headers.map((header, idx) => (
-                      <th key={idx} className="text-left py-2 pr-6 text-2xl font-heading font-bold text-foreground">
+                      <th
+                        key={idx}
+                        className={
+                          idx === 0
+                            ? 'text-left pb-2 pr-5 align-top text-[1.1rem] sm:text-[1.25rem] leading-[1.1] font-bold text-foreground'
+                            : 'text-left pb-2 pr-5 align-top text-[1.1rem] sm:text-[1.25rem] leading-[1.1] font-bold text-foreground'
+                        }
+                      >
                         {header}
                       </th>
                     ))}
@@ -443,9 +450,16 @@ const GuideStepsSection = ({ blogData }) => {
                 </thead>
                 <tbody>
                   {step.comparisonTable.rows.map((row, rowIdx) => (
-                    <tr key={rowIdx}>
+                    <tr key={rowIdx} className="align-top">
                       {row.map((cell, cellIdx) => (
-                        <td key={cellIdx} className="text-left py-2 pr-6 text-lg text-gray-700 leading-relaxed">
+                        <td
+                          key={cellIdx}
+                          className={
+                            cellIdx === 0
+                              ? 'pr-5 pb-2 align-top text-[0.95rem] sm:text-[1.05rem] leading-relaxed font-medium text-foreground'
+                              : 'pr-5 pb-2 align-top text-[0.95rem] sm:text-[1.05rem] leading-relaxed text-gray-700'
+                          }
+                        >
                           {cell}
                         </td>
                       ))}

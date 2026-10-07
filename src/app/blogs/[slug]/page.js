@@ -73,6 +73,8 @@ const DETAIL_TEMPLATE_SLUGS = [
   'best-zoho-erp-implementation-companies-australia',
   'white-label-erp-development-australia',
   'zoho-erp-software-business-efficiency',
+  'sap-business-one-cost-australia',
+  'ai-compliance-audit-australia',
 ];
 
 export async function generateMetadata({ params }) {
