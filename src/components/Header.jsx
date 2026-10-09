@@ -154,6 +154,8 @@ const Header = () => {
 
     { name: 'AI Feasibility Analysis', link: '/ai-feasibility-analysis', tag: 'Strategic Insights', isExternal: false },
 
+    { name: 'AI Security Services', link: '/ai-security-services-australia', tag: 'AI Risk, Privacy & Protection', isExternal: false },
+
   ];
 
 

@@ -1,0 +1,233 @@
+{
+  "hero": [
+    "AI Security Services Company in Australia",
+    "Your team is already using AI. Chatbots, copilots, agents and AI inside your ERP now handle customer records, financials and business secrets. Zynex Technologies finds the gaps, closes them and keeps your AI compliant, so you can scale AI without the risk.",
+    "Our Melbourne team secures AI tools, LLMs and AI agents for Australian SMBs, aligned to ASD guidance and the Privacy Act."
+  ],
+  "stats": [
+    [
+      "95%",
+      "Client Satisfaction Rate"
+    ],
+    [
+      "6-12 weeks",
+      "Average Deployment Time"
+    ],
+    [
+      "3x",
+      "Average Return on Investment"
+    ],
+    [
+      "24/7",
+      "Production Support"
+    ]
+  ],
+  "expertise": [
+    "AI Risk Assessment",
+    "LLM Security Testing",
+    "Prompt Injection Protection",
+    "AI Agent Security",
+    "Shadow AI Discovery",
+    "AI Data Privacy",
+    "Secure RAG Setup",
+    "AI Governance",
+    "AI Compliance Australia",
+    "ERP AI Security"
+  ],
+  "sections": [
+    {
+      "title": "AI Is Opening New Doors. Are They Locked?",
+      "intro": "Traditional cyber security was not built for models that take instructions in plain English, remember what they are told and act on your systems. These are the gaps attackers already use.",
+      "items": [
+        [
+          "Data leakage through AI tools",
+          "Staff paste customer details, contracts and pricing into public AI tools. Once it leaves your network, you lose control of it."
+        ],
+        [
+          "Prompt injection attacks",
+          "A hidden instruction in an email, PDF or web page can trick your chatbot or agent into revealing data or taking actions it should not."
+        ],
+        [
+          "Shadow AI",
+          "Teams sign up for AI apps without IT knowing. You cannot protect what you cannot see."
+        ],
+        [
+          "Over-permissioned AI agents",
+          "Agents connected to your inbox, CRM or ERP often get far more access than they need, turning one mistake into a breach."
+        ],
+        [
+          "Insecure AI integrations",
+          "API keys in code, unmonitored vector databases and third-party plugins create easy entry points."
+        ],
+        [
+          "Compliance exposure",
+          "New Privacy Act rules on automated decisions start in December 2026. AI that uses personal information without the right controls risks fines and lost trust."
+        ]
+      ]
+    },
+    {
+      "title": "Our Security Process",
+      "intro": "A structured approach to securing your AI from discovery to ongoing monitoring.",
+      "items": [
+        [
+          "01",
+          "Discover",
+          "We find every AI tool, model, agent and data flow across your business, including the ones IT does not know about."
+        ],
+        [
+          "02",
+          "Assess and Test",
+          "We test your AI against real-world attacks and map gaps against Australian standards. You get a risk-ranked report in plain English."
+        ],
+        [
+          "03",
+          "Fix and Harden",
+          "We put the controls in place: access limits, guardrails, data protection, secure integrations and an AI use policy your team can follow."
+        ],
+        [
+          "04",
+          "Monitor and Improve",
+          "We keep watch in production with 24/7 support, regular retesting and updates as new threats and rules appear."
+        ]
+      ]
+    },
+    {
+      "title": "Our AI Security Services",
+      "intro": "We set up, test and manage the security around every AI system your business runs.",
+      "items": [
+        [
+          "AI Security Risk Assessment",
+          "We map every AI tool, model and integration, including shadow AI, then rank the risks by business impact. You get a clear report and a prioritised action plan."
+        ],
+        [
+          "LLM and AI Agent Security Testing",
+          "We test your chatbots, copilots and agents the way an attacker would, covering prompt injection, jailbreaks, data extraction and unsafe actions. Then we fix what we find."
+        ],
+        [
+          "Secure AI Implementation",
+          "Building something new? We design security in from day one with access controls, data masking, guardrails, safe tool permissions and private model hosting where needed."
+        ],
+        [
+          "AI Data Privacy and Protection",
+          "We control what data your AI can see, store and share, including PII redaction, encryption, retention rules and secure retrieval (RAG) setups."
+        ],
+        [
+          "AI Governance and Compliance",
+          "We write your AI use policy, set approval workflows and build the records you need for the Privacy Act, Australia's Guidance for AI Adoption and industry rules."
+        ],
+        [
+          "Ongoing AI Monitoring and Support",
+          "We watch your AI systems in production, log and review risky prompts and outputs, and respond fast with 24/7 support."
+        ]
+      ]
+    },
+    {
+      "title": "Built Around Australian Standards",
+      "intro": "Australia has no single AI law yet. Your AI must still meet privacy, consumer and industry rules, plus government guidance. We align every engagement to the frameworks that apply to you.",
+      "items": [
+        [
+          "[ASD's ACSC guidance on Engaging with AI](https://business.gov.au/news/new-guidance-for-engaging-with-artificial-intelligence)",
+          "Apply AI security advice alongside your Essential Eight controls"
+        ],
+        [
+          "ASD Essential Eight",
+          "Extend patching, access control and MFA to AI tools and agents"
+        ],
+        [
+          "Privacy Act 1988 and APPs",
+          "Control how AI collects, uses and discloses personal information"
+        ],
+        [
+          "Automated decision-making rules (Dec 2026)",
+          "Prepare the transparency disclosures your AI decisions will need"
+        ],
+        [
+          "[Guidance for AI Adoption (National AI Centre)](https://www.whitecase.com/insight-alert/australia-launches-new-ai-guidance)",
+          "Put governance, testing, human oversight and record-keeping in place"
+        ],
+        [
+          "APRA CPS 234",
+          "Bring AI suppliers and models into your information security controls"
+        ]
+      ]
+    },
+    {
+      "title": "Why Choose Zynex Technologies",
+      "intro": "Most cyber firms learned AI last year. We build AI systems every day, so we know exactly where they break and how to protect them.",
+      "items": [
+        [
+          "We Build AI, So We Know How to Secure It",
+          "Our team builds multi-agent platforms, voice agents and AI-powered ERP for Australian businesses."
+        ],
+        [
+          "AI and ERP Security in One Team",
+          "We secure the model and the Odoo, SAP, Salesforce or Zoho system it connects to, so nothing falls between vendors."
+        ],
+        [
+          "Local and Accountable",
+          "A Melbourne team serving Sydney, Brisbane, Perth, Adelaide and beyond, who know Australian law."
+        ],
+        [
+          "Plain-English Reporting",
+          "Clear risks, clear costs and clear fixes your leadership team can act on. No 200-page reports."
+        ],
+        [
+          "Security Sized to Your Business",
+          "Whether you run one ChatGPT subscription or a fleet of AI agents, we size the controls to fit."
+        ],
+        [
+          "Long-Term Support",
+          "24/7 production support, regular retesting and updates as new threats and rules appear."
+        ]
+      ]
+    }
+  ],
+  "assessment": {
+    "title": "Get Your Free AI Security Assessment",
+    "intro": "A Zynex AI specialist will review how your business uses AI and show you where your biggest risks are. You leave with clear next steps, whether you work with us or not.",
+    "benefits": [
+      "A quick inventory of the AI tools your business uses",
+      "Your top 3 AI security risks, ranked by business impact",
+      "A compliance check against the Privacy Act and ASD guidance",
+      "A practical action plan with costs and timelines"
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What are AI security services?",
+      "answer": "AI security services protect the AI tools, models and agents a business uses. They cover risks traditional cyber security misses, such as prompt injection, data leakage through AI tools, unsafe agent actions and AI privacy compliance."
+    },
+    {
+      "question": "Why do we need AI security if we already have cyber security?",
+      "answer": "Standard cyber tools protect networks and devices. They do not stop a chatbot from being tricked into sharing customer data or an AI agent from acting outside its role. AI security adds controls built for how AI actually works."
+    },
+    {
+      "question": "Is AI regulated in Australia?",
+      "answer": "Australia has no single AI law yet. Businesses must still meet the Privacy Act, Australian Consumer Law and industry rules when using AI. New Privacy Act transparency rules for automated decisions begin in December 2026."
+    },
+    {
+      "question": "What is prompt injection?",
+      "answer": "Prompt injection is an attack where hidden instructions in a message, file or web page trick an AI system into ignoring its rules. It can lead to leaked data or unauthorised actions. We test for it and put guardrails in place to block it."
+    },
+    {
+      "question": "We only use ChatGPT or Copilot. Do we still need this?",
+      "answer": "Yes. Everyday tools are where staff are most likely to paste sensitive data. An AI use policy, the right business settings and staff guidance can remove most of that risk quickly."
+    },
+    {
+      "question": "How much do AI security services cost?",
+      "answer": "Cost depends on how many AI systems you run and how sensitive your data is. Your free assessment includes a clear quote with no surprises."
+    },
+    {
+      "question": "Do you work with businesses outside Melbourne?",
+      "answer": "Yes. We are based in Melbourne and support businesses across Australia, including Sydney, Brisbane, Perth, Adelaide, Canberra, Hobart, Darwin and the Gold Coast."
+    },
+    {
+      "question": "Can you secure AI inside our ERP?",
+      "answer": "Yes. We implement and secure Odoo, SAP, Salesforce and Zoho, so we protect both the AI and the business data it connects to."
+    }
+  ],
+  "cta": [
+    "Ready to Secure Your AI?",
+    "Every week without AI controls is another week of customer data, contracts and pricing flowing through tools you do not control. Book a free 30-minute assessment and find out exactly where you stand."
+  ]
+}
