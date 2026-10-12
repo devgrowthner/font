@@ -17,7 +17,7 @@
 
   <!-- Excel to Odoo for small businesses -->
   <url>
-    <loc>https://zynextechnologies.com.au/excel-to-odoo-small-business</loc>
+    <loc>https://zynextechnologies.com.au/faq/excel-to-odoo-small-business</loc>
     <lastmod>2026-10-02</lastmod>
     <priority>0.8</priority>
   </url>
@@ -703,4 +703,6 @@
     <priority>0.8</priority>
   </url>
 
+  <url><loc>https://zynextechnologies.com.au/faq/how-long-does-an-odoo-implementation-take</loc></url>
+  <url><loc>https://zynextechnologies.com.au/faq/privacy-act-small-business-exemption-ai</loc></url>
 </urlset>

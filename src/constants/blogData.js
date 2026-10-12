@@ -1,6 +1,17 @@
 // Blog metadata for listing cards
 export const blogList = [
   {
+    "id": "73",
+    "slug": "ai-security-assessment-australia",
+    "title": "AI Security Assessment: 8 Risks Australian Businesses Must Check Before Deploying AI",
+    "excerpt": "Review eight AI security risks before deploying a chatbot, assistant or AI agent in Australia: data flows, permissions, prompt injection, leakage, vendors and more.",
+    "image": "/zynex_banner_natural_logo_4K.png",
+    "date": "October 12, 2026",
+    "author": "Zynex Team",
+    "readTime": "9 min read",
+    "route": "/blogs/ai-security-assessment-australia"
+  },
+  {
     id: "72",
     slug: "ai-compliance-audit-australia",
     title: "AI Compliance Audit: 7 Steps to Meet Australia's 10 December 2026 Privacy Deadline",
@@ -31,9 +42,9 @@ export const blogList = [
     excerpt:
       "Compare Odoo and SAP Business One for Australian businesses, including AUD pricing, features, GST and payroll compliance, implementation and fit.",
     image: "/zynex_banner_natural_logo_4K.png",
-    date: "October 2, 2026",
+    date: "October 12, 2026",
     author: "Zynex Team",
-    readTime: "17 min read",
+    readTime: "10 min read",
     route: "/blogs/odoo-vs-sap-business-one-australia",
   },
   {
@@ -846,252 +857,381 @@ export const blogList = [
 
 // Full content per blog for detail pages
 export const blogContents = {
+
+  "ai-security-assessment-australia": {
+    "metaTitle": "AI Security Assessment: 8 Risks Australian Businesses Must Check",
+    "metaDescription": "Review eight AI security risks before deploying a chatbot, assistant or AI agent in Australia: data flows, permissions, prompt injection, leakage, vendors and more.",
+    "title": "AI Security Assessment: 8 Risks Australian Businesses Must Check Before Deploying AI",
+    "description": "Review eight AI security risks before deploying a chatbot, assistant or AI agent in Australia: data flows, permissions, prompt injection, leakage, vendors and more.",
+    "image": "/zynex_banner_natural_logo_4K.png",
+    "badge": "AI Security",
+    "date": "October 12, 2026",
+    "readTime": "9 min read",
+    "relatedSlugs": [
+      "ai-security-risk-management-safe-systems",
+      "ai-compliance-audit-australia",
+      "ai-agents-vs-chatbots-australia"
+    ],
+    "inlineInternalLinks": [
+      {
+        "match": "AI agent connects to your business systems",
+        "href": "/agentic-ai"
+      },
+      {
+        "match": "AI Strategy Report",
+        "href": "/strategy-report"
+      },
+      {
+        "match": "AI solutions built for your business",
+        "href": "/custom-ai"
+      },
+      {
+        "match": "managing AI security risk when building safe systems",
+        "href": "/blogs/ai-security-risk-management-safe-systems"
+      },
+      {
+        "match": "full compliance audit",
+        "href": "/blogs/ai-compliance-audit-australia"
+      }
+    ],
+    "sectionOrder": [
+      "summary",
+      "introduction",
+      "content",
+      "faq",
+      "cta",
+      "relatedLinks"
+    ],
+    "summaryTitle": "Blog Summary",
+    "summaryDescription": "An AI security assessment is a structured review of an AI system before go-live that checks where your data flows, who and what the AI can access, how it handles prompt injection, and what your vendors do with your data. For most Australian SMBs it covers eight risk areas and has a timeline agreed during scoping, ending with a prioritised fix list.\n\nThis guide is for owners, operations leads and IT managers about to launch a chatbot, AI agent or internal assistant. It walks through the eight risks we check on every engagement, what the deliverables look like, and what the work usually costs. If you want the step-by-step build side, our guide on managing AI security risk when building safe systems covers that. This page is about checking what you're about to ship.",
+    "introductionTitle": "Introduction",
+    "introductionDescription": "Most Australian businesses test a new AI chatbot the same way they test a contact form. They ask it a few sensible questions, check that the answers look right, and switch it on. The problem is that AI systems fail in ways a normal launch checklist never looks for. A customer email with hidden instructions can redirect an AI agent. An over-permissioned service account can let a support bot read your entire CRM. A vendor’s default settings can send customer records offshore or into model training without anyone noticing.\n\nAn AI security assessment is how you find these gaps before your customers, a regulator or an attacker does. The stakes are also rising. The OAIC expects businesses to do due diligence on the AI products they adopt, and new Privacy Act transparency rules for automated decisions start on 10 December 2026. Launching first and checking later is getting harder to defend.\n\nThis guide is for owners, operations leads and IT managers about to launch a chatbot, AI agent or internal assistant. It walks through the eight risks we check on every engagement, what the deliverables look like, and what the work usually costs. If you want the step-by-step build side, our guide on managing AI security risk when building safe systems covers that. This page is about checking what you’re about to ship.",
+    "content": [
+      {
+        "heading": "What Is an AI Security Assessment?",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "An AI security assessment is a review that tests the parts of an AI system a traditional penetration test doesn't touch: the prompts, the retrieved documents, the model's permissions and the vendor's data handling. A pen test looks for open ports and weak passwords. An AI review asks whether a cleverly worded customer email can make your assistant forward an invoice to the wrong person.",
+          "You still need the normal controls. The ACSC's Engaging with Artificial Intelligence guidance is clear that AI systems should sit inside your existing cyber security baseline. The AI layer just adds new ways in."
+        ]
+      },
+      {
+        "heading": "Eight AI Security Risks to Check Before Deployment",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "An AI risk assessment for an Australian business should check eight areas, from data flows through to staff use. Here's the list we work through, roughly in the order problems tend to show up."
+        ]
+      },
+      {
+        "heading": "1. Data Flows, Hosting and Retention",
+        "headingLevel": 3,
+        "bodyParagraphs": [
+          "Every AI system moves data somewhere: to a model provider, a vector database, a logging tool. The first job is a map. Which systems feed the AI, which region hosts each one, how long is data kept, and is any of it used for training? We regularly find a test environment quietly sending real customer records to an offshore API."
+        ]
+      },
+      {
+        "heading": "2. Permissions and Access Control",
+        "headingLevel": 3,
+        "bodyParagraphs": [
+          "An AI assistant connected to your CRM with an admin account can read everything that admin can. That's usually far more than the use case needs. We check service accounts, API scopes and whether the AI inherits the permissions of the user asking the question. Least privilege matters more here than almost anywhere else."
+        ]
+      },
+      {
+        "heading": "3. Direct and Indirect Prompt Injection",
+        "headingLevel": 3,
+        "bodyParagraphs": [
+          "Prompt injection is an attack where text placed in front of the model overrides its instructions. Direct injection comes from the user typing. Indirect injection is sneakier: instructions hidden in an email, PDF or web page the AI reads. We test both with realistic payloads against your actual workflows, not generic jailbreak lists."
+        ]
+      },
+      {
+        "heading": "4. Leakage of Personal and Commercial Data",
+        "headingLevel": 3,
+        "bodyParagraphs": [
+          "A support chatbot trained on your knowledge base can still repeat an internal pricing sheet or a staff phone number if those documents were indexed. We probe for leakage of personal information, commercial data and system prompts, and check output filtering before anything reaches a customer."
+        ]
+      },
+      {
+        "heading": "5. Vendor Terms and Data Handling",
+        "headingLevel": 3,
+        "bodyParagraphs": [
+          "Your AI stack probably includes a model provider, an orchestration tool and a few plugins. Each one is a vendor with its own terms. The OAIC's guidance on commercially available AI products expects businesses to do due diligence on these tools, including how they handle personal information. We review contracts, data processing terms, training opt-outs and where each vendor stores data."
+        ]
+      },
+      {
+        "heading": "6. Automated Decisions and Privacy Transparency",
+        "headingLevel": 3,
+        "bodyParagraphs": [
+          "If your AI helps decide who gets credit, a job interview, a price or eligibility for a service, that's an automated decision risk as well as a security one. From 10 December 2026, APP entities must explain certain substantially automated decisions in their privacy policies. The OAIC has published resources on this transparency requirement. We flag every decision point so your privacy team can check it. The full compliance audit is a separate piece of work."
+        ]
+      },
+      {
+        "heading": "7. Logging and Incident Response",
+        "headingLevel": 3,
+        "bodyParagraphs": [
+          "When something goes wrong with an AI system, you need to know what it was asked, what it retrieved and what it did. Many SMB deployments log nothing useful. We check that prompts, tool calls and outputs are logged with personal data handled properly, and that your incident plan covers AI. If personal information leaks, the Notifiable Data Breaches scheme may apply."
+        ]
+      },
+      {
+        "heading": "8. Shadow AI and Staff Use",
+        "headingLevel": 3,
+        "bodyParagraphs": [
+          "The AI you're formally deploying is rarely the only AI in the business. Staff paste contracts into free chatbots and connect browser extensions to email. We run a short survey and review of network and SaaS logs to find unapproved tools, then recommend a usage policy that people will actually follow."
+        ]
+      },
+      {
+        "heading": "What Does a Zynex AI Security Assessment Include?",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "An AI security assessment from Zynex includes a scoping workshop, technical testing and a ranked remediation plan."
+        ]
+      },
+      {
+        "heading": "How Long Does an Assessment Take and What Does It Cost?",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "An LLM security audit for a single chatbot or assistant is usually a few weeks of work, and cost depends mostly on how many systems the AI connects to. A standalone FAQ bot with no integrations is a small job. An AI agent that reads email, updates Xero and books jobs in your field service tool is much bigger, because every connection is a path for misuse.",
+          "Fixes are priced separately because they vary so much. Some are a config change. Others mean redesigning how an AI agent connects to your business systems."
+        ]
+      },
+      {
+        "heading": "What Zynex Sees in Australian AI Deployments",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "Zynex is a Melbourne-based technology consultancy that builds and secures AI systems for Australian SMBs, so we see these risks from both sides of the table. A few patterns come up again and again.",
+          "The model is rarely the problem. The plumbing is. The most serious findings in our reviews are usually an over-permissioned service account or a document store indexed without anyone checking what was in it.",
+          "Teams test the happy path. A chatbot gets tested with 50 sensible customer questions and passes. Nobody tries the angry customer who pastes in a fake \"system message\", or the supplier invoice with hidden white text.",
+          "Week three is where it slips. Once testing starts, owners realise nobody owns AI risk. We push for one named person before the assessment begins, which saves more time than any tool does.",
+          "Some projects aren't ready. If your data permissions are a mess across the business, fix that first. An AI assessment won't paper over it. Our AI Strategy Report is often the better starting point in that case."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do we need an assessment for an off-the-shelf AI tool?",
+        "answer": "Yes, a lighter version is still worth it, because most risk sits in configuration and permissions rather than the tool. Microsoft 365 Copilot, for example, can surface any file a user already has access to, so overshared SharePoint sites become a real exposure. For off-the-shelf tools we focus on risks 1, 2, 5 and 8 and skip most of the custom testing. If you're building your own assistant, see how we approach AI solutions built for your business, where security testing is part of delivery."
+      },
+      {
+        "question": "Can we fit an AI security review in before our chatbot launch?",
+        "answer": "No, a focused review can usually fit before launch if you start now. Prioritise prompt injection, leakage of internal documents and what the chatbot can access, because those cause the most visible failures. Launch with a narrow scope and a human handover option, then widen it once testing is done. Delaying a week is cheaper than a public screenshot of your bot leaking pricing."
+      },
+      {
+        "question": "How do we secure an AI agent connected to business systems?",
+        "answer": "Give the agent its own account with the minimum permissions for each task, and require human approval for anything that moves money or deletes records. Most agent incidents come from shared admin credentials. Log every tool call, set rate limits, and test with hostile inputs such as emails containing hidden instructions before you connect it to live data."
+      },
+      {
+        "question": "How much should an Australian SMB budget for an AI security assessment?",
+        "answer": "Budget depends on how many systems the AI touches, not headcount. A single website chatbot sits at the low end, while an agent connected to finance and customer systems costs several times more.. Ask any provider for a fixed-price scope after a short discovery call rather than an open-ended daily rate."
+      },
+      {
+        "question": "Should we use a cyber security firm or an AI developer?",
+        "answer": "Choose whoever can test the AI layer and your normal infrastructure together, which often means a cyber firm working with an AI developer. A traditional pen tester may miss prompt injection and retrieval leakage. An AI developer may miss network and identity basics. Ask to see sample findings from a previous AI engagement before you sign."
+      },
+      {
+        "question": "Does deploying AI mean we need to update our privacy policy?",
+        "answer": "Not automatically, but if your AI helps make decisions that significantly affect individuals, your privacy policy may need updating from 10 December 2026. Start by listing every place AI influences a decision about a person. A security assessment flags these points, while a privacy compliance review checks the policy wording against OAIC guidance."
+      },
+      {
+        "question": "How should we manage staff using unapproved AI tools?",
+        "answer": "Move people onto a business plan with training turned off and set a simple rule on what data can't be pasted in. Banning AI outright usually pushes use onto personal phones. Then find out which tools are in use through a quick staff survey and log review, and write a one-page usage policy covering approved tools and banned data types."
+      }
+    ],
+    "ctaTitle": "Book an AI Security Assessment",
+    "ctaDescription": "If you're about to launch a chatbot, assistant or AI agent and nobody has tested what it can access or leak, book a call with our Melbourne team. We'll scope an AI security assessment around your actual systems and give you a fixed price before any work starts. Call 03 9292 2022 or use the Book a call button.",
+    "ctaButtonText": "Book a call",
+    "ctaButtonHref": "https://calendly.com/zynex-technologies/30min"
+  },
   "odoo-vs-sap-business-one-australia": {
-    metaTitle: "Odoo vs SAP Business One: Best ERP for Australia 2026",
-    metaDescription:
-      "Odoo vs SAP Business One compared for Australian businesses: AUD pricing, features, GST and payroll compliance, implementation and which ERP suits you.",
-    title: "Odoo vs SAP Business One: Which ERP Is Right for Your Australian Business in 2026?",
-    description:
-      "Compare Odoo and SAP Business One for Australian businesses, including AUD pricing, features, compliance, implementation and which ERP best fits your plans.",
-    image: "/zynex_banner_natural_logo_4K.png",
-    badge: "ERP Comparison",
-    date: "October 2, 2026",
-    readTime: "17 min read",
-    relatedSlugs: [
+    "metaTitle": "Odoo vs SAP Business One: Best ERP for Australia 2026",
+    "metaDescription": "Compare Odoo and SAP Business One for Australian SMBs: AUD licence costs, GST, BAS, STP payroll, implementation timelines and which ERP fits your business.",
+    "title": "Odoo vs SAP Business One: Which ERP Is Right for Your Australian Business in 2026?",
+    "description": "Compare Odoo and SAP Business One for Australian businesses, including AUD pricing, Australian payroll, implementation and fit by business size.",
+    "image": "/zynex_banner_natural_logo_4K.png",
+    "badge": "ERP Comparison",
+    "date": "October 12, 2026",
+    "readTime": "10 min read",
+    "relatedSlugs": [
+      "sap-business-one-cost-australia",
       "odoo-vs-zoho",
       "odoo-vs-erpnext-comparison",
-      "choose-odoo-implementation-partner-australia",
-      "sap-implementation-partner-vs-in-house-team",
+      "choose-odoo-implementation-partner-australia"
     ],
-    inlineInternalLinks: [
-      { match: "ERP implementation guide", href: "/blogs/erp-implementation-australia-guide" },
-      { match: "Odoo ERP", href: "/odoo-erp-development-company-australia" },
-      { match: "SAP ERP", href: "/sap-erp-implementation-company-australia" },
-      { match: "Odoo cost guide", href: "/blogs/odoo-erp-implementation-cost-australia" },
-      { match: "Odoo customisation", href: "/blogs/odoo-customization-services" },
-      { match: "manufacturing ERP challenges", href: "/blogs/manufacturing-erp-implementation-challenges" },
-      { match: "integrate ERP and CRM", href: "/blogs/integrate-erp-crm-software" },
-      { match: "choose an Odoo partner", href: "/blogs/choose-odoo-implementation-partner-australia" },
-      { match: "SAP checklist", href: "/blogs/sap-erp-implementation-checklist-growing-businesses" },
-      { match: "retail inventory", href: "/blogs/erp-retail-australia-inventory-sales" },
-      { match: "Odoo vs Zoho", href: "/blogs/odoo-vs-zoho" },
-      { match: "choose an ERP partner", href: "/blogs/how-to-choose-erp-implementation-partner-australia" },
-      { match: "Book a 30-minute call", href: "https://calendly.com/zynex-technologies/30min" },
+    "inlineInternalLinks": [
+      {
+        "match": "Odoo and Zoho comparison",
+        "href": "/blogs/odoo-vs-zoho"
+      },
+      {
+        "match": "breakdown of Odoo against ERPNext",
+        "href": "/blogs/odoo-vs-erpnext-comparison"
+      },
+      {
+        "match": "SAP ERP implementation team",
+        "href": "/sap-erp-implementation-company-australia"
+      },
+      {
+        "match": "Odoo ERP development team in Australia",
+        "href": "/odoo-erp-development-company-australia"
+      },
+      {
+        "match": "guide to SAP Business One costs in Australia",
+        "href": "/blogs/sap-business-one-cost-australia"
+      }
     ],
-    sectionOrder: ["summary", "introduction", "content", "faq", "cta", "relatedLinks"],
-    summaryTitle: "Blog Summary",
-    summaryDescription:
-      "Odoo and SAP Business One are both strong ERP choices for Australian small and mid-sized businesses, but they suit different buyers. Odoo is modular and far cheaper to license, at roughly AUD 30 to 45 per user per month, and it can be shaped around almost any workflow, which makes it a good fit for growing SMEs, service businesses, retailers and companies that want one platform for CRM, inventory, accounting and ecommerce. SAP Business One costs more, typically AUD 128 to 213 per professional user per month or about AUD 3,786 per user for a perpetual licence, but it brings tighter financial controls, deep inventory and manufacturing features and the SAP brand, which suits distributors, manufacturers and businesses that plan to move to SAP S/4HANA later. Both handle GST and BAS reporting; for payroll, SAP Business One relies on third-party tools and Odoo's own Australian payroll is still completing STP Phase 2 compliance, so most businesses pair either ERP with a dedicated payroll system. The right answer depends on your budget, complexity and growth plans, and on choosing an implementation partner who knows the Australian setup.",
-    introductionTitle: "Introduction",
-    introductionDescription:
-      "If your business has outgrown spreadsheets, Xero add-ons and disconnected tools, the Odoo vs SAP Business One question usually comes up fast. Both are popular ERP systems with Australian SMEs, both have local partners, and both promise to bring finance, inventory, sales and operations into one place. On paper they look similar. In practice, they differ a lot on cost, flexibility and the kind of business they suit best.\n\nPicking the wrong one is expensive. You either pay for enterprise controls you never use, or you outgrow a system that cannot keep up with your warehouse, multi-entity accounts or reporting needs. Switching ERP a few years later can cost more than the first project.\n\nThis guide compares Odoo and SAP Business One for Australian businesses in 2026: licence pricing in AUD, total cost of ownership, features, GST and payroll compliance, implementation and which industries each one fits. If you are just starting to plan, our ERP implementation guide covers the full process.",
-    content: [
+    "sectionOrder": [
+      "summary",
+      "introduction",
+      "content",
+      "faq",
+      "cta",
+      "relatedLinks"
+    ],
+    "summaryTitle": "Blog Summary",
+    "summaryDescription": "Odoo vs SAP Business One usually comes down to scope and budget. Odoo suits most Australian SMBs that want accounting, inventory, CRM, payroll and ecommerce on one platform, with Custom plan licences listed at about A$64 to A$80 per user per month. SAP Business One fits inventory-heavy or multi-entity businesses that want tighter financial controls and can carry licences of around A$213 per Professional user per month.\n\nThis comparison is for owners, finance leads and operations managers who've outgrown Xero or MYOB and have narrowed the shortlist to these two. We cover what each platform is, real AUD licence costs, Australian compliance (GST, BAS and Single Touch Payroll), implementation time and a verdict by business size. Zynex implements both, so we'll tell you where each one falls short as well as where it wins.",
+    "introductionTitle": "Introduction",
+    "introductionDescription": "The main difference is breadth versus depth. Odoo is a modular, open-core business platform that runs finance, sales, inventory, manufacturing, HR, payroll, website and ecommerce from one database. SAP Business One is an ERP built by SAP for small and mid-sized companies that concentrates on financials, purchasing, inventory, production and reporting, and relies on add-ons from SAP partners for areas such as payroll and ecommerce.\n\nOdoo comes in two editions. Community is free and open source; Enterprise adds paid apps, hosting options and vendor support. Most Australian businesses that need payroll, full accounting and upgrades handled by the vendor end up on Enterprise. (We'll cover the edition choice in its own article, so we'll leave it there.)\n\nSAP Business One is sold and implemented only through SAP partners. It runs on Microsoft SQL Server or SAP HANA, either on your own servers or hosted by a partner, and is typically licensed per named user with different user types for full and limited access.\n\nIf you're also weighing other options, our Odoo and Zoho comparison and our breakdown of Odoo against ERPNext cover those pairings.\n\nOdoo wins on breadth, licence cost and how quickly you can add new departments. SAP Business One wins on financial depth, audit trails and a mature partner add-on market for distribution and manufacturing.\n\nLicence prices change, so confirm current figures before you sign anything.",
+    "content": [
       {
-        heading: "Odoo and SAP Business One at a Glance",
-        headingLevel: 2,
-      },
-      {
-        heading: "What Is Odoo?",
-        headingLevel: 3,
-        bodyParagraphs: [
-          "Odoo is an open-source, modular business platform from Belgium. It offers dozens of connected apps, including accounting, CRM, inventory, manufacturing, ecommerce, point of sale, project management and HR, and you switch on only what you need. It comes in a free Community edition and a paid Enterprise edition, and it can run in Odoo's cloud, on Odoo.sh or on your own servers. Its biggest strength is flexibility: a skilled Odoo ERP partner can tailor it to almost any workflow.",
+        "heading": "Odoo vs SAP Business One: Licence Costs and Total Budget",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "On licences alone, Odoo costs less for almost every Australian SMB we speak with. The bigger question is total cost of ownership: licences, hosting, implementation, add-ons, payroll and support over three years.",
+          "Here's a licence-only comparison for a 20-user business using published list prices as of October 2026 (ex GST):"
         ],
-      },
-      {
-        heading: "What Is SAP Business One?",
-        headingLevel: 3,
-        bodyParagraphs: [
-          "SAP Business One (often called SAP B1) is SAP's ERP built specifically for small and mid-sized businesses. It covers financials, sales, purchasing, inventory, production planning, banking and reporting, with add-ons from certified partners for industry needs. It runs on SAP HANA or Microsoft SQL Server, either on-premise or hosted in the cloud by a partner. Its strengths are strong financial controls, reliable inventory management and a clear upgrade path into the wider SAP ERP family.",
-        ],
-      },
-      {
-        heading: "Odoo vs SAP Business One: Side-by-Side Comparison",
-        headingLevel: 2,
-        table: {
-          headers: ["Factor", "Odoo", "SAP Business One"],
-          rows: [
-            ["Best for", "Growing SMEs, service firms, retail, ecommerce", "Distributors, manufacturers, finance-heavy SMEs"],
-            ["Licence model", "Per user subscription; free Community edition", "Per user subscription or perpetual licence"],
-            ["Typical licence cost (AUD)", "About $30 to $45 per user per month (Enterprise)", "About $128 to $213 per professional user per month, or about $3,786 per user perpetual"],
-            ["Modules", "40+ integrated apps, switch on as needed", "Core ERP modules plus partner add-ons"],
-            ["Customisation", "Very high; open source and Odoo Studio", "Moderate; SDK and certified add-ons"],
-            ["Hosting", "Odoo Online, Odoo.sh or on-premise", "On-premise or partner-hosted cloud"],
-            ["Built-in CRM and ecommerce", "Yes, native", "CRM included; ecommerce usually via add-on"],
-            ["Manufacturing depth", "Good for light to mid manufacturing", "Strong MRP and batch or serial tracking"],
-            ["GST and BAS", "Supported in Australian localisation", "Supported"],
-            ["Australian payroll", "Native module, STP Phase 2 still in progress", "Via third-party payroll integration"],
-            ["Typical go-live (SME)", "4 to 8 weeks for small businesses", "2 to 6 months depending on scope"],
-            ["Upgrade path", "Scales within Odoo", "Clear path to SAP S/4HANA"],
+        "table": {
+          "headers": [
+            "Licence-only comparison (ex GST)",
+            "Odoo Custom",
+            "SAP Business One Professional"
           ],
+          "rows": [
+            [
+              "Monthly cost per user used in this example",
+              "A$80",
+              "A$213"
+            ],
+            [
+              "Monthly cost for 20 users",
+              "A$1,600",
+              "A$4,260"
+            ],
+            [
+              "Annual cost for 20 users",
+              "A$19,200",
+              "A$51,120"
+            ],
+            [
+              "Three-year licence cost at unchanged rates",
+              "A$57,600",
+              "A$153,360"
+            ]
+          ]
         },
-        closingParagraphs: ["Prices vary by partner, edition and billing term, so treat these as starting points for budgeting rather than quotes."],
+        "closingParagraphs": [
+          "Two caveats. Most SAP Business One sites mix Professional users with cheaper limited user types, which narrows the gap. And Odoo's annual billing promotions bring its figure down further. Even so, the licence gap is real.",
+          "Implementation is where the totals can flip. A lightly customised Odoo rollout is usually cheaper than a SAP Business One project of the same scope, but a heavily customised Odoo build can cost more than a standard SAP Business One rollout with proven add-ons. Typical implementation ranges:",
+          "Odoo implementation for 10 to 50 users: request a quote based on modules, migration, integrations and customisation.",
+          "SAP Business One implementation for 10 to 50 users: request a quote based on user types, add-ons, hosting and deployment scope.",
+          "Separate payroll for SAP Business One: include the payroll licence, integration and ongoing support in your estimate.",
+          "For a full breakdown of SAP pricing, see our guide to SAP Business One costs in Australia."
+        ]
       },
       {
-        heading: "Pricing and Total Cost of Ownership in Australia",
-        headingLevel: 2,
+        "heading": "Australian Compliance: GST, BAS and Single Touch Payroll",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "Both handle GST. Odoo goes further for Australian payroll, because it includes STP Phase 2 reporting inside the ERP while SAP Business One sites typically pay for and integrate a separate payroll system.",
+          "Odoo's Australian accounting localisation ships with preconfigured GST taxes, a BAS report that calculates GST and PAYG withholding, TPAR reporting for contractor payments and ABA batch payment files, according to Odoo's Australian fiscal localisation documentation. One catch: the BAS report isn't lodged with the ATO directly from Odoo, so your bookkeeper still lodges through the ATO portal or a lodgement tool.",
+          "Odoo Payroll's Australian localisation is, in Odoo's words, compliant with SuperStream and Single Touch Payroll Phase 2, and it handles PAYG withholding, super and leave at termination (Odoo Australian payroll documentation). It has limits worth checking early. Odoo advises against using it for some flows, including cents-per-kilometre and travel allowances with varied withholding, and it doesn't link to the Timesheets app. Businesses with lots of casual staff or complex award interpretation should test their real pay scenarios before committing.",
+          "SAP Business One's Australian localisation covers GST tax codes and tax reporting. Confirm the available BAS reporting output with your implementation partner. Payroll is the main gap. Single Touch Payroll is the system Australian employers use to report pay information to the ATO each pay run (ATO: Single Touch Payroll), and SAP Business One customers normally meet it through a separate payroll product connected to the ERP. That's an extra licence, an extra integration and one more system for your finance team."
+        ]
       },
       {
-        heading: "Odoo Pricing",
-        headingLevel: 3,
-        bodyParagraphs: [
-          "Odoo's Community edition is free to download, but most Australian businesses choose Enterprise for accounting features, support and upgrades. Odoo lists two paid plans: Standard, which includes all apps on Odoo Online, and Custom, which adds Odoo Studio, multi-company, external API access and the option to host on Odoo.sh or on-premise. In Australia, Enterprise licensing usually works out at about AUD 30 to 45 per user per month.",
-          "Implementation is where most of the budget goes. Based on our Odoo cost guide:",
+        "heading": "Implementation Timelines and What Drives Them",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "Odoo rollouts for SMBs are usually quicker because more departments are covered by standard apps and configuration replaces a lot of development. Across Zynex projects, our average deployment time is 6 to 12 weeks, and lightly customised Odoo projects tend to sit in that window.",
+          "SAP Business One projects of the same size typically run longer when they involve add-ons, payroll integration and multi-entity consolidation. Ask your implementation partner for a go-live estimate based on your entities, add-ons, migration and integrations.",
+          "Whichever you pick, these factors drive the timeline far more than the product:"
         ],
-        bulletList: [
-          "Small business (1 to 10 users): AUD 5,000 to 20,000",
-          "Growing business (10 to 30 users): AUD 20,000 to 60,000",
-          "Mid-market (30 to 100 users): AUD 60,000 to 150,000",
+        "numberedList": [
+          "How much customisation you insist on in phase one.",
+          "The state of your product, customer and supplier data.",
+          "Payroll setup and at least one parallel pay run.",
+          "Integrations with ecommerce, 3PL, bank feeds or EDI.",
+          "Going live too close to 30 June, when finance teams are busy with end of financial year."
+        ]
+      },
+      {
+        "heading": "Which ERP Is Right for Your Business?",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "For most Australian businesses under 100 staff, Odoo is the better starting point. SAP Business One earns its higher cost when financial control, multi-entity reporting or a specific industry add-on matters more than breadth."
+        ]
+      },
+      {
+        "heading": "Choose Odoo If You",
+        "headingLevel": 3,
+        "bulletList": [
+          "Have 10 to 100 staff and want finance, inventory, CRM, payroll and ecommerce in one place.",
+          "Run Shopify or WooCommerce today and want online orders to flow straight into stock and accounting, or want to move the website onto the ERP.",
+          "Want lower licence costs and the option to add apps department by department.",
+          "Have a fairly standard trading or service model without heavy intercompany activity."
+        ]
+      },
+      {
+        "heading": "Choose SAP Business One If You",
+        "headingLevel": 3,
+        "bulletList": [
+          "Run several legal entities in Australia and New Zealand (or offshore) and need consolidation and intercompany controls.",
+          "Are a distributor or manufacturer with complex batch, serial or warehouse requirements and want a proven industry add-on.",
+          "Have a parent company or investors who prefer the SAP brand and audit trail.",
+          "Already use a dedicated payroll system you're happy with and don't need payroll in the ERP."
         ],
+        "closingParagraphs": [
+          "If you're comparing SAP Business One with larger SAP products as well, our SAP ERP implementation team can walk through where Business One stops and S/4HANA starts."
+        ]
       },
       {
-        heading: "SAP Business One Pricing",
-        headingLevel: 3,
-        bodyParagraphs: [
-          "SAP Business One is sold through partners, so prices vary. A published Australian partner price list shows subscription licences at about AUD 213 per month for a Professional user, AUD 187 for a Financial or CRM user and AUD 138 for a Starter Pack user. Other partners bundle licences with cloud hosting from around AUD 142 per Professional user per month. Perpetual licences cost about AUD 3,786 per Professional user, plus annual SAP maintenance.",
-          "The same partner estimates implementation at around AUD 15,000 for finance and administration, AUD 30,000 for distribution and AUD 45,000 for manufacturing, before custom add-ons and integrations.",
-        ],
-      },
-      {
-        heading: "What 20 Users Might Cost in Year One",
-        headingLevel: 3,
-        bodyParagraphs: [
-          "For a 20-user business on subscription licences, licence fees alone come to roughly AUD 7,200 to 10,800 a year on Odoo Enterprise, compared with roughly AUD 34,000 to 51,000 a year for 20 SAP Business One Professional users. Add implementation, data migration, training and support to both. Odoo is usually the cheaper option over five years; SAP Business One can still make sense when its inventory and finance controls save you more than the licence gap.",
-        ],
-      },
-      {
-        heading: "Features, Flexibility and Australian Compliance",
-        headingLevel: 2,
-      },
-      {
-        heading: "Flexibility and Customisation",
-        headingLevel: 3,
-        bodyParagraphs: [
-          "Odoo wins on flexibility. Because it is open source, developers can change screens, workflows and reports, and Odoo Studio lets non-developers add fields and simple automations. That makes it ideal when your processes are unusual or still changing. Our guide to Odoo customisation explains what is possible without making upgrades painful.",
-          "SAP Business One is more structured. You customise through user-defined fields, its SDK and certified partner add-ons. That keeps the system stable and auditable, but deep changes take longer and cost more.",
-        ],
-      },
-      {
-        heading: "Inventory, Manufacturing and Finance",
-        headingLevel: 3,
-        bodyParagraphs: [
-          "SAP Business One is strong in multi-warehouse inventory, batch and serial tracking, landed costs, MRP and financial controls such as approval workflows and period locking. Distributors and manufacturers with complex stock often prefer it. Odoo covers the same ground and handles most SME needs well, and it adds native ecommerce, point of sale and field service. For heavier production, read our notes on manufacturing ERP challenges before you decide.",
-        ],
-      },
-      {
-        heading: "CRM and Integrations",
-        headingLevel: 3,
-        bodyParagraphs: [
-          "Odoo includes CRM, email marketing, helpdesk and a website builder in the same database, so sales and operations share one record. SAP Business One includes CRM basics and connects to other tools through its Service Layer API and partner connectors. If connecting sales and finance is a priority, see how to integrate ERP and CRM.",
-        ],
-      },
-      {
-        heading: "GST, BAS and Payroll",
-        headingLevel: 3,
-        bodyParagraphs: ["Both systems handle Australian GST tax codes and BAS reporting when configured by an experienced local partner. Payroll is where they differ:"],
-        bulletList: [
-          "Odoo has a native Australian payroll module with awards, leave and PAYG withholding feeding into BAS. Odoo's own documentation notes it is still completing Single Touch Payroll Phase 2 and SuperStream compliance, so many businesses run a dedicated payroll tool alongside it for now.",
-          "SAP Business One has no native Australian payroll. Businesses connect it to local payroll software, such as Employment Hero, for STP reporting, super and award interpretation.",
-        ],
-        closingParagraphs: ["In both cases, confirm your payroll setup with your partner and accountant before go-live."],
-      },
-      {
-        heading: "Implementation, Support and Partners in Australia",
-        headingLevel: 2,
-        bodyParagraphs: [
-          "The software matters, but the partner matters more. Most ERP projects that go over budget do so because of weak scoping, messy data or poor training, not because of the product.",
-          "Odoo projects are usually faster. Small businesses can go live in 4 to 8 weeks, mid-sized companies in 3 to 6 months, and multi-site rollouts in 6 to 12 months. Because Odoo is so flexible, the risk is over-customising, so choose a partner who keeps changes lean. Here is how to choose an Odoo partner.",
-          "SAP Business One projects follow a more structured method with fixed phases, which suits businesses that want predictable governance. Only certified SAP partners can sell licences, and ongoing support is tied to annual maintenance. Our SAP checklist covers what to prepare.",
-          "Whichever you choose, plan data migration early. Clean customer, supplier and stock records before moving them, whether you are coming off spreadsheets or a legacy system.",
-        ],
-      },
-      {
-        heading: "Which ERP Is Right for Your Business?",
-        headingLevel: 2,
-      },
-      {
-        heading: "Choose Odoo If You",
-        headingLevel: 3,
-        bulletList: [
-          "Have 5 to 100 users and want to keep licence costs low",
-          "Need CRM, ecommerce, POS, projects and accounting in one system",
-          "Have unique workflows that off-the-shelf software does not fit",
-          "Want to start small and add apps as you grow",
-          "Run a services, wholesale or retail business that needs tight retail inventory control",
-        ],
-      },
-      {
-        heading: "Choose SAP Business One If You",
-        headingLevel: 3,
-        bulletList: [
-          "Run distribution or manufacturing with complex stock, batches or serial numbers",
-          "Need strict financial controls, approvals and audit trails",
-          "Have multiple entities or plan significant international growth",
-          "Want the option to move to SAP S/4HANA as you scale",
-          "Have the budget for higher licence and support fees",
-        ],
-      },
-      {
-        heading: "Industry Snapshot",
-        headingLevel: 3,
-        table: {
-          headers: ["Industry", "Usually a Better Fit", "Why"],
-          rows: [
-            ["Retail and ecommerce", "Odoo", "Native online store, POS and inventory in one system"],
-            ["Professional services", "Odoo", "Projects, timesheets, CRM and invoicing together"],
-            ["Wholesale distribution", "Either; SAP B1 for high volume", "SAP B1 excels at multi-warehouse and landed costs"],
-            ["Manufacturing", "SAP B1 for complex; Odoo for light", "SAP B1 has deeper MRP and traceability"],
-            ["Healthcare and clinics", "Odoo", "Flexible, lower cost, easy to extend"],
-            ["Construction and trades", "Odoo", "Job costing, field service and projects"],
-          ],
-        },
-        closingParagraphs: ["Still comparing other options? See our Odoo vs Zoho breakdown too."],
-      },
-      {
-        heading: "How Zynex Helps You Choose and Implement the Right ERP",
-        headingLevel: 2,
-        bodyParagraphs: [
-          "Zynex Technologies is an Australian ERP and AI company that implements both Odoo and SAP solutions, so we have no reason to push one over the other. We start by mapping your processes, users, data and growth plans, then recommend the platform that gives you the best return over five years, not just the cheapest first invoice.",
-          "Our team handles scoping, configuration, Australian GST and BAS setup, payroll integration, data migration, training and ongoing support for businesses in Sydney, Melbourne, Brisbane, Perth, Adelaide and across Australia. Before you sign with anyone, read how to choose an ERP partner.",
-          "Ready to compare options for your business? Book a 30-minute call with our ERP team.",
-        ],
-      },
+        "heading": "What Zynex Sees in ERP Selection Projects",
+        "headingLevel": 2,
+        "bodyParagraphs": [
+          "Zynex Technologies is a Melbourne-based consultancy that implements Odoo, SAP Business One, Zoho, ERPNext and Salesforce for Australian businesses, so we don't have a reason to push one product. Here's what comes up on first calls.",
+          "The most common mistake is choosing on licence price, then customising the cheaper system until it behaves like the other one. We've seen businesses pick Odoo to save on licences, then spend that saving rebuilding a multi-entity consolidation process that SAP Business One handles out of the box. The opposite happens too: a 25-person wholesaler buys SAP Business One for the brand, then pays for separate payroll, ecommerce and CRM tools it could have had in Odoo.",
+          "The second pattern is payroll. Finance teams often forget it's in scope until week three. If you're on Xero Payroll or KeyPay today, decide early whether payroll moves into Odoo, stays where it is, or connects to SAP Business One through an integration. That decision changes the project plan.",
+          "Our rule of thumb: map your five most important processes (for example quote to cash, purchase to pay, stock receipt, month-end close and pay run), then run each one in a demo of both systems with your own data. Whichever system handles four of the five without custom code is usually the right one. If that's Odoo, our Odoo ERP development team in Australia can scope it in a short workshop."
+        ]
+      }
     ],
-    faq: [
+    "faq": [
       {
-        question: "Is Odoo cheaper than SAP Business One?",
-        answer:
-          "Yes, in most cases. Odoo Enterprise licences cost about AUD 30 to 45 per user per month, while SAP Business One Professional users typically cost AUD 128 to 213 per month. Implementation costs overlap, so compare total cost over five years.",
+        "question": "Which ERP is better for a 30-person Australian wholesaler?",
+        "answer": "Most 30-person wholesalers are better served by Odoo, because it covers inventory, purchasing, sales, CRM and payroll at a lower licence cost. SAP Business One becomes the better pick if you run several entities, need strict batch or serial traceability, or your parent company requires SAP. Test both with your real stock and order data before you decide."
       },
       {
-        question: "Is SAP Business One better than Odoo for manufacturing?",
-        answer:
-          "For complex manufacturing with detailed MRP, batch tracking and strict costing, SAP Business One is often the stronger choice. For light assembly or make-to-order work, Odoo's manufacturing app is usually enough.",
+        "question": "Is SAP Business One worth the extra cost for a business with fewer than 50 staff?",
+        "answer": "SAP Business One is worth the extra cost under 50 staff only when you need its financial controls, multi-entity consolidation or a specific industry add-on. For a single-entity business with standard processes, the licence premium over Odoo is hard to justify. Compare three-year totals, including payroll and add-ons, rather than year-one licences."
       },
       {
-        question: "Do Odoo and SAP Business One support GST and BAS in Australia?",
-        answer:
-          "Yes. Both support Australian GST tax codes and BAS reporting when set up by an experienced local partner.",
+        "question": "Can we migrate from SAP Business One to Odoo?",
+        "answer": "Yes, you can move from SAP Business One to Odoo, but most businesses migrate open transactions, master data and opening balances rather than every historical line. Keep the old SAP database in read-only mode or export reports for audit and ATO record-keeping, since the ATO generally expects records to be kept for five years. Plan the cutover away from month-end and 30 June."
       },
       {
-        question: "Can Odoo or SAP Business One run Australian payroll?",
-        answer:
-          "Odoo has a native Australian payroll module, though it is still completing STP Phase 2 and SuperStream compliance. SAP Business One has no native Australian payroll and connects to local payroll software instead.",
+        "question": "Does Odoo support multiple companies and consolidation?",
+        "answer": "Odoo supports multiple companies in one database with intercompany rules and separate charts of accounts, which works well for simple group structures. If you need formal consolidation with eliminations and currency translation every month, test it carefully or plan a reporting tool on top. SAP Business One is often stronger for complex group consolidation."
       },
       {
-        question: "How long does an Odoo or SAP Business One implementation take?",
-        answer:
-          "Small Odoo projects often go live in 4 to 8 weeks. SAP Business One projects commonly take a few months, depending on modules, data and integrations.",
+        "question": "What should a 20-user business budget for ERP?",
+        "answer": "Budget for licences, implementation, data migration, training and first-year support, not just software. For a 20-user business, published licence prices alone run about A$19,200 a year for Odoo Custom and about A$51,120 for SAP Business One Professional subscriptions. Implementation is quoted separately, so ask for a fixed-scope estimate."
       },
       {
-        question: "Can I switch from SAP Business One to Odoo, or the other way?",
-        answer:
-          "Yes. Both support data migration of customers, suppliers, products, open transactions and balances. Plan the cut-over at the end of a financial period to keep reporting clean.",
-      },
+        "question": "Does Australian payroll make Odoo the simpler option?",
+        "answer": "It largely does, because SAP Business One doesn't include Australian payroll out of the box and is usually connected to a separate STP-enabled payroll product. If one system for finance and payroll is a must, Odoo's Australian payroll app with STP Phase 2 is the simpler path. Check award and allowance scenarios first."
+      }
     ],
-    ctaTitle: "Compare Odoo and SAP for Your Business",
-    ctaDescription:
-      "Talk with Zynex Technologies about your processes, users and growth plans to choose an ERP that fits your Australian business.",
+    "ctaTitle": "Choose the Right ERP for Your Australian Business",
+    "ctaDescription": "Map your five most important processes with Zynex and compare Odoo and SAP Business One using your own data. Request a workshop and a quote based on your scope."
   },
+
   "ai-agents-vs-chatbots-australia": {
     metaTitle: "AI Agents vs Chatbots: What Australian Businesses Need in 2026",
     metaDescription:

@@ -197,6 +197,14 @@
   padding-left: 4px;
 }
 
+.articleSection ul { list-style: disc; }
+.articleSection ol { display: grid; gap: 10px; margin: 0 0 24px; padding-left: 23px; list-style: decimal; color: #38474d; }
+.tableWrap { overflow-x: auto; margin: 24px 0; }
+.tableWrap table { width: 100%; min-width: 480px; border-collapse: collapse; }
+.tableWrap th, .tableWrap td { padding: 16px; border: 1px solid var(--line); text-align: left; }
+.tableWrap th { background: #f0f4ea; }
+.article a:focus-visible, .faqItem summary:focus-visible { outline: 2px solid var(--green); outline-offset: 4px; }
+
 .faqList {
   border-top: 1px solid var(--line);
 }
