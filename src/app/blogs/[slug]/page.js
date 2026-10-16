@@ -5,6 +5,7 @@ import { buildPageMetadata } from '@/lib/seo';
 
 // Slugs that use BlogDetailTemplate
 const DETAIL_TEMPLATE_SLUGS = [
+  'ai-agent-development-cost-australia',
   'ai-security-assessment-australia',
   'odoo-vs-sap-business-one-australia',
   'ai-agents-vs-chatbots-australia',

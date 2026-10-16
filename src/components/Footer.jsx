@@ -10,11 +10,14 @@ const Footer = () => {
 
   const footerLinks = {
     solutions: [
-      { name: 'Custom AI Development', href: '/custom-ai', isRoute: true },
-      { name: 'ERP Development (Odoo)', href: '/odoo-erp-development-company-australia', isRoute: true },
-      { name: 'SAP ERP Implementation', href: '/sap-erp-implementation-company-australia', isRoute: true },
-      { name: 'AI Strategy Report', href: '/strategy-report', isRoute: true },
-      { name: 'CareCob Platform', href: '/solutions', isRoute: true }
+      { name: 'AI Automation', href: '/ai-automation' },
+      { name: 'ERP', href: '/odoo-erp-development-company-australia' },
+      { name: 'AI Security', href: '/ai-security-services-australia' },
+    ],
+    resources: [
+      { name: 'AI & ERP Blogs', href: '/blogs' },
+      { name: 'News', href: '/news' },
+      { name: 'AI FAQs', href: '/faq' },
     ],
     locations: [
       { name: 'Sydney', href: '/ai-development-company-sydney', isRoute: true },
@@ -32,26 +35,25 @@ const Footer = () => {
       { name: 'Learn More', href: '/what-is-zynex', isRoute: true },
       { name: 'White Label Partner', href: '/white-label-software-development-partner', isRoute: true },
       { name: 'Contact', href: '/#contact' },
-      { name: 'Blogs', href: '/blogs', isRoute: true }
     ]
   };
 
   return (
     <footer className="border-t border-gray-200/60 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-16">
+        <div className="flex flex-col gap-10">
           {/* Brand Section - Left Side */}
-          <div className="lg:max-w-[22rem]">
+          <div className="max-w-xl">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 rounded-lg flex items-center justify-center shadow-md" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}>
                 <span className="text-white font-heading font-bold text-xl">Z</span>
               </div>
-              <span className="font-heading font-bold text-xl text-foreground">
+              <span className="font-heading font-bold text-lg sm:text-xl text-foreground">
                 Zynex<span className="text-brand-green">Technologies</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm font-body leading-relaxed">
-              Delivering custom AI solutions with measurable ROI. From strategy to deployment in weeks, not years.
+              Zynex Technologies helps Australian SMBs with AI Automation, ERP and AI Security. We cut repetitive work, bring your operations into one system, and keep your business data protected.
             </p>
 
             {/* Social Media Links */}
@@ -112,10 +114,10 @@ const Footer = () => {
           </div>
 
           {/* Links Section - Right Side with Equal Gaps */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-10 sm:gap-12 flex-1 lg:justify-items-start">
+          <div className="grid grid-cols-1 min-[400px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-[repeat(4,minmax(0,1fr))_minmax(16rem,1.5fr)] gap-x-6 gap-y-10">
             {/* AI Services */}
             <div>
-              <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">AI & ERP Services</h4>
+              <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">Services</h4>
               <ul className="space-y-2.5">
                 {footerLinks.solutions.map((link, index) => (
                   <li key={index}>
@@ -125,6 +127,18 @@ const Footer = () => {
                     >
                       {link.name}
                     </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">Resources</h4>
+              <ul className="space-y-2.5">
+                {footerLinks.resources.map(link => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-muted-foreground transition-colors font-body text-sm hover:text-brand-green block">{link.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -148,7 +162,7 @@ const Footer = () => {
             </div>
 
             {/* Company */}
-            <div className="sm:pl-8 lg:pl-12">
+            <div className="min-w-0">
               <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">Company</h4>
               <ul className="space-y-2.5">
                 {footerLinks.company.map((link, index) => (
@@ -178,14 +192,14 @@ const Footer = () => {
             </div>
 
             {/* Contact Info */}
-            <div>
+            <div className="min-w-0 min-[400px]:col-span-2 sm:col-span-2 lg:col-span-1">
               <h4 className="font-heading font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">Contact</h4>
               <ul className="space-y-2.5">
                 <li className="flex items-start gap-2.5">
                   <svg className="w-4 h-4 text-brand-green mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <a className="text-muted-foreground text-sm hover:text-brand-green transition-colors whitespace-nowrap" href="mailto:support@zynextechnologies.com.au">
+                  <a className="text-muted-foreground text-sm hover:text-brand-green transition-colors break-all" href="mailto:support@zynextechnologies.com.au">
                     support@zynextechnologies.com.au
                   </a>
                 </li>

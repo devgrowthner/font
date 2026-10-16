@@ -705,4 +705,10 @@
 
   <url><loc>https://zynextechnologies.com.au/faq/how-long-does-an-odoo-implementation-take</loc></url>
   <url><loc>https://zynextechnologies.com.au/faq/privacy-act-small-business-exemption-ai</loc></url>
+  <url><loc>https://zynextechnologies.com.au/faq</loc></url>
+  <url>
+    <loc>https://zynextechnologies.com.au/blogs/ai-agent-development-cost-australia</loc>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>

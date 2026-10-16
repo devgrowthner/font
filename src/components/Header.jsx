@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect, useRef } from 'react';
 
 import Link from 'next/link';
@@ -25,8 +27,6 @@ const Header = () => {
   const [isIndustryOpen, setIsIndustryOpen] = useState(false);
 
   const [isErpOpen, setIsErpOpen] = useState(false);
-  const [isFaqOpen, setIsFaqOpen] = useState(false);
-  const faqRef = useRef(null);
 
   const router = useRouter();
 
@@ -37,6 +37,9 @@ const Header = () => {
   const erpRef = useRef(null);
 
 
+
+  const navRef = useRef(null);
+  const menuButtonRef = useRef(null);
 
   const mobileServicesRef = useRef(null);
 
@@ -108,6 +111,35 @@ const Header = () => {
 
 
 
+  useEffect(() => {
+    const dismiss = (event) => {
+      if (event.type === 'keydown' && event.key !== 'Escape') return;
+      if (event.type === 'mousedown' && navRef.current?.contains(event.target)) return;
+      setIsOpen(false);
+      setIsServicesOpen(false);
+      setIsIndustryOpen(false);
+      setIsErpOpen(false);
+      if (event.type === 'keydown' && menuButtonRef.current?.getClientRects().length) {
+        menuButtonRef.current.focus();
+      }
+    };
+    const desktop = window.matchMedia('(min-width: 1280px)');
+    const closeOnResize = () => {
+      setIsOpen(false);
+      setIsServicesOpen(false);
+      setIsIndustryOpen(false);
+      setIsErpOpen(false);
+    };
+    document.addEventListener('keydown', dismiss);
+    document.addEventListener('mousedown', dismiss);
+    desktop.addEventListener('change', closeOnResize);
+    return () => {
+      document.removeEventListener('keydown', dismiss);
+      document.removeEventListener('mousedown', dismiss);
+      desktop.removeEventListener('change', closeOnResize);
+    };
+  }, []);
+
   // Close dropdown when clicking outside (desktop only)
 
   useEffect(() => {
@@ -141,41 +173,6 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
 
   }, [isOpen]);
-
-  useEffect(() => {
-    const dismissFaq = (event) => {
-      if (event.type === 'keydown') {
-        if (event.key === 'Escape') {
-          setIsFaqOpen(false);
-          faqRef.current?.querySelector('button')?.focus();
-        }
-      } else if (!isOpen && faqRef.current && !faqRef.current.contains(event.target)) {
-        setIsFaqOpen(false);
-      }
-    };
-    if (!isFaqOpen) return;
-    document.addEventListener('mousedown', dismissFaq);
-    document.addEventListener('keydown', dismissFaq);
-    return () => {
-      document.removeEventListener('mousedown', dismissFaq);
-      document.removeEventListener('keydown', dismissFaq);
-    };
-  }, [isFaqOpen, isOpen]);
-
-  const faqLinks = [
-    { name: 'How Can Small Businesses Move from Excel to Odoo?', href: '/faq/excel-to-odoo-small-business' },
-    { name: 'How Long Does an Odoo Implementation Take?', href: '/faq/how-long-does-an-odoo-implementation-take' },
-    { name: 'Does the Privacy Act Apply to Small Businesses Using AI Tools?', href: '/faq/privacy-act-small-business-exemption-ai' },
-  ];
-
-  const toggleFaq = () => {
-    setIsFaqOpen(open => !open);
-    setIsServicesOpen(false);
-    setIsIndustryOpen(false);
-    setIsErpOpen(false);
-  };
-
-
 
   const servicesItems = [
 
@@ -375,16 +372,10 @@ const Header = () => {
 
 
 
-  const navLinks = [
-
-    { name: 'Learn More', href: '/what-is-zynex', isRoute: true }
-
-  ];
 
 
 
   const handleLinkClick = () => {
-    setIsFaqOpen(false);
     setIsIndustryOpen(false);
 
     setIsOpen(false);
@@ -398,8 +389,6 @@ const Header = () => {
 
 
   const handleServiceClick = (link, isExternal, e) => {
-    setIsFaqOpen(false);
-
     if (e) {
 
       e.preventDefault();
@@ -436,15 +425,15 @@ const Header = () => {
 
     <>
 
-      <nav className={`fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 px-4 sm:px-6 transition-all duration-300 ease-out transform ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
+      <nav ref={navRef} aria-label="Main navigation" className={`fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 px-4 sm:px-6 transition-all duration-300 ease-out transform ${isVisible || isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
 
-        <div className="w-full max-w-7xl bg-white/95 border border-gray-200/50 rounded-full px-4 sm:px-6 shadow-lg">
+        <div className="w-full min-w-0 max-w-7xl bg-white/95 border border-gray-200/50 rounded-full px-4 sm:px-6 lg:px-8 shadow-lg">
 
-          <div className="flex justify-between items-center h-12 sm:h-12 md:h-14 lg:h-16">
+          <div className="flex justify-between items-center gap-6 h-16 sm:h-[4.5rem] lg:h-20">
 
             <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 shrink-0">
 
-              <Link href="/" className="flex items-center justify-center group -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-5">
+              <Link href="/" className="flex items-center justify-center group relative w-36 sm:w-44 h-12 overflow-hidden">
 
                 <img
 
@@ -452,7 +441,7 @@ const Header = () => {
 
                   alt="ZynexTech Logo"
 
-                  className="block h-40 sm:h-44 md:h-48 lg:h-56 w-auto object-contain transition-all duration-300 drop-shadow-sm hover:drop-shadow-md"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-40 sm:h-48 w-auto max-w-none object-contain transition-all duration-300 drop-shadow-sm hover:drop-shadow-md"
 
                 />
 
@@ -464,9 +453,9 @@ const Header = () => {
 
             {/* Desktop Menu */}
 
-            <div className="hidden xl:flex items-center flex-1 min-w-0 justify-end">
+            <div className="hidden xl:flex items-center shrink-0 justify-end">
 
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-3 2xl:gap-4">
 
                 {/* Services Dropdown */}
 
@@ -480,7 +469,7 @@ const Header = () => {
 
                       event.preventDefault();
 
-                      setIsFaqOpen(false); setIsServicesOpen(!isServicesOpen);
+                      setIsServicesOpen(!isServicesOpen); setIsIndustryOpen(false); setIsErpOpen(false);
 
                     }}
 
@@ -560,7 +549,7 @@ const Header = () => {
 
                       event.preventDefault();
 
-                      setIsFaqOpen(false); setIsIndustryOpen(!isIndustryOpen);
+                      setIsIndustryOpen(!isIndustryOpen);
 
                       setIsServicesOpen(false);
 
@@ -643,7 +632,7 @@ const Header = () => {
 
                       event.preventDefault();
 
-                      setIsFaqOpen(false); setIsErpOpen(!isErpOpen);
+                      setIsErpOpen(!isErpOpen);
 
                       setIsServicesOpen(false);
 
@@ -727,41 +716,12 @@ const Header = () => {
 
                 </Link>
 
-                <div className="relative" ref={faqRef}>
-                  <button type="button" aria-expanded={isFaqOpen} aria-controls="desktop-faq-links" onClick={toggleFaq} className="cursor-pointer text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap flex items-center gap-1 hover:text-brand-green">
-                    FAQ
-                    <svg className={`w-4 h-4 transition-transform ${isFaqOpen ? 'rotate-180' : ''}`} aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                  </button>
-                  {isFaqOpen && (
-                    <div id="desktop-faq-links" className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-80 bg-white border border-gray-200/50 rounded-2xl shadow-xl p-3 z-50">
-                      {faqLinks.map(link => <Link key={link.href} href={link.href} onClick={handleLinkClick} className="block px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-green">{link.name}</Link>)}
-                    </div>
-                  )}
-                </div>
-
-                <Link href="/news" className="cursor-pointer text-gray-700 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group hover:text-brand-green">
-
-                  News
-
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}></span>
-
-                </Link>
 
 
 
 
 
-                {navLinks.map(link => (
 
-                  <Link key={link.name} href={link.href} className="cursor-pointer text-gray-700 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap relative group hover:text-brand-green">
-
-                    {link.name}
-
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full" style={{ background: 'linear-gradient(to right, #719334, #719334)' }}></span>
-
-                  </Link>
-
-                ))}
 
 
 
@@ -785,7 +745,7 @@ const Header = () => {
 
                   rel="noopener noreferrer"
 
-                  className="hidden md:inline-flex items-center gap-2 text-white px-4 lg:px-5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap shadow-md hover:shadow-lg min-w-fit"
+                  className="inline-flex items-center justify-center min-h-11 gap-2 text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 whitespace-nowrap shadow-md hover:shadow-lg min-w-fit"
 
                   style={{ background: 'linear-gradient(to right, #719334, #719334)' }}
 
@@ -801,7 +761,7 @@ const Header = () => {
 
                   onClick={() => setIsModalOpen(true)}
 
-                  className="text-white px-3 lg:px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg transform hover:scale-105 active:scale-95 whitespace-nowrap"
+                  className="text-white min-h-11 px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg active:scale-95 whitespace-nowrap"
 
                   style={{ background: 'linear-gradient(to right, #719334, #719334)' }}
 
@@ -825,9 +785,11 @@ const Header = () => {
 
                 aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 aria-expanded={isOpen}
-                onClick={() => setIsOpen(!isOpen)}
+                aria-controls="mobile-navigation"
+                ref={menuButtonRef}
+                onClick={() => { setIsOpen(!isOpen); setIsServicesOpen(false); setIsIndustryOpen(false); setIsErpOpen(false); }}
 
-                className="text-gray-600 hover:text-gray-900 p-1 sm:p-1.5 rounded-lg hover:bg-white/50 active:bg-white/70 transition-all duration-300"
+                className="text-gray-600 hover:text-gray-900 min-w-11 min-h-11 flex items-center justify-center rounded-lg hover:bg-white/50 active:bg-white/70 transition-all duration-300"
 
               >
 
@@ -869,9 +831,9 @@ const Header = () => {
 
         {isOpen && (
 
-          <div className="absolute top-full left-4 right-4 mt-2 xl:hidden" data-mobile-menu>
+          <div className="absolute top-full left-4 right-4 mt-2 xl:hidden" data-mobile-menu id="mobile-navigation">
 
-            <div className="bg-white/95 shadow-xl rounded-2xl border border-gray-200/50 overflow-hidden">
+            <div className="bg-white shadow-xl rounded-2xl border border-gray-200/50 max-h-[calc(100dvh-7rem)] overflow-y-auto overscroll-contain">
 
               <div className="px-3 py-3 space-y-2">
 
@@ -879,7 +841,7 @@ const Header = () => {
 
                 <div ref={mobileServicesRef}>
 
-                  <a href="/custom-ai" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsFaqOpen(false); setIsServicesOpen(!isServicesOpen); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
+                  <a href="/custom-ai" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsServicesOpen(!isServicesOpen); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
 
                     <span>AI Services</span>
 
@@ -926,7 +888,7 @@ const Header = () => {
 
                 <div ref={mobileIndustryRef}>
 
-                  <a href="/solutions" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsFaqOpen(false); setIsIndustryOpen(!isIndustryOpen); setIsServicesOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
+                  <a href="/solutions" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsIndustryOpen(!isIndustryOpen); setIsServicesOpen(false); setIsErpOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
 
                     <span>Industry</span>
 
@@ -973,7 +935,7 @@ const Header = () => {
 
                 <div ref={mobileErpRef}>
 
-                  <a href="/odoo-erp-development-company-australia" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsFaqOpen(false); setIsErpOpen(!isErpOpen); setIsServicesOpen(false); setIsIndustryOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
+                  <a href="/odoo-erp-development-company-australia" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsErpOpen(!isErpOpen); setIsServicesOpen(false); setIsIndustryOpen(false); }} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green">
 
                     <span>ERP services</span>
 
@@ -1026,31 +988,10 @@ const Header = () => {
 
                 </Link>
 
-                <div>
-                  <button type="button" aria-expanded={isFaqOpen} aria-controls="mobile-faq-links" onClick={toggleFaq} className="text-gray-700 flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-base font-medium w-full cursor-pointer hover:text-brand-green">
-                    FAQ
-                    <svg className={`w-5 h-5 transition-transform ${isFaqOpen ? 'rotate-180' : ''}`} aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-                  </button>
-                  {isFaqOpen && <div id="mobile-faq-links" className="mt-2 space-y-1">{faqLinks.map(link => <Link key={link.href} href={link.href} onClick={handleLinkClick} className="block px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-brand-green">{link.name}</Link>)}</div>}
-                </div>
-
-                <Link href="/news" className="text-gray-700 block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green" onClick={handleLinkClick}>
-
-                  News
-
-                </Link>
 
 
 
-                {navLinks.map(link => (
 
-                  <Link key={link.name} href={link.href} className="text-gray-700 block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer hover:bg-white/70 active:bg-white/90 transition-all duration-300 transform active:scale-95 hover:text-brand-green" onClick={handleLinkClick}>
-
-                    {link.name}
-
-                  </Link>
-
-                ))}
 
 
 
@@ -1067,6 +1008,7 @@ const Header = () => {
                   target="_blank"
 
                   rel="noopener noreferrer"
+                  onClick={handleLinkClick}
 
                   className="text-white block px-4 py-2.5 rounded-lg text-base font-medium w-full text-center cursor-pointer transition-all duration-300 shadow-md hover:shadow-lg transform active:scale-95 min-w-fit"
 

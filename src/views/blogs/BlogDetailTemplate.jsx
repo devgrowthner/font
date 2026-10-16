@@ -1672,7 +1672,7 @@ const FAQSection = ({ blogData }) => (
 
     <motion.div initial="initial" whileInView="animate" viewport={{ once: true, margin: '-100px' }} variants={fadeInUp}>
       <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
-        Frequently Asked Questions
+        {blogData.faqTitle || 'Frequently Asked Questions'}
       </h2>
       {blogData.faqDescription && (
         <p className="text-lg text-gray-700 leading-relaxed mb-12">

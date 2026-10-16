@@ -1,6 +1,5 @@
 'use client';
 
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ContactModal from "./ContactModal";
@@ -23,7 +22,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left pt-8">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left pt-28 pb-12 sm:pt-32 sm:pb-16">
         <div className="max-w-2xl">
           {/* Micro Trust Line */}
           <motion.div
@@ -69,7 +68,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-xl mb-6 sm:mb-8"
           >
-            Zynex Technologies delivers custom AI and ERP solutions with measurable ROI. We assess feasibility, develop competitive strategies, and deploy production-ready systems that transform your operations.
+            Zynex Technologies delivers AI automation, ERP and AI security solutions with measurable ROI. We assess feasibility, build competitive strategies, and deploy production-ready systems that protect and transform your operations.
           </motion.p>
 
           {/* CTA Buttons */}
